@@ -1,0 +1,10 @@
+@use 'contrast/variables';
+@use 'application';
+@use 'contrast/diff';
+@use 'mastodon-bird-ui/layout-single-column';
+@use 'mastodon-bird-ui/layout-multiple-columns';
+@use 'mastodon-bird-ui/accessible';
+
+.status__content[lang="fi"] + .translate-button {
+  display: none;
+}

@@ -2,7 +2,7 @@
 @use "legacy/layout-multiple-columns";
 @use "tokens";
 @use "error";
-@use "micro-interactions/star";
+@use "variants/accessible";
 
 // In mastodon core these styles are located under
 // app/javascript/styles/mastodon/components.scss

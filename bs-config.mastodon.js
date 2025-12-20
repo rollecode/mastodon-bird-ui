@@ -1,9 +1,9 @@
-// Browsersync configuration for proxying mementomori.social
+// Browsersync configuration for proxying mastodon.social
 const { createProxyMiddleware, responseInterceptor } = require('http-proxy-middleware');
 const variant = process.env.VARIANT || 'mastodon-bird-ui';
 
 const proxy = createProxyMiddleware({
-  target: 'https://mementomori.social',
+  target: 'https://mastodon.social',
   changeOrigin: true,
   secure: true,
   selfHandleResponse: true,
@@ -37,12 +37,12 @@ module.exports = {
       dir: 'dist',
     },
   ],
-  port: 3999,
+  port: 3998,
   files: ['dist/**/*.css'],
   open: false,
   notify: true,
   logLevel: 'info',
-  logPrefix: 'Bird UI (mementomods)',
+  logPrefix: 'Bird UI (mastodon.social)',
   reloadDelay: 0,
   reloadDebounce: 500,
   injectChanges: true,

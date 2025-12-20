@@ -4,6 +4,8 @@
 * Components override for Mastodon v4.6.0+, disable top border/padding for tabs-bar wrapper
 * Fixes to placeholder styles
 * Add `npm run dev:mementomods` to test styles against mementomori.social
+* Add `npm run dev:mastodon` to test against mastodon.social
+* Start proper modularization based on Mastodon core
 
 ### 4.0.0rc2: 2025-12-13
 

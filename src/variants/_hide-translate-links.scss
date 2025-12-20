@@ -1,0 +1,4 @@
+// Hide all translate buttons
+.status__content[lang] + .translate-button {
+  display: none;
+}

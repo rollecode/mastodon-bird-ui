@@ -1,8 +1,7 @@
-@use "legacy/layout-single-column";
-@use "legacy/layout-multiple-columns";
+@use "layout-single-column";
+@use "layout-multiple-columns";
 @use "tokens";
 @use "error";
-@use "micro-interactions/star";
 
 // In mastodon core these styles are located under
 // app/javascript/styles/mastodon/components.scss

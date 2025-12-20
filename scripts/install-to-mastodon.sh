@@ -106,12 +106,19 @@ echo ""
 echo "Checking themes.yml..."
 
 THEMES_TO_ADD=(
-  "mastodon-bird-ui: styles/mastodon-bird-ui.scss"
-  "mastodon-bird-ui-stars: styles/mastodon-bird-ui-stars.scss"
+  "mastodon-bird-ui-dark: styles/mastodon-bird-ui-dark.scss"
+  "mastodon-bird-ui-dark-change-to-stars: styles/mastodon-bird-ui-dark-change-to-stars.scss"
+  "hide-finnish: styles/hide-finnish.scss"
+  "hide-finnish-change-to-stars: styles/hide-finnish-change-to-stars.scss"
+  "hide-translate-links: styles/hide-translate-links.scss"
+  "mastodon-bird-ui-light: styles/mastodon-bird-ui-light.scss"
+  "mastodon-bird-ui-light-hide-finnish: styles/mastodon-bird-ui-light-hide-finnish.scss"
+  "mastodon-bird-ui-light-hide-finnish-change-to-stars: styles/mastodon-bird-ui-light-hide-finnish-change-to-stars.scss"
+  "mastodon-bird-ui-light-hide-translate-links: styles/mastodon-bird-ui-light-hide-translate-links.scss"
+  "mastodon-bird-ui-contrast: styles/mastodon-bird-ui-contrast.scss"
   "mastodon-bird-ui-accessible: styles/mastodon-bird-ui-accessible.scss"
+  "mastodon-bird-ui-accessible-hide-finnish: styles/mastodon-bird-ui-accessible-hide-finnish.scss"
   "mastodon-bird-ui-accessible-plus: styles/mastodon-bird-ui-accessible-plus.scss"
-  "mastodon-bird-ui-hide-finnish: styles/mastodon-bird-ui-hide-finnish.scss"
-  "mastodon-bird-ui-hide-translate-links: styles/mastodon-bird-ui-hide-translate-links.scss"
 )
 
 THEMES_ADDED=0
