@@ -56,7 +56,19 @@
   display: block;
 }
 
-.layout-single-column.no-reduce-motion
+// Override the heart's active:not(.activated) state with star icon
+.layout-single-column
+  .detailed-status__action-bar
+  .active:not(.activated)
+  .icon-star,
+.layout-single-column .status__action-bar .active:not(.activated) .icon-star {
+  background-image: var(
+    --icon-star-detailed-status-action-bar-active
+  ) !important;
+}
+
+html.no-reduce-motion
+  .layout-single-column
   .icon-button.star-icon.activate
   .icon-star {
   background-color: unset !important;
@@ -73,7 +85,8 @@
   width: unset;
 }
 
-.layout-single-column.no-reduce-motion
+html.no-reduce-motion
+  .layout-single-column
   .icon-button.star-icon.active
   .icon-star {
   animation: none !important;
@@ -83,7 +96,8 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .layout-single-column.no-reduce-motion
+  html.no-reduce-motion
+    .layout-single-column
     .icon-button.star-icon.activate
     .icon-star {
     animation:
@@ -125,7 +139,7 @@
   content: "";
   height: 50px !important;
   left: 50% !important;
-  margin-left: -24px;
+  margin-left: -26px;
   margin-top: -20px;
   opacity: unset;
   position: absolute;
@@ -135,7 +149,8 @@
   z-index: unset;
 }
 
-.layout-single-column.no-reduce-motion
+html.no-reduce-motion
+  .layout-single-column
   .icon-button.star-icon.activate
   .icon-star,
 .layout-single-column
@@ -171,6 +186,10 @@
   color: var(--color-yellow);
 }
 
+.layout-single-column .status .star-icon {
+  top: -2px;
+}
+
 .layout-single-column
   .detailed-status__action-bar
   button.icon-button.star-icon.deactivate:hover
@@ -185,9 +204,6 @@
   .icon-star,
 .layout-single-column .detailed-status button.icon-button.deactivate .icon-star,
 .layout-single-column .status button.icon-button.deactivate .icon-star {
-  background-image: var(
-    --icon-star-detailed-status-action-bar-hover
-  ) !important;
   color: var(--color-dim);
 }
 
@@ -258,7 +274,7 @@
 .layout-single-column
   button.icon-button.icon-button--with-counter.activate.star-icon
   > .icon-star {
-  left: 0 !important;
+  left: -2px !important;
   position: absolute !important;
   top: unset !important;
 }
