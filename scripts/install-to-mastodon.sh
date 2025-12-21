@@ -136,20 +136,26 @@ if [[ "$MAKE_DEFAULT" =~ ^[Yy]$ ]]; then
   echo ""
   echo "Making Bird UI the default system theme..."
 
-  # Patch application.scss (default dark theme)
-  cat > "$STYLES_PATH/application.scss" << 'EOF'
-@use 'common';
-@use 'mastodon-bird-ui';
-EOF
-  echo -e "${GREEN}  Patched: application.scss${NC}"
+  # Update themes.yml: change default to point to Bird UI
+  # First, ensure original Mastodon themes are available as separate options
+  if ! grep -q "^mastodon-dark:" "$THEMES_FILE"; then
+    echo "mastodon-dark: styles/application.scss" >> "$THEMES_FILE"
+    echo -e "${GREEN}  Added: mastodon-dark (original Mastodon dark theme)${NC}"
+  fi
+  if ! grep -q "^mastodon-light:" "$THEMES_FILE"; then
+    echo "mastodon-light: styles/mastodon-light.scss" >> "$THEMES_FILE"
+    echo -e "${GREEN}  Added: mastodon-light (original Mastodon light theme)${NC}"
+  fi
 
-  # Patch mastodon-light.scss
-  cat > "$STYLES_PATH/mastodon-light.scss" << 'EOF'
-@use 'common';
-@use 'mastodon-bird-ui';
-@use 'mastodon-bird-ui/variables-light';
-EOF
-  echo -e "${GREEN}  Patched: mastodon-light.scss${NC}"
+  # Change default to use Bird UI
+  if grep -q "^default: styles/application.scss" "$THEMES_FILE"; then
+    sed -i 's|^default: styles/application.scss|default: styles/mastodon-bird-ui-dark.scss|' "$THEMES_FILE"
+    echo -e "${GREEN}  Updated: default now uses Bird UI${NC}"
+  elif grep -q "^default: styles/mastodon-bird-ui-dark.scss" "$THEMES_FILE"; then
+    echo -e "${GREEN}  Default already uses Bird UI${NC}"
+  else
+    echo -e "${YELLOW}  Warning: default theme has unexpected value, not modified${NC}"
+  fi
 fi
 
 # Generate theme entry points
@@ -301,8 +307,6 @@ echo "Fixing file ownership..."
 chown -R mastodon:mastodon "$STYLES_PATH/mastodon-bird-ui"
 chown mastodon:mastodon "$STYLES_PATH"/mastodon-bird-ui-*.scss 2>/dev/null || true
 chown mastodon:mastodon "$STYLES_PATH"/hide-*.scss 2>/dev/null || true
-chown mastodon:mastodon "$STYLES_PATH"/application.scss 2>/dev/null || true
-chown mastodon:mastodon "$STYLES_PATH"/mastodon-light.scss 2>/dev/null || true
 
 # Update themes.yml
 echo ""
@@ -394,14 +398,28 @@ FI_VARIATIONS="    mastodon-bird-ui-dark-change-to-stars: Mastodon Bird UI (tumm
     mastodon-bird-ui-accessible-hide-finnish: Mastodon Bird UI (saavutettavuus huomioitu, piilota Käännä-linkit suomelle)
     mastodon-bird-ui-accessible-plus: Mastodon Bird UI (saavutettavuus Plus, fontit vielä isommalla)"
 
+# Original Mastodon theme translations (when Bird UI is made default)
+EN_ORIGINAL="    mastodon-dark: Mastodon (Dark)
+    mastodon-light: Mastodon (Light)"
+
+FI_ORIGINAL="    mastodon-dark: Mastodon (tumma)
+    mastodon-light: Mastodon (vaalea)"
+
 # Build the themes to add
 EN_THEMES="$EN_BASE"
 FI_THEMES="$FI_BASE"
 
+if [[ "$MAKE_DEFAULT" =~ ^[Yy]$ ]]; then
+  EN_THEMES="$EN_THEMES
+$EN_ORIGINAL"
+  FI_THEMES="$FI_THEMES
+$FI_ORIGINAL"
+fi
+
 if [[ "$ADD_VARIATIONS" =~ ^[Yy]$ ]]; then
-  EN_THEMES="$EN_BASE
+  EN_THEMES="$EN_THEMES
 $EN_VARIATIONS"
-  FI_THEMES="$FI_BASE
+  FI_THEMES="$FI_THEMES
 $FI_VARIATIONS"
 fi
 
