@@ -1,3 +1,7 @@
+### 4.0.0-alpha.0: 2025-12-21
+
+* Release install-to-mastodon.sh workflow
+
 ### 4.0.0rc3: 2025-12-20
 
 * Revert and rewrite over-engineered modularization

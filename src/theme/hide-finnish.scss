@@ -1,7 +1,0 @@
-@use 'application';
-@use 'mastodon-bird-ui/layout-single-column';
-@use 'mastodon-bird-ui/layout-multiple-columns';
-
-.status__content[lang="fi"] + .translate-button {
-  display: none;
-}

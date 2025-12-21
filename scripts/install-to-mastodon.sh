@@ -3,7 +3,7 @@
 # https://github.com/ronilaukkarinen/mastodon-bird-ui
 # Author: Roni Laukkarinen (@rolle@mementomori.social)
 #
-# This script copies Bird UI files to your Mastodon installation
+# This script installs Bird UI to your Mastodon installation
 
 set -e
 
@@ -18,6 +18,7 @@ MASTODON_PATH="${MASTODON_PATH:-}"
 
 # Get version from CHANGELOG.md
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SRC_DIR="$SCRIPT_DIR/../src"
 VERSION=$(grep -m1 '^### ' "$SCRIPT_DIR/../CHANGELOG.md" | sed 's/### \([^:]*\):.*/\1/')
 
 # Parse arguments
@@ -76,34 +77,172 @@ if [ ! -f "$THEMES_FILE" ]; then
   exit 1
 fi
 
-# Check if dist/mastodon-core exists
-DIST_DIR="$SCRIPT_DIR/../dist/mastodon-core"
-
-if [ ! -d "$DIST_DIR" ]; then
-  echo -e "${YELLOW}dist/mastodon-core not found. Building...${NC}"
-  cd "$SCRIPT_DIR/.."
-  npm run build:mastodon-core
-  cd -
-fi
-
-echo -e "${GREEN}This will install Mastodon Bird UI $VERSION to $MASTODON_PATH${NC}"
+echo -e "${GREEN}Installing Mastodon Bird UI $VERSION to $MASTODON_PATH${NC}"
 echo ""
 
-# Copy mastodon-bird-ui folder
-echo "Copying mastodon-bird-ui/ to $STYLES_PATH/"
-cp -r "$DIST_DIR/mastodon-bird-ui" "$STYLES_PATH/"
+# Create mastodon-bird-ui directory
+echo "Creating mastodon-bird-ui/ directory..."
+mkdir -p "$STYLES_PATH/mastodon-bird-ui"
 
-# Copy theme entry points
-echo "Copying theme entry points..."
-for f in "$DIST_DIR"/*.scss; do
-  filename=$(basename "$f")
-  echo "  - $filename"
-  cp "$f" "$STYLES_PATH/"
-done
+# Copy Bird UI files
+echo "Copying Bird UI files..."
+cp "$SRC_DIR"/legacy/_layout-*.scss "$STYLES_PATH/mastodon-bird-ui/"
+cp "$SRC_DIR"/variants/_*.scss "$STYLES_PATH/mastodon-bird-ui/"
+cp "$SRC_DIR"/micro-interactions/_star.scss "$STYLES_PATH/mastodon-bird-ui/_stars.scss"
+cp "$SRC_DIR"/_variables-light.scss "$STYLES_PATH/mastodon-bird-ui/"
 
-# Check if themes are already in themes.yml
+# Generate theme entry points
+echo "Generating theme entry points..."
+
+# Dark theme (base)
+cat > "$STYLES_PATH/mastodon-bird-ui-dark.scss" << 'EOF'
+@use 'common';
+@use 'mastodon-bird-ui/layout-single-column';
+@use 'mastodon-bird-ui/layout-multiple-columns';
+EOF
+echo "  - mastodon-bird-ui-dark.scss"
+
+# Dark with stars
+cat > "$STYLES_PATH/mastodon-bird-ui-dark-change-to-stars.scss" << 'EOF'
+@use 'common';
+@use 'mastodon-bird-ui/layout-single-column';
+@use 'mastodon-bird-ui/layout-multiple-columns';
+@use 'mastodon-bird-ui/stars';
+EOF
+echo "  - mastodon-bird-ui-dark-change-to-stars.scss"
+
+# Hide Finnish translate button
+cat > "$STYLES_PATH/hide-finnish.scss" << 'EOF'
+@use 'common';
+@use 'mastodon-bird-ui/layout-single-column';
+@use 'mastodon-bird-ui/layout-multiple-columns';
+
+.status__content[lang="fi"] + .translate-button {
+  display: none;
+}
+EOF
+echo "  - hide-finnish.scss"
+
+# Hide Finnish with stars
+cat > "$STYLES_PATH/hide-finnish-change-to-stars.scss" << 'EOF'
+@use 'common';
+@use 'mastodon-bird-ui/layout-single-column';
+@use 'mastodon-bird-ui/layout-multiple-columns';
+@use 'mastodon-bird-ui/stars';
+
+.status__content[lang="fi"] + .translate-button {
+  display: none;
+}
+EOF
+echo "  - hide-finnish-change-to-stars.scss"
+
+# Hide all translate links
+cat > "$STYLES_PATH/hide-translate-links.scss" << 'EOF'
+@use 'common';
+@use 'mastodon-bird-ui/layout-single-column';
+@use 'mastodon-bird-ui/layout-multiple-columns';
+
+.status__content[lang] + .translate-button {
+  display: none;
+}
+EOF
+echo "  - hide-translate-links.scss"
+
+# Light theme
+cat > "$STYLES_PATH/mastodon-bird-ui-light.scss" << 'EOF'
+@use 'common';
+@use 'mastodon-bird-ui/layout-single-column';
+@use 'mastodon-bird-ui/layout-multiple-columns';
+@use 'mastodon-bird-ui/variables-light';
+EOF
+echo "  - mastodon-bird-ui-light.scss"
+
+# Light hide Finnish
+cat > "$STYLES_PATH/mastodon-bird-ui-light-hide-finnish.scss" << 'EOF'
+@use 'common';
+@use 'mastodon-bird-ui/layout-single-column';
+@use 'mastodon-bird-ui/layout-multiple-columns';
+@use 'mastodon-bird-ui/variables-light';
+
+.status__content[lang="fi"] + .translate-button {
+  display: none;
+}
+EOF
+echo "  - mastodon-bird-ui-light-hide-finnish.scss"
+
+# Light hide Finnish with stars
+cat > "$STYLES_PATH/mastodon-bird-ui-light-hide-finnish-change-to-stars.scss" << 'EOF'
+@use 'common';
+@use 'mastodon-bird-ui/layout-single-column';
+@use 'mastodon-bird-ui/layout-multiple-columns';
+@use 'mastodon-bird-ui/variables-light';
+@use 'mastodon-bird-ui/stars';
+
+.status__content[lang="fi"] + .translate-button {
+  display: none;
+}
+EOF
+echo "  - mastodon-bird-ui-light-hide-finnish-change-to-stars.scss"
+
+# Light hide translate links
+cat > "$STYLES_PATH/mastodon-bird-ui-light-hide-translate-links.scss" << 'EOF'
+@use 'common';
+@use 'mastodon-bird-ui/layout-single-column';
+@use 'mastodon-bird-ui/layout-multiple-columns';
+@use 'mastodon-bird-ui/variables-light';
+
+.status__content[lang] + .translate-button {
+  display: none;
+}
+EOF
+echo "  - mastodon-bird-ui-light-hide-translate-links.scss"
+
+# Contrast theme
+cat > "$STYLES_PATH/mastodon-bird-ui-contrast.scss" << 'EOF'
+@use 'common';
+@use 'mastodon/high-contrast';
+@use 'mastodon-bird-ui/layout-single-column';
+@use 'mastodon-bird-ui/layout-multiple-columns';
+EOF
+echo "  - mastodon-bird-ui-contrast.scss"
+
+# Accessible theme
+cat > "$STYLES_PATH/mastodon-bird-ui-accessible.scss" << 'EOF'
+@use 'common';
+@use 'mastodon/high-contrast';
+@use 'mastodon-bird-ui/layout-single-column';
+@use 'mastodon-bird-ui/layout-multiple-columns';
+@use 'mastodon-bird-ui/accessible';
+EOF
+echo "  - mastodon-bird-ui-accessible.scss"
+
+# Accessible hide Finnish
+cat > "$STYLES_PATH/mastodon-bird-ui-accessible-hide-finnish.scss" << 'EOF'
+@use 'common';
+@use 'mastodon/high-contrast';
+@use 'mastodon-bird-ui/layout-single-column';
+@use 'mastodon-bird-ui/layout-multiple-columns';
+@use 'mastodon-bird-ui/accessible';
+
+.status__content[lang="fi"] + .translate-button {
+  display: none;
+}
+EOF
+echo "  - mastodon-bird-ui-accessible-hide-finnish.scss"
+
+# Accessible plus theme
+cat > "$STYLES_PATH/mastodon-bird-ui-accessible-plus.scss" << 'EOF'
+@use 'common';
+@use 'mastodon/high-contrast';
+@use 'mastodon-bird-ui/layout-single-column';
+@use 'mastodon-bird-ui/layout-multiple-columns';
+@use 'mastodon-bird-ui/accessible-plus';
+EOF
+echo "  - mastodon-bird-ui-accessible-plus.scss"
+
+# Update themes.yml
 echo ""
-echo "Checking themes.yml..."
+echo "Updating themes.yml..."
 
 THEMES_TO_ADD=(
   "mastodon-bird-ui-dark: styles/mastodon-bird-ui-dark.scss"
@@ -126,24 +265,20 @@ for theme in "${THEMES_TO_ADD[@]}"; do
   theme_name=$(echo "$theme" | cut -d: -f1)
   if ! grep -q "^$theme_name:" "$THEMES_FILE"; then
     echo "$theme" >> "$THEMES_FILE"
-    echo -e "${GREEN}Added: $theme_name${NC}"
+    echo -e "${GREEN}  Added: $theme_name${NC}"
     THEMES_ADDED=$((THEMES_ADDED + 1))
   else
-    echo -e "${YELLOW}Already exists: $theme_name${NC}"
+    echo -e "${YELLOW}  Already exists: $theme_name${NC}"
   fi
 done
 
 echo ""
 echo -e "${GREEN}Installation complete!${NC}"
 echo ""
-
-if [ $THEMES_ADDED -gt 0 ]; then
-  echo "Next steps:"
-  echo "1. Restart your Mastodon web service"
-  echo "2. Recompile assets: RAILS_ENV=production bundle exec rails assets:precompile"
-  echo "3. Users can now select Bird UI themes in Preferences > Appearance"
-else
-  echo "All themes were already installed."
-  echo "If you updated Bird UI, recompile assets:"
-  echo "RAILS_ENV=production bundle exec rails assets:precompile"
-fi
+echo "Next steps:"
+echo "1. Fix ownership: sudo chown -R mastodon:mastodon $STYLES_PATH"
+echo "2. Recompile assets:"
+echo "   Production:  RAILS_ENV=production bundle exec rails assets:precompile"
+echo "   Development: RAILS_ENV=development bundle exec rails assets:precompile"
+echo "3. Restart Mastodon web service"
+echo "4. Users can select Bird UI themes in Preferences > Appearance"

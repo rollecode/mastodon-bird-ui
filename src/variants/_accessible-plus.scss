@@ -1,9 +1,3 @@
-@use 'contrast/variables';
-@use 'application';
-@use 'contrast/diff';
-@use 'mastodon-bird-ui/layout-single-column';
-@use 'mastodon-bird-ui/layout-multiple-columns';
-
 body.theme-mastodon-bird-ui-accessible-plus {
   --color-accent: #0a9ff9;
   --color-accent-dark: #1a3ff9;

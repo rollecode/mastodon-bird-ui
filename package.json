@@ -1,6 +1,6 @@
 {
   "name": "mastodon-bird-ui",
-  "version": "4.0.0rc2",
+  "version": "4.0.0-alpha.0",
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -27,9 +27,6 @@
     "sync:mastodon": "browser-sync start --config bs-config.mastodon.js",
     "build": "npm run build:custom-css",
     "build:custom-css": "parcel build src/mastodon-bird-ui.scss --dist-dir dist --no-source-maps && npm run banner",
-    "build:mastodon-core": "npm run build:mastodon-core:copy && npm run build:mastodon-core:rewrite",
-    "build:mastodon-core:copy": "rm -rf dist/mastodon-core && mkdir -p dist/mastodon-core/mastodon-bird-ui && cp -r src/common src/components src/layouts src/variants dist/mastodon-core/mastodon-bird-ui/ && cp src/mastodon-bird-ui.scss src/mastodon-bird-ui-stars.scss dist/mastodon-core/mastodon-bird-ui/ && cp src/theme/*.scss dist/mastodon-core/",
-    "build:mastodon-core:rewrite": "for f in dist/mastodon-core/mastodon-bird-ui/mastodon-bird-ui*.scss; do sed -i 's|@use \"common/|@use \"mastodon-bird-ui/common/|g; s|@use \"components/|@use \"mastodon-bird-ui/components/|g; s|@use \"layouts/|@use \"mastodon-bird-ui/layouts/|g; s|@use \"variants/|@use \"mastodon-bird-ui/variants/|g' \"$f\"; done",
     "banner": "for f in dist/*.css; do echo \"/* Mastodon Bird UI v$npm_package_version - https://github.com/ronilaukkarinen/mastodon-bird-ui */\" | cat - \"$f\" > temp && mv temp \"$f\"; done",
     "clean": "rm -rf dist .parcel-cache"
   },
