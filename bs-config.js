@@ -17,9 +17,10 @@ module.exports = {
     rule: {
       match: /<\/head>/i,
       fn: function (snippet, match) {
-        // Inject CSS file into the head
+        // Inject CSS file and add mastodon-bird-ui class to html element for dev mode
         const cssInjection = `
     <link rel="stylesheet" href="/mastodon-bird-ui/${variant}.css">
+    <script>document.documentElement.classList.add('mastodon-bird-ui');</script>
 `;
         return cssInjection + snippet + match;
       },

@@ -1,5 +1,9 @@
 // Mastodon Bird UI by @rolle@mementomori.social
-// CSS variables (only for Bird UI themes and system theme)
+// CSS variables
+// - html.mastodon-bird-ui: dev mode (BrowserSync adds this class)
+// - html.theme-mastodon-bird-ui: embeds
+// - data-user-theme selectors: Mastodon core installation
+html.mastodon-bird-ui,
 html.theme-mastodon-bird-ui,
 html:has(body:not(.admin)):where(
   [data-user-theme="default"],

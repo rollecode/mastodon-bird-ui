@@ -1,22 +1,25 @@
 // Mastodon 4.6+ semantic token overrides for Bird UI
 // Each theme variation has its own token definitions
-// Exclude admin pages from Bird UI styles
+// - html.mastodon-bird-ui: dev mode (BrowserSync adds this class)
+// - html.theme-mastodon-bird-ui: embeds
+// - data-user-theme selectors: Mastodon core installation
 
 // Dark theme tokens (only for dark Bird UI themes)
+html.mastodon-bird-ui,
 html:has(body:not(.admin)).theme-dark,
 html.theme-mastodon-bird-ui,
 html:has(body:not(.admin)):where(
-  [data-user-theme="default"],
-  [data-user-theme="mastodon-bird-ui-dark"],
-  [data-user-theme="mastodon-bird-ui-dark-change-to-stars"],
-  [data-user-theme="hide-finnish"],
-  [data-user-theme="hide-finnish-change-to-stars"],
-  [data-user-theme="hide-translate-links"],
-  [data-user-theme="mastodon-bird-ui-contrast"],
-  [data-user-theme="mastodon-bird-ui-accessible"],
-  [data-user-theme="mastodon-bird-ui-accessible-hide-finnish"],
-  [data-user-theme="mastodon-bird-ui-accessible-plus"]
-) {
+    [data-user-theme="default"],
+    [data-user-theme="mastodon-bird-ui-dark"],
+    [data-user-theme="mastodon-bird-ui-dark-change-to-stars"],
+    [data-user-theme="hide-finnish"],
+    [data-user-theme="hide-finnish-change-to-stars"],
+    [data-user-theme="hide-translate-links"],
+    [data-user-theme="mastodon-bird-ui-contrast"],
+    [data-user-theme="mastodon-bird-ui-accessible"],
+    [data-user-theme="mastodon-bird-ui-accessible-hide-finnish"],
+    [data-user-theme="mastodon-bird-ui-accessible-plus"]
+  ) {
   // Text tokens
   --color-text-primary: #fff;
   --color-text-secondary: #717c9b;
@@ -174,11 +177,11 @@ html:has(body:not(.admin)):where([data-user-theme="system"]) {
 // Light theme (only for light Bird UI themes)
 html:has(body:not(.admin)).theme-light,
 html:has(body:not(.admin)):where(
-  [data-user-theme="mastodon-bird-ui-light"],
-  [data-user-theme="mastodon-bird-ui-light-hide-finnish"],
-  [data-user-theme="mastodon-bird-ui-light-hide-finnish-change-to-stars"],
-  [data-user-theme="mastodon-bird-ui-light-hide-translate-links"]
-) {
+    [data-user-theme="mastodon-bird-ui-light"],
+    [data-user-theme="mastodon-bird-ui-light-hide-finnish"],
+    [data-user-theme="mastodon-bird-ui-light-hide-finnish-change-to-stars"],
+    [data-user-theme="mastodon-bird-ui-light-hide-translate-links"]
+  ) {
   // Text tokens (Bird UI light: --color-fg: #000, --color-dim: #9388a6)
   --color-text-primary: #1f1b23;
   --color-text-secondary: #9388a6;
