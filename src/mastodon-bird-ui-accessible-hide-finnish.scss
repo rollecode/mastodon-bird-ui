@@ -1,9 +1,3 @@
 @use "index";
-@use "error";
 @use "variants/accessible";
 @use "variants/hide-finnish";
-
-// In mastodon core these styles are located under
-// app/javascript/styles/mastodon/components.scss
-@use "components/tabs-bar";
-@use "components/account-avatar";

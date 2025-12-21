@@ -1,8 +1,2 @@
 @use "index";
-@use "error";
 @use "micro-interactions/star";
-
-// In mastodon core these styles are located under
-// app/javascript/styles/mastodon/components.scss
-@use "components/tabs-bar";
-@use "components/account-avatar";
