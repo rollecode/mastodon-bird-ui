@@ -1,0 +1,9 @@
+// Fixes: Video under text layer while scrolling #173
+// https://github.com/ronilaukkarinen/mastodon-bird-ui/issues/173
+.picture-in-picture {
+  z-index: 99;
+}
+
+.picture-in-picture .video-player {
+  border: 0 !important;
+}
