@@ -1,5 +1,17 @@
 //  Define font sizes for those where missing
-body.theme-mastodon-bird-ui-accessible-plus {
+html[data-user-theme="mastodon-bird-ui-accessible-plus"],
+html.mastodon-bird-ui[data-user-theme="mastodon-bird-ui-accessible-plus"] {
+  // Override Mastodon 4.6.0+ semantic tokens for accessible theme
+  --color-bg-primary: #000;
+  --color-text-brand: #0a9ff9;
+  --color-text-brand-soft: #3db8ff;
+  --color-text-brand-on-inverted: #0a9ff9;
+  --color-bg-brand-base: #0a9ff9;
+  --color-bg-brand-base-hover: #0889d9;
+  --color-bg-brand-soft: #0a9ff926;
+  --color-bg-brand-softer: #0a9ff91a;
+
+  // Legacy variables for backward compatibility
   --color-accent: #0a9ff9;
   --color-accent-dark: #1a3ff9;
   --color-brand-mastodon-text-light: #fff;
@@ -49,6 +61,8 @@ body.theme-mastodon-bird-ui-accessible-plus {
     width: 32px;
   }
 
+  ._annual_report_announcement__wrapper h2,
+  ._annual_report_announcement__wrapper p,
   [role="dialog"] textarea,
   time:not(.invisible),
   span:not(.invisible),
@@ -124,7 +138,8 @@ body .content-warning {
 }
 
 @media (width <= 700px) {
-  body.theme-mastodon-bird-ui-accessible-plus {
+  html[data-user-theme="mastodon-bird-ui-accessible-plus"],
+  html.mastodon-bird-ui[data-user-theme="mastodon-bird-ui-accessible-plus"] {
     --font-size: 24px;
     --line-height: 30px;
   }

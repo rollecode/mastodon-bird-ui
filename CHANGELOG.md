@@ -8,6 +8,7 @@
 * Further improve workflow for indexes that both MastoAdmin install script and the SCSS structure use
 * Fix styles for .button--plain
 * Support Wrapstodon
+* Migrate accessible themes as part of mastodon-bird-ui instead of just README.md snippets
 
 ### 4.0.0rc3: 2025-12-20
 
