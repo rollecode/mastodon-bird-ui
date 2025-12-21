@@ -1,7 +1,7 @@
 // Mastodon Bird UI by @rolle@mementomori.social
 
-// CSS variables
-:root {
+// CSS variables (exclude admin pages)
+html:has(body:not(.admin)) {
   // Brand colors
   --color-brand-twitter: #1d9bf0;
   --color-brand-twitter-bg: #15202b;

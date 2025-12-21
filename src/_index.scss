@@ -1,0 +1,9 @@
+// Mastodon Bird UI - Main index
+// This file imports all Bird UI modules
+// Add new modules here when modularizing
+
+@use "tokens";
+@use "legacy/layout-single-column";
+@use "legacy/layout-multiple-columns";
+@use "components/tabs-bar";
+@use "components/account-avatar";

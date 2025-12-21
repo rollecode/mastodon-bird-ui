@@ -1,9 +1,10 @@
 // Mastodon 4.6+ semantic token overrides for Bird UI
 // Each theme variation has its own token definitions
+// Exclude admin pages from Bird UI styles
 
 // Dark theme tokens (default)
-.theme-dark,
-html:where(
+html:has(body:not(.admin)).theme-dark,
+html:has(body:not(.admin)):where(
   :not([data-user-theme="mastodon-light"], [data-user-theme="system"])
 ) {
   // Text tokens
@@ -97,7 +98,7 @@ html:where(
 }
 
 // System theme dark mode
-html:where([data-user-theme="system"]) {
+html:has(body:not(.admin)):where([data-user-theme="system"]) {
   @media (prefers-color-scheme: dark) {
     // Text tokens
     --color-text-primary: #fff;
@@ -161,8 +162,8 @@ html:where([data-user-theme="system"]) {
 }
 
 // Light theme (matches Bird UI light theme colors from _variables-light.scss)
-.theme-light,
-html:where([data-user-theme="mastodon-light"]) {
+html:has(body:not(.admin)).theme-light,
+html:has(body:not(.admin)):where([data-user-theme="mastodon-light"]) {
   // Text tokens (Bird UI light: --color-fg: #000, --color-dim: #9388a6)
   --color-text-primary: #1f1b23;
   --color-text-secondary: #9388a6;
@@ -254,7 +255,7 @@ html:where([data-user-theme="mastodon-light"]) {
 }
 
 // System theme light mode (matches Bird UI light theme colors)
-html:where([data-user-theme="system"]) {
+html:has(body:not(.admin)):where([data-user-theme="system"]) {
   @media (prefers-color-scheme: light) {
     // Text tokens
     --color-text-primary: #1f1b23;
@@ -305,8 +306,8 @@ html:where([data-user-theme="system"]) {
 }
 
 // High contrast theme
-html[data-user-theme="contrast"],
-html[data-user-theme="contrast"] .theme-dark {
+html:has(body:not(.admin))[data-user-theme="contrast"],
+html:has(body:not(.admin))[data-user-theme="contrast"] .theme-dark {
   // Higher contrast text
   --color-text-primary: #fff;
   --color-text-secondary: #a0a8c0;

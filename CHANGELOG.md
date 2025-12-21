@@ -1,6 +1,8 @@
 ### 4.0.0-alpha.0: 2025-12-21
 
 * Release install-to-mastodon.sh workflow
+* Fix styles leaking to admin
+* Improve install script, add y/n for variations and default theme
 
 ### 4.0.0rc3: 2025-12-20
 

@@ -160,100 +160,74 @@ The following instances have enabled Mastodon Bird UI for their users, based on 
 
 Mastodon Bird UI can be integrated as a **Site theme** for all instance users as optional.
 
-**Please note**: These include modifications to the Mastodon core so do it only at your own risk! I highly recommend making the modifications in a local development environment, push them to your fork, then git pull that fork to live after confirmed working.
+**Please note**: This requires Mastodon v4.6.0+ and modifies Mastodon's styles directory. Do this at your own risk! I recommend testing in a development environment first.
 
 ![image](https://github.com/ronilaukkarinen/mastodon-bird-ui/assets/1534150/b30f19e2-2835-4d92-b40d-cac9922f64b3)
 
-If you'd like a different branding for your instance like "Elephant" without any [mention of birds](https://github.com/ronilaukkarinen/mastodon-bird-ui/issues/30), use [Bird UI Theme Admins](https://github.com/mstdn/Bird-UI-Theme-Admins) by [@stux](https://mstdn.social/@stux). If you want Mastodon Bird UI to be as default, read along.
+If you'd like a different branding for your instance like "Elephant" without any [mention of birds](https://github.com/ronilaukkarinen/mastodon-bird-ui/issues/30), use [Bird UI Theme Admins](https://github.com/mstdn/Bird-UI-Theme-Admins) by [@stux](https://mstdn.social/@stux).
 
-Cd to your Mastodon directory (usually $HOME/live) you can run these bash commands (**Please note:** These add Mastodon Bird UI as name "Mastodon Bird UI (Dark)" + variants as default, while retaining the original themes as secondary themes) and run below.
+### Using the install script
 
-**Mastodon main/nightly:** `nightly`<br>
-**Mastodon stable:** `main`
-
-```bash
-export MASTODON_VERSION_FOR_BIRD_UI="main"
-
-# Create a new folder for the theme
-mkdir -p app/javascript/styles/mastodon-bird-ui
-
-# Download the CSS file
-wget -N --no-check-certificate --no-cache --no-cookies --no-http-keep-alive https://raw.githubusercontent.com/ronilaukkarinen/mastodon-bird-ui/$MASTODON_VERSION_FOR_BIRD_UI/dist/mastodon-bird-ui.css -O app/javascript/styles/mastodon-bird-ui/mastodon-bird-ui.scss
-
-# Replace theme-contrast with theme-mastodon-bird-ui-contrast and theme-mastodon-light with theme-mastodon-bird-ui-light
-sed -i -e 's/theme-contrast/theme-mastodon-bird-ui-contrast/g' -e 's/theme-mastodon-light/theme-mastodon-bird-ui-light/g' app/javascript/styles/mastodon-bird-ui/mastodon-bird-ui.scss
-
-# Create high contrast theme file
-echo -e "@use 'contrast/variables';\n@use 'application';\n@use 'contrast/diff';\n@use 'mastodon-bird-ui/mastodon-bird-ui.scss';" > app/javascript/styles/mastodon-bird-ui-contrast.scss
-
-# Create light theme file
-echo -e "@use 'mastodon-light/variables';\n@use 'application';\n@use 'mastodon-light/diff';\n@use 'mastodon-bird-ui/mastodon-bird-ui.scss';" > app/javascript/styles/mastodon-bird-ui-light.scss
-
-# Create dark theme file
-echo -e "@use 'application';\n@use 'mastodon-bird-ui/mastodon-bird-ui.scss';" > app/javascript/styles/mastodon-bird-ui-dark.scss
-
-# Overwrite config/themes.yml with new settings, Mastodon Bird UI dark as default
-echo -e "default: styles/mastodon-bird-ui-dark.scss\nmastodon-bird-ui-light: styles/mastodon-bird-ui-light.scss\nmastodon-bird-ui-contrast: styles/mastodon-bird-ui-contrast.scss\nmastodon-dark: styles/application.scss\nmastodon-light: styles/mastodon-light.scss\ncontrast: styles/contrast.scss" > config/themes.yml
-```
-
-After this you need to edit localisations in `config/locales/en.yml` (`nano config/locales/en.yml`) and add these lines:
-
-```yml
-  themes:
-     contrast: Mastodon (High contrast)
-     default: Mastodon Bird UI (Dark)
-     mastodon-bird-ui-light: Mastodon Bird UI (Light)
-     mastodon-bird-ui-contrast: Mastodon Bird UI (High contrast)
-     mastodon-light: Mastodon (Light)
-     mastodon-dark: Mastodon (Dark)
-```
-
-Same for the localizations of your choice, for example `config/locales/fi.yml` (`nano config/locales/fi.yml`):
-
-
-```yml
-  themes:
-     contrast: Mastodon (Korkea kontrasti)
-     default: Mastodon Bird UI (Tumma)
-     mastodon-bird-ui-light: Mastodon Bird UI (Vaalea)
-     mastodon-bird-ui-contrast: Mastodon Bird UI (Korkea kontrasti)
-     mastodon-light: Mastodon (Vaalea)
-     mastodon-dark: Mastodon (Tumma)
-```
-
-Make sure everything is set in place, then rebuild all the assets and restart all the services:
+Clone this repository and run the install script:
 
 ```bash
-bundle install
-rm -rfv public/packs
-yarn install
+git clone https://github.com/ronilaukkarinen/mastodon-bird-ui.git
+cd mastodon-bird-ui
+npm install
+sudo bash scripts/install-to-mastodon.sh --path /path/to/mastodon
+```
+
+The script will:
+- Copy Bird UI source files to `app/javascript/styles/mastodon-bird-ui/`
+- Generate theme entry points for all variants (dark, light, contrast, accessible, etc.)
+- Update `config/themes.yml` with the new themes
+
+After running the script, rebuild assets and restart services:
+
+```bash
+# Production
 RAILS_ENV=production bundle exec rails assets:precompile
-sudo systemctl restart mastodon-web mastodon-sidekiq mastodon-streaming
-sudo systemctl restart postgresql
+sudo systemctl restart mastodon-web
+
+# Development
+RAILS_ENV=development bundle exec rails assets:precompile
 ```
 
-And you're done!
+Users can now select Bird UI themes in Preferences > Appearance.
 
-## Installation for regular users, contributing and testing
+## Installation for regular users
 
-1. Install [Live CSS Editor](https://github.com/webextensions/live-css-editor) (or any other extension like [Stylus](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=en) that allows you to inject CSS into web pages) or use [Unite for macOS](https://www.bzgapps.com/unite) or use the [user.js by eg](https://ieji.de/@eg/110174544387143309)
+1. Install [Live CSS Editor](https://github.com/webextensions/live-css-editor) or [Stylus](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=en) browser extension
 2. Copy the contents of `dist/mastodon-bird-ui.css`
-3. Open extension and paste the CSS into the editor
-4. If you use Live CSS Editor, click 📌-icon so the styles will be remembered for the domain or if you want just to use it as needed, activate styles from the extension's popup
+3. Paste the CSS into the browser extension
+4. Click the pin icon so the styles persist for the domain
 
-## Development
+## Development and contributing
 
-For contributors and developers working on Mastodon Bird UI, we provide a live development environment with instant CSS hot-reloading using Parcel and Browsersync.
+### Testing on any Mastodon instance (including mastodon.social)
 
-### Prerequisites
+The easiest way to test changes without running a local Mastodon instance:
 
-- Node.js installed (see `.nvmrc` for the recommended version)
-- A running Mastodon instance (e.g., `mastodon.test`)
-- Dependencies installed: `npm install`
+1. Fork and clone this repository
+2. Install [nvm](https://github.com/nvm-sh/nvm) and run `nvm install` to get the correct Node.js version
+3. Install dependencies: `npm install`
+4. Build CSS: `npm run build`
+5. Install [Stylus](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne?hl=en) browser extension
+6. Navigate to any Mastodon instance (e.g., mastodon.social)
+7. Paste the contents of `dist/mastodon-bird-ui.css` into the extension
+8. Edit SCSS files in `src/`, run `npm run build`, and refresh to see changes
 
-### Development workflow
+### Local development with hot-reload
 
-Start the development server:
+For the best development experience with instant CSS injection, use a local Mastodon instance:
+
+#### Prerequisites
+
+- [nvm](https://github.com/nvm-sh/nvm) installed, then run `nvm install` to get the correct Node.js version
+- A running Mastodon instance (default: `mementomori.test`, configure in `bs-config.js`)
+- Dependencies: `npm install`
+
+#### Start development
 
 ```bash
 npm run dev
@@ -261,18 +235,28 @@ npm run dev
 
 This will:
 1. **Parcel** - Watch your CSS files and recompile on changes to `dist/`
-2. **Browsersync** - Proxy your Mastodon instance (default: `mastodon.test`) and inject the compiled CSS
+2. **Browsersync** - Proxy your Mastodon instance and inject the compiled CSS
 
-Browsersync will display a URL like `http://localhost:3000` - open that instead of your Mastodon instance directly. Any changes you make to SCSS files in `src/` will be instantly reflected in your browser without needing to reload the page.
+Open `http://localhost:3999` instead of your Mastodon instance directly. Any changes you make to SCSS files will be reflected immediately without page reload.
 
 ### Available commands
 
 ```bash
-npm run dev       # Development mode (watch + browsersync)
-npm run build     # Production build (minified, no source maps)
-npm run watch     # Parcel watch only (no browsersync)
-npm run sync      # Browsersync only (no parcel)
-npm run clean     # Clean build artifacts
+# Development with hot-reload (watch + browsersync + lint)
+npm run dev                      # Default dark theme
+npm run dev:stars                # Stars animation variant
+npm run dev:accessible           # Accessible variant
+npm run dev:accessible-plus      # Accessible plus variant
+npm run dev:accessible-hide-finnish  # Accessible + hide Finnish translate
+
+# Individual tools
+npm run watch                    # Parcel watch only
+npm run sync                     # Browsersync only
+npm run lint                     # Run stylelint
+
+# Production
+npm run build                    # Build for Custom CSS (minified, with version banner)
+npm run clean                    # Remove dist/ and .parcel-cache/
 ```
 
 ### Configuration
@@ -280,35 +264,35 @@ npm run clean     # Clean build artifacts
 - **Parcel configuration**: `.parcelrc` - Controls CSS compilation and optimization
 - **Browsersync configuration**: `bs-config.js` - Configure proxy settings, injection rules, and other options
 
-If your Mastodon instance is not at `mastodon.test`, edit `bs-config.js` and change the `proxy` value.
+If your Mastodon instance is not at `mementomori.test`, edit `bs-config.js` and change the `proxy` value.
+
+### Contributing
+
+1. Fork this repository
+2. Create a feature branch: `git checkout -b my-feature`
+3. Make your changes in `src/`
+4. Test using one of the methods above
+5. Commit your changes
+6. Push to your fork and open a Pull Request
 
 ## Updating instructions
 
-If you are using **Custom CSS**, just copy and paste the new version to **Custom CSS** textarea in the Appearance settings in your instance (https://_yourinstance_/admin/settings/appearance).
+If you are using **Custom CSS**, just copy and paste the new version of `dist/mastodon-bird-ui.css` to **Custom CSS** textarea in the Appearance settings in your instance (https://_yourinstance_/admin/settings/appearance).
 
-If you are using Mastodon Bird UI as option, get the latest changes to your instance, first cding to live folder (or to wherever your Mastodon root is), then run below.
-
-**Mastodon main/nightly:** `nightly`<br>
-**Mastodon stable:** `main`
+If you are using Mastodon Bird UI as a site theme, update to the latest version:
 
 ```bash
-export MASTODON_VERSION_FOR_BIRD_UI="main"
-
-# Download the CSS file
-wget -N --no-check-certificate --no-cache --no-cookies --no-http-keep-alive https://raw.githubusercontent.com/ronilaukkarinen/mastodon-bird-ui/$MASTODON_VERSION_FOR_BIRD_UI/dist/mastodon-bird-ui.css -O app/javascript/styles/mastodon-bird-ui/mastodon-bird-ui.scss
-
-# Replace theme-contrast with theme-mastodon-bird-ui-contrast and theme-mastodon-light with theme-mastodon-bird-ui-light
-sed -i -e 's/theme-contrast/theme-mastodon-bird-ui-contrast/g' -e 's/theme-mastodon-light/theme-mastodon-bird-ui-light/g' app/javascript/styles/mastodon-bird-ui/mastodon-bird-ui.scss
+cd mastodon-bird-ui
+git pull
+sudo bash scripts/install-to-mastodon.sh --path /path/to/mastodon
 ```
 
-After this commit changes to your Mastodon fork if you have one, then:
+Then rebuild assets and restart:
 
-```
+```bash
 RAILS_ENV=production bundle exec rails assets:precompile
-sudo service mastodon-web reload
+sudo systemctl restart mastodon-web
 ```
-
-That's it!
 
 ## Other tweaks and customizations
 
