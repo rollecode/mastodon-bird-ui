@@ -1,7 +1,8 @@
 {
   "defaultSeverity": "warning",
   "plugins": [
-    "@ronilaukkarinen/stylelint-value-no-unknown-custom-properties",
+    "stylelint-value-no-unknown-custom-properties",
+    "./stylelint-plugins/no-unused-custom-properties.js",
     "stylelint-order"
   ],
   "extends": ["stylelint-config-standard-scss"],
@@ -35,6 +36,7 @@
     "custom-property-empty-line-before": "never",
     "color-no-invalid-hex": null,
     "color-function-notation": null,
+    "color-function-alias-notation": null,
     "color-hex-length": null,
     "selector-not-notation": null,
     "selector-type-case": "lower",
@@ -72,6 +74,9 @@
         "importFrom": ["dist/mastodon-bird-ui.css"]
       }
     ],
+    "plugin/no-unused-custom-properties": [true, {
+      "cssFiles": ["dist/mastodon-bird-ui.css"]
+    }],
     "rule-empty-line-before": [
       "always-multi-line",
       {
