@@ -11,6 +11,7 @@
 * Fix hide-finnish and hide-translate-links variant selectors to match updated Mastodon HTML structure
 * Add `--color-text-brand` override for all themes to use Bird UI accent colors
 * Fix .compose-form__warning styles
+* Fix issue with image margin in compose form media item
 
 ### 4.0.0-alpha.0: 2025-12-21
 
