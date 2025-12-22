@@ -718,6 +718,8 @@ body.theme-mastodon-light.layout-single-column {
   }
 
   .detailed-status.status--has-quote .status__quote {
+    // This is Mastodon core variable
+    // stylelint-disable-next-line
     --status-gutter-width: 0;
   }
 
@@ -1799,6 +1801,9 @@ body.theme-mastodon-light.layout-single-column {
   }
 
   // When image is still loading up, reset width to 100%, Fixes #150
+  // When images are still loading the placeholder only shows up partly #150
+  // @link https://github.com/ronilaukkarinen/mastodon-bird-ui/issues/150
+  // stylelint-disable-next-line
   bodycanvas[class="media-gallery__preview"] {
     width: 100% !important;
   }
