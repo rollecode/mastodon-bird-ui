@@ -12,6 +12,7 @@
 * Add `--color-text-brand` override for all themes to use Bird UI accent colors
 * Fix .compose-form__warning styles
 * Fix issue with image margin in compose form media item
+* Move all body.embed rules outside main selector with @at-root
 
 ### 4.0.0-alpha.0: 2025-12-21
 
