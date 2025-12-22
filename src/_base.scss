@@ -433,9 +433,12 @@ body.theme-mastodon-light.layout-single-column {
     width: calc(100% - 30px) !important;
   }
 
-  body {
-    background-color: var(--color-bg);
-    color: var(--color-fg);
+  @at-root {
+    body.layout-single-column,
+    body.layout-multiple-columns {
+      background-color: var(--color-bg);
+      color: var(--color-fg);
+    }
   }
 
   .ui {

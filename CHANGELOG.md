@@ -7,6 +7,7 @@
 * Upgrade stylelint to v16
 * Add `stylelint-value-no-unknown-custom-properties` to detect undefined CSS custom properties
 * Add custom `plugin/no-unused-custom-properties` to detect unused CSS custom properties
+* Fix accessible theme background not applying due to nested body selector losing specificity
 
 ### 4.0.0-alpha.0: 2025-12-21
 
