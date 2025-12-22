@@ -7,9 +7,14 @@ const cssFile = variant || 'mastodon-bird-ui';
 const theme = variant || 'mastodon-bird-ui-dark';
 
 module.exports = {
-  proxy: 'https://mementomori.test',
+  proxy: {
+    target: 'https://mementomori.test',
+    proxyOptions: {
+      secure: false, // Allow self-signed certificates
+    },
+  },
   port: 3999,
-  files: ['dist/**/*.css'],
+  files: ['dist/*.css'],
   https: false,
   serveStatic: [
     {
@@ -37,33 +42,23 @@ module.exports = {
     rule: {
       match: /<\/head>/i,
       fn: function (snippet, match) {
-        // Inject CSS and set data-user-theme (no extra class needed)
-        const cssInjection = `
-    <link rel="stylesheet" href="/mastodon-bird-ui/${cssFile}.css">
-    <script>
-      (function() {
-        var userTheme = '${theme}';
-        document.documentElement.dataset.userTheme = userTheme;
-        // Override after React hydration
-        window.addEventListener('load', function() {
-          setTimeout(function() {
-            document.documentElement.dataset.userTheme = userTheme;
-          }, 100);
-        });
-      })();
-    </script>
-`;
+        // Inject CSS before </head>
+        const cssInjection = `<link rel="stylesheet" href="/mastodon-bird-ui/${cssFile}.css">\n`;
         return cssInjection + snippet + match;
       },
     },
   },
   open: false,
   notify: true,
-  logLevel: 'info',
+  logLevel: 'debug',
   logPrefix: 'Mastodon Bird UI',
   reloadDelay: 0,
-  reloadDebounce: 500,
+  reloadDebounce: 100,
   injectChanges: true,
-  watchEvents: ['change'],
+  watchEvents: ['change', 'add'],
+  watchOptions: {
+    usePolling: true,
+    interval: 500,
+  },
   ignore: ['node_modules', '.git', '*.map'],
 };

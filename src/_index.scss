@@ -3,8 +3,7 @@
 // Add new modules here when modularizing
 
 @use "tokens";
-@use "legacy/layout-single-column";
-@use "legacy/layout-multiple-columns";
+@use "base";
 @use "components/error";
 @use "components/tabs-bar";
 @use "components/account-avatar";

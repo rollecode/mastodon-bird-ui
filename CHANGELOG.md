@@ -1,7 +1,8 @@
 ### 4.0.0-alpha.0-1: 2025-12-22
 
 * Make dev mode authentic by using only `data-user-theme` attribute instead of artificial `.mastodon-bird-ui` class
-
+* BrowserSync conf improvements
+* Split legacy/ to base.scss and start modularization work
 
 ### 4.0.0-alpha.0: 2025-12-21
 

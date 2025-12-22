@@ -15,19 +15,11 @@ const proxy = createProxyMiddleware({
       const contentType = proxyRes.headers['content-type'] || '';
       if (contentType.includes('text/html')) {
         let html = responseBuffer.toString('utf8');
-        // Inject CSS and script before </head>
+        // Override data-user-theme attribute in HTML tag
+        html = html.replace(/data-user-theme="[^"]*"/, `data-user-theme="${theme}"`);
+        // Inject CSS before </head>
         const injection = `
     <link rel="stylesheet" href="/mastodon-bird-ui/${cssFile}.css">
-    <script>
-      (function() {
-        document.documentElement.dataset.userTheme = '${theme}';
-        window.addEventListener('load', function() {
-          setTimeout(function() {
-            document.documentElement.dataset.userTheme = '${theme}';
-          }, 100);
-        });
-      })();
-    </script>
 `;
         html = html.replace(/<\/head>/i, injection + '</head>');
         return html;
@@ -50,14 +42,18 @@ module.exports = {
     },
   ],
   port: 3999,
-  files: ['dist/**/*.css'],
+  files: ['dist/*.css'],
   open: false,
   notify: true,
   logLevel: 'info',
   logPrefix: 'Bird UI (mementomods)',
   reloadDelay: 0,
-  reloadDebounce: 500,
+  reloadDebounce: 100,
   injectChanges: true,
-  watchEvents: ['change'],
+  watchEvents: ['change', 'add'],
+  watchOptions: {
+    usePolling: true,
+    interval: 500,
+  },
   ignore: ['node_modules', '.git', '*.map'],
 };
