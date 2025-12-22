@@ -934,8 +934,9 @@ body.theme-mastodon-light.layout-single-column {
 
   // Composer form warnings
   .compose-form .compose-form__warning {
-    background-color: var(--color-light-purple);
-    color: var(--color-bg);
+    background-color: var(--color-dark);
+    border-color: var(--color-dark);
+    color: var(--color-light-text);
   }
 
   // Content warning placeholder
