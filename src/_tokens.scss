@@ -1,12 +1,10 @@
 // Mastodon 4.6+ semantic token overrides for Bird UI
 // Each theme variation has its own token definitions
-// - html.mastodon-bird-ui: dev mode (BrowserSync adds this class)
 // - html.theme-mastodon-bird-ui: embeds
-// - data-user-theme selectors: Mastodon core installation
+// - data-user-theme selectors: Mastodon core installation and dev mode
 // stylelint-disable no-duplicate-selectors
 
 // Dark theme tokens (only for dark Bird UI themes)
-html.mastodon-bird-ui,
 html:has(body:not(.admin)).theme-dark,
 html.theme-mastodon-bird-ui,
 html:has(body:not(.admin)):where(

@@ -1,6 +1,8 @@
 // Browsersync configuration for proxying mementomori.social
 const { createProxyMiddleware, responseInterceptor } = require('http-proxy-middleware');
-const variant = process.env.VARIANT || 'mastodon-bird-ui';
+const variant = process.env.VARIANT;
+const cssFile = variant || 'mastodon-bird-ui';
+const theme = variant || 'mastodon-bird-ui-dark';
 
 const proxy = createProxyMiddleware({
   target: 'https://mementomori.social',
@@ -13,11 +15,21 @@ const proxy = createProxyMiddleware({
       const contentType = proxyRes.headers['content-type'] || '';
       if (contentType.includes('text/html')) {
         let html = responseBuffer.toString('utf8');
-        // Inject CSS before </head>
-        html = html.replace(
-          /<\/head>/i,
-          `<link rel="stylesheet" href="/mastodon-bird-ui/${variant}.css">\n</head>`
-        );
+        // Inject CSS and script before </head>
+        const injection = `
+    <link rel="stylesheet" href="/mastodon-bird-ui/${cssFile}.css">
+    <script>
+      (function() {
+        document.documentElement.dataset.userTheme = '${theme}';
+        window.addEventListener('load', function() {
+          setTimeout(function() {
+            document.documentElement.dataset.userTheme = '${theme}';
+          }, 100);
+        });
+      })();
+    </script>
+`;
+        html = html.replace(/<\/head>/i, injection + '</head>');
         return html;
       }
       // Return unchanged for non-HTML (JSON, etc.)

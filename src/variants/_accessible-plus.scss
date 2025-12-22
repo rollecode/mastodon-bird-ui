@@ -1,6 +1,5 @@
 //  Define font sizes for those where missing
 html[data-user-theme="mastodon-bird-ui-accessible-plus"],
-html.mastodon-bird-ui[data-user-theme="mastodon-bird-ui-accessible-plus"],
 html:has(body:not(.admin))[data-user-theme="mastodon-bird-ui-accessible-plus"] {
   // Override Mastodon 4.6.0+ semantic tokens for accessible theme
   --color-bg-primary: #000;

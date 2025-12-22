@@ -1,6 +1,10 @@
 // Browsersync configuration for proxying mastodon.test
 // This allows you to develop mastodon-bird-ui CSS while testing against your real Mastodon instance
-const variant = process.env.VARIANT || 'mastodon-bird-ui';
+// VARIANT env var sets both CSS file and theme name (for variant-specific builds like stars, light, accessible)
+// For base theme: CSS file is mastodon-bird-ui.css, theme name is mastodon-bird-ui-dark
+const variant = process.env.VARIANT;
+const cssFile = variant || 'mastodon-bird-ui';
+const theme = variant || 'mastodon-bird-ui-dark';
 
 module.exports = {
   proxy: 'https://mementomori.test',
@@ -18,14 +22,14 @@ module.exports = {
       // Force data-user-theme attribute on html element in the HTML response
       match: /<html([^>]*)data-user-theme="[^"]*"([^>]*)>/i,
       fn: function (req, res, matchedString) {
-        return matchedString.replace(/data-user-theme="[^"]*"/, `data-user-theme="${variant}"`);
+        return matchedString.replace(/data-user-theme="[^"]*"/, `data-user-theme="${theme}"`);
       },
     },
     {
       // Add data-user-theme if not present
       match: /<html(?![^>]*data-user-theme)([^>]*)>/i,
       fn: function (req, res, matchedString) {
-        return matchedString.replace('<html', `<html data-user-theme="${variant}"`);
+        return matchedString.replace('<html', `<html data-user-theme="${theme}"`);
       },
     },
   ],
@@ -33,18 +37,17 @@ module.exports = {
     rule: {
       match: /<\/head>/i,
       fn: function (snippet, match) {
-        // Inject CSS and add class/attribute for dev mode
+        // Inject CSS and set data-user-theme (no extra class needed)
         const cssInjection = `
-    <link rel="stylesheet" href="/mastodon-bird-ui/${variant}.css">
+    <link rel="stylesheet" href="/mastodon-bird-ui/${cssFile}.css">
     <script>
       (function() {
-        var theme = '${variant}';
-        document.documentElement.classList.add('mastodon-bird-ui');
-        document.documentElement.dataset.userTheme = theme;
+        var userTheme = '${theme}';
+        document.documentElement.dataset.userTheme = userTheme;
         // Override after React hydration
         window.addEventListener('load', function() {
           setTimeout(function() {
-            document.documentElement.dataset.userTheme = theme;
+            document.documentElement.dataset.userTheme = userTheme;
           }, 100);
         });
       })();
