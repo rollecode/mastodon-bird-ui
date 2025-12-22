@@ -10,15 +10,9 @@ html:has(body:not(.admin)):where(
     [data-user-theme^="hide-"]
   ) {
   // Brand colors
-  --color-brand-twitter: #1d9bf0;
-  --color-brand-twitter-bg: #15202b;
-  --color-brand-twitter-dim: #8b98a5;
-  --color-brand-twitter-mud: #273340;
-  --color-brand-twitter-dark: #232543;
-  --color-brand-twitter-threaded-line: #425364;
   --color-brand-mastodon: #6364ff;
   --color-brand-mastodon-links: #858afa;
-  --color-brand-mastodon-bg: #1e2028;
+  --color-brand-mastodon-bg: #092080;
   --color-brand-mastodon-dim: #717c9b;
   --color-brand-mastodon-mud: rgb(39 44 64 / 50%);
   --color-brand-mastodon-dark: #232543;
