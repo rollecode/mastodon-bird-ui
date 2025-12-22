@@ -449,6 +449,13 @@ body.theme-mastodon-light.layout-single-column {
     width: 100%;
   }
 
+  // Fix dropdown options being white-on-white in dark mode
+  // https://github.com/mastodon/mastodon/issues/37332
+  select option {
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+
   // Text color
   .account__header__tabs__name h1,
   .account__header__bio .account__header__content,
