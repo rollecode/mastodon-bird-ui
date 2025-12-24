@@ -1785,8 +1785,7 @@ body.theme-mastodon-light.layout-single-column {
   // When image is still loading up, reset width to 100%, Fixes #150
   // When images are still loading the placeholder only shows up partly #150
   // @link https://github.com/ronilaukkarinen/mastodon-bird-ui/issues/150
-  // stylelint-disable-next-line
-  bodycanvas[class="media-gallery__preview"] {
+  canvas[class="media-gallery__preview"] {
     width: 100% !important;
   }
 
@@ -4736,7 +4735,10 @@ body.theme-mastodon-light.layout-single-column {
       aspect-ratio: unset !important;
     }
 
-    body.embed .spoiler-button + .media-gallery__item > .media-gallery__preview {
+    body.embed
+      .spoiler-button
+      + .media-gallery__item
+      > .media-gallery__preview {
       margin-left: unset !important;
       max-height: unset !important;
       width: 100% !important;
