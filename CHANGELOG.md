@@ -13,6 +13,7 @@
 * Fix .compose-form__warning styles
 * Fix issue with image margin in compose form media item
 * Move all body.embed rules outside main selector with @at-root
+* Advanced web interface: Slimmer drawer selections in 4.6.0+
 
 ### 4.0.0-alpha.0: 2025-12-21
 

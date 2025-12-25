@@ -1,106 +1,155 @@
 // Advanced Web Interface (multiple columns) specific styles
 // These styles only apply to the multi-column layout
-
-// Column container
-.layout-multiple-columns .column {
-  border-right: 1px solid var(--color-border);
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  width: var(--width-column);
-}
-
-// Column width variable (different from single-column's --width-compose-panel)
 .layout-multiple-columns {
+  // Column width variable (different from single-column's --width-compose-panel)
   --width-column: 380px;
-}
 
-// Drawer pager
-.layout-multiple-columns .drawer__pager,
-.layout-multiple-columns .drawer__inner {
-  background: var(--color-bg);
-}
+  // Hide the elephant mascot in drawer
+  .drawer__inner__mastodon {
+    display: none;
+  }
 
-// UI Header (AWI specific)
-.layout-multiple-columns .ui__header {
-  background-color: var(--color-bg);
-  border-bottom: 1px solid var(--color-border);
-}
+  // Slimmer drawer selections in 4.6.0+
+  .drawer__tab {
+    padding: 0;
+  }
 
-// Getting started sidebar
-.layout-multiple-columns .getting-started,
-.layout-multiple-columns .getting-started__wrapper {
-  background: var(--color-bg);
-}
+  .drawer__pager,
+  .drawer__header {
+    border: 0;
+  }
 
-.layout-multiple-columns .getting-started__trends h4 {
-  border-bottom: 1px solid var(--color-border);
-}
+  .drawer__inner > .compose-form {
+    padding: 16px 6px;
+  }
 
-// Column subheading and links
-.layout-multiple-columns .column-subheading,
-.layout-multiple-columns .column-link {
-  align-items: center;
-  color: var(--color-light-text);
-  display: flex;
-  font-size: var(--font-size);
-  font-weight: var(--font-weight-semibold);
-  gap: var(--gap-column-link);
-  overflow: visible;
-  padding-bottom: 8px;
-  padding-left: var(--gap-column-link);
-  padding-right: calc(var(--gap-column-link) * 1.5);
-  padding-top: 8px;
-}
+  // Column/panel ordering
+  .columns-area__panels__pane {
+    order: 3;
+  }
 
-// Compose form highlight (AWI specific)
-.layout-multiple-columns .compose-form__highlightable {
-  background: var(--color-bg);
-}
+  .columns-area__panels__main {
+    order: 2;
+  }
 
-.layout-multiple-columns .compose-form__highlightable:focus-within {
-  background: var(--color-bg-compose-form-focus);
-}
+  .columns-area__panels__pane--start.columns-area__panels__pane--navigational {
+    order: 1;
+  }
 
-// Scrollbar customizations for AWI
-.layout-multiple-columns .scrollable::-webkit-scrollbar {
-  height: 6px;
-  width: 6px;
-}
+  .columns-area__panels__pane--compositional {
+    flex-grow: 1;
+    height: 100vh;
+    max-width: 350px;
+    min-height: 880px;
+    position: sticky;
+    top: 0;
+  }
 
-.layout-multiple-columns .scrollable::-webkit-scrollbar-thumb {
-  background-color: var(--color-border);
-  border: 0px solid var(--color-border);
-  border-radius: 50px;
-}
+  // Drawer ordering (compose panel at end)
+  .drawer {
+    order: 999999;
+  }
 
-.layout-multiple-columns .scrollable::-webkit-scrollbar-thumb:hover {
-  background-color: var(--color-light-purple);
-}
+  // Column container
+  .column {
+    border-right: 1px solid var(--color-border);
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    width: var(--width-column);
+  }
 
-.layout-multiple-columns .scrollable::-webkit-scrollbar-thumb:active {
-  background-color: var(--color-black-coral);
-}
+  // Drawer pager
+  .drawer__pager,
+  .drawer__inner {
+    background: var(--color-bg);
+  }
 
-.layout-multiple-columns .scrollable::-webkit-scrollbar-track {
-  background: transparent;
-}
+  // UI Header (AWI specific)
+  .ui__header {
+    background-color: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+  }
 
-// Search in AWI (different positioning)
-.layout-multiple-columns .search {
-  margin-bottom: 10px;
-}
+  // Getting started sidebar
+  .getting-started,
+  .getting-started__wrapper {
+    background: var(--color-bg);
+  }
 
-.layout-multiple-columns .search__icon {
-  inset-inline-end: 10px;
-}
+  .getting-started__trends h4 {
+    border-bottom: 1px solid var(--color-border);
+  }
 
-// Column select menu
-.layout-multiple-columns .column-select__menu {
-  background: var(--color-bg);
-  border: 1px solid var(--color-border);
-}
+  // Column subheading and links
+  .column-subheading,
+  .column-link {
+    align-items: center;
+    color: var(--color-light-text);
+    display: flex;
+    font-size: var(--font-size);
+    font-weight: var(--font-weight-semibold);
+    gap: var(--gap-column-link);
+    overflow: visible;
+    padding-bottom: 8px;
+    padding-left: var(--gap-column-link);
+    padding-right: calc(var(--gap-column-link) * 1.5);
+    padding-top: 8px;
+  }
 
-.layout-multiple-columns .column-select__menu * {
-  color: var(--color-fg);
+  .navigation-panel__list-panel {
+    width: 100%;
+  }
+
+  // Compose form highlight (AWI specific)
+  .compose-form__highlightable {
+    background: var(--color-bg);
+  }
+
+  .compose-form__highlightable:focus-within {
+    background: var(--color-bg-compose-form-focus);
+  }
+
+  // Scrollbar customizations for AWI
+  .scrollable::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+  }
+
+  .scrollable::-webkit-scrollbar-thumb {
+    background-color: var(--color-border);
+    border: 0px solid var(--color-border);
+    border-radius: 50px;
+  }
+
+  .scrollable::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-light-purple);
+  }
+
+  .scrollable::-webkit-scrollbar-thumb:active {
+    background-color: var(--color-black-coral);
+  }
+
+  .scrollable::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  // Search in AWI (different positioning)
+  .search {
+    margin-bottom: 10px;
+  }
+
+  .search__icon {
+    inset-inline-end: 10px;
+  }
+
+  // Column select menu
+  .column-select__menu {
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+  }
+
+  .column-select__menu * {
+    color: var(--color-fg);
+  }
 }

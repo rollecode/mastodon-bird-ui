@@ -1,322 +1,3 @@
-@media (hover: hover) {
-  .layout-single-column button.icon-button:not(.active):hover .icon-star ~ span,
-  .layout-single-column button.icon-button:not(.active):hover .icon-star {
-    color: var(--color-yellow);
-  }
-
-  .layout-single-column button.icon-button.active:hover .icon-star ~ span {
-    color: var(--color-dim);
-  }
-}
-
-.layout-single-column .column-link .icon-star {
-  background-image: var(--icon-star-column-link);
-}
-
-.layout-single-column .column-link.active .icon-star {
-  background-image: var(--icon-star-column-link-active);
-}
-
-.layout-single-column .notification-group--favourite .icon-star,
-.layout-single-column .notification-favourite .icon-star {
-  background-image: var(--icon-star-notification);
-  background-repeat: no-repeat;
-}
-
-.layout-single-column .notification__filter-bar .active .icon-star {
-  background-image: var(--icon-star-active);
-}
-
-.layout-single-column button.icon-button:hover .icon-star ~ span {
-  color: var(--color-dim);
-}
-
-.layout-single-column button.icon-button.activate .icon-star ~ span,
-.layout-single-column button.icon-button.active .icon-star ~ span {
-  color: var(--color-yellow);
-}
-
-.layout-single-column .notification__filter-bar .icon-star,
-.layout-single-column .detailed-status__action-bar .icon-button .icon-star,
-.layout-single-column .status__action-bar .icon-button .icon-star {
-  --size-icon: 20px;
-  background-image: var(--icon-star-detailed-status-action-bar);
-}
-
-.layout-single-column
-  .notification__filter-bar
-  button.icon-button.active
-  .icon-star,
-.layout-single-column
-  .detailed-status__action-bar
-  button.icon-button.active
-  .icon-star,
-.layout-single-column .status__action-bar button.icon-button.active .icon-star {
-  background-image: var(--icon-star-detailed-status-action-bar) !important;
-  display: block;
-}
-
-// Override the heart's active:not(.activated) state with star icon
-.layout-single-column
-  .detailed-status__action-bar
-  .active:not(.activated)
-  .icon-star,
-.layout-single-column .status__action-bar .active:not(.activated) .icon-star {
-  background-image: var(
-    --icon-star-detailed-status-action-bar-active
-  ) !important;
-}
-
-html.no-reduce-motion
-  .layout-single-column
-  .icon-button.star-icon.activate
-  .icon-star {
-  background-color: unset !important;
-  background-image: var(
-    --icon-star-detailed-status-action-bar-active
-  ) !important;
-  background-position: center;
-  color: var(--color-yellow);
-  height: unset !important;
-  left: unset !important;
-  position: relative;
-  top: 0;
-  transform: none;
-  width: unset;
-}
-
-html.no-reduce-motion
-  .layout-single-column
-  .icon-button.star-icon.active
-  .icon-star {
-  animation: none !important;
-  background-image: var(
-    --icon-star-detailed-status-action-bar-active
-  ) !important;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  html.no-reduce-motion
-    .layout-single-column
-    .icon-button.star-icon.activate
-    .icon-star {
-    animation:
-      sparkles-width 0.65s 1,
-      sparkles-size 0.65s 1,
-      popping 0.5s 1 !important;
-  }
-
-  .layout-single-column
-    .detailed-status__action-bar
-    button.icon-button.star-icon.activate::after,
-  .layout-single-column
-    .status__action-bar
-    button.icon-button.activate.star-icon::after {
-    animation:
-      sparkles-width 0.65s 1,
-      sparkles-size 0.65s 1;
-  }
-
-  .layout-single-column
-    .detailed-status__action-bar
-    button.icon-button.activate.star-icon::before,
-  .layout-single-column
-    .status__action-bar
-    button.icon-button.activate.star-icon::before {
-    animation:
-      ring-border-width 0.35s 1,
-      ring-size 0.35s 1;
-  }
-}
-
-.layout-single-column
-  .detailed-status__action-bar
-  button.icon-button.star-icon.activate::after,
-.layout-single-column
-  .status__action-bar
-  button.icon-button.activate.star-icon::after {
-  background-color: unset !important;
-  content: "";
-  height: 50px !important;
-  left: 50% !important;
-  margin-left: -26px;
-  margin-top: -20px;
-  opacity: unset;
-  position: absolute;
-  top: calc(50% + 1px);
-  transform: none;
-  width: 50px !important;
-  z-index: unset;
-}
-
-html.no-reduce-motion
-  .layout-single-column
-  .icon-button.star-icon.activate
-  .icon-star,
-.layout-single-column
-  .detailed-status__action-bar
-  button.icon-button.star-icon.activate::after,
-.layout-single-column
-  .status__action-bar
-  button.icon-button.activate.star-icon::after {
-  display: block !important;
-}
-
-.layout-single-column
-  .detailed-status__action-bar
-  button.icon-button.activate.star-icon::before,
-.layout-single-column
-  .status__action-bar
-  button.icon-button.activate.star-icon::before {
-  border: 0px solid var(--color-yellow);
-  border-radius: 10em;
-  content: "";
-  height: 0em;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  transform-origin: 50px 50px;
-  width: 0em;
-}
-
-.layout-single-column .icon-button.star-icon.active,
-.layout-single-column .notification-group--favourite .star-icon,
-.layout-single-column .notification-favourite .star-icon {
-  color: var(--color-yellow);
-}
-
-.layout-single-column .status .star-icon {
-  top: -2px;
-}
-
-.layout-single-column
-  .detailed-status__action-bar
-  button.icon-button.star-icon.deactivate:hover
-  .icon-star,
-.layout-single-column
-  .status__action-bar
-  button.icon-button.deactivate.star-icon:hover
-  .icon-star,
-.layout-single-column
-  .detailed-status__action-bar
-  .icon-button.deactivate
-  .icon-star,
-.layout-single-column .detailed-status button.icon-button.deactivate .icon-star,
-.layout-single-column .status button.icon-button.deactivate .icon-star {
-  color: var(--color-dim);
-}
-
-.layout-single-column
-  .detailed-status__action-bar
-  button.icon-button.star-icon.activate:hover
-  .icon-star,
-.layout-single-column
-  .status__action-bar
-  button.icon-button.activate.star-icon:hover
-  .icon-star,
-.layout-single-column
-  .detailed-status__action-bar
-  .icon-button:hover
-  .icon-star,
-.layout-single-column .detailed-status button.icon-button:hover .icon-star,
-.layout-single-column .status button.icon-button:hover .icon-star {
-  background-image: var(
-    --icon-star-detailed-status-action-bar-active
-  ) !important;
-  color: var(--color-yellow);
-  position: relative;
-  top: 0;
-}
-
-.layout-single-column
-  .detailed-status__action-bar
-  .icon-button:focus
-  .icon-star,
-.layout-single-column .detailed-status button.icon-button:focus .icon-star,
-.layout-single-column .status button.icon-button:hover .icon-star {
-  color: var(--color-dim);
-}
-
-.layout-single-column button:focus,
-.layout-single-column .icon-button:focus {
-  outline: 0;
-}
-
-.layout-single-column button:focus-visible,
-.layout-single-column .icon-button:focus-visible {
-  outline: 2px solid var(--color-accent);
-}
-
-.layout-single-column .search__popout__menu__item {
-  align-items: initial;
-}
-
-.layout-single-column
-  .detailed-status__action-bar
-  button.icon-button.star-icon.icon-button--with-counter.star-icon.activate::after,
-.layout-single-column
-  .status__action-bar
-  button.icon-button.icon-button--with-counter.star-icon.activate.star-icon::after {
-  left: calc(50% - 8px) !important;
-  top: calc(50% + -1px) !important;
-}
-
-.layout-single-column
-  .detailed-status__action-bar
-  button.icon-button.icon-button--with-counter.activate.star-icon::before,
-.layout-single-column
-  .status__action-bar
-  button.icon-button.icon-button--with-counter.activate.star-icon::before {
-  left: calc(50% - 8px) !important;
-}
-
-.layout-single-column
-  button.icon-button.icon-button--with-counter.activate.star-icon
-  > .icon-star {
-  left: -2px !important;
-  position: absolute !important;
-  top: unset !important;
-}
-
-@media (hover: none) {
-  .layout-single-column
-    .detailed-status__action-bar
-    button.icon-button.star-icon.activate:hover
-    .icon-star,
-  .layout-single-column
-    .status__action-bar
-    button.icon-button.activate.star-icon:hover
-    .icon-star,
-  .layout-single-column
-    .detailed-status__action-bar
-    .icon-button:hover
-    .icon-star,
-  .layout-single-column .detailed-status button.icon-button:hover .icon-star,
-  .layout-single-column .status button.icon-button:hover .icon-star {
-    background-image: var(
-      --icon-star-detailed-status-action-bar-active
-    ) !important;
-  }
-}
-
-@media (width <= 888px) {
-  .layout-single-column
-    .status__action-bar
-    button.icon-button.icon-button--with-counter.star-icon.activate.star-icon::after {
-    left: calc(50% - 11px) !important;
-  }
-
-  .layout-single-column
-    .detailed-status__action-bar
-    button.icon-button.icon-button--with-counter.activate.star-icon::before,
-  .layout-single-column
-    .status__action-bar
-    button.icon-button.icon-button--with-counter.activate.star-icon::before {
-    left: calc(50% - 11px) !important;
-  }
-}
-
 @keyframes popping {
   0% {
     transform: scale(0, 0);
@@ -774,5 +455,247 @@ html.no-reduce-motion
 
   85% {
     transform: scale(1, 1);
+  }
+}
+
+html.no-reduce-motion .icon-button.star-icon.activate .icon-star {
+  background-color: unset !important;
+  background-image: var(
+    --icon-star-detailed-status-action-bar-active
+  ) !important;
+  background-position: center;
+  color: var(--color-yellow);
+  height: unset !important;
+  left: unset !important;
+  position: relative;
+  top: 0;
+  transform: none;
+  width: unset;
+}
+
+html.no-reduce-motion .icon-button.star-icon.active .icon-star {
+  animation: none !important;
+  background-image: var(
+    --icon-star-detailed-status-action-bar-active
+  ) !important;
+}
+
+html.no-reduce-motion .icon-button.star-icon.activate .icon-star {
+  animation:
+    sparkles-width 0.65s 1,
+    sparkles-size 0.65s 1,
+    popping 0.5s 1 !important;
+}
+
+html.no-reduce-motion
+  .detailed-status__action-bar
+  button.icon-button.star-icon.activate::after,
+.status__action-bar button.icon-button.activate.star-icon::after {
+  animation:
+    sparkles-width 0.65s 1,
+    sparkles-size 0.65s 1;
+}
+
+html.no-reduce-motion
+  .detailed-status__action-bar
+  button.icon-button.activate.star-icon::before,
+.status__action-bar button.icon-button.activate.star-icon::before {
+  animation:
+    ring-border-width 0.35s 1,
+    ring-size 0.35s 1;
+}
+
+html.no-reduce-motion .icon-button.star-icon.activate .icon-star,
+.detailed-status__action-bar button.icon-button.star-icon.activate::after,
+.status__action-bar button.icon-button.activate.star-icon::after {
+  display: block !important;
+}
+
+// Body level
+.layout-single-column,
+.layout-multiple-columns {
+  .column-link .icon-star {
+    background-image: var(--icon-star-column-link);
+  }
+
+  .column-link.active .icon-star {
+    background-image: var(--icon-star-column-link-active);
+  }
+
+  .notification-group--favourite .icon-star,
+  .notification-favourite .icon-star {
+    background-image: var(--icon-star-notification);
+    background-repeat: no-repeat;
+  }
+
+  .notification__filter-bar .active .icon-star {
+    background-image: var(--icon-star-active);
+  }
+
+  button.icon-button:hover .icon-star ~ span {
+    color: var(--color-dim);
+  }
+
+  button.icon-button.activate .icon-star ~ span,
+  button.icon-button.active .icon-star ~ span {
+    color: var(--color-yellow);
+  }
+
+  button.icon-button.star-icon:hover .icon-button__counter,
+  button.icon-button.star-icon:hover .icon-button__counter span {
+    color: var(--color-yellow);
+  }
+
+  .notification__filter-bar .icon-star,
+  .detailed-status__action-bar .icon-button .icon-star,
+  .status__action-bar .icon-button .icon-star {
+    --size-icon: 20px;
+    background-image: var(--icon-star-detailed-status-action-bar);
+  }
+
+  .notification__filter-bar button.icon-button.active .icon-star,
+  .detailed-status__action-bar button.icon-button.active .icon-star,
+  .status__action-bar button.icon-button.active .icon-star {
+    background-image: var(--icon-star-detailed-status-action-bar);
+    display: block;
+  }
+
+  // Override the heart's active:not(.activated) state with star icon
+  .detailed-status__action-bar .active:not(.activated) .icon-star,
+  .status__action-bar .active:not(.activated) .icon-star {
+    background-image: var(
+      --icon-star-detailed-status-action-bar-active
+    ) !important;
+  }
+
+  .detailed-status__action-bar button.icon-button.star-icon.activate::after,
+  .status__action-bar button.icon-button.activate.star-icon::after {
+    background-color: unset !important;
+    content: "";
+    height: 50px !important;
+    left: 50% !important;
+    margin-left: -26px;
+    margin-top: -20px;
+    opacity: unset;
+    position: absolute;
+    top: calc(50% + 1px);
+    transform: none;
+    width: 50px !important;
+    z-index: unset;
+  }
+
+  .detailed-status__action-bar button.icon-button.activate.star-icon::before,
+  .status__action-bar button.icon-button.activate.star-icon::before {
+    border: 0px solid var(--color-yellow);
+    border-radius: 10em;
+    content: "";
+    height: 0em;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: 50px 50px;
+    width: 0em;
+  }
+
+  .icon-button.star-icon.active,
+  .notification-group--favourite .star-icon,
+  .notification-favourite .star-icon {
+    color: var(--color-yellow);
+  }
+
+  .status .star-icon {
+    top: -2px;
+  }
+
+  .detailed-status__action-bar
+    button.icon-button.star-icon.deactivate:hover
+    .icon-star,
+  .status__action-bar button.icon-button.deactivate.star-icon:hover .icon-star,
+  .detailed-status__action-bar .icon-button.deactivate .icon-star,
+  .detailed-status button.icon-button.deactivate .icon-star,
+  .status button.icon-button.deactivate .icon-star {
+    color: var(--color-dim);
+  }
+
+  .detailed-status__action-bar
+    button.icon-button.star-icon.activate:hover
+    .icon-star,
+  .status__action-bar button.icon-button.activate.star-icon:hover .icon-star,
+  .detailed-status__action-bar .icon-button:hover .icon-star,
+  .detailed-status button.icon-button:hover .icon-star,
+  .status button.icon-button:hover .icon-star {
+    background-image: var(
+      --icon-star-detailed-status-action-bar-active
+    ) !important;
+    color: var(--color-yellow);
+    position: relative;
+    top: 0;
+  }
+
+  .detailed-status__action-bar .icon-button:focus .icon-star,
+  .detailed-status button.icon-button:focus .icon-star,
+  .status button.icon-button:hover .icon-star {
+    color: var(--color-dim);
+  }
+
+  button:focus,
+  .icon-button:focus {
+    outline: 0;
+  }
+
+  button:focus-visible,
+  .icon-button:focus-visible {
+    outline: 2px solid var(--color-accent);
+  }
+
+  .search__popout__menu__item {
+    align-items: initial;
+  }
+
+  .detailed-status__action-bar
+    button.icon-button.star-icon.icon-button--with-counter.star-icon.activate::after,
+  .status__action-bar
+    button.icon-button.icon-button--with-counter.star-icon.activate.star-icon::after {
+    left: calc(50% - 8px) !important;
+    top: calc(50% + -1px) !important;
+  }
+
+  .detailed-status__action-bar
+    button.icon-button.icon-button--with-counter.activate.star-icon::before,
+  .status__action-bar
+    button.icon-button.icon-button--with-counter.activate.star-icon::before {
+    left: calc(50% - 8px) !important;
+  }
+
+  button.icon-button.icon-button--with-counter.activate.star-icon > .icon-star {
+    left: -2px !important;
+    position: absolute !important;
+    top: unset !important;
+  }
+
+  @media (hover: hover) {
+    button.icon-button:not(.active):hover .icon-star ~ span,
+    button.icon-button:not(.active):hover .icon-star {
+      color: var(--color-yellow);
+    }
+
+    button.icon-button.active:hover .icon-star ~ span {
+      color: var(--color-dim);
+    }
+  }
+
+  @media (width <= 888px) {
+    .status__action-bar
+      button.icon-button.icon-button--with-counter.star-icon.activate.star-icon::after {
+      left: calc(50% - 11px) !important;
+    }
+
+    .detailed-status__action-bar
+      button.icon-button.icon-button--with-counter.activate.star-icon::before,
+    .status__action-bar
+      button.icon-button.icon-button--with-counter.activate.star-icon::before {
+      left: calc(50% - 11px) !important;
+    }
   }
 }
