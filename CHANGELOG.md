@@ -1,10 +1,7 @@
-### 4.0.0-alpha.0-2: 2026-01-05
+### 4.0.0-alpha.0-3: 2026-01-11
 
 * Remove dead code: fade in list panels no longer functional
 * Remove CSS properties and icons that are no longer in use since Mastodon 4.2 (replaced by buttons and drop downs, deprecated in older versions, etc.): `--icon-share-detailed-status-action-bar`, `--color-light-fuchsia-pink`, `--icon-follow-hashtag', `--icon-unfollow-hashtag`, `--icon-star`, `--icon-share`, _`--compose-form-linear-gradient`. `--active-header-box-shadow`, `--icon-users-column-link`, `--icon-plus-red`, `--icon-cross-green`, `--icon-cog`, `--icon-genderless-pronouns`, `--icon-verified`
-
-### 4.0.0-alpha.0-1: 2025-12-22
-
 * Make dev mode authentic by using only `data-user-theme` attribute instead of artificial `.mastodon-bird-ui` class
 * BrowserSync conf improvements
 * Split legacy/ to base.scss and start modularization work
@@ -19,9 +16,6 @@
 * Fix issue with image margin in compose form media item
 * Move all body.embed rules outside main selector with @at-root
 * Advanced web interface: Slimmer drawer selections in 4.6.0+
-
-### 4.0.0-alpha.0: 2025-12-21
-
 * Release install-to-mastodon.sh workflow
 * Fix styles leaking to admin
 * Improve install script, add y/n for variations and default theme
