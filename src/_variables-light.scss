@@ -3,7 +3,11 @@
 // This file is loaded by light theme entry points to override dark defaults
 // See: https://github.com/ronilaukkarinen/mastodon-bird-ui/issues/177
 
-:root {
+// Force light theme regardless of system preference or data-color-scheme attribute
+:root,
+[data-color-scheme='light'],
+[data-color-scheme='dark'],
+html:not([data-color-scheme]) {
   --color-bg: #fff;
   --color-fg: #000;
   --color-border: #e6e1ed;
