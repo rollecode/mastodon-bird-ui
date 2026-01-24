@@ -1,17 +1,9 @@
-html[data-user-theme="mastodon-bird-ui-light"],
-html[data-user-theme="mastodon-bird-ui-light-hide-finnish"],
-html[data-user-theme="mastodon-bird-ui-light-hide-finnish-change-to-stars"],
-html[data-user-theme="mastodon-bird-ui-light-hide-translate-links"],
-html:has(body:not(.admin))[data-user-theme="mastodon-bird-ui-light"],
-html:has(
-    body:not(.admin)
-  )[data-user-theme="mastodon-bird-ui-light-hide-finnish"],
-html:has(
-    body:not(.admin)
-  )[data-user-theme="mastodon-bird-ui-light-hide-finnish-change-to-stars"],
-html:has(
-    body:not(.admin)
-  )[data-user-theme="mastodon-bird-ui-light-hide-translate-links"] {
+// Mastodon Bird UI - Light theme variable overrides
+// Updated for v4.6.0-alpha.3-2026-01-24 file-based theme system
+// This file is loaded by light theme entry points to override dark defaults
+// See: https://github.com/ronilaukkarinen/mastodon-bird-ui/issues/177
+
+:root {
   --color-bg: #fff;
   --color-fg: #000;
   --color-border: #e6e1ed;
@@ -43,9 +35,19 @@ html:has(
   --color-hashtag: var(--color-accent-dark);
   --color-mention: var(--color-accent-dark);
 
-  // Mastodon 4.6.0+ semantic tokens override
-  // stylelint-disable-next-line
+  // Mastodon v4.6.0-alpha.3-2026-01-24 semantic tokens
+  // Mapped from Bird UI light theme variables above
+  --color-bg-primary: #fff;
+  --color-bg-secondary: rgb(0 0 0 / 5%);
+  --color-bg-tertiary: rgb(0 0 0 / 8%);
+  --color-bg-elevated: #fff;
+  --color-bg-overlay: #fff;
+  --color-bg-inverted: #1f1b23;
+  --color-text-primary: #1f1b23;
+  --color-text-secondary: #9388a6;
+  --color-text-tertiary: #9388a6;
   --color-text-brand: var(--color-accent-dark);
+  --color-border-primary: #e6e1ed;
 
   // Icons for light theme
   --icon-boost: url("data:image/svg+xml, %3Csvg version='1.0' xmlns='http://www.w3.org/2000/svg' width='21' height='21' viewBox='0 0 136 136'%3E%3Cpath fill='%239388a6' d='M51 23.8c0 .4 2.4 3.1 5.3 6l5.3 5.2h34.6l3.4 3.4 3.4 3.4v47.4l-6.7-6.1-6.8-6.1-4 4-4 4 13.8 13.7 13.7 13.8L122.5 99c7.4-7.4 13.5-13.7 13.5-14-.1-.3-1.7-2.3-3.6-4.4l-3.5-4-6.8 6.8-6.9 6.9-.4-25.4c-.3-23.8-.4-25.7-2.5-29.4-2.7-5.1-5.7-7.9-11.3-10.4-4.1-1.9-6.5-2.1-27.2-2.1-12.6 0-22.8.4-22.8.8zM13 37.5-.4 51l3.8 3.9 3.9 4 6.6-6.1 6.6-6 .5 24.4c.5 26.3.7 27.2 6.6 33.2 6 5.9 6.8 6.1 33.2 6.4 13.3.2 24.2-.1 24.2-.5 0-.5-2.2-3-4.8-5.6l-4.8-4.7-15.9-.1c-17.7 0-21.7-.9-24.9-5.2-2-2.7-2.1-4.2-2.3-26.5l-.2-23.6 6.7 6.7C42.5 55 46 58 46.6 58c.5 0 2.5-1.6 4.4-3.5l3.4-3.5L41 37.5C33.6 30.1 27.3 24 27 24c-.3 0-6.6 6.1-14 13.5z'/%3E%3C/svg%3E%0A");

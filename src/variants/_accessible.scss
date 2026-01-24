@@ -1,9 +1,8 @@
-html[data-user-theme="mastodon-bird-ui-accessible"],
-html[data-user-theme="mastodon-bird-ui-accessible-hide-finnish"],
-html:has(body:not(.admin))[data-user-theme="mastodon-bird-ui-accessible"],
-html:has(
-    body:not(.admin)
-  )[data-user-theme="mastodon-bird-ui-accessible-hide-finnish"] {
+// Mastodon Bird UI - Accessible variant
+// v4.6.0-alpha.3-2026-01-24 file-based theme system
+// See: https://github.com/ronilaukkarinen/mastodon-bird-ui/issues/177
+
+:root {
   // Override Mastodon 4.6.0+ semantic tokens for accessible theme
   // stylelint-disable plugin/no-unused-custom-properties
   --color-bg-primary: #000;
@@ -55,9 +54,8 @@ html:has(
   --icon-home-notification: url('data:image/svg+xml, %0A%3Csvg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"%3E%3Ctitle%3EHome%3C/title%3E%3Cpath d="M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212" fill="none" stroke="%23ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="38"/%3E%3Cpath d="M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69" fill="none" stroke="%23ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="38"/%3E%3C/svg%3E');
 }
 
-//  Define font sizes for those where missing
-html[data-user-theme="mastodon-bird-ui-accessible-plus"],
-html:has(body:not(.admin))[data-user-theme="mastodon-bird-ui-accessible-plus"] {
+// Accessible Plus font size overrides - loaded via @use cascade
+:root {
   ._annual_report_announcement__wrapper h2,
   ._annual_report_announcement__wrapper p,
   [role="dialog"] textarea,
@@ -136,11 +134,7 @@ body .content-warning {
 }
 
 @media (width <= 700px) {
-  html[data-user-theme="mastodon-bird-ui-accessible-plus"],
-  html.mastodon-bird-ui[data-user-theme="mastodon-bird-ui-accessible-plus"],
-  html:has(
-      body:not(.admin)
-    )[data-user-theme="mastodon-bird-ui-accessible-plus"] {
+  :root {
     --font-size: 24px;
     --line-height: 30px;
   }

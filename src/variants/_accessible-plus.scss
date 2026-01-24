@@ -1,6 +1,8 @@
-//  Define font sizes for those where missing
-html[data-user-theme="mastodon-bird-ui-accessible-plus"],
-html:has(body:not(.admin))[data-user-theme="mastodon-bird-ui-accessible-plus"] {
+// Mastodon Bird UI - Accessible Plus variant
+// v4.6.0-alpha.3-2026-01-24 file-based theme system
+// See: https://github.com/ronilaukkarinen/mastodon-bird-ui/issues/177
+
+:root {
   // Override Mastodon 4.6.0+ semantic tokens for accessible theme
   // stylelint-disable plugin/no-unused-custom-properties
   --color-bg-primary: #000;
@@ -135,11 +137,7 @@ body .content-warning {
 }
 
 @media (width <= 700px) {
-  html[data-user-theme="mastodon-bird-ui-accessible-plus"],
-  html.mastodon-bird-ui[data-user-theme="mastodon-bird-ui-accessible-plus"],
-  html:has(
-      body:not(.admin)
-    )[data-user-theme="mastodon-bird-ui-accessible-plus"] {
+  :root {
     --font-size: 24px;
     --line-height: 30px;
   }

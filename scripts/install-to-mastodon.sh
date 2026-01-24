@@ -286,14 +286,12 @@ EOF
     # High contrast / Accessible variants
     cat > "$STYLES_PATH/mastodon-bird-ui-contrast.scss" << 'EOF'
 @use 'common';
-@use 'mastodon/high-contrast';
 @use 'mastodon-bird-ui';
 EOF
     echo "  - mastodon-bird-ui-contrast.scss"
 
     cat > "$STYLES_PATH/mastodon-bird-ui-accessible.scss" << 'EOF'
 @use 'common';
-@use 'mastodon/high-contrast';
 @use 'mastodon-bird-ui';
 @use 'mastodon-bird-ui/variants/accessible';
 EOF
@@ -306,7 +304,6 @@ EOF
 
     cat > "$STYLES_PATH/mastodon-bird-ui-accessible-hide-finnish.scss" << 'EOF'
 @use 'common';
-@use 'mastodon/high-contrast';
 @use 'mastodon-bird-ui';
 @use 'mastodon-bird-ui/variants/accessible';
 @use 'mastodon-bird-ui/variants/hide-finnish';
@@ -321,7 +318,6 @@ EOF
 
     cat > "$STYLES_PATH/mastodon-bird-ui-accessible-plus.scss" << 'EOF'
 @use 'common';
-@use 'mastodon/high-contrast';
 @use 'mastodon-bird-ui';
 @use 'mastodon-bird-ui/variants/accessible-plus';
 EOF

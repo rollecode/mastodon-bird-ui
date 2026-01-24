@@ -1,3 +1,9 @@
+### 4.0.0-alpha.0-4: 2026-01-24
+
+* Migrate to Mastodon v4.6.0-alpha.3-2026-01-24 file-based theme system ([#177](https://github.com/ronilaukkarinen/mastodon-bird-ui/issues/177), [mastodon#37477](https://github.com/mastodon/mastodon/pull/37477))
+* Replace `data-user-theme` and `body.theme-*` selectors with `:root`, `html[data-color-scheme]`, `html[data-contrast]` ([mastodon#37523](https://github.com/mastodon/mastodon/pull/37523))
+* Add v4.6.0 semantic token overrides for light theme
+
 ### 4.0.0-alpha.0-3: 2026-01-11
 
 * Remove dead code: fade in list panels no longer functional

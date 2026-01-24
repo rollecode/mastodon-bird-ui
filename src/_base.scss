@@ -1,16 +1,9 @@
 // Mastodon Bird UI by @rolle@mementomori.social
-// Base to be modularized
-// Based on legacy/_layout-single-column.scss
+// Base styles - applies when Bird UI stylesheet is loaded
+// Updated for v4.6.0-alpha.3-2026-01-24 file-based theme system
+// See: https://github.com/ronilaukkarinen/mastodon-bird-ui/issues/177
 
-// - html.theme-mastodon-bird-ui: embeds
-// - data-user-theme selectors: Mastodon core installation and dev mode
-html.theme-mastodon-bird-ui,
-html:has(body:not(.admin)):where(
-    [data-user-theme="default"],
-    [data-user-theme="system"],
-    [data-user-theme^="mastodon-bird-ui"],
-    [data-user-theme^="hide-"]
-  ) {
+:root {
   // Brand colors
   --color-brand-mastodon: #6364ff;
   --color-brand-mastodon-links: #858afa;
@@ -205,8 +198,8 @@ html:has(body:not(.admin)):where(
   --icon-instagram: url('data:image/svg+xml, %0A%3Csvg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="%23717c9b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"%3E%3Crect x="2" y="2" width="20" height="20" rx="5" ry="5"%3E%3C/rect%3E%3Cpath d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"%3E%3C/path%3E%3Cline x1="17.5" y1="6.5" x2="17.51" y2="6.5"%3E%3C/line%3E%3C/svg%3E');
 }
 
-// High Contrast theme
-body.theme-contrast.layout-single-column {
+// High Contrast theme - v4.6.0-alpha.3-2026-01-24 uses html[data-contrast="high"]
+html[data-contrast="high"] {
   --color-dim: #b8b3c0;
 
   // Icons
@@ -249,7 +242,7 @@ body.theme-contrast.layout-single-column {
 }
 
 // Light theme
-body.theme-mastodon-light.layout-single-column {
+html[data-color-scheme="light"] {
   --color-bg: #fff;
   --color-fg: #000;
   --color-border: #e6e1ed;
