@@ -881,7 +881,8 @@ html[data-contrast="high"] {
   .reply-indicator__content a,
   .status__content a,
   .column-link--transparent.active,
-  .status__content__read-more-button {
+  .status__content__read-more-button,
+  .status__content__translate-button {
     color: var(--color-accent);
   }
 

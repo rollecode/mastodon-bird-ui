@@ -7,5 +7,4 @@ src/CLAUDE.md
 node_modules
 package-lock.json
 temp.css
-dist
 .parcel-cache

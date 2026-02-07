@@ -1,3 +1,7 @@
+### [Unreleased]
+
+* Fix translate button color not matching link color
+
 ### 4.0.0-alpha.0-4: 2026-01-24
 
 * Migrate to Mastodon v4.6.0-alpha.3-2026-01-24 file-based theme system ([#177](https://github.com/ronilaukkarinen/mastodon-bird-ui/issues/177), [mastodon#37477](https://github.com/mastodon/mastodon/pull/37477))
