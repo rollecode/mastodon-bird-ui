@@ -1,6 +1,8 @@
 ### [Unreleased]
 
 * Fix translate button color not matching link color
+* Fix extra border-left showing up in mobile devices
+* Lint build for 4.6.0-alpha.3
 
 ### 4.0.0-alpha.0-4: 2026-01-24
 

@@ -1,10 +1,9 @@
 // Mastodon Bird UI - Accessible variant
 // v4.6.0-alpha.3-2026-01-24 file-based theme system
 // See: https://github.com/ronilaukkarinen/mastodon-bird-ui/issues/177
-
 :root {
   // Override Mastodon 4.6.0+ semantic tokens for accessible theme
-  // stylelint-disable plugin/no-unused-custom-properties
+  // stylelint-disable plugin/no-unused-custom-properties, no-duplicate-selectors
   --color-bg-primary: #000;
   --color-text-brand: #0a9ff9;
   --color-text-brand-soft: #3db8ff;
@@ -158,7 +157,6 @@ body .content-warning {
 }
 
 //  Add background color for the compose form
-//  stylelint-disable-next-line no-duplicate-selectors
 .layout-multiple-columns .compose-form .compose-form__autosuggest-wrapper,
 .layout-multiple-columns .compose-form .compose-form__buttons-wrapper,
 .layout-single-column .compose-form .compose-form__autosuggest-wrapper,

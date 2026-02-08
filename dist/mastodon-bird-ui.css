@@ -1,4 +1,3 @@
-/* Mastodon Bird UI v4.0.0-alpha.0-4 - https://github.com/ronilaukkarinen/mastodon-bird-ui */
 :root {
   --color-text-primary: #fff;
   --color-text-secondary: #717c9b;
@@ -3549,6 +3548,11 @@ body.layout-single-column, body.layout-multiple-columns {
 }
 
 @media screen and (width <= 1174px) {
+  .layout-single-column .columns-area__panels__pane--navigational .navigation-panel, .layout-multiple-columns .columns-area__panels__pane--navigational .navigation-panel {
+    border-inline-start: 0;
+    border-left: 0;
+  }
+
   .layout-single-column .app-body:not(.layout-multiple-columns) .ui__header .ui__header__logo, .layout-multiple-columns .app-body:not(.layout-multiple-columns) .ui__header .ui__header__logo {
     margin-left: 3px;
   }
@@ -3729,6 +3733,12 @@ body.embed .entry .detailed-status {
   overflow: hidden;
   border: 0 !important;
   border-radius: 0 !important;
+}
+
+@media (width <= 760px) {
+  .layout-single-column .columns-area__panels__main, .layout-single-column .columns-area__panels__main > div, .layout-multiple-columns .columns-area__panels__main, .layout-multiple-columns .columns-area__panels__main > div {
+    border-left: 0;
+  }
 }
 
 .error .dialog .dialog__message p, .error .dialog .dialog__message h1 {
@@ -4101,3 +4111,4 @@ html.no-reduce-motion .detailed-status__action-bar .icon-button.star-icon.activa
 .layout-multiple-columns .column-select__menu * {
   color: var(--color-fg);
 }
+/*# sourceMappingURL=mastodon-bird-ui.css.map */
