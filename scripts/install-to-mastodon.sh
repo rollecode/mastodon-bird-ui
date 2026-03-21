@@ -197,10 +197,10 @@ ensure_entry_point() {
 }
 
 # Core entry points (always needed)
-ensure_entry_point "$STYLES_PATH/mastodon-bird-ui-dark.scss" "@use 'common';
+ensure_entry_point "$STYLES_PATH/mastodon-bird-ui-dark.scss" "@use 'application';
 @use 'mastodon-bird-ui';"
 
-ensure_entry_point "$STYLES_PATH/mastodon-bird-ui-light.scss" "@use 'common';
+ensure_entry_point "$STYLES_PATH/mastodon-bird-ui-light.scss" "@use 'application';
 @use 'mastodon-bird-ui';
 @use 'mastodon-bird-ui/variables-light';"
 
@@ -209,7 +209,7 @@ if [[ "$ADD_VARIATIONS" =~ ^[Yy]$ ]]; then
   echo ""
   echo "  Creating variation entry points..."
 
-  ensure_entry_point "$STYLES_PATH/mastodon-bird-ui-dark-change-to-stars.scss" "@use 'common';
+  ensure_entry_point "$STYLES_PATH/mastodon-bird-ui-dark-change-to-stars.scss" "@use 'application';
 @use 'mastodon-bird-ui';
 @use 'mastodon-bird-ui/stars';"
 
@@ -218,14 +218,14 @@ if [[ "$ADD_VARIATIONS" =~ ^[Yy]$ ]]; then
 @use "stars";
 EOF
 
-  ensure_entry_point "$STYLES_PATH/hide-finnish.scss" "@use 'common';
+  ensure_entry_point "$STYLES_PATH/hide-finnish.scss" "@use 'application';
 @use 'mastodon-bird-ui';
 
 .status__content__text[lang=\"fi\"] ~ .status__content__translate-button {
   display: none;
 }"
 
-  ensure_entry_point "$STYLES_PATH/hide-finnish-change-to-stars.scss" "@use 'common';
+  ensure_entry_point "$STYLES_PATH/hide-finnish-change-to-stars.scss" "@use 'application';
 @use 'mastodon-bird-ui';
 @use 'mastodon-bird-ui/stars';
 
@@ -233,33 +233,33 @@ EOF
   display: none;
 }"
 
-  ensure_entry_point "$STYLES_PATH/hide-translate-links.scss" "@use 'common';
+  ensure_entry_point "$STYLES_PATH/hide-translate-links.scss" "@use 'application';
 @use 'mastodon-bird-ui';
 
 .status__content__text[lang] ~ .status__content__translate-button {
   display: none;
 }"
 
-  ensure_entry_point "$STYLES_PATH/mastodon-bird-ui-light-hide-finnish.scss" "@use 'common';
+  ensure_entry_point "$STYLES_PATH/mastodon-bird-ui-light-hide-finnish.scss" "@use 'application';
 @use 'mastodon-bird-ui';
 @use 'mastodon-bird-ui/variables-light';
 @use 'mastodon-bird-ui/variants/hide-finnish';"
 
-  ensure_entry_point "$STYLES_PATH/mastodon-bird-ui-light-hide-finnish-change-to-stars.scss" "@use 'common';
+  ensure_entry_point "$STYLES_PATH/mastodon-bird-ui-light-hide-finnish-change-to-stars.scss" "@use 'application';
 @use 'mastodon-bird-ui';
 @use 'mastodon-bird-ui/variables-light';
 @use 'mastodon-bird-ui/stars';
 @use 'mastodon-bird-ui/variants/hide-finnish';"
 
-  ensure_entry_point "$STYLES_PATH/mastodon-bird-ui-light-hide-translate-links.scss" "@use 'common';
+  ensure_entry_point "$STYLES_PATH/mastodon-bird-ui-light-hide-translate-links.scss" "@use 'application';
 @use 'mastodon-bird-ui';
 @use 'mastodon-bird-ui/variables-light';
 @use 'mastodon-bird-ui/variants/hide-translate-links';"
 
-  ensure_entry_point "$STYLES_PATH/mastodon-bird-ui-contrast.scss" "@use 'common';
+  ensure_entry_point "$STYLES_PATH/mastodon-bird-ui-contrast.scss" "@use 'application';
 @use 'mastodon-bird-ui';"
 
-  ensure_entry_point "$STYLES_PATH/mastodon-bird-ui-accessible.scss" "@use 'common';
+  ensure_entry_point "$STYLES_PATH/mastodon-bird-ui-accessible.scss" "@use 'application';
 @use 'mastodon-bird-ui';
 @use 'mastodon-bird-ui/variants/accessible';"
 
@@ -268,7 +268,7 @@ EOF
 @use "variants/accessible";
 EOF
 
-  ensure_entry_point "$STYLES_PATH/mastodon-bird-ui-accessible-hide-finnish.scss" "@use 'common';
+  ensure_entry_point "$STYLES_PATH/mastodon-bird-ui-accessible-hide-finnish.scss" "@use 'application';
 @use 'mastodon-bird-ui';
 @use 'mastodon-bird-ui/variants/accessible';
 @use 'mastodon-bird-ui/variants/hide-finnish';"
@@ -279,7 +279,7 @@ EOF
 @use "variants/hide-finnish";
 EOF
 
-  ensure_entry_point "$STYLES_PATH/mastodon-bird-ui-accessible-plus.scss" "@use 'common';
+  ensure_entry_point "$STYLES_PATH/mastodon-bird-ui-accessible-plus.scss" "@use 'application';
 @use 'mastodon-bird-ui';
 @use 'mastodon-bird-ui/variants/accessible-plus';"
 
