@@ -1,0 +1,76 @@
+// Profile tabs styling to match old account__section-headline
+.layout-single-column,
+.layout-multiple-columns {
+  [class*="_redesign__tabs"] {
+    background-color: transparent;
+    border-bottom: 1px solid var(--color-border);
+    border-left: 0;
+    border-right: 0;
+    border-top: 1px solid var(--color-border);
+    gap: 0;
+    margin-top: 20px;
+    padding: 0;
+  }
+
+  [class*="_redesign__tabs"] a {
+    color: var(--color-dim);
+    flex: 1 1 0;
+    font-size: var(--font-size);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height);
+    padding: 12px 20px;
+    position: relative;
+    text-align: center;
+    transition: background 200ms;
+  }
+
+  [class*="_redesign__tabs"] a:hover {
+    background-color: var(--color-column-link-hover);
+    color: var(--color-light-text);
+  }
+
+  // Active tab
+  [class*="_redesign__tabs"] a.active {
+    border-bottom: 0;
+    color: var(--color-light-text);
+    font-weight: var(--font-weight-bold);
+    padding-bottom: 12px;
+  }
+
+  // Filter dropdown
+  [class*="_v2__filtersWrapper"] {
+    padding: 0;
+  }
+
+  [class*="_v2__filterOverlay"] {
+    border: 0;
+    box-shadow: 2px 4px 16px rgb(0 0 0 / 1%);
+  }
+
+  [class*="_v2__filtersWrapper"] [class*="filterSelectButton"] {
+    color: var(--color-dim);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight-semibold);
+    padding: 12px 20px;
+    transition: background 200ms;
+  }
+
+  [class*="_v2__filtersWrapper"] [class*="filterSelectButton"]:hover {
+    background-color: var(--color-column-link-hover);
+    color: var(--color-light-text);
+  }
+
+  // Active tab indicator pill
+  [class*="_redesign__tabs"] a.active::after {
+    background-color: var(--color-accent);
+    border-radius: 9999px;
+    bottom: -1px;
+    content: "";
+    display: block;
+    height: 4px;
+    left: 50%;
+    min-width: 56px;
+    position: absolute;
+    transform: translateX(-50%);
+  }
+}
