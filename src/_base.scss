@@ -6,17 +6,6 @@
 // Start base
 .layout-single-column,
 .layout-multiple-columns {
-  // Show more in server banner
-  .server-banner__meta__column {
-    max-width: 60%;
-    width: unset;
-  }
-
-  // Increase gap for server-banner__meta
-  .server-banner__meta {
-    gap: 25px;
-  }
-
   // Native Mastodon 4.1.2-nightly threaded lines
   .status__line--first {
     height: calc(100% + var(--size-avatar));

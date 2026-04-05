@@ -1,0 +1,14 @@
+// Server banner
+.layout-single-column,
+.layout-multiple-columns {
+  // Show more in server banner
+  .server-banner__meta__column {
+    max-width: 60%;
+    width: unset;
+  }
+
+  // Increase gap for server-banner__meta
+  .server-banner__meta {
+    gap: 25px;
+  }
+}
