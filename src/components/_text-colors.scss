@@ -1,0 +1,23 @@
+// Text color
+.layout-single-column,
+.layout-multiple-columns {
+  .account__header__tabs__name h1,
+  .account__header__bio .account__header__content,
+  .reply-indicator__content,
+  .status__content {
+    color: var(--color-fg);
+  }
+
+  // Link color variants
+  .status-link.hashtag {
+    color: var(--color-hashtag);
+  }
+
+  .status-link.mention:not(.hashtag) {
+    color: var(--color-mention);
+  }
+
+  .status-link.mention:not(.hashtag):not(.mention) {
+    color: var(--color-link);
+  }
+}
