@@ -1,0 +1,209 @@
+// Color overrides - unread, dim, light purple, white, account names
+.layout-single-column,
+.layout-multiple-columns {
+  // Unread message
+  .notification-ungrouped--unread,
+  .conversation--unread,
+  .notification.unread:hover,
+  .notification.unread,
+  .status__wrapper.unread,
+  .notification-group.notification-group--unread {
+    background-color: var(--color-dark);
+  }
+
+  @at-root {
+    .notification-group--unread::before,
+    .notification-ungrouped--unread::before {
+      display: none;
+    }
+  }
+
+  .notification:hover .notification__message {
+    background-color: transparent;
+  }
+
+  // Things like notification status update text that should be dim
+  .notification .status-link.mention:not(.hashtag):not(.mention),
+  .notification .status-link.hashtag,
+  .notification .status-link.mention:not(.hashtag),
+  .compose-form .autosuggest-textarea__textarea::placeholder,
+  .compose-form .icon-button,
+  .compose-form .spoiler-input__input::placeholder,
+  .compose-form__poll-wrapper .button.button-secondary,
+  .language-dropdown__dropdown__results__item__common-name,
+  .report-dialog-modal__textarea::placeholder,
+  .poll__link,
+  .muted .poll,
+  .status .status__relative-time,
+  .status .status__visibility-icon,
+  .block-modal__action-bar > div,
+  .boost-modal__action-bar > div,
+  .confirmation-modal__action-bar > div,
+  .mute-modal__action-bar > div,
+  .search-popout > h4,
+  .search__popout > h4,
+  .status-check-box__status .detailed-status__display-name,
+  .report-dialog-modal .poll__option.dialog-option > .poll__option__text,
+  .status-card .status-card__description,
+  .report-dialog-modal .dialog-option .poll__input,
+  .dropdown-menu__container__header,
+  .sign-in-banner p,
+  .navigation-bar > a,
+  .character-counter,
+  .text-icon-button,
+  .empty-column-indicator,
+  .follow_requests-unlocked_explanation,
+  .poll__footer,
+  .server-banner h4,
+  .column-header__button,
+  .search__icon .icon-times-circle,
+  .timeline-hint,
+  .status__display-name.muted,
+  .setting-text-label,
+  .account__header__bio .account__header__fields dt,
+  .account__header__bio .account__header__fields dd,
+  .link-footer p,
+  .account__header__extra__links a,
+  .trends__item__current,
+  .emoji-mart-anchor,
+  .emoji-mart,
+  .emoji-mart-anchors,
+  .reply-indicator .display-name *,
+  .status__display-name,
+  .status__prepend .status__display-name strong,
+  .status__prepend,
+  .compose-form .compose-form__modifiers,
+  .compose-form .autosuggest-textarea__textarea,
+  .compose-form .spoiler-input__input,
+  .autosuggest-textarea__suggestions,
+  .compose-form .autosuggest-account .display-name__account,
+  .compose-panel .compose-form__autosuggest-wrapper,
+  .compose-form .compose-form__buttons-wrapper,
+  .account__section-headline a,
+  .account__section-headline button,
+  .notification__filter-bar a,
+  .notification__filter-bar button,
+  .attachment-list.compact .icon,
+  .attachment-list__list a,
+  .notification__message .icon-user-plus,
+  .notification__message .icon-home,
+  .notification__message .icon-retweet,
+  .link-footer p a,
+  .trends__item__name,
+  .muted .status__content,
+  .muted .status__content a,
+  .muted .status__content p,
+  .muted .status__display-name strong,
+  .privacy-dropdown__option:not(.active) .privacy-dropdown__option__content {
+    color: var(--color-dim);
+  }
+
+  // Dim backgrounds
+  .poll__chart {
+    background-color: var(--color-dim);
+  }
+
+  // Lighter border colors
+  .report-dialog-modal .dialog-option .poll__input,
+  .poll__input {
+    border-color: var(--color-brand-mastodon-text-light);
+  }
+
+  // Light grey things
+  .navigation-bar,
+  .navigation-bar strong {
+    color: var(--color-topaz);
+  }
+
+  // CW button
+  .reply-indicator__content .status__content__spoiler-link,
+  .status__content__spoiler-link {
+    background-color: var(--color-dark);
+    color: var(--color-light-purple);
+    font-weight: var(--font-weight-semibold);
+
+    // Need to override forced styles
+    margin-left: calc(var(--gap-default) / 2) !important;
+    vertical-align: baseline;
+  }
+
+  .reply-indicator__content .status__content__spoiler-link:focus,
+  .reply-indicator__content .status__content__spoiler-link:hover,
+  .status__content .status__content__spoiler-link:focus,
+  .status__content .status__content__spoiler-link:hover {
+    background-color: var(--color-dark);
+    color: var(--color-lighter-purple);
+  }
+
+  // CW button in notifications
+  .notification .reply-indicator__content .status__content__spoiler-link,
+  .notification .status__content__spoiler-link {
+    background-color: var(--color-dark);
+    color: var(--color-dim);
+  }
+
+  .notification .reply-indicator__content .status__content__spoiler-link:focus,
+  .notification .reply-indicator__content .status__content__spoiler-link:hover,
+  .notification .status__content .status__content__spoiler-link:focus,
+  .notification .status__content .status__content__spoiler-link:hover {
+    background-color: var(--color-dark);
+    color: var(--color-dim);
+  }
+
+  // Light purple things
+  .announcements__pagination .icon-button:hover i,
+  .server-banner__introduction,
+  .account__header__tabs__name h1 small,
+  .account .account__display-name,
+  .column-settings__section,
+  .setting-toggle__label,
+  .server-banner__number-label {
+    color: var(--color-light-purple);
+  }
+
+  // White things
+  .compose-form__poll-wrapper select,
+  .actions-modal ul li:not(:empty) a,
+  .report-dialog-modal .status__content,
+  .report-dialog-modal .status__content p,
+  .report-dialog-modal .poll__option.dialog-option > .poll__option__text strong,
+  .report-dialog-modal__lead,
+  .detailed-status__display-name strong,
+  .dismissable-banner__message,
+  .privacy-dropdown__option,
+  .privacy-dropdown__option__content strong,
+  .privacy-dropdown__option.active,
+  .privacy-dropdown__option:hover .privacy-dropdown__option__content,
+  .privacy-dropdown__option:focus .privacy-dropdown__option__content,
+  .status__info .display-name strong.display-name__html,
+  .reply-indicator .display-name strong.display-name__html,
+  .notification__message,
+  .getting-started__trends h4 a,
+  .trends__item__name a,
+  .emoji-mart-search input,
+  .language-dropdown__dropdown__results__item,
+  .reply-indicator__content,
+  .compose-form .compose-form__modifiers:focus,
+  .compose-form .autosuggest-textarea__textarea,
+  .compose-form .spoiler-input__input:focus,
+  .compose-panel .compose-form__autosuggest-wrapper:focus,
+  .compose-form .compose-form__buttons-wrapper:focus,
+  .autosuggest-textarea .autosuggest-textarea__textarea:focus,
+  .account__section-headline a.active,
+  .account__section-headline button.active,
+  .notification__filter-bar a.active,
+  .notification__filter-bar button.active {
+    color: var(--color-light-text);
+  }
+
+  .muted .status__info *,
+  .muted .status__info .display-name * {
+    color: var(--color-light-text);
+  }
+
+  // Account names
+  .status__info .display-name .display-name__account,
+  .display-name__account {
+    color: var(--color-dim);
+  }
+}
