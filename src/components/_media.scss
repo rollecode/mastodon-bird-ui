@@ -1,0 +1,96 @@
+// Media proportions and gallery layout
+.layout-single-column,
+.layout-multiple-columns {
+  // Fix aspect-ratio for some videos in mastodon v4.1.5-nightly-2023-07-26
+  div[style*="aspect-ratio"]:not([class]) {
+    // It's inlined so we have to use !important
+    aspect-ratio: unset !important;
+  }
+
+  // Start: Experimental Threads-like media proportions, if the height is tall, show smaller media: https://mementomori.social/@rolle/111715197571142727
+  .media-gallery__item.standalone img,
+  .video-player .media-gallery__preview {
+    object-fit: contain;
+  }
+
+  .detailed-status .status.status--is-quote .media-gallery,
+  .status .audio-player,
+  .status .media-gallery,
+  .status .video-player,
+  .audio-player,
+  .media-gallery,
+  .media-gallery__gifv,
+  .media-gallery__preview,
+  .video-player,
+  .status__quote .status__quote-author-button {
+    margin-left: calc(var(--size-avatar) + var(--gap-default));
+  }
+
+  .spoiler-button + .media-gallery__item > .media-gallery__preview {
+    margin-left: unset !important;
+    max-height: unset !important;
+    width: 100% !important;
+  }
+
+  .media-gallery__gifv,
+  .media-gallery__preview,
+  .detailed-status .audio-player,
+  .detailed-status .media-gallery,
+  .detailed-status .media-gallery__gifv,
+  .detailed-status .media-gallery__preview,
+  .detailed-status .video-player {
+    margin-left: 0;
+  }
+
+  .media-gallery__preview {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+
+  .media-gallery__item {
+    outline: 0;
+  }
+
+  .media-gallery > .media-gallery__item:nth-of-type(odd),
+  .media-gallery > .media-gallery__item:nth-of-type(odd) > a,
+  .media-gallery__preview:nth-of-type(odd) {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .media-gallery > .media-gallery__item:nth-of-type(even),
+  .media-gallery > .media-gallery__item:nth-of-type(even) > a,
+  .media-gallery__preview:nth-of-type(even) {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+  }
+
+  // End: Experimental Threads-like media proportions, if the height is tall, show smaller media
+  .status .status-card + .more-from-author,
+  .status .status-card {
+    margin-left: calc(var(--size-avatar) + var(--gap-default));
+  }
+
+  .media-gallery.media-gallery__item--tall,
+  .media-gallery.media-gallery--layout-1,
+  .media-gallery.media-gallery--layout-2,
+  .media-gallery.media-gallery--layout-3,
+  .media-gallery.media-gallery--layout-4,
+  .media-gallery__preview,
+  .audio-player,
+  .video-player {
+    max-height: 430px;
+    width: unset !important;
+  }
+
+  // When image is still loading up, reset width to 100%, Fixes #150
+  // When images are still loading the placeholder only shows up partly #150
+  // @link https://github.com/ronilaukkarinen/mastodon-bird-ui/issues/150
+  canvas[class="media-gallery__preview"] {
+    width: 100% !important;
+  }
+
+  .media-gallery:has(.spoiler-button) .media-gallery__preview {
+    width: 100% !important;
+  }
+}
