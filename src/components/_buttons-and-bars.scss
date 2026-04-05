@@ -1,0 +1,89 @@
+// Icon buttons, badges, bars, column headers
+.layout-single-column,
+.layout-multiple-columns {
+  // Icon buttons
+  .icon-button {
+    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+    color: var(--color-dim);
+  }
+
+  // Hide/Show media button
+  .spoiler-button.spoiler-button--minified > button {
+    background-color: var(--color-bg);
+    border-radius: var(--border-radius-badges);
+    color: var(--color-ghost-button-text);
+    opacity: 0.5;
+  }
+
+  // Alt badge
+  .media-gallery__item__badges > span {
+    border-radius: var(--border-radius-badges);
+  }
+
+  // Distance from the edge
+  .spoiler-button--minified {
+    inset-inline-start: var(--badges-distance-from-edge);
+    top: var(--badges-distance-from-edge);
+  }
+
+  .media-gallery__item__badges {
+    bottom: var(--badges-distance-from-edge);
+    inset-inline-start: var(--badges-distance-from-edge);
+  }
+
+  .spoiler-button.spoiler-button--minified > button:hover,
+  .spoiler-button.spoiler-button--minified > button:focus {
+    opacity: 1;
+  }
+
+  .icon-button:hover {
+    color: var(--color-accent);
+  }
+
+  // Other general buttons
+  .column-header__button.active:active,
+  .column-header__button.active:focus,
+  .column-header__button.active:hover {
+    background-color: var(--color-focusable-toot);
+    color: var(--color-fg);
+  }
+
+  // Bars on panels
+  .ui__header,
+  .columns-area__panels__main > div.tabs-bar__wrapper,
+  .tabs-bar__wrapper {
+    backdrop-filter: blur(12px);
+    background-color: var(--color-bg-75);
+    border-color: var(--color-border);
+    padding: 0;
+  }
+
+  // Fix Create account button not clickable on mobile
+  .ui__header:has(.button[href="/auth/sign_up"]) {
+    z-index: 4;
+  }
+
+  // Hidden things
+  .column-header
+    .column-header__icon:not(.icon-user-plus):not(.icon-user-times) {
+    display: none;
+  }
+
+  // Column headers
+  .column-header {
+    font-size: var(--font-size-heading);
+    font-weight: var(--font-weight-bold);
+  }
+
+  // Column sub-headers
+  .column-subheading {
+    background-color: transparent;
+    color: var(--color-fg);
+    font-size: var(--font-size-bigger);
+    font-weight: var(--font-weight-bold);
+    text-transform: unset;
+  }
+}
