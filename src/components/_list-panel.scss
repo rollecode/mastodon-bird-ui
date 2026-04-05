@@ -1,0 +1,103 @@
+// List panel, mobile search, compact compose button, responsive breakpoints
+.layout-single-column,
+.layout-multiple-columns {
+  // Hide search (can be found under Explore in the mobile
+  .ui__header__links .button.button-secondary[href="/search"] {
+    display: none;
+  }
+
+  // More compact compose button on mobile
+  .ui__header__links .button.button-secondary[href="/publish"] {
+    background-color: var(--color-accent-dark);
+    background-image: var(--icon-compose);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 22px;
+    border: 0;
+    box-sizing: border-box;
+    color: var(--color-light-purple);
+    height: 35px;
+    width: 45px;
+  }
+
+  .ui__header__links
+    .button.button-secondary[href="/publish"]:is(:hover, :focus, :active) {
+    background-color: var(--color-accent-dark-50);
+    color: var(--color-light-purple);
+  }
+
+  .ui__header__links .button.button-secondary[href="/publish"] span {
+    color: transparent;
+  }
+
+  // List panel
+  .list-panel {
+    background-color: var(--color-bg);
+    margin: 0 0 5px;
+    padding: 5px 9px 50px 36px;
+    position: absolute;
+    top: 100%;
+  }
+
+  .lists__item__title span {
+    color: var(--color-fg);
+  }
+
+  .list-panel .icon {
+    display: none;
+  }
+
+  .app-body .list-panel .column-link span::before {
+    bottom: -10px;
+    left: -15px;
+    right: -15px;
+    top: -10px;
+  }
+
+  @media (width <= 600px) {
+    .status.status--is-quote {
+      --font-size: 14px;
+      --font-size-smaller: 12px;
+    }
+  }
+
+  @media (width >= 1175px) {
+    .columns-area__panels__main {
+      max-width: calc(var(--width-main-panel) + calc(var(--gap-default) * 4));
+      padding-left: calc(var(--gap-default) * 2);
+      padding-right: calc(var(--gap-default) * 2);
+    }
+
+    .navigation-panel {
+      margin-right: -20px;
+      padding-left: 0 !important;
+      padding-right: 20px;
+    }
+  }
+
+  @media (width >= 1175px) {
+    .ui__header,
+    .columns-area__panels__main > div.tabs-bar__wrapper,
+    .tabs-bar__wrapper {
+      margin-right: -2px;
+    }
+  }
+
+  @media (width <= 1175px) {
+    .columns-area__panels__main > div {
+      border-right: 0;
+    }
+  }
+
+  // Truncate too long unfollow buttons and texts beside it so they don't overlap in notifications
+  @media (width <= 600px) {
+    .notification .account__relationship > .button,
+    .notification__report__actions .button {
+      max-width: 24vw;
+    }
+
+    .notification__message > span > span {
+      max-width: 50vw;
+    }
+  }
+}

@@ -62,6 +62,7 @@
 * Modularize threaded lines from _base.scss to _threaded-lines.scss #172
 * Modularize scrollbars from _base.scss to _scrollbars.scss #172
 * Modularize onboarding from _base.scss to _onboarding.scss #172
+* Modularize list panel from _base.scss to _list-panel.scss #172
 * Remove select hack as it it's fixed in upstream already, ref: https://github.com/mastodon/mastodon/issues/37332
 
 ### 4.0.0-alpha.0-4: 2026-01-24
