@@ -1,0 +1,99 @@
+// Profile links layout and icon positioning
+.layout-single-column,
+.layout-multiple-columns {
+  // Truncate too long links in the profile, like Nostr
+  .account__header__bio .account__header__fields span > a:only-of-type {
+    display: block;
+    max-width: 220px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .account__header__bio .account__header__fields dt {
+    order: 1;
+  }
+
+  .account__header__bio .account__header__fields dd {
+    order: 2;
+  }
+
+  // Icon positioning - icons appear before label/value
+  .account__header__bio .account__header__fields dl::before,
+  .account__header__bio .account__header__fields dl::after {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    flex-shrink: 0;
+    order: 0;
+  }
+
+  // ...except on those that have link URLs for known platforms
+  .account__header__bio
+    .account__header__fields
+    dl:has(
+      dd[title*="github.com" i],
+      dd[title*="youtube.com" i],
+      dd[title*="youtu.be" i],
+      dd[title*="twitch.tv" i],
+      dd[title*="twitter.com" i],
+      dd[title*="x.com" i],
+      dd[title*="discord" i],
+      dd[title*="linkedin.com" i],
+      dd[title*="instagram.com" i],
+      dd[title*="ko-fi.com" i],
+      dd[title*="kofi.com" i],
+      dd[title*="paypal" i],
+      dd[title*="patreon.com" i],
+      dd[title*="threads.net" i],
+      dd[title*="bsky.app" i],
+      dd[title*="bsky.social" i],
+      dd[title*="facebook.com" i],
+      dd[title*="fb.com" i],
+      dd[title*="bandcamp.com" i],
+      dd[title*="wordpress.com" i],
+      dd[title*="wordpress.org" i],
+      dd[title*="/@" i]
+    ),
+  .account__header__bio .account__header__fields dl:has(a):not(:first-of-type) {
+    max-width: 50%;
+    order: 9999;
+    width: auto;
+  }
+
+  // Hide labels for social/link fields (keep icons only)
+  .account__header__bio
+    .account__header__fields
+    dl:has(
+      dd[title*="github.com" i],
+      dd[title*="youtube.com" i],
+      dd[title*="youtu.be" i],
+      dd[title*="twitch.tv" i],
+      dd[title*="twitter.com" i],
+      dd[title*="x.com" i],
+      dd[title*="discord" i],
+      dd[title*="linkedin.com" i],
+      dd[title*="instagram.com" i],
+      dd[title*="ko-fi.com" i],
+      dd[title*="kofi.com" i],
+      dd[title*="paypal" i],
+      dd[title*="patreon.com" i],
+      dd[title*="threads.net" i],
+      dd[title*="bsky.app" i],
+      dd[title*="bsky.social" i],
+      dd[title*="bandcamp.com" i],
+      dd[title*="facebook.com" i],
+      dd[title*="fb.com" i],
+      dd[title*="wordpress.com" i],
+      dd[title*="wordpress.org" i],
+      dd[title*="/@" i]
+    )
+    dt,
+  .account__header__bio
+    .account__header__fields
+    dl:has(a):not(:first-of-type)
+    dt {
+    display: none;
+  }
+}
