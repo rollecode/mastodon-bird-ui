@@ -1,0 +1,38 @@
+// Visual indicator about direct messages
+.layout-single-column,
+.layout-multiple-columns {
+  // @source https://github.com/mastodon/mastodon/issues/22158#issuecomment-1353661031 */
+  .notification-ungrouped--direct,
+  .detailed-status-direct {
+    position: relative;
+  }
+
+  .notification-ungrouped--mention.notification-grouped--direct::after,
+  .notification-ungrouped--mention.notification-ungrouped--direct::after {
+    border-left: 20px solid transparent;
+    border-top: 20px solid var(--color-accent);
+
+    // Add a ribbon to the corner
+    content: "";
+    height: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+  }
+
+  // Indicator for private mentions when grouped notifications are enabled in 4.3.0
+  .notification-ungrouped--direct .status__wrapper-direct::after,
+  .notification-ungrouped--direct .detailed-status-direct::after {
+    display: none;
+  }
+
+  .notification .status__wrapper-direct::after {
+    top: -40px;
+  }
+
+  // Private message conversations
+  .conversation .status__action-bar {
+    padding-left: 0;
+  }
+}
