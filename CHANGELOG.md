@@ -16,6 +16,7 @@
 * Remove select hack as it is fixed in upstream already, ref: https://github.com/mastodon/mastodon/issues/37332
 * Fix install script for new profile subdirectories
 * Fix trends item name layout for new structure
+* Remove border from profile edit avatar
 
 ### 4.0.0-alpha.0-4: 2026-01-24
 

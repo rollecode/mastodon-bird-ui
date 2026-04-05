@@ -1,0 +1,7 @@
+// Remove border from profile edit avatar
+.layout-single-column,
+.layout-multiple-columns {
+  [class*="_feat_account_edit__avatar"] > .account__avatar {
+    border: 0;
+  }
+}

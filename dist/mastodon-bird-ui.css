@@ -2328,6 +2328,10 @@ body.layout-single-column, body.layout-multiple-columns {
   background-color: #0000;
 }
 
+.layout-single-column [class*="_feat_account_edit__avatar"] > .account__avatar, .layout-multiple-columns [class*="_feat_account_edit__avatar"] > .account__avatar {
+  border: 0;
+}
+
 .layout-single-column .search__icon .icon.active, .layout-multiple-columns .search__icon .icon.active {
   opacity: 1;
 }
