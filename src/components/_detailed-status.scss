@@ -1,0 +1,66 @@
+// Detailed status view
+.layout-single-column,
+.layout-multiple-columns {
+  // Detailed status update
+  .detailed-status .status__content {
+    font-size: var(--font-size-bigger);
+    line-height: 1.4;
+  }
+
+  .detailed-status__meta {
+    color: var(--color-dim);
+    font-size: var(--font-size);
+  }
+
+  .detailed-status__favorites,
+  .detailed-status__reblogs {
+    display: inline-flex;
+    font-size: var(--font-size);
+    gap: 4px;
+  }
+
+  .detailed-status__meta .animated-number {
+    color: var(--color-light-text);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .detailed-status__reblogs {
+    font-size: var(--font-size);
+  }
+
+  // Fix alignment
+  .detailed-status__link {
+    top: 0;
+  }
+
+  // Profile lock icon alignment fix
+  .account__header__tabs__name h1 small {
+    display: flex;
+    gap: 4px;
+    margin-top: 4px;
+  }
+
+  // Textual labels for detailed metrics
+  .detailed-status__link > .icon-reply + span::after {
+    color: var(--color-dim);
+    content: "Replies";
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .detailed-status__link > .icon-retweet + span::after {
+    color: var(--color-dim);
+    content: "Boosts";
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .detailed-status__link > .icon-star + span::after {
+    color: var(--color-dim);
+    content: "Favourites";
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .detailed-status__meta .detailed-status__link .icon-star,
+  .detailed-status__meta .detailed-status__link .icon-retweet {
+    display: none;
+  }
+}
