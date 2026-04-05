@@ -1,0 +1,34 @@
+// Small layout fixes
+.layout-single-column,
+.layout-multiple-columns {
+  .status__prepend + .status {
+    padding-top: 10px;
+  }
+
+  .search__icon .icon-times-circle {
+    top: 9px;
+  }
+
+  .setting-text__toolbar {
+    align-items: center;
+  }
+
+  .timeline-hint strong {
+    display: block;
+    margin-bottom: var(--gap-default);
+  }
+
+  .timeline-hint br {
+    display: none;
+  }
+
+  // General fixes
+  .account__header__bar .avatar {
+    margin-left: 0 !important;
+  }
+
+  // Fix for button line-height
+  .button.logo-button {
+    line-height: 22px;
+  }
+}
