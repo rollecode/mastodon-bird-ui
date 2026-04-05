@@ -65,6 +65,7 @@
 * Modularize list panel from _base.scss to _list-panel.scss #172
 * Modularize mobile devices from _base.scss to layouts/_mobile.scss #172
 * Modularize embeds from _base.scss to _embeds.scss #172
+* Move remaining mobile fix to layouts/_mobile.scss and remove _base.scss #172
 * Remove select hack as it it's fixed in upstream already, ref: https://github.com/mastodon/mastodon/issues/37332
 
 ### 4.0.0-alpha.0-4: 2026-01-24

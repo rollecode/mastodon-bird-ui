@@ -289,4 +289,12 @@
       border-bottom: 0;
     }
   }
+
+  // Hide extra border from mobile in 4.6.0-alpha.3
+  @media (width <= 760px) {
+    .columns-area__panels__main,
+    .columns-area__panels__main > div {
+      border-left: 0 !important;
+    }
+  }
 }

@@ -3599,6 +3599,12 @@ body.layout-single-column, body.layout-multiple-columns {
   }
 }
 
+@media (width <= 760px) {
+  .layout-single-column .columns-area__panels__main, .layout-single-column .columns-area__panels__main > div, .layout-multiple-columns .columns-area__panels__main, .layout-multiple-columns .columns-area__panels__main > div {
+    border-left: 0 !important;
+  }
+}
+
 body.embed {
   border: 0;
   background-color: #0e1014 !important;
@@ -3729,12 +3735,6 @@ body.embed .entry .detailed-status {
   overflow: hidden;
   border: 0 !important;
   border-radius: 0 !important;
-}
-
-@media (width <= 760px) {
-  .layout-single-column .columns-area__panels__main, .layout-single-column .columns-area__panels__main > div, .layout-multiple-columns .columns-area__panels__main, .layout-multiple-columns .columns-area__panels__main > div {
-    border-left: 0;
-  }
 }
 
 .error .dialog .dialog__message p, .error .dialog .dialog__message h1 {
@@ -4107,4 +4107,3 @@ html.no-reduce-motion .detailed-status__action-bar .icon-button.star-icon.activa
 .layout-multiple-columns .column-select__menu * {
   color: var(--color-fg);
 }
-/*# sourceMappingURL=mastodon-bird-ui.css.map */
