@@ -3,21 +3,6 @@
 // Updated for v4.6.0-alpha.3-2026-01-24 file-based theme system
 // See: https://github.com/ronilaukkarinen/mastodon-bird-ui/issues/177
 
-// Vars in mobile
-@media (width <= 500px) {
-  :root {
-    --font-size: 16px;
-    --line-height: 1.4;
-    --font-size-heading: 17px;
-    --badges-distance-from-edge: 10px;
-  }
-
-  // Hide scrollbar on mobile, since we can't pick the handle anyway
-  .layout-single-column::-webkit-scrollbar {
-    display: none;
-  }
-}
-
 // Start base
 .layout-single-column,
 .layout-multiple-columns {

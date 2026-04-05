@@ -1,0 +1,14 @@
+// Vars in mobile
+@media (width <= 500px) {
+  :root {
+    --font-size: 16px;
+    --line-height: 1.4;
+    --font-size-heading: 17px;
+    --badges-distance-from-edge: 10px;
+  }
+
+  // Hide scrollbar on mobile, since we can't pick the handle anyway
+  .layout-single-column::-webkit-scrollbar {
+    display: none;
+  }
+}
