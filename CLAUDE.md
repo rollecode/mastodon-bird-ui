@@ -13,36 +13,6 @@ Mastodon Bird UI is a CSS-only theme that transforms Mastodon's default UI to re
 - `scripts/` - Installation and utility scripts
 - Parcel bundler compiles SCSS to CSS
 
-### Directory structure
-
-```
-src/
-├── mastodon-bird-ui.scss          # Main entry point (both layouts)
-├── mastodon-bird-ui-stars.scss    # Stars animation variant
-├── common/                        # Shared variables and themes
-│   ├── _tokens.scss               # Mastodon semantic token overrides
-│   ├── _variables.scss            # Bird UI-specific colors
-│   ├── _typography.scss           # Font sizes and weights
-│   ├── _layout.scss               # Gaps, sizes, border-radius
-│   ├── _effects.scss              # Gradients, shadows
-│   ├── _icons.scss                # SVG icon data URIs
-│   └── theme/                     # Theme color definitions
-├── components/                    # UI component styles
-│   ├── _basics.scss
-│   ├── _navigation.scss
-│   ├── _status.scss
-│   └── micro-interactions/        # Heart/star animations
-├── layouts/                       # Layout-specific styles
-│   └── _advanced-web-interface.scss
-├── variants/                      # Theme variant overrides
-│   ├── _accessible.scss
-│   ├── _accessible-plus.scss
-│   ├── _hide-finnish.scss
-│   └── _hide-translate-links.scss
-└── themes/                        # Entry points for Mastodon core
-    └── mastodon-bird-ui*.scss
-```
-
 ## Common commands
 
 ```bash
@@ -99,7 +69,7 @@ This theme targets Mastodon v4.6.0+ which uses a new semantic token system with 
 - Always add an empty line after headings
 - No formatting in CHANGELOG.md except `inline code` and when absolute necessary
 - Use * as bullets in CHANGELOG.md
-- No Claude watermark in commits
+- Critical: No Co-Authored by Claude watermark in commits
 - No emojis in commits or code
 - Keep CHANGELOG.md date up to date when adding entries
 - Update README badge version when releasing
