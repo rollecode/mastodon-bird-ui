@@ -41,6 +41,7 @@
 * Modularize search and inputs from _base.scss to _search-and-inputs.scss #172
 * Modularize profile basics from _base.scss to profile/_profile-basics.scss #172
 * Modularize profile link layout from _base.scss to profile/_profile-link-layout.scss #172
+* Modularize profile platform icons from _base.scss to profile/_profile-platform-icons.scss #172
 * Remove select hack as it it's fixed in upstream already, ref: https://github.com/mastodon/mastodon/issues/37332
 
 ### 4.0.0-alpha.0-4: 2026-01-24
