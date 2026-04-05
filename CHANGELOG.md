@@ -6,13 +6,13 @@
 * Fix install scripts for mementomods-2026-02-21, Ref: https://github.com/mastodon/mastodon/pull/37612
 * Fix focusable background color standing out too much for account name
 * Fix install script for Mastodon 2026-03-21 `common.scss` removal
-* Fully modularize `_base.scss` into 40+ focused module files ([#172](https://github.com/ronilaukkarinen/mastodon-bird-ui/issues/172))
+* Fully modularize `_base.scss` into 40+ focused module files #172
 * Fix Browsersync CSS hot reload by stripping CSP headers from proxied responses
-* Support new profile page structure ([#183](https://github.com/ronilaukkarinen/mastodon-bird-ui/issues/183))
-* Update Mastodon Bird UI theme tokens with latest design system tokens ([#184](https://github.com/ronilaukkarinen/mastodon-bird-ui/issues/184))
-* Add platform icon detection using `a[href]` for new profile field structure
-* Style profile number fields, tabs, badges, pinned posts for new redesign
-* Fix profile button positioning and colors
+* Support new profile page structure #183
+* Remove calendar icon for "Joined" field that are no longer in the new profile, Ref: #183
+* Style new `account_timeline_components_redesign__handleHelp`, Ref: #183
+* Fix profile button colors, Ref: #183
+* Update Mastodon Bird UI theme tokens with latest design system tokens, Closes #184
 * Remove select hack as it is fixed in upstream already, ref: https://github.com/mastodon/mastodon/issues/37332
 * Fix install script for new profile subdirectories
 
