@@ -2265,6 +2265,15 @@ body.layout-single-column, body.layout-multiple-columns {
   position: absolute;
 }
 
+.layout-single-column [class*="_redesign__avatarWrapper"], .layout-multiple-columns [class*="_redesign__avatarWrapper"] {
+  margin-top: -45px;
+  margin-left: 2px;
+}
+
+.layout-single-column [class*="_redesign__name"] span, .layout-multiple-columns [class*="_redesign__name"] span {
+  font-size: var(--font-size-bigger);
+}
+
 .layout-single-column .search__icon .icon.active, .layout-multiple-columns .search__icon .icon.active {
   opacity: 1;
 }

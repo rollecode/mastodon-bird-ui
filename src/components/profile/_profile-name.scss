@@ -1,0 +1,7 @@
+// Profile display name size
+.layout-single-column,
+.layout-multiple-columns {
+  [class*="_redesign__name"] span {
+    font-size: var(--font-size-bigger);
+  }
+}
