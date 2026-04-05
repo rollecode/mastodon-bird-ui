@@ -1,0 +1,44 @@
+// Follow/unfollow button
+.layout-single-column,
+.layout-multiple-columns {
+  .account__relationship .icon-button,
+  .notification .account__relationship .icon-button {
+    background-color: transparent;
+  }
+
+  .notification .account__relationship .icon {
+    color: var(--color-dim);
+    font-size: 20px;
+  }
+
+  .list-adder__lists .icon-times::before,
+  .account__wrapper .account__relationship .icon-button.active .icon,
+  .explore__search-results .account__relationship .icon-button.active .icon,
+  .notification .account__relationship .icon-button.active .icon {
+    color: var(--color-green);
+    opacity: 0.75;
+  }
+
+  .list-adder__lists .icon-times:hover::before,
+  .explore__search-results .icon-button.active:hover .icon,
+  .notification .account__relationship .icon-button.active:hover .icon {
+    color: var(--color-red);
+    opacity: 1;
+  }
+
+  .explore__search-results .icon-button:focus .icon,
+  .notification .account__relationship .icon-button:focus .icon,
+  .explore__search-results .icon-button.active:focus .icon,
+  .notification .account__relationship .icon-button.active:focus .icon,
+  .explore__search-results .icon-button:hover .icon,
+  .notification .account__relationship .icon-button:hover .icon {
+    color: var(--color-green);
+    opacity: 1;
+  }
+
+  .notification .account__relationship {
+    border-radius: 50%;
+    height: 24px;
+    transform: translateY(-4px);
+  }
+}
