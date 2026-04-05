@@ -16,6 +16,7 @@
 * Modularize body colors from _base.scss to _ui.scss #172
 * Modularize text and link colors from _base.scss to _text-colors.scss #172
 * Modularize logo from _base.scss to _logo.scss #172
+* Modularize typography from _base.scss to _typography.scss #172
 * Remove select hack as it it's fixed in upstream already, ref: https://github.com/mastodon/mastodon/issues/37332
 
 ### 4.0.0-alpha.0-4: 2026-01-24

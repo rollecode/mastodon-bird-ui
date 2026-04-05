@@ -1,0 +1,52 @@
+// Typography - font sizes and line heights
+.layout-single-column,
+.layout-multiple-columns {
+  // Things that should have the default font-size
+  .notification__message,
+  .status__content,
+  .account__header__tabs__name h1 small,
+  .button,
+  .status__content__read-more-button,
+  .status__prepend,
+  .status__info,
+  .status__relative-time,
+  .status__info .status__display-name,
+  .account__section-headline a,
+  .account__section-headline button,
+  .notification__filter-bar a,
+  .notification__filter-bar button {
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+  }
+
+  // Things that should have the mid font-size
+  .account__header__extra__links,
+  .columns-area__panels__pane--compositional
+    .account__header__account-note
+    textarea,
+  .account__header__content,
+  .columns-area__panels__pane--compositional
+    .compose-form
+    .autosuggest-textarea__textarea,
+  .columns-area__panels__pane--compositional
+    .compose-form
+    .spoiler-input__input {
+    font-size: var(--font-size-mid);
+    line-height: var(--line-height-mid);
+  }
+
+  // Exceptions
+  .account__header__content {
+    line-height: 18px;
+  }
+
+  // Things that will have even smaller font size
+  .account__header__account-note label {
+    font-size: var(--font-size-12);
+  }
+
+  // Line heights
+  .status__content {
+    line-height: var(--line-height);
+  }
+}
