@@ -1,0 +1,42 @@
+// Modals
+.layout-single-column,
+.layout-multiple-columns {
+  // Modal overlay
+  .modal-root__overlay {
+    // It's inlined so we have to use !important
+    background-color: var(--color-modal-overlay) !important;
+    color: var(--color-light-text) !important;
+  }
+
+  .modal-root__modal .display-name strong,
+  .modal-root__modal .status__content {
+    // It's inlined so we have to use !important
+    color: var(--color-light-text) !important;
+  }
+
+  // Hide footer buttons in modals
+  .picture-in-picture .picture-in-picture__footer {
+    display: none;
+  }
+
+  // Picture in picture fixes
+  .picture-in-picture .audio-player,
+  .picture-in-picture .video-player {
+    border-radius: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  // Report modal
+  .report-dialog-modal .poll__option.dialog-option > .poll__option__text {
+    display: grid;
+    gap: 6px;
+  }
+
+  // Improve modal icon size and accessibility
+  .image-loader .icon,
+  .media-modal__navigation .icon {
+    color: var(--color-light-text);
+    height: 32px;
+    width: 32px;
+  }
+}
