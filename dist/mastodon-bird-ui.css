@@ -2301,7 +2301,24 @@ body.layout-single-column, body.layout-multiple-columns {
 }
 
 .layout-single-column [class*="_comp_number_fields__list"], .layout-multiple-columns [class*="_comp_number_fields__list"] {
+  gap: 4px var(--gap-default);
   order: 5;
+  margin: 0;
+}
+
+.layout-single-column [class*="_comp_number_fields__item"], .layout-multiple-columns [class*="_comp_number_fields__item"] {
+  color: var(--color-dim);
+  font-size: var(--font-size);
+  flex-direction: row-reverse;
+  gap: 4px;
+  display: inline-flex;
+}
+
+.layout-single-column [class*="_comp_number_fields__item"] a, .layout-single-column [class*="_comp_number_fields__item"] strong, .layout-multiple-columns [class*="_comp_number_fields__item"] a, .layout-multiple-columns [class*="_comp_number_fields__item"] strong {
+  color: var(--color-light-text);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight-bold);
+  display: inline;
 }
 
 .layout-single-column .search__icon .icon.active, .layout-multiple-columns .search__icon .icon.active {

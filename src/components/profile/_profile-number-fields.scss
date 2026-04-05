@@ -1,4 +1,4 @@
-// Move number fields (stats) to bottom of profile header
+// Move number fields (stats) to bottom and style like old Bird UI
 .layout-single-column,
 .layout-multiple-columns {
   .account__header__bar {
@@ -10,7 +10,28 @@
     order: 4;
   }
 
+  // Move stats below bio and fields
   [class*="_comp_number_fields__list"] {
+    gap: 4px var(--gap-default);
+    margin: 0;
     order: 5;
+  }
+
+  // Reverse order: number first, label after
+  [class*="_comp_number_fields__item"] {
+    color: var(--color-dim);
+    display: inline-flex;
+    flex-direction: row-reverse;
+    font-size: var(--font-size);
+    gap: 4px;
+  }
+
+  // Number styling
+  [class*="_comp_number_fields__item"] a,
+  [class*="_comp_number_fields__item"] strong {
+    color: var(--color-light-text);
+    display: inline;
+    font-size: var(--font-size);
+    font-weight: var(--font-weight-bold);
   }
 }
