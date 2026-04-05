@@ -74,3 +74,4 @@ This theme targets Mastodon v4.6.0+ which uses a new semantic token system with 
 - Keep CHANGELOG.md date up to date when adding entries
 - Update README badge version when releasing
 - No empty lines after // comments in SCSS
+- Always commit `dist/` build files together with source changes, because users rely on the compiled CSS via the Custom CSS panel
