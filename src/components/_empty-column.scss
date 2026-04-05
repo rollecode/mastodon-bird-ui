@@ -1,0 +1,7 @@
+// Empty column indicator
+.layout-single-column,
+.layout-multiple-columns {
+  .empty-column-indicator {
+    min-height: 120px;
+  }
+}

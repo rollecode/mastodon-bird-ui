@@ -6,11 +6,6 @@
 // Start base
 .layout-single-column,
 .layout-multiple-columns {
-  // Empty column
-  .empty-column-indicator {
-    min-height: 120px;
-  }
-
   .status__prepend + .status {
     padding-top: 10px;
   }
