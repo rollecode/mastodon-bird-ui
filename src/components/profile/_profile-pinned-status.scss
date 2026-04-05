@@ -1,0 +1,57 @@
+// Pinned status header - reset grid to match Bird UI status layout
+.layout-single-column,
+.layout-multiple-columns {
+  [class*="pinnedStatusHeader"] {
+    align-items: flex-start;
+    display: flex;
+    gap: var(--gap-default);
+    height: calc(var(--gap-default) * 2);
+    justify-content: flex-start;
+  }
+
+  [class*="pinnedStatusHeader"] > .status__display-name {
+    align-items: flex-start;
+    display: inline-flex;
+    gap: var(--gap-default);
+    order: 1;
+  }
+
+  [class*="pinnedStatusHeader"] > .status__relative-time {
+    height: unset;
+    order: 3;
+  }
+
+  // Pinned badge
+  [class*="pinnedBadge"] {
+    color: var(--color-dim);
+    font-size: var(--font-size-smaller);
+    order: 2;
+    padding: 0;
+  }
+
+  [data-id="pinned-view-all"] {
+    margin-top: -10px;
+  }
+
+  // View all pinned posts button - minimal link style
+  [class*="pinnedViewAllButton"] {
+    align-items: center;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    color: var(--color-dim);
+    display: flex;
+    font-size: var(--font-size-smaller);
+    gap: 4px;
+    margin: 0;
+    margin-left: auto;
+    padding: 8px 16px;
+    width: auto;
+  }
+
+  [class*="pinnedViewAllButton"]:hover,
+  [class*="pinnedViewAllButton"]:focus {
+    background-color: transparent;
+    color: var(--color-accent);
+  }
+}

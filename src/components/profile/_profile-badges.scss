@@ -5,4 +5,9 @@
   [class*="_comp_badge__default"] {
     background-color: transparent;
   }
+
+  // Only remove padding from pinned badge, not role badge
+  [class*="pinnedBadge"] [class*="_comp_badge__default"] {
+    padding: 0;
+  }
 }
