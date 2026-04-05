@@ -6,12 +6,6 @@
 // Start base
 .layout-single-column,
 .layout-multiple-columns {
-  // Follow recommendations, "Who to follow" since Mastodon v4.3.0-alpha.1 (2024-02-01)
-  .inline-follow-suggestions__body__scrollable__card .account__avatar {
-    background-color: transparent;
-    border: 0;
-  }
-
   // Explore -> For you shade in bio
   .scrollable .account-card__bio::after {
     background: linear-gradient(270deg, var(--color-bg), transparent);

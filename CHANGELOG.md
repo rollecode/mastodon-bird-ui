@@ -45,6 +45,7 @@
 * Modularize profile verified and joined from _base.scss to profile/_profile-verified.scss #172
 * Modularize profile header from _base.scss to profile/_profile-header.scss #172
 * Modularize search icon active from _base.scss to _search-icon-active.scss #172
+* Modularize follow recommendations from _base.scss to _follow-recommendations.scss #172
 * Remove select hack as it it's fixed in upstream already, ref: https://github.com/mastodon/mastodon/issues/37332
 
 ### 4.0.0-alpha.0-4: 2026-01-24

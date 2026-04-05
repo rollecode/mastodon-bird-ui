@@ -1,0 +1,8 @@
+// Follow recommendations, "Who to follow"
+.layout-single-column,
+.layout-multiple-columns {
+  .inline-follow-suggestions__body__scrollable__card .account__avatar {
+    background-color: transparent;
+    border: 0;
+  }
+}
