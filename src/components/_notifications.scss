@@ -1,0 +1,225 @@
+// Notifications
+.layout-single-column,
+.layout-multiple-columns {
+  // "Your lists" view
+  .column-subheading ~ article {
+    padding-left: var(--gap-default);
+    padding-right: var(--gap-default);
+  }
+
+  // Notifications
+  .notification-group,
+  .notification__message {
+    display: grid;
+    gap: var(--gap-default);
+    grid-template-columns: minmax(0, var(--size-avatar)) minmax(0, 1fr);
+  }
+
+  .notification__message {
+    height: calc(var(--gap-default) * 2);
+  }
+
+  // Make sure notification user is clickable
+  .notification__display-name {
+    position: relative;
+    z-index: 99;
+  }
+
+  // Hack to display notification message title on one line
+  .notification__message > span {
+    display: block;
+    margin-top: calc(var(--size-avatar-small) + 6px);
+    overflow: visible;
+  }
+
+  .notification__message > span > span {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .notification__message > div {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .muted .status__avatar {
+    opacity: 1;
+  }
+
+  .notification .account__avatar-overlay-base {
+    display: none;
+  }
+
+  .notification .account__avatar,
+  .notification .account__avatar-overlay-overlay .account__avatar,
+  .notification .account__avatar-overlay-overlay {
+    // Need to override inline styles
+    height: var(--size-avatar-small) !important;
+    min-height: var(--size-avatar-small) !important;
+    min-width: var(--size-avatar-small) !important;
+    position: absolute;
+    width: var(--size-avatar-small) !important;
+  }
+
+  .notification .status__info .status__display-name {
+    overflow: visible;
+  }
+
+  // Fixes: User avatars in notifications are sometimes links to my profile instead of theirs #25
+  .notification.notification-reblog .status__info .status__display-name,
+  .notification.notification-follow .status__info .status__display-name,
+  .notification-group--favourite .status__info .status__display-name,
+  .notification.notification-favourite .status__info .status__display-name {
+    pointer-events: none;
+  }
+
+  // Hack to show follow notification more minimal way
+  .notification.notification-admin-report .notification__report,
+  .notification.notification-admin-sign-up .account__wrapper,
+  .notification.notification-update .account__wrapper,
+  .notification.notification-follow .account__wrapper {
+    position: relative;
+  }
+
+  .notification.notification-admin-report .account__avatar-overlay-overlay {
+    top: calc(-1 * calc(var(--size-avatar-small) + var(--gap-default) + 4px));
+  }
+
+  // Hack to show follow notification more minimal way
+  .notification.notification-poll .display-name,
+  .notification.notification-update .display-name__html,
+  .notification.notification-update .display-name__account,
+  .notification.notification-admin-sign-up .display-name__html,
+  .notification.notification-admin-sign-up .display-name,
+  .notification.notification-follow .display-name__html {
+    visibility: hidden;
+  }
+
+  .notification.notification-update .account__avatar-wrapper,
+  .notification.notification-admin-sign-up .account__avatar-wrapper,
+  .notification.notification-follow .account__avatar-wrapper,
+  .notification .account__avatar-overlay {
+    left: calc(var(--size-avatar-small) + var(--gap-default) + 18px);
+    margin-top: calc(-1 * calc(var(--size-avatar-small) + var(--gap-default)));
+    position: absolute;
+    top: 4px;
+  }
+
+  .notification.notification-admin-report .account__avatar-overlay {
+    margin-top: 0;
+    top: 0;
+  }
+
+  .notification.notification-status .notification__message > span {
+    display: none;
+  }
+
+  .notification.notification-follow .verified-badge,
+  .notification.notification-admin-sign-up .account__contents,
+  .notification.notification-follow .account__contents,
+  .notification.notification-follow .display-name,
+  .notification.notification-admin-sign-up .display-name + span,
+  .notification.notification-follow .display-name + span,
+  .notification-group--favourite .status__wrapper-direct .status__prepend,
+  .notification.notification-favourite .status__wrapper-direct .status__prepend,
+  .notification.notification-reblog .display-name,
+  .notification-group--favourite .display-name,
+  .notification.notification-favourite .display-name {
+    display: none;
+  }
+
+  // Minimal boost notification fix
+  .notification.notification-reblog .notification__message > span {
+    margin-top: calc(var(--size-avatar-small) + calc(var(--gap-default) / 2));
+  }
+
+  // Minimal follow notification fix
+  .notification.notification-follow .notification__message > span {
+    margin-top: calc(
+      calc(var(--size-avatar-small) + calc(var(--gap-default) / 2)) + 6px
+    );
+  }
+
+  .notification.notification.notification-admin-sign-up .account__relationship,
+  .notification.notification-follow .account__relationship {
+    transform: translateY(-8px);
+  }
+
+  .notification.notification-follow .account__avatar-wrapper {
+    top: 6px;
+  }
+
+  // Minimal fav notification fix
+  .notification.notification-favourite .notification__message > span {
+    margin-top: calc(var(--size-avatar-small) + calc(var(--gap-default) / 2));
+  }
+
+  // If a status content is empty and there's only attachment, remove gap
+  .notification
+    .status__content:has(.status__content__text:empty)
+    + .attachment-list {
+    margin-top: 0;
+  }
+
+  // Less space before attachments if no status content
+  .status .status__content:has(.status__content__text:empty) + .audio-player,
+  .status .status__content:has(.status__content__text:empty) + .video-player,
+  .status .status__content:has(.status__content__text:empty) + .media-gallery,
+  .detailed-status
+    .status__content:has(.status__content__text:empty)
+    + .audio-player,
+  .detailed-status
+    .status__content:has(.status__content__text:empty)
+    + .video-player,
+  .detailed-status
+    .status__content:has(.status__content__text:empty)
+    + .media-gallery:not(.compose-form__uploads) {
+    margin-top: calc(var(--gap-default) / 2);
+  }
+
+  .status__prepend {
+    padding-left: calc(var(--size-avatar) + 2px);
+  }
+
+  .notification.notification-update .account__display-name,
+  .notification.notification-follow .account__display-name {
+    display: inline-flex;
+    gap: var(--gap-default);
+    padding-left: calc(var(--size-avatar) + var(--gap-default));
+  }
+
+  // Admin reports and other admin notifications
+  .notification-admin-report .notification__report {
+    border-color: var(--color-border);
+    display: flex;
+    font-size: var(--font-size);
+    gap: 16px;
+    margin-top: 22px;
+    padding: 16px;
+    padding-left: calc(var(--size-avatar) + var(--gap-default));
+  }
+
+  .notification-admin-report .notification__report__details {
+    color: var(--color-dim);
+    font-size: var(--font-size);
+  }
+
+  .notification-admin-report .notification__report__details strong {
+    font-weight: var(--font-weight-regular);
+  }
+
+  // Revert hack for notification admin message that has no avatar visible
+  .notification-admin-report .notification__message > span {
+    display: block;
+    margin-top: calc(var(--size-avatar-small) + 4px);
+    overflow: visible;
+  }
+
+  // Hide things in notifications
+  .notification .status__relative-time,
+  .notification .status__info::before {
+    display: none;
+  }
+}
