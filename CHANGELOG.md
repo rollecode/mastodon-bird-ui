@@ -1,3 +1,8 @@
+### [Unreleased]
+
+* Fix inconsistent private mention styles between conversations and notifications, Closes #181
+* Add border-bottom to `follow_requests-unlocked_explanation`
+
 ### 4.0.0-alpha.6: 2026-04-06
 
 * Fix translate button color not matching link color

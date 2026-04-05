@@ -35,4 +35,27 @@
   .conversation .status__action-bar {
     padding-left: 0;
   }
+
+  // Hide default left border on unread conversations
+  .conversation.unread::before {
+    border-inline-start: 0;
+  }
+
+  // Unread conversation - background and ribbon
+  .conversation.unread {
+    // stylelint-disable-next-line
+    background: var(--color-bg-brand-softest);
+    position: relative;
+  }
+
+  .conversation.unread::after {
+    border-left: 20px solid transparent;
+    border-top: 20px solid var(--color-accent);
+    content: "";
+    height: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+  }
 }
