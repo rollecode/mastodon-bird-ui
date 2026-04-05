@@ -7,6 +7,7 @@
 * Fix focusable background color standing out too much for account name
 * Fix install script for Mastodon 2026-03-21 `common.scss` removal
 * Modularize base variables from _base.scss to _variables-base.scss #172
+* Modularize high contrast variables from _base.scss to _variables-high-contrast.scss #172
 
 ### 4.0.0-alpha.0-4: 2026-01-24
 
