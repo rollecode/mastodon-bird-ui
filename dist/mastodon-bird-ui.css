@@ -2255,6 +2255,16 @@ body.layout-single-column, body.layout-multiple-columns {
   transform: translateX(-50%);
 }
 
+.layout-single-column .account__header__bar, .layout-multiple-columns .account__header__bar {
+  position: relative;
+}
+
+.layout-single-column .account__header__buttons, .layout-multiple-columns .account__header__buttons {
+  right: 16px;
+  top: var(--gap-default);
+  position: absolute;
+}
+
 .layout-single-column .search__icon .icon.active, .layout-multiple-columns .search__icon .icon.active {
   opacity: 1;
 }
