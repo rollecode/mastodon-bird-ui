@@ -129,12 +129,11 @@ copy_if_exists() {
     echo -e "  ${GREEN}Updated:${NC} $(basename "$dest")"
     return 0
   fi
-  return 1
+  return 0
 }
 
 # Core module files
 copy_if_exists "$SRC_DIR/_index.scss" "$BIRD_UI_PATH/_index.scss"
-copy_if_exists "$SRC_DIR/_variables-light.scss" "$BIRD_UI_PATH/_variables-light.scss"
 
 # Variables
 for f in "$SRC_DIR/variables/"_*.scss; do
