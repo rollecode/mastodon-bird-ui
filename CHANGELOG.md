@@ -56,6 +56,7 @@
 * Modularize icon replacements from _base.scss to _icon-replacements.scss #172
 * Modularize media border radius from _base.scss to _media-border-radius.scss #172
 * Modularize hide autoplay gifs from _base.scss to _hide-autoplay-gifs.scss #172
+* Modularize focus colors from _base.scss to _focus-colors.scss #172
 * Remove select hack as it it's fixed in upstream already, ref: https://github.com/mastodon/mastodon/issues/37332
 
 ### 4.0.0-alpha.0-4: 2026-01-24

@@ -6,12 +6,6 @@
 // Start base
 .layout-single-column,
 .layout-multiple-columns {
-  // More distinct focus color for accessibility, instead of just white
-  input:focus-visible {
-    outline-color: var(--color-accent);
-    outline-style: solid;
-  }
-
   // Destructive colors (For you -suggestions, users when focused to the follow button
   .button.logo-button.button--destructive:active,
   .button.logo-button.button--destructive:focus {
