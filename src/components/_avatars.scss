@@ -1,0 +1,97 @@
+// Avatars, borders, hover/focus effects
+.layout-single-column,
+.layout-multiple-columns {
+  // Avatar
+  .status__avatar[style="width: 46px; height: 46px;"],
+  .account__avatar[style="width: 46px; height: 46px;"],
+  .status__avatar {
+    // Need to override inline styles
+    height: var(--size-avatar) !important;
+    max-height: var(--size-avatar) !important;
+    max-width: var(--size-avatar) !important;
+    min-height: var(--size-avatar) !important;
+    min-width: var(--size-avatar) !important;
+
+    // Need to override inline styles
+    width: var(--size-avatar) !important;
+  }
+
+  // Improve "others you know follow" avatar group
+  .avatar-group--compact .account__avatar {
+    box-shadow: none;
+  }
+
+  // Avatars
+  .account-card__title__avatar .account__avatar,
+  .account-card__title__avatar img,
+  .account__avatar > img,
+  .column > .scrollable .status__avatar img {
+    background-color: var(--color-bg);
+    border: 0;
+    border-radius: 50%;
+    box-shadow: rgb(255 255 255 / 3%) 0 0 2px inset;
+  }
+
+  // Things that should not have border
+  .column-inline-form,
+  .column > .scrollable,
+  .error-column,
+  .getting-started,
+  .regeneration-indicator,
+  .column-header {
+    border: 0;
+  }
+
+  .column-header__wrapper.active {
+    box-shadow: none;
+  }
+
+  .column-header__wrapper.active::before {
+    background: var(--active-header-radial-gradient);
+  }
+
+  .compose-form__autosuggest-wrapper,
+  .compose-form__buttons-wrapper {
+    border: 0;
+  }
+
+  article,
+  .status__prepend,
+  .notification__message,
+  .status {
+    transition:
+      background-color 200ms,
+      border-color 200ms,
+      opacity 200ms;
+  }
+
+  // Toot hover effect
+  article:focus,
+  article:hover {
+    background-color: var(--color-light-shade);
+  }
+
+  // Focusable toot and other hilighted items
+  .compose-form .autosuggest-textarea__suggestions__item.selected,
+  .compose-form .autosuggest-textarea__suggestions__item:active,
+  .compose-form .autosuggest-textarea__suggestions__item:focus,
+  .compose-form .autosuggest-textarea__suggestions__item:hover,
+  .focusable:focus {
+    background: var(--color-focusable-toot);
+  }
+
+  // Search panel that opens when focusing Search or paste URL field
+  .explore__search-header .search__popout,
+  .compose-form__poll-wrapper option,
+  .search__popout,
+  .search-popout {
+    background-color: var(--color-dark);
+    border-color: var(--color-dark);
+    color: var(--color-dim);
+  }
+
+  .search__popout em,
+  .search-popout em {
+    color: var(--color-light-text);
+  }
+}
