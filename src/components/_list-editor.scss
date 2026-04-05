@@ -1,0 +1,60 @@
+// List editor and adder
+.layout-single-column,
+.layout-multiple-columns {
+  // List adder input
+  .list-editor input.setting-text,
+  .list-adder input.setting-text {
+    background-color: transparent;
+    border-color: var(--color-black-coral);
+    height: 38px;
+  }
+
+  .list-editor .column-inline-form button,
+  .list-adder .column-inline-form button,
+  .list-editor .column-inline-form button::before {
+    min-height: 38px;
+
+    // It's inlined so we have to use !important
+    width: 100% !important;
+  }
+
+  .list-editor__search {
+    padding: 15px;
+  }
+
+  .embed-modal .embed-modal__container .embed-modal__html {
+    color: var(--color-light-text);
+  }
+
+  .embed-modal .embed-modal__container .embed-modal__html,
+  .list-editor__search .search__input {
+    background-color: transparent;
+    border-color: var(--color-black-coral);
+    height: 38px;
+  }
+
+  .list-editor .drawer__inner.backdrop {
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 20%);
+  }
+
+  // Search icon fix for v4.4.0-rc.1-2025-07-01 changes
+  .search__icon-wrapper {
+    right: 0;
+    top: 0;
+  }
+
+  .list-editor__search .search__icon .icon {
+    margin: 15px;
+  }
+
+  .list-editor .list__display-name,
+  .list-adder .list__display-name {
+    align-items: center;
+    display: flex;
+    gap: var(--gap-default);
+  }
+
+  .list__display-name .icon-list-ul {
+    top: -2px;
+  }
+}

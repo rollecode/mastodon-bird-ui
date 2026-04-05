@@ -1,4 +1,4 @@
-### [Unreleased]
+### [Unreleased]: 2026-04-05
 
 * Fix translate button color not matching link color
 * Fix extra border-left showing up in mobile devices
@@ -18,6 +18,7 @@
 * Modularize logo from _base.scss to _logo.scss #172
 * Modularize typography from _base.scss to _typography.scss #172
 * Modularize modals from _base.scss to _modals.scss #172
+* Modularize list editor from _base.scss to _list-editor.scss #172
 * Remove select hack as it it's fixed in upstream already, ref: https://github.com/mastodon/mastodon/issues/37332
 
 ### 4.0.0-alpha.0-4: 2026-01-24
