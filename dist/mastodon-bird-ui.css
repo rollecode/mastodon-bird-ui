@@ -2560,13 +2560,9 @@ body.layout-single-column, body.layout-multiple-columns {
   margin-top: calc(var(--gap-default) * 2);
 }
 
-.layout-single-column .trends__item__name a, .layout-multiple-columns .trends__item__name a {
+.layout-single-column .trends__item__name > a, .layout-multiple-columns .trends__item__name > a {
   font-size: var(--font-size);
-}
-
-.layout-single-column .trends__item__name, .layout-multiple-columns .trends__item__name {
-  gap: 4px;
-  display: grid;
+  margin-bottom: 4px;
 }
 
 .layout-single-column .account__header__image, .layout-multiple-columns .account__header__image {

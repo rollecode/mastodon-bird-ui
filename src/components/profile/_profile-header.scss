@@ -15,13 +15,9 @@
     margin-top: calc(var(--gap-default) * 2);
   }
 
-  .trends__item__name a {
+  .trends__item__name > a {
     font-size: var(--font-size);
-  }
-
-  .trends__item__name {
-    display: grid;
-    gap: 4px;
+    margin-bottom: 4px;
   }
 
   .account__header__image {

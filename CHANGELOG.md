@@ -15,6 +15,7 @@
 * Update Mastodon Bird UI theme tokens with latest design system tokens, Closes #184
 * Remove select hack as it is fixed in upstream already, ref: https://github.com/mastodon/mastodon/issues/37332
 * Fix install script for new profile subdirectories
+* Fix trends item name layout for new structure
 
 ### 4.0.0-alpha.0-4: 2026-01-24
 
