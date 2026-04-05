@@ -1,0 +1,32 @@
+// New onboarding in /start
+.layout-single-column,
+.layout-multiple-columns {
+  .onboarding__steps__item,
+  .onboarding__link {
+    background-color: var(--color-dark);
+    margin-bottom: 10px;
+  }
+
+  .onboarding__steps__item__progress > svg > path {
+    fill: var(--color-dark);
+  }
+
+  .onboarding__links > * {
+    margin-bottom: 10px;
+  }
+
+  // Fixes for the design for v4.3.0-alpha.3-2024-03-22 with new popout layout
+  .explore__search-results {
+    border: 0;
+  }
+
+  .column-back-button,
+  .account__section-headline {
+    border-left: 0;
+    border-right: 0;
+  }
+
+  .column-back-button {
+    border-top: 0;
+  }
+}
