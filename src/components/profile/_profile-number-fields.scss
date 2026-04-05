@@ -1,0 +1,16 @@
+// Move number fields (stats) to bottom of profile header
+.layout-single-column,
+.layout-multiple-columns {
+  .account__header__bar {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .account__header__extra {
+    order: 4;
+  }
+
+  [class*="_comp_number_fields__list"] {
+    order: 5;
+  }
+}

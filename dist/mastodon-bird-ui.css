@@ -1,3 +1,4 @@
+/* Mastodon Bird UI v4.0.0-alpha.0-4 - https://github.com/ronilaukkarinen/mastodon-bird-ui */
 :root {
   --color-text-primary: #fff;
   --color-text-secondary: #717c9b;
@@ -2286,6 +2287,23 @@ body.layout-single-column, body.layout-multiple-columns {
   background-color: #0000;
 }
 
+.layout-single-column .account__header__content, .layout-multiple-columns .account__header__content {
+  margin-bottom: 16px;
+}
+
+.layout-single-column .account__header__bar, .layout-multiple-columns .account__header__bar {
+  flex-direction: column;
+  display: flex;
+}
+
+.layout-single-column .account__header__extra, .layout-multiple-columns .account__header__extra {
+  order: 4;
+}
+
+.layout-single-column [class*="_comp_number_fields__list"], .layout-multiple-columns [class*="_comp_number_fields__list"] {
+  order: 5;
+}
+
 .layout-single-column .search__icon .icon.active, .layout-multiple-columns .search__icon .icon.active {
   opacity: 1;
 }
@@ -4269,4 +4287,3 @@ html.no-reduce-motion .detailed-status__action-bar .icon-button.star-icon.activa
 .layout-multiple-columns .column-select__menu * {
   color: var(--color-fg);
 }
-/*# sourceMappingURL=mastodon-bird-ui.css.map */
