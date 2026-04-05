@@ -28,6 +28,7 @@
 * Modularize content warnings from _base.scss to _content-warnings.scss #172
 * Modularize color overrides from _base.scss to _color-overrides.scss #172
 * Modularize status from _base.scss to _status.scss #172
+* Modularize transparent panels from _base.scss to _transparent-panels.scss #172
 * Remove select hack as it it's fixed in upstream already, ref: https://github.com/mastodon/mastodon/issues/37332
 
 ### 4.0.0-alpha.0-4: 2026-01-24
