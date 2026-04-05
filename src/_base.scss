@@ -6,16 +6,6 @@
 // Start base
 .layout-single-column,
 .layout-multiple-columns {
-  // Hide autoplaying gifs in notifications (they get annoying if you have favs/boosts on)
-  .notification.notification-reblog
-    .media-gallery:has(.media-gallery__gifv.autoplay),
-  .notification-group--favourite
-    .media-gallery:has(.media-gallery__gifv.autoplay),
-  .notification.notification-favourite
-    .media-gallery:has(.media-gallery__gifv.autoplay) {
-    display: none;
-  }
-
   // More distinct focus color for accessibility, instead of just white
   input:focus-visible {
     outline-color: var(--color-accent);
