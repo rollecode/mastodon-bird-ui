@@ -1,0 +1,49 @@
+// Status header, action bar, display name
+.layout-single-column,
+.layout-multiple-columns {
+  // Main panel column
+  .columns-area__panels__main > div {
+    border-left: 1px solid var(--color-border);
+    border-right: 1px solid var(--color-border);
+  }
+
+  // Status header
+  .status .status__info {
+    align-items: flex-start;
+    gap: var(--gap-default);
+    height: calc(var(--gap-default) * 2);
+    justify-content: flex-start;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  // Status action bar
+  .status__action-bar {
+    height: 27px;
+    margin-top: 12px;
+    max-height: 27px;
+  }
+
+  // Display name
+  .status__info .status__display-name {
+    align-items: flex-start;
+    display: inline-flex;
+    gap: var(--gap-default);
+    order: 1;
+  }
+
+  .status__info .display-name {
+    display: flex;
+    gap: calc(var(--gap-default) / 2);
+  }
+
+  .status__info .status__relative-time {
+    height: unset;
+    order: 3;
+  }
+
+  // Visibility icon
+  .status .status__visibility-icon {
+    font-size: var(--font-size-mid);
+  }
+}
