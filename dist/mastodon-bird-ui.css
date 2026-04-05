@@ -307,7 +307,7 @@ html[data-contrast="high"] {
   }
 }
 
-.layout-single-column .search__popout, .layout-single-column .search-popout, .layout-multiple-columns .search__popout, .layout-multiple-columns .search-popout {
+.layout-single-column .search__popout, .layout-multiple-columns .search__popout {
   left: 15px;
   width: calc(100% - 30px) !important;
   max-width: calc(100% - 30px) !important;

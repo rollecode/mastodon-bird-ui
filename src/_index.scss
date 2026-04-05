@@ -6,10 +6,11 @@
 @use "variables/tokens";
 
 // Base file (to be modularized)
-@use "variables-base";
-@use "variables-high-contrast";
-@use "variables-ipad-landscape";
-@use "variables-mobile";
+@use "variables/variables-base";
+@use "variables/variables-high-contrast";
+@use "variables/variables-ipad-landscape";
+@use "variables/variables-mobile";
+@use "components/search";
 @use "base";
 
 // Components

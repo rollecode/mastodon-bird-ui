@@ -6,18 +6,6 @@
 // Start base
 .layout-single-column,
 .layout-multiple-columns {
-  // Search popout offset
-  .search__popout,
-  .search-popout {
-    left: calc(30px / 2);
-
-    // It's inlined so we have to use !important
-    max-width: calc(100% - 30px) !important;
-
-    // It's inlined so we have to use !important
-    width: calc(100% - 30px) !important;
-  }
-
   @at-root {
     body.layout-single-column,
     body.layout-multiple-columns {

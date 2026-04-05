@@ -1,0 +1,11 @@
+// Search popout offset
+.layout-single-column .search__popout,
+.layout-multiple-columns .search__popout {
+  left: calc(30px / 2);
+
+  // It's inlined so we have to use !important
+  max-width: calc(100% - 30px) !important;
+
+  // It's inlined so we have to use !important
+  width: calc(100% - 30px) !important;
+}

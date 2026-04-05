@@ -11,6 +11,7 @@
 * Modularize iPad variables from _base.scss to _variables-ipad-landscape.scss #172
 * Modularize mobile variables from _base.scss to _variables-mobile.scss #172
 * Fix Browsersync CSS hot reload by stripping CSP headers from proxied responses
+* Modularize search #172
 
 ### 4.0.0-alpha.0-4: 2026-01-24
 
