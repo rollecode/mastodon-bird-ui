@@ -3,3 +3,10 @@
   display: flex;
   width: 100%;
 }
+
+// Body background and text color
+body.layout-single-column,
+body.layout-multiple-columns {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+}

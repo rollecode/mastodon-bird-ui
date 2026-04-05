@@ -6,14 +6,6 @@
 // Start base
 .layout-single-column,
 .layout-multiple-columns {
-  @at-root {
-    body.layout-single-column,
-    body.layout-multiple-columns {
-      background-color: var(--color-bg);
-      color: var(--color-fg);
-    }
-  }
-
   // Text color
   .account__header__tabs__name h1,
   .account__header__bio .account__header__content,
