@@ -14,11 +14,6 @@
     }
   }
 
-  .ui {
-    display: flex;
-    width: 100%;
-  }
-
   // Fix dropdown options being white-on-white in dark mode
   // https://github.com/mastodon/mastodon/issues/37332
   select option {
