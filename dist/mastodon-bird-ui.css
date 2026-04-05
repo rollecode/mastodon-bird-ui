@@ -1950,21 +1950,6 @@ body.layout-single-column, body.layout-multiple-columns {
   text-transform: unset;
 }
 
-.layout-single-column .account__header__bio .account__header__fields dl:first-of-type:before, .layout-multiple-columns .account__header__bio .account__header__fields dl:first-of-type:before {
-  content: "";
-  background-image: url("data:image/svg+xml, %3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" aria-hidden=\"true\" fill=\"%23717c9b\" class=\"r-115tad6 r-4qtqp9 r-yyyyoo r-1xvli5t r-1d4mawv r-dnmrzs r-bnwqim r-1plcrui r-lrvibr\"%3E%3Cg%3E%3Cpath d=\"M7 4V3h2v1h6V3h2v1h1.5C19.89 4 21 5.12 21 6.5v12c0 1.38-1.11 2.5-2.5 2.5h-13C4.12 21 3 19.88 3 18.5v-12C3 5.12 4.12 4 5.5 4H7zm0 2H5.5c-.27 0-.5.22-.5.5v12c0 .28.23.5.5.5h13c.28 0 .5-.22.5-.5v-12c0-.28-.22-.5-.5-.5H17v1h-2V6H9v1H7V6zm0 6h2v-2H7v2zm0 4h2v-2H7v2zm4-4h2v-2h-2v2zm0 4h2v-2h-2v2zm4-4h2v-2h-2v2z\"%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 18.5px;
-  height: 18.5px;
-  display: inline-block;
-}
-
-.layout-single-column .account__header__bio .account__header__fields dl:first-of-type:after, .layout-multiple-columns .account__header__bio .account__header__fields dl:first-of-type:after {
-  display: none !important;
-}
-
 .layout-single-column .account__header__bio .account__header__fields dd, .layout-single-column .account__header__bio .account__header__fields dt, .layout-multiple-columns .account__header__bio .account__header__fields dd, .layout-multiple-columns .account__header__bio .account__header__fields dt {
   color: var(--color-dim);
   font-size: var(--font-size);
@@ -2176,6 +2161,17 @@ body.layout-single-column, body.layout-multiple-columns {
   right: auto;
 }
 
+.layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"] span[class*="fieldVerifiedIcon"] svg, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"] span[class*="fieldVerifiedIcon"] svg {
+  background-image: var(--icon-verified-smaller);
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 15px;
+}
+
+.layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"] span[class*="fieldVerifiedIcon"] svg path, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"] span[class*="fieldVerifiedIcon"] svg path {
+  display: none;
+}
+
 .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:before, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:before {
   background-position: center;
   background-repeat: no-repeat;
@@ -2187,7 +2183,7 @@ body.layout-single-column, body.layout-multiple-columns {
   display: inline-block;
 }
 
-.layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="github.com" i]) dt, .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="youtube.com" i]) dt, .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="youtu.be" i]) dt, .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="twitch.tv" i]) dt, .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="twitter.com" i]) dt, .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="x.com" i]) dt, .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="discord" i]) dt, .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="linkedin.com" i]) dt, .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="instagram.com" i]) dt, .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="ko-fi.com" i]) dt, .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="kofi.com" i]) dt, .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="paypal" i]) dt, .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="patreon.com" i]) dt, .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="threads.net" i]) dt, .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="bsky.app" i]) dt, .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="bsky.social" i]) dt, .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="bandcamp.com" i]) dt, .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="facebook.com" i]) dt, .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="fb.com" i]) dt, .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="wordpress.com" i]) dt, .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="wordpress.org" i]) dt, .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="/@" i]) dt, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="github.com" i]) dt, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="youtube.com" i]) dt, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="youtu.be" i]) dt, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="twitch.tv" i]) dt, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="twitter.com" i]) dt, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="x.com" i]) dt, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="discord" i]) dt, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="linkedin.com" i]) dt, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="instagram.com" i]) dt, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="ko-fi.com" i]) dt, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="kofi.com" i]) dt, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="paypal" i]) dt, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="patreon.com" i]) dt, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="threads.net" i]) dt, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="bsky.app" i]) dt, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="bsky.social" i]) dt, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="bandcamp.com" i]) dt, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="facebook.com" i]) dt, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="fb.com" i]) dt, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="wordpress.com" i]) dt, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="wordpress.org" i]) dt, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="/@" i]) dt {
+.layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a) dt, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a) dt {
   display: none;
 }
 
@@ -2279,6 +2275,11 @@ body.layout-single-column, body.layout-multiple-columns {
 
 .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="npub" i]):before, .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="nostr:" i]):before, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="npub" i]):before, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="nostr:" i]):before {
   background-image: var(--icon-nostr);
+  content: "";
+}
+
+.layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href^="http"]):not(:has(dd a[href*="github.com" i], dd a[href*="youtube.com" i], dd a[href*="youtu.be" i], dd a[href*="twitch.tv" i], dd a[href*="twitter.com" i], dd a[href*="x.com" i], dd a[href*="discord" i], dd a[href*="linkedin.com" i], dd a[href*="instagram.com" i], dd a[href*="ko-fi.com" i], dd a[href*="kofi.com" i], dd a[href*="paypal" i], dd a[href*="patreon.com" i], dd a[href*="threads.net" i], dd a[href*="bsky.app" i], dd a[href*="bsky.social" i], dd a[href*="bandcamp.com" i], dd a[href*="facebook.com" i], dd a[href*="fb.com" i], dd a[href*="wordpress.com" i], dd a[href*="wordpress.org" i], dd a[href*="/@" i], dd a[href*="mastodon.social" i], dd a[href*="mastodon.online" i], dd a[href*="masto.host" i], dd a[href*="friendica" i], dd a[href*="npub" i], dd a[href*="nostr:" i])):before, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href^="http"]):not(:has(dd a[href*="github.com" i], dd a[href*="youtube.com" i], dd a[href*="youtu.be" i], dd a[href*="twitch.tv" i], dd a[href*="twitter.com" i], dd a[href*="x.com" i], dd a[href*="discord" i], dd a[href*="linkedin.com" i], dd a[href*="instagram.com" i], dd a[href*="ko-fi.com" i], dd a[href*="kofi.com" i], dd a[href*="paypal" i], dd a[href*="patreon.com" i], dd a[href*="threads.net" i], dd a[href*="bsky.app" i], dd a[href*="bsky.social" i], dd a[href*="bandcamp.com" i], dd a[href*="facebook.com" i], dd a[href*="fb.com" i], dd a[href*="wordpress.com" i], dd a[href*="wordpress.org" i], dd a[href*="/@" i], dd a[href*="mastodon.social" i], dd a[href*="mastodon.online" i], dd a[href*="masto.host" i], dd a[href*="friendica" i], dd a[href*="npub" i], dd a[href*="nostr:" i])):before {
+  background-image: var(--icon-link);
   content: "";
 }
 

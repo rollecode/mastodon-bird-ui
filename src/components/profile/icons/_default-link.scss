@@ -1,0 +1,41 @@
+// Default link icon for fields with URLs that don't match a known platform
+@use "../field-selectors" as *;
+
+.layout-single-column,
+.layout-multiple-columns {
+  #{$field-list} > #{$field-item}:has(dd a[href^="http"]):not(
+    :has(
+      dd a[href*="github.com" i],
+      dd a[href*="youtube.com" i],
+      dd a[href*="youtu.be" i],
+      dd a[href*="twitch.tv" i],
+      dd a[href*="twitter.com" i],
+      dd a[href*="x.com" i],
+      dd a[href*="discord" i],
+      dd a[href*="linkedin.com" i],
+      dd a[href*="instagram.com" i],
+      dd a[href*="ko-fi.com" i],
+      dd a[href*="kofi.com" i],
+      dd a[href*="paypal" i],
+      dd a[href*="patreon.com" i],
+      dd a[href*="threads.net" i],
+      dd a[href*="bsky.app" i],
+      dd a[href*="bsky.social" i],
+      dd a[href*="bandcamp.com" i],
+      dd a[href*="facebook.com" i],
+      dd a[href*="fb.com" i],
+      dd a[href*="wordpress.com" i],
+      dd a[href*="wordpress.org" i],
+      dd a[href*="/@" i],
+      dd a[href*="mastodon.social" i],
+      dd a[href*="mastodon.online" i],
+      dd a[href*="masto.host" i],
+      dd a[href*="friendica" i],
+      dd a[href*="npub" i],
+      dd a[href*="nostr:" i]
+    )
+  )::before {
+    background-image: var(--icon-link);
+    content: "";
+  }
+}

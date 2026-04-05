@@ -49,12 +49,23 @@
     color: var(--color-accent);
   }
 
-  // Verified icon positioning
+  // Verified icon - replace with Bird UI style
   #{$field-list} > #{$field-item} span[class*="fieldVerifiedIcon"] {
     order: 3;
     position: relative;
     right: auto;
     top: auto;
+  }
+
+  #{$field-list} > #{$field-item} span[class*="fieldVerifiedIcon"] svg {
+    background-image: var(--icon-verified-smaller);
+    background-repeat: no-repeat;
+    height: 15px;
+    width: 15px;
+  }
+
+  #{$field-list} > #{$field-item} span[class*="fieldVerifiedIcon"] svg path {
+    display: none;
   }
 
   // Icon positioning for ::before pseudo-elements
