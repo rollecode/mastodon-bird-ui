@@ -1,0 +1,429 @@
+// Icon replacements for navigation, status, notifications
+.layout-single-column,
+.layout-multiple-columns {
+  // Replace bookmark icon
+  .status .icon-button:hover:focus .icon-bookmark,
+  .status .icon-button:focus .icon-bookmark,
+  .status .icon-button.active .icon-bookmark {
+    background-image: var(--icon-bookmark-active);
+  }
+
+  .status button.icon-button:hover .icon-bookmark {
+    background-image: var(--icon-bookmark-status-hover);
+  }
+
+  // Replace the original icons (after 4.3.0)
+  // Set size for the filter bar and profile icons
+  .account__header__buttons .icon,
+  .notification__filter-bar .icon {
+    --size-icon: 20px;
+  }
+
+  // Set size for the column link icons
+  .column-link .icon {
+    --size-icon: 22px;
+    height: 22px;
+    width: 22px;
+  }
+
+  // Set size for the status icons
+  .detailed-status__action-bar .icon,
+  .status__action-bar .icon {
+    --size-icon: 19px;
+  }
+
+  // General for all column icons
+  .notification-group--favourite .notification__message > .icon,
+  .notification-favourite .notification__message > .icon,
+  .notification-reblog .notification__message > .icon,
+  .account__header__buttons .icon,
+  .detailed-status__action-bar .icon,
+  .status__action-bar .icon,
+  .notification__filter-bar .icon,
+  .column-link .icon {
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .list-adder__lists .icon-plus,
+  .list-adder__lists .icon-times,
+  .detailed-status__action-bar .icon,
+  .status__action-bar .icon,
+  .notification__filter-bar .icon,
+  .column-header__button .icon-sliders,
+  .column-link .icon {
+    background-size: var(--size-icon) var(--size-icon);
+    height: var(--size-icon);
+    width: var(--size-icon);
+  }
+
+  .account__header__buttons .icon {
+    background-position: center;
+    background-size: var(--size-icon) var(--size-icon);
+  }
+
+  .status__prepend .icon.icon-at {
+    height: 18px;
+    position: relative;
+    top: 2px;
+    width: 18px;
+  }
+
+  // Hide the original icon from behind
+  .ui__navigation-bar__item[href="/home"] svg path,
+  .ui__navigation-bar__item[href="/notifications"] svg path,
+  .ui__navigation-bar__item[href="/explore"] svg path,
+  .list-adder__lists .icon-plus > path,
+  .list-adder__lists .icon-times > path,
+  .list-adder__lists .list__display-name svg > path,
+  .status__prepend .icon.icon-retweet path,
+  .notification-group--reblog > .notification-group__icon > .icon path,
+  .notification-reblog .notification__message > .icon path,
+  .notification-group--favourite > .notification-group__icon > .icon path,
+  .notification-group--favourite .notification__message > .icon path,
+  .notification-favourite .notification__message > .icon path,
+  .account__header__buttons .icon path,
+  .detailed-status__action-bar .icon path,
+  .notification__filter-bar .icon path,
+  .status__action-bar path,
+  .column-link .icon path,
+  .load-more path,
+  .account__domain-pill__popout__parts > div:nth-child(2) path,
+  .column-header__button .icon-sliders > path,
+  .compose-form .icon-close > path,
+  .item-list .lists__item__title path,
+  .lists__item .icon-button.active path,
+  .dialog-modal__content .lists__item__title path,
+  .hashtag-header__header__buttons .icon > path,
+  .lists__item .icon-button svg > path {
+    display: none;
+  }
+
+  // ...except for these icons, we kinda like them as they are
+  .icon-user-plus.column-link__icon path,
+  .icon.icon-undefined path,
+  .icon.icon-users path,
+  .account__header__buttons .optional path,
+  .account__header__buttons .icon.icon-user-plus path,
+  .notification__filter-bar .icon.icon-user-plus path,
+  .account__header__buttons .icon.icon-tasks path,
+  .notification__filter-bar .icon.icon-tasks path,
+  .icon.icon-wrapstodon-planet path,
+  .navigation-panel__legal .column-link[href="/about"] path {
+    display: block;
+  }
+
+  .navigation-panel__legal .column-link[href="/about"] svg {
+    background-image: none;
+  }
+
+  // Home icon
+  .ui__navigation-bar__item[href="/home"] .icon,
+  .column-link .icon-home {
+    background-image: var(--icon-home);
+  }
+
+  .ui__navigation-bar__item[href="/home"].active .icon,
+  .column-link.active .icon-home {
+    background-image: var(--icon-home-column-link-active);
+  }
+
+  .notification__filter-bar .icon-home {
+    background-image: var(--icon-home-notification);
+  }
+
+  .notification__filter-bar .active .icon-home {
+    background-image: var(--icon-home-notification-active);
+  }
+
+  .list-adder__lists .icon-plus {
+    --size-icon: 20px;
+    background-image: var(--icon-plus);
+  }
+
+  .list-adder__lists .icon-times {
+    --size-icon: 20px;
+    background-image: var(--icon-checked-green);
+  }
+
+  .list-adder__lists .icon-button:hover .icon-plus {
+    background-image: var(--icon-plus-green);
+  }
+
+  .list-adder__lists .icon-button:hover .icon-times {
+    background-image: var(--icon-cross-red);
+  }
+
+  // Notifications icon
+  .ui__navigation-bar__item[href="/notifications"] .icon,
+  .icon.icon-bell-o,
+  .column-link .icon-bell {
+    background-image: var(--icon-bell);
+  }
+
+  .ui__navigation-bar__item[href="/notifications"].active .icon,
+  .column-link.active .icon-bell {
+    background-image: var(--icon-bell-active);
+  }
+
+  // Explore icon
+  .ui__navigation-bar__item[href="/explore"] .icon,
+  .column-link .icon-explore,
+  .column-link .icon-hashtag {
+    background-image: var(--icon-hashtag);
+  }
+
+  .ui__navigation-bar__item[href="/explore"].active .icon,
+  .column-link.active .icon-explore,
+  .column-link.active .icon-hashtag {
+    background-image: var(--icon-hashtag-active);
+  }
+
+  // Live feeds icon
+  .column-link .icon-globe {
+    background-image: var(--icon-globe);
+  }
+
+  .column-link.active .icon-globe {
+    background-image: var(--icon-globe-active);
+  }
+
+  // Private mentions icon
+  .column-link .icon-at {
+    background-image: var(--icon-direct-messages);
+  }
+
+  .column-link.active .icon-at {
+    background-image: var(--icon-direct-messages-active);
+    transform: scale(1.15);
+  }
+
+  // Bookmarks icon
+  .column-link .icon-bookmarks {
+    background-image: var(--icon-bookmark-column-link);
+  }
+
+  .column-link.active .icon-bookmarks {
+    background-image: var(--icon-bookmark-column-link-active);
+  }
+
+  // Preferences icon
+  .column-link .icon-cog {
+    --size-icon: 22px;
+    background-image: var(--icon-sliders-contrast);
+  }
+
+  // Settings icon
+  .column-header__button .icon-sliders {
+    --size-icon: 20px;
+    background-image: var(--icon-sliders);
+  }
+
+  .column-header__button.active .icon-sliders {
+    // Use contrast icon
+    background-image: var(--icon-sliders-contrast);
+
+    // Disable rotate
+    transform: none;
+  }
+
+  // Administration icon
+  .column-link .icon-tachometer {
+    --size-icon: 22px;
+    background-image: var(--icon-administration);
+  }
+
+  // Moderation icon
+  .column-link .icon-flag {
+    --size-icon: 22px;
+    background-image: var(--icon-moderation);
+  }
+
+  // Replace retweet icon
+  .notification__filter-bar .icon-retweet {
+    background-image: var(--icon-boost-notification-filter-bar);
+  }
+
+  .notification__filter-bar .active .icon-retweet {
+    background-image: var(--icon-boost-notification-filter-bar-active);
+  }
+
+  .notification__filter-bar .active .icon-mailreply,
+  .notification__filter-bar .active .icon-reply-all,
+  .notification__filter-bar .active .icon-reply {
+    background-image: var(--icon-reply-nofitication-filter-bar-active);
+  }
+
+  .detailed-status button.icon-button .icon-retweet,
+  .status button.icon-button .icon-retweet {
+    background-image: var(--icon-boost-status);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  // Replace notification retweet icon
+  .notification-group--reblog .icon-repeat,
+  .notification-reblog .icon-retweet {
+    background-image: var(--icon-boost-notification-wrapper);
+  }
+
+  button.icon-button .icon-retweet {
+    --size-icon: 20px;
+    background-image: var(--icon-boost);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  button.icon-button:hover .icon-retweet,
+  button.icon-button.active .icon-retweet {
+    background-image: var(--icon-boost-active);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  // Un-boost and un-bookmark styles
+
+  // Mobile devices
+  button.icon-button:not(.active):focus .icon-retweet,
+  button.icon-button:not(.active):hover .icon-retweet {
+    animation: none;
+    background-image: var(--icon-boost);
+  }
+
+  .status button.icon-button:not(.active):focus .icon-bookmark,
+  .status button.icon-button:not(.active):hover .icon-bookmark {
+    background-image: var(--icon-bookmark);
+  }
+
+  // Un-boost and un-bookmark numbers on explore page
+
+  button.icon-button:not(.active):focus .icon-retweet ~ span,
+  button.icon-button:not(.active):hover .icon-retweet ~ span {
+    color: var(--color-dim);
+  }
+
+  // Replace bookmark icon
+  .detailed-status .icon-bookmark,
+  .status .icon-bookmark {
+    background-image: var(--icon-bookmark);
+  }
+
+  button.icon-button:hover .icon-retweet ~ span,
+  button.icon-button.active .icon-retweet ~ span {
+    color: var(--color-green);
+  }
+
+  button.icon-button:hover .icon-star ~ span,
+  button.icon-button.active .icon-star ~ span {
+    color: var(--color-red);
+  }
+
+  // Replace reply icon
+  .notification__filter-bar .icon-mail-reply,
+  .notification__filter-bar .icon-reply,
+  .notification__filter-bar .icon-reply-all {
+    --size-icon: 19px;
+    position: relative;
+    top: 1px;
+  }
+
+  .conversation .icon-reply,
+  .notification__filter-bar .icon-mail-reply,
+  .notification__filter-bar .icon-reply,
+  .notification__filter-bar .icon-reply-all,
+  .detailed-status .icon-mail-reply,
+  .detailed-status .icon-reply,
+  .detailed-status .icon-reply-all,
+  .status .icon-mail-reply,
+  .status .icon-reply,
+  .status .icon-reply-all {
+    background-image: var(--icon-reply);
+  }
+
+  .detailed-status__action-bar .icon-mail-reply,
+  .detailed-status__action-bar .icon-reply,
+  .detailed-status__action-bar .icon-reply-all {
+    background-image: var(--icon-reply-detailed-status-action-bar);
+  }
+
+  .detailed-status__action-bar .icon-button:hover .icon-mail-reply,
+  .detailed-status__action-bar .icon-button:hover .icon-reply,
+  .detailed-status__action-bar .icon-button:hover .icon-reply-all {
+    background-image: var(--icon-reply-detailed-status-action-bar-hover);
+  }
+
+  .conversation .icon-button:hover .icon-reply {
+    background-image: var(--icon-reply-conversation);
+  }
+
+  .detailed-status__action-bar .icon-bookmark {
+    background-image: var(--icon-bookmark-detailed-status-action-bar);
+  }
+
+  .detailed-status__action-bar .icon-button:hover .icon-bookmark {
+    background-image: var(--icon-bookmark-detailed-status-action-bar-hover);
+  }
+
+  .detailed-status__action-bar .icon-button.active .icon-bookmark {
+    background-image: var(--icon-bookmark-detailed-status-action-bar-active);
+  }
+
+  .status button.icon-button:hover .icon-mail-reply,
+  .status button.icon-button:hover .icon-reply,
+  .status button.icon-button:hover .icon-reply-all {
+    background-image: var(--icon-reply-status-hover);
+  }
+
+  // More icons
+  .icon-list-ul {
+    background-image: var(--icon-list);
+    top: 1px;
+  }
+
+  // "More" icon
+  .icon-ellipsis-h {
+    background-image: var(--icon-more-status-action-bar);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .column-link .icon.icon-.column-link__icon,
+  .icon-ellipsis-v {
+    background-image: var(--icon-more);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .icon-search {
+    background-image: var(--icon-search-opaque);
+  }
+
+  // Close icon
+  .icon-close {
+    background-image: var(--icon-close);
+  }
+
+  .status .icon-close {
+    background-image: var(--icon-close-action-bar);
+  }
+
+  .relationship-tag {
+    background-color: var(--color-mud);
+    color: var(--color-light-text);
+    font-size: 11px;
+    font-weight: var(--font-weight-semibold);
+    line-height: 12px;
+    opacity: 1;
+  }
+
+  .detailed-status__action-bar .icon-button {
+    min-width: 24px;
+    position: relative;
+  }
+
+  .detailed-status__action-bar-dropdown .icon-button::after,
+  .detailed-status__button .icon-button::after {
+    transform: translateX(-6px);
+  }
+}
