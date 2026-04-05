@@ -6,27 +6,6 @@
 // Start base
 .layout-single-column,
 .layout-multiple-columns {
-  // Add border radius to media
-  .media-gallery,
-  .audio-player,
-  .video-player,
-  .media-gallery__gifv,
-  .media-gallery__preview {
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius);
-    overflow: hidden;
-  }
-
-  // Fix double border on media
-  .media-gallery .media-gallery__item .media-gallery__gifv {
-    border: 0;
-  }
-
-  // Exception for your own profile media gallery
-  .account-gallery__container .media-gallery__gifv {
-    border-radius: 0;
-  }
-
   // Hide autoplaying gifs in notifications (they get annoying if you have favs/boosts on)
   .notification.notification-reblog
     .media-gallery:has(.media-gallery__gifv.autoplay),
