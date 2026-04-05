@@ -1,0 +1,11 @@
+@use "../field-selectors" as *;
+
+.layout-single-column,
+.layout-multiple-columns {
+  #{$field-list} > #{$field-item}:has(dd a[href*="twitch.tv" i])::before {
+    background-image: var(--icon-twitch);
+    content: "";
+    height: 18.5px;
+    width: 18.5px;
+  }
+}

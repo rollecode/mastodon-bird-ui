@@ -1,0 +1,12 @@
+@use "../field-selectors" as *;
+
+.layout-single-column,
+.layout-multiple-columns {
+  #{$field-list} > #{$field-item}:has(dd a[href*="facebook.com" i])::before,
+  #{$field-list} > #{$field-item}:has(dd a[href*="fb.com" i])::before {
+    background-image: var(--icon-facebook);
+    content: "";
+    height: 18.5px;
+    width: 18.5px;
+  }
+}

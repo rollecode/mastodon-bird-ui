@@ -67,6 +67,7 @@
 * Modularize embeds from _base.scss to _embeds.scss #172
 * Move remaining mobile fix to layouts/_mobile.scss and remove _base.scss #172
 * Remove select hack as it it's fixed in upstream already, ref: https://github.com/mastodon/mastodon/issues/37332
+* Update Mastodon Bird UI theme tokens with latest design system tokens, Closes #184
 
 ### 4.0.0-alpha.0-4: 2026-01-24
 
