@@ -1,0 +1,33 @@
+// Pill style hashtag tags
+.layout-single-column,
+.layout-multiple-columns {
+  .hashtag-bar a {
+    background-color: var(--color-dark);
+    border-radius: 9999px;
+    color: var(--color-light-purple);
+    display: inline-block;
+    font-size: var(--font-size-smaller);
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.5;
+    margin: 0 4px 4px 0;
+    padding: 4px 8px;
+    text-decoration: none;
+  }
+
+  .hashtag-bar .link-button {
+    font-size: var(--font-size-smaller);
+  }
+
+  .hashtag-bar a:focus,
+  .hashtag-bar a:hover {
+    background-color: var(--color-accent-dark);
+
+    // It should be always light also on light mode, so not using variable here
+    color: #f7f9f9;
+  }
+
+  .hashtag-bar a:focus span,
+  .hashtag-bar a:hover span {
+    text-decoration: none;
+  }
+}

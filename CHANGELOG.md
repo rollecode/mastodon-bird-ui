@@ -30,6 +30,7 @@
 * Modularize status from _base.scss to _status.scss #172
 * Modularize transparent panels from _base.scss to _transparent-panels.scss #172
 * Modularize avatars from _base.scss to _avatars.scss #172
+* Modularize hashtag bar from _base.scss to _hashtag-bar.scss #172
 * Remove select hack as it it's fixed in upstream already, ref: https://github.com/mastodon/mastodon/issues/37332
 
 ### 4.0.0-alpha.0-4: 2026-01-24
