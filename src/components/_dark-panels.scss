@@ -1,0 +1,61 @@
+// Dark panels like modals and boxes
+.layout-single-column,
+.layout-multiple-columns {
+  .account-memorial-banner,
+  .follow-request-banner,
+  .moved-account-banner,
+  .about__meta,
+  .about__section__title,
+  .announcements,
+  .report-dialog-modal,
+  .report-modal__target,
+  .compose-form .autosuggest-textarea__suggestions,
+  .privacy-dropdown__dropdown,
+  .drawer__backdrop,
+  .list-editor__account,
+  .list-editor,
+  .list-editor__lists,
+  .list-adder__account,
+  .list-adder,
+  .list-adder__lists,
+  .dropdown-menu__arrow::before,
+  .dropdown-menu,
+  .dropdown-menu__item a,
+  .dropdown-menu__item button,
+  .emoji-mart-category-label span,
+  .emoji-mart-bar:first-child,
+  .emoji-picker-dropdown__menu,
+  .privacy-dropdown.active .privacy-dropdown__value,
+  .emoji-mart-search input,
+  .emoji-mart-scroll,
+  .emoji-mart-search,
+  .follow_requests-unlocked_explanation,
+  .dismissable-banner,
+  .block-modal__action-bar,
+  .boost-modal__action-bar,
+  .confirmation-modal__action-bar,
+  .mute-modal__action-bar,
+  .setting-text__wrapper,
+  .setting-text,
+  .report-modal__comment,
+  .report-modal__container,
+  .actions-modal,
+  .block-modal,
+  .boost-modal,
+  .compare-history-modal,
+  .confirmation-modal,
+  .mute-modal,
+  .report-modal,
+  .announcements__root,
+  .column-header__collapsible-inner {
+    background-color: var(--color-dark);
+    border-color: var(--color-dark);
+    color: var(--color-light-text);
+  }
+
+  // Setting boxes
+  .column-header__collapsible-inner {
+    background-color: var(--color-bg);
+    border-color: var(--color-border);
+  }
+}
