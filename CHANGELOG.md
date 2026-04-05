@@ -19,6 +19,7 @@
 * Modularize typography from _base.scss to _typography.scss #172
 * Modularize modals from _base.scss to _modals.scss #172
 * Modularize list editor from _base.scss to _list-editor.scss #172
+* Modularize status cards and quote posts from _base.scss to _status-card.scss #172
 * Remove select hack as it it's fixed in upstream already, ref: https://github.com/mastodon/mastodon/issues/37332
 
 ### 4.0.0-alpha.0-4: 2026-01-24

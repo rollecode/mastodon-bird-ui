@@ -1,0 +1,196 @@
+// URL preview cards and quote posts
+.layout-single-column,
+.layout-multiple-columns {
+  // URL preview cards
+  .status-card,
+  .status-card:hover,
+  .status-card:focus {
+    background-color: transparent;
+    border-color: var(--color-border);
+  }
+
+  // URL preview card summary text
+  .status-card .status-card__host,
+  .status-card .status-card__description {
+    color: var(--color-dim);
+  }
+
+  // URL preview card box
+  .status-card .status-card__content {
+    padding: var(--gap-default);
+  }
+
+  .status-card.expanded .status-card__content {
+    display: grid;
+    gap: 8px;
+  }
+
+  // Preview cards
+  .status-card {
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    transition:
+      background-color 200ms,
+      border-color 200ms,
+      opacity 200ms,
+      transform 200ms;
+  }
+
+  .status-card.status-card.bottomless {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .status-card.expanded {
+    display: block;
+  }
+
+  a.status-card .status-card__host {
+    font-size: var(--font-size);
+  }
+
+  .status-card a:active .status-card__author,
+  .status-card a:active .status-card__title,
+  .status-card a:focus .status-card__author,
+  .status-card a:focus .status-card__title,
+  .status-card a:hover .status-card__author,
+  .status-card a:hover .status-card__title,
+  a.status-card:active .status-card__author,
+  a.status-card:active .status-card__title,
+  a.status-card:focus .status-card__author,
+  a.status-card:focus .status-card__title,
+  a.status-card:hover .status-card__author,
+  a.status-card:hover .status-card__title {
+    color: var(--color-fg);
+  }
+
+  .status-card a:active .status-card__host,
+  .status-card a:hover .status-card__host,
+  .status-card a:focus .status-card__host,
+  a.status-card:active .status-card__host,
+  a.status-card:focus .status-card__host,
+  a.status-card:hover .status-card__host,
+  a.status-card:focus .status-card__description,
+  a.status-card:hover .status-card__description {
+    color: var(--color-dim);
+  }
+
+  // New Quote Posts feature after v4.5.0.alpha.2-2025-08-24
+  .status__quote {
+    // stylelint-disable-next-line
+    --status-gutter-width: calc(var(--size-avatar) + var(--gap-default));
+  }
+
+  // This is Mastodon core variable
+  .detailed-status.status--has-quote .status__quote {
+    // stylelint-disable-next-line
+    --status-gutter-width: 0;
+  }
+
+  .status.status--is-quote {
+    --size-avatar: 32px;
+  }
+
+  .status__quote.status__quote--error {
+    --surface-border-color: var(--color-border);
+    background-color: var(--surface-border-color);
+    border-color: var(--surface-border-color);
+    color: var(--color-light-text);
+    justify-content: center;
+    min-height: 45px;
+    text-align: center;
+  }
+
+  .status__quote.status__quote--error > span {
+    color: var(--color-light-text);
+  }
+
+  .status__quote:not(.status__quote--error) .status {
+    min-height: 40px;
+  }
+
+  // Disabled quote post selection
+  .dropdown-menu__item [aria-disabled="true"],
+  .dropdown-menu__item :disabled,
+  .dropdown-menu__item button:disabled {
+    color: var(--color-dim);
+  }
+
+  div[data-popper-placement] .reblog-button__item button:disabled {
+    align-items: flex-start;
+  }
+
+  .notification-grouped
+    .status--has-quote
+    .status__quote
+    .status.status--is-quote
+    .status__content,
+  .notification-grouped--direct
+    .status--has-quote
+    .status__quote
+    .status.status--is-quote
+    .status__content,
+  .notification-ungrouped
+    .status--has-quote
+    .status__quote
+    .status.status--is-quote
+    .status__content {
+    margin-left: calc(var(--size-avatar) + var(--gap-default));
+    padding-left: 0;
+  }
+
+  // Show minimal status card if there's no image
+  .status-card .status-card__image:not(:has(img)) {
+    display: none;
+  }
+
+  // Show iframe in status card if status contains embedded media
+  .status-card .status-card-video:has(iframe) {
+    display: inherit;
+  }
+
+  // Hide empty YouTube description
+  .status-card__description:empty {
+    display: none;
+  }
+
+  .status-card:focus,
+  .status-card:hover {
+    background-color: rgba(255 255 255 / 3%);
+  }
+
+  .status-card__image-image,
+  .status-card__image-preview,
+  .status-card .status-card__image {
+    background-color: var(--color-arsenic);
+    border-radius: 0;
+  }
+
+  a.status-card .status-card__content {
+    padding: 16px;
+  }
+
+  a.status-card .status-card__title {
+    color: var(--color-fg);
+    font-size: var(--font-size-title);
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.3;
+    margin: 0;
+  }
+
+  a.status-card.expanded .status-card__title {
+    white-space: inherit;
+  }
+
+  .status-card.expanded .status-card__host {
+    color: var(--color-dim);
+    font-size: var(--font-size);
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .status-card.expanded .status-card__description {
+    margin-top: 0;
+  }
+}
