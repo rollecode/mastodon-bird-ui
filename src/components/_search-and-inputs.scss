@@ -1,0 +1,96 @@
+// Emoji-mart, search, inputs, placeholders
+.layout-single-column,
+.layout-multiple-columns {
+  // Emoji-mart search input
+  .emoji-mart-search-icon svg {
+    fill: var(--color-border);
+    opacity: 1;
+  }
+
+  .emoji-mart-search > input:focus-visible ~ .emoji-mart-search-icon svg {
+    fill: var(--color-accent);
+  }
+
+  .emoji-mart-search > input {
+    font-size: var(--font-size-smaller);
+  }
+
+  .compose-form__autosuggest-wrapper textarea::placeholder,
+  .report-dialog-modal__textarea::placeholder,
+  .emoji-mart-search > input::placeholder {
+    color: var(--color-dim);
+    opacity: 1;
+  }
+
+  .report-dialog-modal__textarea,
+  .report-dialog-modal__textarea:focus,
+  .emoji-mart-search > input:focus {
+    color: var(--color-light-text);
+  }
+
+  .emoji-mart-search-icon:disabled {
+    opacity: 1;
+  }
+
+  // Search
+  .search__icon-wrapper .search__icon {
+    background-image: var(--icon-search);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    display: inline-block;
+    height: 24px;
+    inset-inline-start: unset;
+    position: absolute;
+    right: 14px;
+    top: 9px;
+    width: 24px;
+  }
+
+  .search__icon-wrapper.has-value .search__icon {
+    background-image: var(--icon-close-action-bar);
+  }
+
+  .search__icon-wrapper .search__icon path {
+    display: none;
+  }
+
+  .search.active .search__input,
+  input.setting-text,
+  .search__input {
+    background-color: var(--color-mud);
+    border-color: var(--color-mud);
+    border-radius: 32px;
+    color: var(--color-dim);
+    font-size: var(--font-size);
+    height: 42px;
+    padding: 0 20px;
+  }
+
+  // Input texts
+  .search.active .search__input,
+  .poll__option input[type="text"],
+  input.setting-text:focus,
+  .search__input:focus {
+    color: var(--color-light-text);
+  }
+
+  // Poll input
+  .poll__option input[type="text"] {
+    background-color: transparent;
+    border-color: var(--color-border);
+  }
+
+  .poll__option input[type="text"]:focus {
+    border-color: var(--color-accent);
+  }
+
+  // Placeholders
+  .poll__option input[type="text"]::placeholder,
+  .search__input::placeholder,
+  input::placeholder,
+  input.setting-text::placeholder {
+    color: var(--color-dim);
+    opacity: 1;
+  }
+}

@@ -38,6 +38,7 @@
 * Modularize notifications from _base.scss to _notifications.scss #172
 * Modularize navigation panel from _base.scss to _navigation-panel.scss #172
 * Modularize follow button from _base.scss to _follow-button.scss #172
+* Modularize search and inputs from _base.scss to _search-and-inputs.scss #172
 * Remove select hack as it it's fixed in upstream already, ref: https://github.com/mastodon/mastodon/issues/37332
 
 ### 4.0.0-alpha.0-4: 2026-01-24
