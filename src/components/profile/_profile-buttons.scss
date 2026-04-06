@@ -5,9 +5,25 @@
     position: relative;
   }
 
+  // Hide mobile buttons, always use desktop ones
+  [class*="_redesign__buttonsMobile"] {
+    display: none !important;
+  }
+
+  // Prevent container query from hiding desktop buttons
+  [class*="_redesign__buttonsDesktop"] {
+    display: flex !important;
+  }
+
   .account__header__buttons {
-    position: absolute;
-    right: 16px;
-    top: var(--gap-default);
+    display: inline-flex;
+  }
+
+  @media (width >= 420px) {
+    .account__header__buttons {
+      position: absolute;
+      right: 16px;
+      top: var(--gap-default);
+    }
   }
 }

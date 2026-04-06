@@ -1,4 +1,3 @@
-/* Mastodon Bird UI v4.0.0-alpha.6 - https://github.com/ronilaukkarinen/mastodon-bird-ui */
 :root {
   --color-text-primary: #fff;
   --color-text-secondary: #717c9b;
@@ -2176,6 +2175,7 @@ body.layout-single-column, body.layout-multiple-columns {
   font-size: var(--font-size-mid);
   text-transform: lowercase;
   flex-direction: row-reverse;
+  flex: none;
   gap: 4px;
   font-weight: 500;
   display: inline-flex;
@@ -2263,10 +2263,24 @@ body.layout-single-column, body.layout-multiple-columns {
   position: relative;
 }
 
+.layout-single-column [class*="_redesign__buttonsMobile"], .layout-multiple-columns [class*="_redesign__buttonsMobile"] {
+  display: none !important;
+}
+
+.layout-single-column [class*="_redesign__buttonsDesktop"], .layout-multiple-columns [class*="_redesign__buttonsDesktop"] {
+  display: flex !important;
+}
+
 .layout-single-column .account__header__buttons, .layout-multiple-columns .account__header__buttons {
-  right: 16px;
-  top: var(--gap-default);
-  position: absolute;
+  display: inline-flex;
+}
+
+@media (width >= 420px) {
+  .layout-single-column .account__header__buttons, .layout-multiple-columns .account__header__buttons {
+    right: 16px;
+    top: var(--gap-default);
+    position: absolute;
+  }
 }
 
 .layout-single-column [class*="_redesign__avatarWrapper"], .layout-multiple-columns [class*="_redesign__avatarWrapper"] {
@@ -4479,3 +4493,4 @@ html.no-reduce-motion .detailed-status__action-bar .icon-button.star-icon.activa
 .layout-multiple-columns .column-select__menu * {
   color: var(--color-fg);
 }
+/*# sourceMappingURL=mastodon-bird-ui.css.map */

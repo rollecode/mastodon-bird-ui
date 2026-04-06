@@ -22,6 +22,7 @@
   [class*="_comp_number_fields__item"] {
     color: var(--color-dim);
     display: inline-flex;
+    flex: 0 0 auto;
     flex-direction: row-reverse;
     font-size: var(--font-size-mid);
     font-weight: 500;
