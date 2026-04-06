@@ -139,6 +139,11 @@ body .content-warning {
   }
 }
 
+.layout-single-column .account__header__bio dl[class*="fieldList"],
+.layout-multiple-columns .account__header__bio dl[class*="fieldList"] {
+  row-gap: 16px;
+}
+
 .layout-single-column .icon-with-badge__badge {
   font-size: 14px;
   padding: 3px 6px;

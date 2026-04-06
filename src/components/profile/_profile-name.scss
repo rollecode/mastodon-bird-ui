@@ -4,4 +4,8 @@
   [class*="_redesign__name"] span {
     font-size: var(--font-size-bigger);
   }
+
+  [class*="_redesign__username"] {
+    font-size: var(--font-size-smaller);
+  }
 }

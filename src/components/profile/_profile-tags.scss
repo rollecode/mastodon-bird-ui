@@ -1,0 +1,7 @@
+// Profile hashtag tags font size
+.layout-single-column,
+.layout-multiple-columns {
+  [class*="_v2__tagsWrapper"] [class*="_comp_tags__tag"] {
+    font-size: var(--font-size-smaller);
+  }
+}

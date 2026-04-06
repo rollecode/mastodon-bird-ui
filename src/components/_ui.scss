@@ -9,4 +9,6 @@ body.layout-single-column,
 body.layout-multiple-columns {
   background-color: var(--color-bg);
   color: var(--color-fg);
+  font-size: var(--font-size-smaller);
+  line-height: var(--line-height-mid);
 }

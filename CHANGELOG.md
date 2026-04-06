@@ -10,6 +10,7 @@
 * Fix profile spacing for familiar followers, number fields and field list
 * Fix status content paragraph margin-bottom to 18px
 * Fix dropdown menu button hover and focus background color
+* Use font size and line height variables for accessible theme compatibility
 
 ### 4.0.0-alpha.6: 2026-04-06
 

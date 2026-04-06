@@ -1,3 +1,4 @@
+/* Mastodon Bird UI v4.0.0-alpha.6 - https://github.com/ronilaukkarinen/mastodon-bird-ui */
 :root {
   --color-text-primary: #fff;
   --color-text-secondary: #717c9b;
@@ -321,6 +322,8 @@ html[data-contrast="high"] {
 body.layout-single-column, body.layout-multiple-columns {
   background-color: var(--color-bg);
   color: var(--color-fg);
+  font-size: var(--font-size-smaller);
+  line-height: var(--line-height-mid);
 }
 
 .layout-single-column .account__header__tabs__name h1, .layout-single-column .account__header__bio .account__header__content, .layout-single-column .reply-indicator__content, .layout-single-column .status__content, .layout-multiple-columns .account__header__tabs__name h1, .layout-multiple-columns .account__header__bio .account__header__content, .layout-multiple-columns .reply-indicator__content, .layout-multiple-columns .status__content {
@@ -1982,6 +1985,7 @@ body.layout-single-column, body.layout-multiple-columns {
   flex-wrap: wrap;
   margin: 0 0 20px;
   display: flex;
+  line-height: var(--line-height-mid) !important;
 }
 
 .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"], .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"] {
@@ -2183,9 +2187,11 @@ body.layout-single-column, body.layout-multiple-columns {
 }
 
 .layout-single-column [class*="_comp_number_fields__list"], .layout-multiple-columns [class*="_comp_number_fields__list"] {
+  font-size: var(--font-size-smaller);
   gap: 4px calc(var(--gap-default) * 1.5);
   order: 5;
   margin: 0;
+  line-height: var(--line-height-mid) !important;
 }
 
 .layout-single-column [class*="_comp_number_fields__item"], .layout-multiple-columns [class*="_comp_number_fields__item"] {
@@ -2305,6 +2311,10 @@ body.layout-single-column, body.layout-multiple-columns {
   font-size: var(--font-size-bigger);
 }
 
+.layout-single-column [class*="_redesign__username"], .layout-multiple-columns [class*="_redesign__username"] {
+  font-size: var(--font-size-smaller);
+}
+
 .layout-single-column [class*="pinnedStatusHeader"], .layout-multiple-columns [class*="pinnedStatusHeader"] {
   align-items: flex-start;
   gap: var(--gap-default);
@@ -2361,6 +2371,10 @@ body.layout-single-column, body.layout-multiple-columns {
 
 .layout-single-column .account__header__familiar-followers, .layout-multiple-columns .account__header__familiar-followers {
   margin-block: 0;
+}
+
+.layout-single-column [class*="_v2__tagsWrapper"] [class*="_comp_tags__tag"], .layout-multiple-columns [class*="_v2__tagsWrapper"] [class*="_comp_tags__tag"] {
+  font-size: var(--font-size-smaller);
 }
 
 .layout-single-column .search__icon .icon.active, .layout-multiple-columns .search__icon .icon.active {

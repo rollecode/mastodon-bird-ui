@@ -12,7 +12,9 @@
 
   // Move stats below bio and fields
   [class*="_comp_number_fields__list"] {
+    font-size: var(--font-size-smaller);
     gap: 4px calc(var(--gap-default) * 1.5);
+    line-height: var(--line-height-mid) !important;
     margin: 0;
     order: 5;
   }
