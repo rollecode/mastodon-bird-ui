@@ -137,6 +137,7 @@ html[data-contrast="high"] {
   --color-outer-space: #42485a;
   --font-size: 15px;
   --font-size-smaller: 13px;
+  --font-size-11: 11px;
   --font-size-12: 12px;
   --font-size-mid: 14px;
   --font-size-bigger: 17px;
@@ -2164,11 +2165,32 @@ body.layout-single-column, body.layout-multiple-columns {
   content: "";
 }
 
-.layout-single-column [class*="_comp_badge__roleColored"], .layout-single-column [class*="_comp_badge__default"], .layout-multiple-columns [class*="_comp_badge__roleColored"], .layout-multiple-columns [class*="_comp_badge__default"] {
+.layout-single-column .account__header__badges [class*="_comp_badge__roleColored"], .layout-single-column .account__header__badges [class*="_comp_badge__default"], .layout-multiple-columns .account__header__badges [class*="_comp_badge__roleColored"], .layout-multiple-columns .account__header__badges [class*="_comp_badge__default"] {
   background-color: #0000;
 }
 
-.layout-single-column [class*="pinnedBadge"] [class*="_comp_badge__default"], .layout-multiple-columns [class*="pinnedBadge"] [class*="_comp_badge__default"] {
+.layout-single-column [class*="_redesign__name"], .layout-multiple-columns [class*="_redesign__name"] {
+  column-gap: 6px;
+}
+
+.layout-single-column [class*="_redesign__name"] > [class*="_comp_badge__default"], .layout-multiple-columns [class*="_redesign__name"] > [class*="_comp_badge__default"] {
+  background-color: var(--color-dark);
+  color: var(--color-light-text);
+  font-size: var(--font-size-11);
+  font-weight: var(--font-weight-semibold);
+  opacity: 1;
+  padding: 4px 6px;
+  padding-inline-end: 6px;
+  line-height: 12px;
+  transform: translateY(-1px);
+}
+
+.layout-single-column [class*="_redesign__followerBadgeIcon"], .layout-multiple-columns [class*="_redesign__followerBadgeIcon"] {
+  display: none;
+}
+
+.layout-single-column [class*="_comp_badge__default"][class*="pinnedBadge"], .layout-multiple-columns [class*="_comp_badge__default"][class*="pinnedBadge"] {
+  background-color: #0000;
   padding: 0;
 }
 
@@ -2310,7 +2332,7 @@ body.layout-single-column, body.layout-multiple-columns {
   margin-left: 2px;
 }
 
-.layout-single-column [class*="_redesign__name"] span, .layout-multiple-columns [class*="_redesign__name"] span {
+.layout-single-column [class*="_redesign__name"] h1 span, .layout-multiple-columns [class*="_redesign__name"] h1 span {
   font-size: var(--font-size-bigger);
 }
 
@@ -3115,7 +3137,7 @@ body.layout-single-column, body.layout-multiple-columns {
 .layout-single-column .relationship-tag, .layout-multiple-columns .relationship-tag {
   background-color: var(--color-mud);
   color: var(--color-light-text);
-  font-size: 11px;
+  font-size: var(--font-size-11);
   font-weight: var(--font-weight-semibold);
   opacity: 1;
   line-height: 12px;

@@ -1,13 +1,38 @@
-// Profile role badges
+// Profile badges
 .layout-single-column,
 .layout-multiple-columns {
-  [class*="_comp_badge__roleColored"],
-  [class*="_comp_badge__default"] {
+  // Role badges in the badges section
+  .account__header__badges [class*="_comp_badge__roleColored"],
+  .account__header__badges [class*="_comp_badge__default"] {
     background-color: transparent;
   }
 
-  // Only remove padding from pinned badge, not role badge
-  [class*="pinnedBadge"] [class*="_comp_badge__default"] {
+  // Name area gap
+  [class*="_redesign__name"] {
+    column-gap: 6px;
+  }
+
+  // "Follows you" badge in the name area
+  [class*="_redesign__name"] > [class*="_comp_badge__default"] {
+    background-color: var(--color-dark);
+    color: var(--color-light-text);
+    font-size: var(--font-size-11);
+    font-weight: var(--font-weight-semibold);
+    line-height: 12px;
+    opacity: 1;
+    padding: 4px 6px;
+    padding-inline-end: 6px;
+    transform: translateY(-1px);
+  }
+
+  // Hide the "Follows you" icon, keep text only
+  [class*="_redesign__followerBadgeIcon"] {
+    display: none;
+  }
+
+  // Pinned badge - no background, no padding
+  [class*="_comp_badge__default"][class*="pinnedBadge"] {
+    background-color: transparent;
     padding: 0;
   }
 
