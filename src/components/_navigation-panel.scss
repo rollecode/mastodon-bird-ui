@@ -97,6 +97,8 @@
   }
 
   .dropdown-menu__item a:hover,
+  .dropdown-menu__item button:hover,
+  .dropdown-menu__item button:focus,
   .notification__filter-bar button:hover,
   .account__section-headline a:hover {
     background-color: var(--color-column-link-hover);

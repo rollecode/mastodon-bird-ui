@@ -1488,7 +1488,7 @@ body.layout-single-column, body.layout-multiple-columns {
   transition: background .2s;
 }
 
-.layout-single-column .dropdown-menu__item a:hover, .layout-single-column .notification__filter-bar button:hover, .layout-single-column .account__section-headline a:hover, .layout-multiple-columns .dropdown-menu__item a:hover, .layout-multiple-columns .notification__filter-bar button:hover, .layout-multiple-columns .account__section-headline a:hover {
+.layout-single-column .dropdown-menu__item a:hover, .layout-single-column .dropdown-menu__item button:hover, .layout-single-column .dropdown-menu__item button:focus, .layout-single-column .notification__filter-bar button:hover, .layout-single-column .account__section-headline a:hover, .layout-multiple-columns .dropdown-menu__item a:hover, .layout-multiple-columns .dropdown-menu__item button:hover, .layout-multiple-columns .dropdown-menu__item button:focus, .layout-multiple-columns .notification__filter-bar button:hover, .layout-multiple-columns .account__section-headline a:hover {
   background-color: var(--color-column-link-hover);
 }
 
