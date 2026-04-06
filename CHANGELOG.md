@@ -12,6 +12,7 @@
 * Fix dropdown menu button hover and focus background color
 * Use font size and line height variables for accessible theme compatibility
 * Map `--color-text-brand` to `--color-accent` for consistent link colors
+* Fix profile badge and username spacing
 
 ### 4.0.0-alpha.6: 2026-04-06
 

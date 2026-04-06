@@ -10,4 +10,12 @@
   [class*="pinnedBadge"] [class*="_comp_badge__default"] {
     padding: 0;
   }
+
+  .account__header__extra {
+    margin-top: 0;
+  }
+
+  .account__header__badges {
+    margin-bottom: 16px;
+  }
 }
