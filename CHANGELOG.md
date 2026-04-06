@@ -8,6 +8,7 @@
 * Adjust profile field font size and row gap for mobile under 700px
 * Fix threaded line content alignment
 * Fix profile spacing for familiar followers, number fields and field list
+* Fix status content paragraph margin-bottom to 18px
 
 ### 4.0.0-alpha.6: 2026-04-06
 

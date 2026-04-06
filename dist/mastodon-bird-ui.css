@@ -1043,6 +1043,10 @@ body.layout-single-column, body.layout-multiple-columns {
   padding-left: calc(24px + var(--gap-default));
 }
 
+.layout-single-column .status__content p, .layout-single-column .edit-indicator__content p, .layout-single-column .reply-indicator__content p, .layout-multiple-columns .status__content p, .layout-multiple-columns .edit-indicator__content p, .layout-multiple-columns .reply-indicator__content p {
+  margin-bottom: 18px;
+}
+
 .layout-single-column div[style*="aspect-ratio"]:not([class]), .layout-multiple-columns div[style*="aspect-ratio"]:not([class]) {
   aspect-ratio: unset !important;
 }

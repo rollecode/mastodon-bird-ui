@@ -1,0 +1,9 @@
+// Status content paragraph spacing
+.layout-single-column,
+.layout-multiple-columns {
+  .status__content p,
+  .edit-indicator__content p,
+  .reply-indicator__content p {
+    margin-bottom: 18px;
+  }
+}
