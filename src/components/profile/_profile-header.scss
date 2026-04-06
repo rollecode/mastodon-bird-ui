@@ -20,8 +20,10 @@
     margin-bottom: 4px;
   }
 
-  .account__header__image {
-    height: 200px;
+  @media (width >= 760px) {
+    .account__header__image {
+      height: 200px;
+    }
   }
 
   .account__header__bar .avatar .account__avatar {
