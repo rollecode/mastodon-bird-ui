@@ -143,7 +143,6 @@ The following instances have enabled Mastodon Bird UI for their users, based on 
 | [jkpg.rocks](https://jkpg.rocks/)                                        | Site theme                | Mastodon Bird UI | 2+             | Yes         |
 | [convo.casa](https://convo.casa)                                         | Site theme                | Mastodon Bird UI | 5000+          | No          |
 | [social.kryta.app](https://social.kryta.app)                             | Custom CSS                | Mastodon Bird UI | <100           | Yes         |
-| [everythingbagel.social](https://everythingbagel.social)                 | Site theme                | Bagel UI         | 5              | Yes         |
 | [social.vivaldi.net](https://social.vivaldi.net)                         | Site theme                | Mastodon Bird UI | 6700+          | No          |
 | [wxw.moe](https://wxw.moe)                                               | Site theme                | Mastodon Bird UI | 3500+          | Yes         |
 | [mastodon.com.pl](https://mastodon.com.pl)                               | Site theme                | Mastodon Bird UI | 100+           | No          |
