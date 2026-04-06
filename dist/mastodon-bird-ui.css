@@ -2032,6 +2032,16 @@ body.layout-single-column, body.layout-multiple-columns {
   display: none;
 }
 
+@media (width <= 700px) {
+  .layout-single-column .account__header__bio dl[class*="fieldList"], .layout-multiple-columns .account__header__bio dl[class*="fieldList"] {
+    row-gap: 5px;
+  }
+
+  .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"], .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"] dt, .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"] dd, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"], .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"] dt, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"] dd {
+    font-size: var(--font-size-mid);
+  }
+}
+
 .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:before, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:before {
   background-position: center;
   background-repeat: no-repeat;
@@ -2272,15 +2282,10 @@ body.layout-single-column, body.layout-multiple-columns {
 }
 
 .layout-single-column .account__header__buttons, .layout-multiple-columns .account__header__buttons {
+  right: 16px;
+  top: var(--gap-default);
   display: inline-flex;
-}
-
-@media (width >= 420px) {
-  .layout-single-column .account__header__buttons, .layout-multiple-columns .account__header__buttons {
-    right: 16px;
-    top: var(--gap-default);
-    position: absolute;
-  }
+  position: absolute;
 }
 
 .layout-single-column [class*="_redesign__avatarWrapper"], .layout-multiple-columns [class*="_redesign__avatarWrapper"] {
@@ -2610,8 +2615,10 @@ body.layout-single-column, body.layout-multiple-columns {
   margin-bottom: 4px;
 }
 
-.layout-single-column .account__header__image, .layout-multiple-columns .account__header__image {
-  height: 200px;
+@media (width >= 760px) {
+  .layout-single-column .account__header__image, .layout-multiple-columns .account__header__image {
+    height: 200px;
+  }
 }
 
 .layout-single-column .account__header__bar .avatar .account__avatar, .layout-multiple-columns .account__header__bar .avatar .account__avatar {

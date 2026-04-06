@@ -5,6 +5,7 @@
 * Fix profile buttons and number fields on mobile under 420px
 * Fix profile header image height only on viewports above 760px
 * Fix profile buttons staying at top right on all viewports
+* Adjust profile field font size and row gap for mobile under 700px
 
 ### 4.0.0-alpha.6: 2026-04-06
 

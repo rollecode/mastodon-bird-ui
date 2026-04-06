@@ -68,6 +68,19 @@
     display: none;
   }
 
+  // Mobile field adjustments
+  @media (width <= 700px) {
+    #{$field-list} {
+      row-gap: 5px;
+    }
+
+    #{$field-list} > #{$field-item},
+    #{$field-list} > #{$field-item} dt,
+    #{$field-list} > #{$field-item} dd {
+      font-size: var(--font-size-mid);
+    }
+  }
+
   // Icon positioning for ::before pseudo-elements
   #{$field-list} > #{$field-item}::before {
     background-position: center;
