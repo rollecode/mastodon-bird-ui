@@ -387,6 +387,10 @@ body.layout-single-column, body.layout-multiple-columns {
   font-size: var(--font-size-mid);
 }
 
+.layout-single-column .simple_form span.hint, .layout-multiple-columns .simple_form span.hint {
+  font-size: var(--font-size-smaller);
+}
+
 .layout-single-column .status__content, .layout-multiple-columns .status__content {
   line-height: var(--line-height);
 }

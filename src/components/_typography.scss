@@ -59,6 +59,10 @@
     font-size: var(--font-size-mid);
   }
 
+  .simple_form span.hint {
+    font-size: var(--font-size-smaller);
+  }
+
   // Line heights
   .status__content {
     line-height: var(--line-height);
