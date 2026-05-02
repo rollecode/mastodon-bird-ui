@@ -2309,18 +2309,9 @@ body.layout-single-column, body.layout-multiple-columns {
   position: relative;
 }
 
-.layout-single-column [class*="_redesign__buttonsMobile"], .layout-multiple-columns [class*="_redesign__buttonsMobile"] {
-  display: none !important;
-}
-
-.layout-single-column [class*="_redesign__buttonsDesktop"], .layout-multiple-columns [class*="_redesign__buttonsDesktop"] {
-  display: flex !important;
-}
-
-.layout-single-column .account__header__buttons, .layout-multiple-columns .account__header__buttons {
+.layout-single-column .account__header__buttons[class*="_comp_account_header__buttonsDesktop"], .layout-multiple-columns .account__header__buttons[class*="_comp_account_header__buttonsDesktop"] {
   right: 16px;
   top: var(--gap-default);
-  display: inline-flex;
   position: absolute;
 }
 

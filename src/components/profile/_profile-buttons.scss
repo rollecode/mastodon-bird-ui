@@ -1,22 +1,12 @@
-// Position profile buttons at top right, next to avatar
+// Position desktop profile buttons at top right of the header bar.
+// Mobile variant keeps upstream's sticky-bottom behavior on narrow viewports.
 .layout-single-column,
 .layout-multiple-columns {
   .account__header__bar {
     position: relative;
   }
 
-  // Hide mobile buttons, always use desktop ones
-  [class*="_redesign__buttonsMobile"] {
-    display: none !important;
-  }
-
-  // Prevent container query from hiding desktop buttons
-  [class*="_redesign__buttonsDesktop"] {
-    display: flex !important;
-  }
-
-  .account__header__buttons {
-    display: inline-flex;
+  .account__header__buttons[class*="_comp_account_header__buttonsDesktop"] {
     position: absolute;
     right: 16px;
     top: var(--gap-default);
