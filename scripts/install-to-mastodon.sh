@@ -190,15 +190,9 @@ ensure_entry_point() {
   echo -e "  ${GREEN}Updated:${NC} $name"
 }
 
-# Core entry points (always needed)
-ensure_entry_point "$STYLES_PATH/mastodon-bird-ui-dark.scss" "@use 'application';
-@use 'mastodon-bird-ui';"
-
-ensure_entry_point "$STYLES_PATH/mastodon-bird-ui-light.scss" "@use 'application';
-@use 'mastodon-bird-ui';
-@use 'mastodon-bird-ui/variables/variables-light';"
-
-# Auto bundle - respects data-color-scheme attribute and prefers-color-scheme
+# Auto bundle - respects data-color-scheme attribute and prefers-color-scheme.
+# Replaces the old separate Dark/Light theme entries; Mastodon's Appearance
+# radios drive the scheme.
 ensure_entry_point "$STYLES_PATH/mastodon-bird-ui-auto.scss" "@use 'application';
 @use 'mastodon-bird-ui';
 @use 'mastodon-bird-ui/variables/light-mixin' as light;
@@ -217,9 +211,6 @@ ensure_entry_point "$STYLES_PATH/mastodon-bird-ui-auto.scss" "@use 'application'
 if [[ "$ADD_VARIATIONS" =~ ^[Yy]$ ]]; then
   echo ""
   echo "  Creating variation entry points..."
-
-  ensure_entry_point "$STYLES_PATH/mastodon-bird-ui-contrast.scss" "@use 'application';
-@use 'mastodon-bird-ui';"
 
   ensure_entry_point "$STYLES_PATH/mastodon-bird-ui-accessible.scss" "@use 'application';
 @use 'mastodon-bird-ui';
@@ -264,20 +255,17 @@ add_theme_entry() {
 
 # Set default theme entry
 if [[ "$SET_DEFAULT" =~ ^[Yy]$ ]]; then
-  echo "default: styles/mastodon-bird-ui-dark.scss" > "$THEMES_FILE"
-  echo -e "  ${GREEN}Set:${NC} default: styles/mastodon-bird-ui-dark.scss (Bird UI Dark)"
+  echo "default: styles/mastodon-bird-ui-auto.scss" > "$THEMES_FILE"
+  echo -e "  ${GREEN}Set:${NC} default: styles/mastodon-bird-ui-auto.scss (Bird UI)"
   add_theme_entry "mastodon-dark" "styles/application.scss"
 else
   echo "default: styles/application.scss" > "$THEMES_FILE"
   echo -e "  ${GREEN}Set:${NC} default: styles/application.scss"
-  add_theme_entry "mastodon-bird-ui-dark" "styles/mastodon-bird-ui-dark.scss"
+  add_theme_entry "mastodon-bird-ui-auto" "styles/mastodon-bird-ui-auto.scss"
 fi
-add_theme_entry "mastodon-bird-ui-light" "styles/mastodon-bird-ui-light.scss"
-add_theme_entry "mastodon-bird-ui-auto" "styles/mastodon-bird-ui-auto.scss"
 
 # Bird UI variations
 if [[ "$ADD_VARIATIONS" =~ ^[Yy]$ ]]; then
-  add_theme_entry "mastodon-bird-ui-contrast" "styles/mastodon-bird-ui-contrast.scss"
   add_theme_entry "mastodon-bird-ui-accessible" "styles/mastodon-bird-ui-accessible.scss"
   add_theme_entry "mastodon-bird-ui-accessible-plus" "styles/mastodon-bird-ui-accessible-plus.scss"
 fi
@@ -303,7 +291,7 @@ remove_stale_locale_entry() {
   fi
 }
 
-STALE_THEME_KEYS="mastodon-dark mastodon-light contrast system mastodon-bird-ui-dark-change-to-stars hide-finnish hide-finnish-change-to-stars hide-translate-links mastodon-bird-ui-light-hide-finnish mastodon-bird-ui-light-hide-finnish-change-to-stars mastodon-bird-ui-light-hide-translate-links mastodon-bird-ui-accessible-hide-finnish"
+STALE_THEME_KEYS="mastodon-dark mastodon-light contrast system mastodon-bird-ui-dark mastodon-bird-ui-light mastodon-bird-ui-contrast mastodon-bird-ui-dark-change-to-stars hide-finnish hide-finnish-change-to-stars hide-translate-links mastodon-bird-ui-light-hide-finnish mastodon-bird-ui-light-hide-finnish-change-to-stars mastodon-bird-ui-light-hide-translate-links mastodon-bird-ui-accessible-hide-finnish"
 
 for locale_file in "$EN_LOCALE" "$FI_LOCALE"; do
   [ ! -f "$locale_file" ] && continue
@@ -315,8 +303,8 @@ done
 
 # Set the 'default' locale label based on whether Bird UI is the default theme
 if [[ "$SET_DEFAULT" =~ ^[Yy]$ ]]; then
-  sed -i "s/^    default: Mastodon.*/    default: Mastodon Bird UI (Dark)/" "$EN_LOCALE"
-  sed -i "s/^    default: Mastodon.*/    default: Mastodon Bird UI (tumma)/" "$FI_LOCALE"
+  sed -i "s/^    default: Mastodon.*/    default: Mastodon Bird UI/" "$EN_LOCALE"
+  sed -i "s/^    default: Mastodon.*/    default: Mastodon Bird UI/" "$FI_LOCALE"
   echo -e "  ${GREEN}Set:${NC} default locale -> Mastodon Bird UI"
 else
   sed -i "s/^    default: Mastodon Bird UI.*/    default: Mastodon/" "$EN_LOCALE" 2>/dev/null
@@ -345,21 +333,15 @@ if [[ "$SET_DEFAULT" =~ ^[Yy]$ ]]; then
   add_locale_entry "$EN_LOCALE" "mastodon-dark" "Mastodon (Dark)" "en.yml"
   add_locale_entry "$FI_LOCALE" "mastodon-dark" "Mastodon (tumma)" "fi.yml"
 else
-  add_locale_entry "$EN_LOCALE" "mastodon-bird-ui-dark" "Mastodon Bird UI (Dark)" "en.yml"
-  add_locale_entry "$FI_LOCALE" "mastodon-bird-ui-dark" "Mastodon Bird UI (tumma)" "fi.yml"
+  add_locale_entry "$EN_LOCALE" "mastodon-bird-ui-auto" "Mastodon Bird UI" "en.yml"
+  add_locale_entry "$FI_LOCALE" "mastodon-bird-ui-auto" "Mastodon Bird UI" "fi.yml"
 fi
-add_locale_entry "$EN_LOCALE" "mastodon-bird-ui-light" "Mastodon Bird UI (Light)" "en.yml"
-add_locale_entry "$FI_LOCALE" "mastodon-bird-ui-light" "Mastodon Bird UI (vaalea)" "fi.yml"
-add_locale_entry "$EN_LOCALE" "mastodon-bird-ui-auto" "Mastodon Bird UI" "en.yml"
-add_locale_entry "$FI_LOCALE" "mastodon-bird-ui-auto" "Mastodon Bird UI" "fi.yml"
 
 # Variation locale entries
 if [[ "$ADD_VARIATIONS" =~ ^[Yy]$ ]]; then
-  add_locale_entry "$EN_LOCALE" "mastodon-bird-ui-contrast" "Mastodon Bird UI (High contrast)" "en.yml"
   add_locale_entry "$EN_LOCALE" "mastodon-bird-ui-accessible" "Mastodon Bird UI (Accessible)" "en.yml"
   add_locale_entry "$EN_LOCALE" "mastodon-bird-ui-accessible-plus" "Mastodon Bird UI (Accessible Plus)" "en.yml"
 
-  add_locale_entry "$FI_LOCALE" "mastodon-bird-ui-contrast" "Mastodon Bird UI (suuri kontrasti)" "fi.yml"
   add_locale_entry "$FI_LOCALE" "mastodon-bird-ui-accessible" "Mastodon Bird UI (saavutettava)" "fi.yml"
   add_locale_entry "$FI_LOCALE" "mastodon-bird-ui-accessible-plus" "Mastodon Bird UI (saavutettava Plus)" "fi.yml"
 fi
