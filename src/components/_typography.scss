@@ -63,6 +63,10 @@
     font-size: var(--font-size-smaller);
   }
 
+  .simple_form .input.with_label .hint {
+    font-size: var(--font-size-smaller);
+  }
+
   // Line heights
   .status__content {
     line-height: var(--line-height);

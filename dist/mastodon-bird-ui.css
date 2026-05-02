@@ -387,7 +387,7 @@ body.layout-single-column, body.layout-multiple-columns {
   font-size: var(--font-size-mid);
 }
 
-.layout-single-column .simple_form span.hint, .layout-multiple-columns .simple_form span.hint {
+.layout-single-column .simple_form span.hint, .layout-multiple-columns .simple_form span.hint, .layout-single-column .simple_form .input.with_label .hint, .layout-multiple-columns .simple_form .input.with_label .hint {
   font-size: var(--font-size-smaller);
 }
 

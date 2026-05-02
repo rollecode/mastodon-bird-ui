@@ -6,6 +6,7 @@
 * Apply `--font-size` variable to `form_field_wrapper__wrapper` so accessible themes scale form field text
 * Apply `--font-size-mid` variable to `app-form__link__text` and its `strong` so accessible themes scale app form links
 * Apply `--font-size-smaller` variable to `.simple_form span.hint` so accessible themes scale form hints
+* Apply `--font-size-smaller` variable to `.simple_form .input.with_label .hint` so accessible themes scale labelled input hints
 * Fix inconsistent private mention styles between conversations and notifications, Closes #181
 * Add border-bottom to `follow_requests-unlocked_explanation`
 * Fix profile buttons and number fields on mobile under 420px
