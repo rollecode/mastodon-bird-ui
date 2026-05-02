@@ -11,4 +11,10 @@
     right: 16px;
     top: var(--gap-default);
   }
+
+  @media (max-width: 419px) {
+    .account__header__buttons {
+      padding-top: 0;
+    }
+  }
 }
