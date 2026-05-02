@@ -379,6 +379,10 @@ body.layout-single-column, body.layout-multiple-columns {
   font-size: var(--font-size-12);
 }
 
+.layout-single-column .display-name__html, .layout-multiple-columns .display-name__html {
+  font-size: var(--font-size);
+}
+
 .layout-single-column .status__content, .layout-multiple-columns .status__content {
   line-height: var(--line-height);
 }

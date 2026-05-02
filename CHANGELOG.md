@@ -2,6 +2,7 @@
 
 * Fix duplicate profile buttons after upstream class name change while keeping desktop buttons positioned at top right of the header bar, Closes #185
 * Remove padding-top from `account__header__buttons` on viewports under 420px
+* Apply `--font-size` variable to `display-name__html` so accessible themes scale display names
 * Fix inconsistent private mention styles between conversations and notifications, Closes #181
 * Add border-bottom to `follow_requests-unlocked_explanation`
 * Fix profile buttons and number fields on mobile under 420px

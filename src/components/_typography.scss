@@ -45,6 +45,11 @@
     font-size: var(--font-size-12);
   }
 
+  // Apply font size variable so accessible themes scale these elements
+  .display-name__html {
+    font-size: var(--font-size);
+  }
+
   // Line heights
   .status__content {
     line-height: var(--line-height);
