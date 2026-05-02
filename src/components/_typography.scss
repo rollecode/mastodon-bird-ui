@@ -50,6 +50,10 @@
     font-size: var(--font-size);
   }
 
+  [class*="_comp_form_fields_form_field_wrapper__wrapper"] {
+    font-size: var(--font-size);
+  }
+
   // Line heights
   .status__content {
     line-height: var(--line-height);
