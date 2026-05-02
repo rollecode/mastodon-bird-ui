@@ -54,6 +54,11 @@
     font-size: var(--font-size);
   }
 
+  .app-form__link__text,
+  .app-form__link__text strong {
+    font-size: var(--font-size-mid);
+  }
+
   // Line heights
   .status__content {
     line-height: var(--line-height);

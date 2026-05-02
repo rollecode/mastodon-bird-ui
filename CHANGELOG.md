@@ -4,6 +4,7 @@
 * Remove padding-top from `account__header__buttons` on viewports under 420px
 * Apply `--font-size` variable to `display-name__html` so accessible themes scale display names
 * Apply `--font-size` variable to `form_field_wrapper__wrapper` so accessible themes scale form field text
+* Apply `--font-size-mid` variable to `app-form__link__text` and its `strong` so accessible themes scale app form links
 * Fix inconsistent private mention styles between conversations and notifications, Closes #181
 * Add border-bottom to `follow_requests-unlocked_explanation`
 * Fix profile buttons and number fields on mobile under 420px

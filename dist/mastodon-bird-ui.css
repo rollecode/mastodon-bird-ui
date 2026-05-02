@@ -383,6 +383,10 @@ body.layout-single-column, body.layout-multiple-columns {
   font-size: var(--font-size);
 }
 
+.layout-single-column .app-form__link__text, .layout-single-column .app-form__link__text strong, .layout-multiple-columns .app-form__link__text, .layout-multiple-columns .app-form__link__text strong {
+  font-size: var(--font-size-mid);
+}
+
 .layout-single-column .status__content, .layout-multiple-columns .status__content {
   line-height: var(--line-height);
 }
