@@ -1,3 +1,7 @@
+### [Unreleased]
+
+* Refactor `:is()` complex selector in mobile sign-out CSS to plain comma list so PostCSS no longer emits "Complex selectors" warnings during Mastodon's Vite build, Closes https://github.com/rollecode/mastodon-bird-ui/issues/178
+
 ### 4.0.0-alpha.7: 2026-05-02
 
 * Fix duplicate profile buttons after upstream class name change while keeping desktop buttons positioned at top right of the header bar, Closes #185

@@ -240,7 +240,12 @@
         .ui .ui__header__links > .button[href="/auth/sign_in"]
       )
       .tabs-bar__wrapper
-      :is(.column-back-button, .column-header > *) {
+      .column-back-button,
+    .app-body:not(.layout-multiple-columns):has(
+        .ui .ui__header__links > .button[href="/auth/sign_in"]
+      )
+      .tabs-bar__wrapper
+      .column-header > * {
       display: none;
     }
 
