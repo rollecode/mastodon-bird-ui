@@ -17,4 +17,16 @@
       padding-top: 0;
     }
   }
+
+  // On smaller viewports the absolutely positioned desktop buttons would
+  // overlap badges; let them flow normally and push badges down 16px.
+  @media (max-width: 759px) {
+    .account__header__buttons[class*="_comp_account_header__buttonsDesktop"] {
+      position: static;
+    }
+
+    ._comp_account_header__badges {
+      margin-top: 16px;
+    }
+  }
 }

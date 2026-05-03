@@ -8,12 +8,12 @@
   }
 
   // Name area gap
-  [class*="_redesign__name"] {
+  [class*="_comp_account_header__name"] {
     column-gap: 6px;
   }
 
   // "Follows you" badge in the name area
-  [class*="_redesign__name"] > [class*="_comp_badge__default"] {
+  [class*="_comp_account_header__name"] > [class*="_comp_badge__default"] {
     background-color: var(--color-dark);
     color: var(--color-light-text);
     font-size: var(--font-size-11);
@@ -26,7 +26,7 @@
   }
 
   // Hide the "Follows you" icon, keep text only
-  [class*="_redesign__followerBadgeIcon"] {
+  [class*="_comp_account_header__followerBadgeIcon"] {
     display: none;
   }
 

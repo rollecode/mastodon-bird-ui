@@ -1,11 +1,18 @@
-// Profile display name size
+// Profile display name size and alignment
 .layout-single-column,
 .layout-multiple-columns {
-  [class*="_redesign__name"] h1 span {
+  ._comp_account_header__name,
+  ._comp_account_header__name > h1,
+  ._comp_account_header__name > h1 > bdi {
+    align-items: center;
+    display: inline-flex;
+  }
+
+  ._comp_account_header__name > h1 span {
     font-size: var(--font-size-bigger);
   }
 
-  [class*="_redesign__username"] {
+  ._comp_account_header__name > h1 small {
     font-size: var(--font-size-smaller);
     gap: 2px;
   }

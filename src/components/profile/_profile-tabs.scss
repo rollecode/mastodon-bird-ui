@@ -1,7 +1,8 @@
-// Profile tabs styling to match old account__section-headline
+// Profile tabs styling to match old account__section-headline.
+// Targets the new _comp_tab_list__* module classes (post-#38863 upstream rename).
 .layout-single-column,
 .layout-multiple-columns {
-  [class*="_redesign__tabs"] {
+  [class*="_comp_tab_list__tabList"][class*="_comp_tab_list__withSpaceAndBorder"] {
     background-color: transparent;
     border-bottom: 1px solid var(--color-border);
     border-left: 0;
@@ -12,7 +13,7 @@
     padding: 0;
   }
 
-  [class*="_redesign__tabs"] a {
+  [class*="_comp_tab_list__tabList"] [class*="_comp_tab_list__tab"] {
     color: var(--color-dim);
     flex: 1 1 0;
     font-size: var(--font-size);
@@ -24,20 +25,34 @@
     transition: background 200ms;
   }
 
-  [class*="_redesign__tabs"] a:hover {
+  [class*="_comp_tab_list__tabList"] [class*="_comp_tab_list__tab"]:hover {
     background-color: var(--color-column-link-hover);
     color: var(--color-light-text);
   }
 
   // Active tab
-  [class*="_redesign__tabs"] a.active {
+  [class*="_comp_tab_list__tabList"] [class*="_comp_tab_list__tab"].active {
     border-bottom: 0;
     color: var(--color-light-text);
     font-weight: var(--font-weight-bold);
     padding-bottom: 12px;
   }
 
-  // Filter dropdown
+  // Active tab indicator pill
+  [class*="_comp_tab_list__tabList"] [class*="_comp_tab_list__tab"].active::after {
+    background-color: var(--color-accent);
+    border-radius: 9999px;
+    bottom: -1px;
+    content: "";
+    display: block;
+    height: 4px;
+    left: 50%;
+    min-width: 56px;
+    position: absolute;
+    transform: translateX(-50%);
+  }
+
+  // Filter dropdown (unchanged from before)
   [class*="_v2__filtersWrapper"] {
     padding: 0;
   }
@@ -58,19 +73,5 @@
   [class*="_v2__filtersWrapper"] [class*="filterSelectButton"]:hover {
     background-color: var(--color-column-link-hover);
     color: var(--color-light-text);
-  }
-
-  // Active tab indicator pill
-  [class*="_redesign__tabs"] a.active::after {
-    background-color: var(--color-accent);
-    border-radius: 9999px;
-    bottom: -1px;
-    content: "";
-    display: block;
-    height: 4px;
-    left: 50%;
-    min-width: 56px;
-    position: absolute;
-    transform: translateX(-50%);
   }
 }

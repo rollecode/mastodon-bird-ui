@@ -1,8 +1,17 @@
 // Familiar followers spacing
 .layout-single-column,
 .layout-multiple-columns {
+  // Old class kept for back-compat with older Mastodon versions
   .account__header__familiar-followers {
     margin-block-end: 16px;
     margin-block-start: 0;
+  }
+
+  // New module class (post-#38863 upstream rename) needs explicit margin-bottom
+  // so spacing after FamiliarFollowers stays consistent regardless of badges.
+  // Reset upstream margin-top to avoid doubling against displayNameWrapper.
+  [class*="_comp_familiar_followers__wrapper"][class*="_comp_account_header__familiarFollowers"] {
+    margin-top: 0;
+    margin-bottom: 16px;
   }
 }

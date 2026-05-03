@@ -1,7 +1,4 @@
 /* Mastodon Bird UI v4.0.0-alpha.8.rc - https://github.com/ronilaukkarinen/mastodon-bird-ui */
-/* Mastodon Bird UI v4.0.0-alpha.6 - https://github.com/ronilaukkarinen/mastodon-bird-ui */
-/* Mastodon Bird UI v4.0.0-alpha.6 - https://github.com/ronilaukkarinen/mastodon-bird-ui */
-/* Mastodon Bird UI v4.0.0-alpha.6 - https://github.com/ronilaukkarinen/mastodon-bird-ui */
 :root {
   --color-text-primary: #fff;
   --color-text-secondary: #717c9b;
@@ -619,7 +616,7 @@ body.layout-single-column, body.layout-multiple-columns {
   color: var(--color-dim);
 }
 
-.layout-single-column [class*="_v2__filterOverlay"], .layout-single-column ._account_timeline_components_redesign__handleHelp, .layout-single-column .account-memorial-banner, .layout-single-column .follow-request-banner, .layout-single-column .moved-account-banner, .layout-single-column .about__meta, .layout-single-column .about__section__title, .layout-single-column .announcements, .layout-single-column .report-dialog-modal, .layout-single-column .report-modal__target, .layout-single-column .compose-form .autosuggest-textarea__suggestions, .layout-single-column .privacy-dropdown__dropdown, .layout-single-column .drawer__backdrop, .layout-single-column .list-editor__account, .layout-single-column .list-editor, .layout-single-column .list-editor__lists, .layout-single-column .list-adder__account, .layout-single-column .list-adder, .layout-single-column .list-adder__lists, .layout-single-column .dropdown-menu__arrow:before, .layout-single-column .dropdown-menu, .layout-single-column .dropdown-menu__item a, .layout-single-column .dropdown-menu__item button, .layout-single-column .emoji-mart-category-label span, .layout-single-column .emoji-mart-bar:first-child, .layout-single-column .emoji-picker-dropdown__menu, .layout-single-column .privacy-dropdown.active .privacy-dropdown__value, .layout-single-column .emoji-mart-search input, .layout-single-column .emoji-mart-scroll, .layout-single-column .emoji-mart-search, .layout-single-column .follow_requests-unlocked_explanation, .layout-single-column .dismissable-banner, .layout-single-column .block-modal__action-bar, .layout-single-column .boost-modal__action-bar, .layout-single-column .confirmation-modal__action-bar, .layout-single-column .mute-modal__action-bar, .layout-single-column .setting-text__wrapper, .layout-single-column .setting-text, .layout-single-column .report-modal__comment, .layout-single-column .report-modal__container, .layout-single-column .actions-modal, .layout-single-column .block-modal, .layout-single-column .boost-modal, .layout-single-column .compare-history-modal, .layout-single-column .confirmation-modal, .layout-single-column .mute-modal, .layout-single-column .report-modal, .layout-single-column .announcements__root, .layout-single-column .column-header__collapsible-inner, .layout-multiple-columns [class*="_v2__filterOverlay"], .layout-multiple-columns ._account_timeline_components_redesign__handleHelp, .layout-multiple-columns .account-memorial-banner, .layout-multiple-columns .follow-request-banner, .layout-multiple-columns .moved-account-banner, .layout-multiple-columns .about__meta, .layout-multiple-columns .about__section__title, .layout-multiple-columns .announcements, .layout-multiple-columns .report-dialog-modal, .layout-multiple-columns .report-modal__target, .layout-multiple-columns .compose-form .autosuggest-textarea__suggestions, .layout-multiple-columns .privacy-dropdown__dropdown, .layout-multiple-columns .drawer__backdrop, .layout-multiple-columns .list-editor__account, .layout-multiple-columns .list-editor, .layout-multiple-columns .list-editor__lists, .layout-multiple-columns .list-adder__account, .layout-multiple-columns .list-adder, .layout-multiple-columns .list-adder__lists, .layout-multiple-columns .dropdown-menu__arrow:before, .layout-multiple-columns .dropdown-menu, .layout-multiple-columns .dropdown-menu__item a, .layout-multiple-columns .dropdown-menu__item button, .layout-multiple-columns .emoji-mart-category-label span, .layout-multiple-columns .emoji-mart-bar:first-child, .layout-multiple-columns .emoji-picker-dropdown__menu, .layout-multiple-columns .privacy-dropdown.active .privacy-dropdown__value, .layout-multiple-columns .emoji-mart-search input, .layout-multiple-columns .emoji-mart-scroll, .layout-multiple-columns .emoji-mart-search, .layout-multiple-columns .follow_requests-unlocked_explanation, .layout-multiple-columns .dismissable-banner, .layout-multiple-columns .block-modal__action-bar, .layout-multiple-columns .boost-modal__action-bar, .layout-multiple-columns .confirmation-modal__action-bar, .layout-multiple-columns .mute-modal__action-bar, .layout-multiple-columns .setting-text__wrapper, .layout-multiple-columns .setting-text, .layout-multiple-columns .report-modal__comment, .layout-multiple-columns .report-modal__container, .layout-multiple-columns .actions-modal, .layout-multiple-columns .block-modal, .layout-multiple-columns .boost-modal, .layout-multiple-columns .compare-history-modal, .layout-multiple-columns .confirmation-modal, .layout-multiple-columns .mute-modal, .layout-multiple-columns .report-modal, .layout-multiple-columns .announcements__root, .layout-multiple-columns .column-header__collapsible-inner {
+.layout-single-column [class*="_v2__filterOverlay"], .layout-single-column ._comp_account_header__handleHelp, .layout-single-column .account-memorial-banner, .layout-single-column .follow-request-banner, .layout-single-column .moved-account-banner, .layout-single-column .about__meta, .layout-single-column .about__section__title, .layout-single-column .announcements, .layout-single-column .report-dialog-modal, .layout-single-column .report-modal__target, .layout-single-column .compose-form .autosuggest-textarea__suggestions, .layout-single-column .privacy-dropdown__dropdown, .layout-single-column .drawer__backdrop, .layout-single-column .list-editor__account, .layout-single-column .list-editor, .layout-single-column .list-editor__lists, .layout-single-column .list-adder__account, .layout-single-column .list-adder, .layout-single-column .list-adder__lists, .layout-single-column .dropdown-menu__arrow:before, .layout-single-column .dropdown-menu, .layout-single-column .dropdown-menu__item a, .layout-single-column .dropdown-menu__item button, .layout-single-column .emoji-mart-category-label span, .layout-single-column .emoji-mart-bar:first-child, .layout-single-column .emoji-picker-dropdown__menu, .layout-single-column .privacy-dropdown.active .privacy-dropdown__value, .layout-single-column .emoji-mart-search input, .layout-single-column .emoji-mart-scroll, .layout-single-column .emoji-mart-search, .layout-single-column .follow_requests-unlocked_explanation, .layout-single-column .dismissable-banner, .layout-single-column .block-modal__action-bar, .layout-single-column .boost-modal__action-bar, .layout-single-column .confirmation-modal__action-bar, .layout-single-column .mute-modal__action-bar, .layout-single-column .setting-text__wrapper, .layout-single-column .setting-text, .layout-single-column .report-modal__comment, .layout-single-column .report-modal__container, .layout-single-column .actions-modal, .layout-single-column .block-modal, .layout-single-column .boost-modal, .layout-single-column .compare-history-modal, .layout-single-column .confirmation-modal, .layout-single-column .mute-modal, .layout-single-column .report-modal, .layout-single-column .announcements__root, .layout-single-column .column-header__collapsible-inner, .layout-multiple-columns [class*="_v2__filterOverlay"], .layout-multiple-columns ._comp_account_header__handleHelp, .layout-multiple-columns .account-memorial-banner, .layout-multiple-columns .follow-request-banner, .layout-multiple-columns .moved-account-banner, .layout-multiple-columns .about__meta, .layout-multiple-columns .about__section__title, .layout-multiple-columns .announcements, .layout-multiple-columns .report-dialog-modal, .layout-multiple-columns .report-modal__target, .layout-multiple-columns .compose-form .autosuggest-textarea__suggestions, .layout-multiple-columns .privacy-dropdown__dropdown, .layout-multiple-columns .drawer__backdrop, .layout-multiple-columns .list-editor__account, .layout-multiple-columns .list-editor, .layout-multiple-columns .list-editor__lists, .layout-multiple-columns .list-adder__account, .layout-multiple-columns .list-adder, .layout-multiple-columns .list-adder__lists, .layout-multiple-columns .dropdown-menu__arrow:before, .layout-multiple-columns .dropdown-menu, .layout-multiple-columns .dropdown-menu__item a, .layout-multiple-columns .dropdown-menu__item button, .layout-multiple-columns .emoji-mart-category-label span, .layout-multiple-columns .emoji-mart-bar:first-child, .layout-multiple-columns .emoji-picker-dropdown__menu, .layout-multiple-columns .privacy-dropdown.active .privacy-dropdown__value, .layout-multiple-columns .emoji-mart-search input, .layout-multiple-columns .emoji-mart-scroll, .layout-multiple-columns .emoji-mart-search, .layout-multiple-columns .follow_requests-unlocked_explanation, .layout-multiple-columns .dismissable-banner, .layout-multiple-columns .block-modal__action-bar, .layout-multiple-columns .boost-modal__action-bar, .layout-multiple-columns .confirmation-modal__action-bar, .layout-multiple-columns .mute-modal__action-bar, .layout-multiple-columns .setting-text__wrapper, .layout-multiple-columns .setting-text, .layout-multiple-columns .report-modal__comment, .layout-multiple-columns .report-modal__container, .layout-multiple-columns .actions-modal, .layout-multiple-columns .block-modal, .layout-multiple-columns .boost-modal, .layout-multiple-columns .compare-history-modal, .layout-multiple-columns .confirmation-modal, .layout-multiple-columns .mute-modal, .layout-multiple-columns .report-modal, .layout-multiple-columns .announcements__root, .layout-multiple-columns .column-header__collapsible-inner {
   background-color: var(--color-dark);
   border-color: var(--color-dark);
   color: var(--color-light-text);
@@ -2184,11 +2181,11 @@ body.layout-single-column, body.layout-multiple-columns {
   background-color: #0000;
 }
 
-.layout-single-column [class*="_redesign__name"], .layout-multiple-columns [class*="_redesign__name"] {
+.layout-single-column [class*="_comp_account_header__name"], .layout-multiple-columns [class*="_comp_account_header__name"] {
   column-gap: 6px;
 }
 
-.layout-single-column [class*="_redesign__name"] > [class*="_comp_badge__default"], .layout-multiple-columns [class*="_redesign__name"] > [class*="_comp_badge__default"] {
+.layout-single-column [class*="_comp_account_header__name"] > [class*="_comp_badge__default"], .layout-multiple-columns [class*="_comp_account_header__name"] > [class*="_comp_badge__default"] {
   background-color: var(--color-dark);
   color: var(--color-light-text);
   font-size: var(--font-size-11);
@@ -2200,7 +2197,7 @@ body.layout-single-column, body.layout-multiple-columns {
   transform: translateY(-1px);
 }
 
-.layout-single-column [class*="_redesign__followerBadgeIcon"], .layout-multiple-columns [class*="_redesign__followerBadgeIcon"] {
+.layout-single-column [class*="_comp_account_header__followerBadgeIcon"], .layout-multiple-columns [class*="_comp_account_header__followerBadgeIcon"] {
   display: none;
 }
 
@@ -2253,7 +2250,7 @@ body.layout-single-column, body.layout-multiple-columns {
   display: inline;
 }
 
-.layout-single-column [class*="_redesign__tabs"], .layout-multiple-columns [class*="_redesign__tabs"] {
+.layout-single-column [class*="_comp_tab_list__tabList"][class*="_comp_tab_list__withSpaceAndBorder"], .layout-multiple-columns [class*="_comp_tab_list__tabList"][class*="_comp_tab_list__withSpaceAndBorder"] {
   border-bottom: 1px solid var(--color-border);
   border-left: 0;
   border-right: 0;
@@ -2264,7 +2261,7 @@ body.layout-single-column, body.layout-multiple-columns {
   padding: 0;
 }
 
-.layout-single-column [class*="_redesign__tabs"] a, .layout-multiple-columns [class*="_redesign__tabs"] a {
+.layout-single-column [class*="_comp_tab_list__tabList"] [class*="_comp_tab_list__tab"], .layout-multiple-columns [class*="_comp_tab_list__tabList"] [class*="_comp_tab_list__tab"] {
   color: var(--color-dim);
   font-size: var(--font-size);
   font-weight: var(--font-weight-semibold);
@@ -2276,16 +2273,29 @@ body.layout-single-column, body.layout-multiple-columns {
   position: relative;
 }
 
-.layout-single-column [class*="_redesign__tabs"] a:hover, .layout-multiple-columns [class*="_redesign__tabs"] a:hover {
+.layout-single-column [class*="_comp_tab_list__tabList"] [class*="_comp_tab_list__tab"]:hover, .layout-multiple-columns [class*="_comp_tab_list__tabList"] [class*="_comp_tab_list__tab"]:hover {
   background-color: var(--color-column-link-hover);
   color: var(--color-light-text);
 }
 
-.layout-single-column [class*="_redesign__tabs"] a.active, .layout-multiple-columns [class*="_redesign__tabs"] a.active {
+.layout-single-column [class*="_comp_tab_list__tabList"] [class*="_comp_tab_list__tab"].active, .layout-multiple-columns [class*="_comp_tab_list__tabList"] [class*="_comp_tab_list__tab"].active {
   color: var(--color-light-text);
   font-weight: var(--font-weight-bold);
   border-bottom: 0;
   padding-bottom: 12px;
+}
+
+.layout-single-column [class*="_comp_tab_list__tabList"] [class*="_comp_tab_list__tab"].active:after, .layout-multiple-columns [class*="_comp_tab_list__tabList"] [class*="_comp_tab_list__tab"].active:after {
+  background-color: var(--color-accent);
+  content: "";
+  border-radius: 9999px;
+  min-width: 56px;
+  height: 4px;
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .layout-single-column [class*="_v2__filtersWrapper"], .layout-multiple-columns [class*="_v2__filtersWrapper"] {
@@ -2310,19 +2320,6 @@ body.layout-single-column, body.layout-multiple-columns {
   color: var(--color-light-text);
 }
 
-.layout-single-column [class*="_redesign__tabs"] a.active:after, .layout-multiple-columns [class*="_redesign__tabs"] a.active:after {
-  background-color: var(--color-accent);
-  content: "";
-  border-radius: 9999px;
-  min-width: 56px;
-  height: 4px;
-  display: block;
-  position: absolute;
-  bottom: -1px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 .layout-single-column .account__header__bar, .layout-multiple-columns .account__header__bar {
   position: relative;
 }
@@ -2339,16 +2336,30 @@ body.layout-single-column, body.layout-multiple-columns {
   }
 }
 
-.layout-single-column [class*="_redesign__avatarWrapper"], .layout-multiple-columns [class*="_redesign__avatarWrapper"] {
-  margin-top: -45px;
-  margin-left: 2px;
+@media (width <= 759px) {
+  .layout-single-column .account__header__buttons[class*="_comp_account_header__buttonsDesktop"], .layout-multiple-columns .account__header__buttons[class*="_comp_account_header__buttonsDesktop"] {
+    position: static;
+  }
+
+  .layout-single-column ._comp_account_header__badges, .layout-multiple-columns ._comp_account_header__badges {
+    margin-top: 16px;
+  }
 }
 
-.layout-single-column [class*="_redesign__name"] h1 span, .layout-multiple-columns [class*="_redesign__name"] h1 span {
+.layout-single-column [class*="_comp_account_header__avatarWrapper"], .layout-multiple-columns [class*="_comp_account_header__avatarWrapper"] {
+  margin-top: -64px;
+}
+
+.layout-single-column ._comp_account_header__name, .layout-single-column ._comp_account_header__name > h1, .layout-single-column ._comp_account_header__name > h1 > bdi, .layout-multiple-columns ._comp_account_header__name, .layout-multiple-columns ._comp_account_header__name > h1, .layout-multiple-columns ._comp_account_header__name > h1 > bdi {
+  align-items: center;
+  display: inline-flex;
+}
+
+.layout-single-column ._comp_account_header__name > h1 span, .layout-multiple-columns ._comp_account_header__name > h1 span {
   font-size: var(--font-size-bigger);
 }
 
-.layout-single-column [class*="_redesign__username"], .layout-multiple-columns [class*="_redesign__username"] {
+.layout-single-column ._comp_account_header__name > h1 small, .layout-multiple-columns ._comp_account_header__name > h1 small {
   font-size: var(--font-size-smaller);
   gap: 2px;
 }
@@ -2409,6 +2420,11 @@ body.layout-single-column, body.layout-multiple-columns {
 
 .layout-single-column .account__header__familiar-followers, .layout-multiple-columns .account__header__familiar-followers {
   margin-block: 0 16px;
+}
+
+.layout-single-column [class*="_comp_familiar_followers__wrapper"][class*="_comp_account_header__familiarFollowers"], .layout-multiple-columns [class*="_comp_familiar_followers__wrapper"][class*="_comp_account_header__familiarFollowers"] {
+  margin-top: 0;
+  margin-bottom: 16px;
 }
 
 .layout-single-column [class*="_v2__tagsWrapper"] [class*="_comp_tags__tag"], .layout-multiple-columns [class*="_v2__tagsWrapper"] [class*="_comp_tags__tag"] {

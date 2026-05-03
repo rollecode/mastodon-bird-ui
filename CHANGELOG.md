@@ -1,3 +1,9 @@
+### [Unreleased]
+
+* Update profile tabs, name, avatar wrapper, badges, handle help, and familiar followers selectors to the new `_comp_account_header__*` and `_comp_tab_list__*` module classes (upstream rename in #38863)
+* Restore even profile tab distribution at all viewport widths
+* Add explicit `margin-bottom: 16px` on familiar followers under the new module class so spacing stays consistent when no role badges are rendered
+
 ### 4.0.0-alpha.8.rc: 2026-05-03
 
 * Add `mastodon-bird-ui-auto` theme that responds to `data-color-scheme` and `prefers-color-scheme`, ref #182
