@@ -13,6 +13,13 @@
     object-fit: contain;
   }
 
+  // When a content warning placeholder covers a portrait video, "contain"
+  // letterboxes the placeholder inside the video's aspect ratio. Use "cover"
+  // so the placeholder fills the container instead.
+  .video-player:has(.spoiler-button) .media-gallery__preview {
+    object-fit: cover;
+  }
+
   .detailed-status .status.status--is-quote .media-gallery,
   .status .audio-player,
   .status .media-gallery,

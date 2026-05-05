@@ -1078,6 +1078,10 @@ body.layout-single-column, body.layout-multiple-columns {
   object-fit: contain;
 }
 
+.layout-single-column .video-player:has(.spoiler-button) .media-gallery__preview, .layout-multiple-columns .video-player:has(.spoiler-button) .media-gallery__preview {
+  object-fit: cover;
+}
+
 .layout-single-column .detailed-status .status.status--is-quote .media-gallery, .layout-single-column .status .audio-player, .layout-single-column .status .media-gallery, .layout-single-column .status .video-player, .layout-single-column .audio-player, .layout-single-column .media-gallery, .layout-single-column .media-gallery__gifv, .layout-single-column .media-gallery__preview, .layout-single-column .video-player, .layout-single-column .status__quote .status__quote-author-button, .layout-multiple-columns .detailed-status .status.status--is-quote .media-gallery, .layout-multiple-columns .status .audio-player, .layout-multiple-columns .status .media-gallery, .layout-multiple-columns .status .video-player, .layout-multiple-columns .audio-player, .layout-multiple-columns .media-gallery, .layout-multiple-columns .media-gallery__gifv, .layout-multiple-columns .media-gallery__preview, .layout-multiple-columns .video-player, .layout-multiple-columns .status__quote .status__quote-author-button {
   margin-left: calc(var(--size-avatar) + var(--gap-default));
 }
