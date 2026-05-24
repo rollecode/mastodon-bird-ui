@@ -2,18 +2,18 @@
 // Mobile variant keeps upstream's sticky-bottom behavior on narrow viewports.
 .layout-single-column,
 .layout-multiple-columns {
-  .account__header__bar {
+  ._comp_account_header__barWrapper {
     position: relative;
   }
 
-  .account__header__buttons[class*="_comp_account_header__buttonsDesktop"] {
+  [class*="_comp_account_header__buttons"][class*="_comp_account_header__buttonsDesktop"] {
     position: absolute;
     right: 16px;
     top: var(--gap-default);
   }
 
   @media (max-width: 419px) {
-    .account__header__buttons {
+    [class*="_comp_account_header__buttons"] {
       padding-top: 0;
     }
   }
@@ -21,7 +21,7 @@
   // On smaller viewports the absolutely positioned desktop buttons would
   // overlap badges; let them flow normally and push badges down 16px.
   @media (max-width: 759px) {
-    .account__header__buttons[class*="_comp_account_header__buttonsDesktop"] {
+    [class*="_comp_account_header__buttons"][class*="_comp_account_header__buttonsDesktop"] {
       position: static;
     }
 

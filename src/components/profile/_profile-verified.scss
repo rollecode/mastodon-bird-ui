@@ -3,16 +3,16 @@
 .layout-multiple-columns {
   // Verified colors for Firefox before :has
   .account__details .verified-badge a,
-  .account__header__bar .account__header__fields .verified__mark,
-  .account__header__bar .account__header__fields .verified a,
-  .account__header__bar
-    .account__header__bio
-    .account__header__fields
+  ._comp_account_header__barWrapper ._comp_account_header__fieldList .verified__mark,
+  ._comp_account_header__barWrapper ._comp_account_header__fieldList .verified a,
+  ._comp_account_header__barWrapper
+    ._comp_account_header__bioButtonsWrapper
+    ._comp_account_header__fieldList
     .verified
     a,
-  .account__header__bar
-    .account__header__bio
-    .account__header__fields
+  ._comp_account_header__barWrapper
+    ._comp_account_header__bioButtonsWrapper
+    ._comp_account_header__fieldList
     .verified
     dd {
     color: var(--color-verified);
@@ -21,21 +21,21 @@
 
   // Reset verified colors
   .account__details .verified-badge a,
-  .account__header__bar:has(.account__header__fields .verified)
-    .account__header__fields
+  ._comp_account_header__barWrapper:has(._comp_account_header__fieldList .verified)
+    ._comp_account_header__fieldList
     .verified__mark,
-  .account__header__bar:has(.account__header__fields .verified)
-    .account__header__fields
+  ._comp_account_header__barWrapper:has(._comp_account_header__fieldList .verified)
+    ._comp_account_header__fieldList
     .verified
     a,
-  .account__header__bar:has(.account__header__fields .verified)
-    .account__header__bio
-    .account__header__fields
+  ._comp_account_header__barWrapper:has(._comp_account_header__fieldList .verified)
+    ._comp_account_header__bioButtonsWrapper
+    ._comp_account_header__fieldList
     .verified
     a,
-  .account__header__bar:has(.account__header__fields .verified)
-    .account__header__bio
-    .account__header__fields
+  ._comp_account_header__barWrapper:has(._comp_account_header__fieldList .verified)
+    ._comp_account_header__bioButtonsWrapper
+    ._comp_account_header__fieldList
     .verified
     dd {
     color: var(--color-accent);
@@ -44,8 +44,8 @@
 
   // Replace verified__mark
   .account__details .verified-badge .verified-badge__mark,
-  .account__header__bar:has(.account__header__fields .verified)
-    .account__header__fields
+  ._comp_account_header__barWrapper:has(._comp_account_header__fieldList .verified)
+    ._comp_account_header__fieldList
     .verified__mark {
     background-image: var(--icon-verified-smaller);
     background-repeat: no-repeat;
@@ -55,16 +55,16 @@
   }
 
   .account__details .verified-badge .verified-badge__mark path,
-  .account__header__bar:has(.account__header__fields .verified)
-    .account__header__fields
+  ._comp_account_header__barWrapper:has(._comp_account_header__fieldList .verified)
+    ._comp_account_header__fieldList
     .verified__mark
     path {
     display: none;
   }
 
   .account__details .verified-badge,
-  .account__header__bar:has(.account__header__fields .verified)
-    .account__header__fields
+  ._comp_account_header__barWrapper:has(._comp_account_header__fieldList .verified)
+    ._comp_account_header__fieldList
     .verified
     dd {
     align-items: center;
@@ -73,8 +73,8 @@
   }
 
   .account__details .verified-badge .verified-badge__mark,
-  .account__header__bar:has(.account__header__fields .verified)
-    .account__header__fields
+  ._comp_account_header__barWrapper:has(._comp_account_header__fieldList .verified)
+    ._comp_account_header__fieldList
     .verified
     dd
     span:nth-child(1) {
@@ -84,8 +84,8 @@
   }
 
   .account__details .verified-badge > span,
-  .account__header__bar:has(.account__header__fields .verified)
-    .account__header__fields
+  ._comp_account_header__barWrapper:has(._comp_account_header__fieldList .verified)
+    ._comp_account_header__fieldList
     .verified
     dd
     span:nth-child(2) {
@@ -93,7 +93,7 @@
   }
 
   // Joined label - first dl is always "Joined"
-  .account__header__bio .account__header__fields dl:first-of-type dt {
+  ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:first-of-type dt {
     display: inline-flex;
     font-weight: var(--font-weight-regular);
     gap: calc(var(--gap-default) / 2);
@@ -107,15 +107,15 @@
     text-transform: unset;
   }
 
-  .account__header__bio .account__header__fields dd,
-  .account__header__bio .account__header__fields dt {
+  ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dd,
+  ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dt {
     color: var(--color-dim);
     font-size: var(--font-size);
     font-weight: var(--font-weight-regular);
     text-transform: unset;
   }
 
-  .account__header__bio .account__header__fields dl {
+  ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl {
     align-items: center;
     background-color: transparent;
     border: 0;

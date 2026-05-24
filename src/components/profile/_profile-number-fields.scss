@@ -1,12 +1,12 @@
 // Move number fields (stats) to bottom and style like old Bird UI
 .layout-single-column,
 .layout-multiple-columns {
-  .account__header__bar {
+  ._comp_account_header__barWrapper {
     display: flex;
     flex-direction: column;
   }
 
-  .account__header__extra {
+  ._comp_account_header__bioButtonsWrapper {
     order: 4;
   }
 

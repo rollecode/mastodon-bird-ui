@@ -14,7 +14,7 @@
 
   // Replace the original icons (after 4.3.0)
   // Set size for the filter bar and profile icons
-  .account__header__buttons .icon,
+  [class*="_comp_account_header__buttons"] .icon,
   .notification__filter-bar .icon {
     --size-icon: 20px;
   }
@@ -36,7 +36,7 @@
   .notification-group--favourite .notification__message > .icon,
   .notification-favourite .notification__message > .icon,
   .notification-reblog .notification__message > .icon,
-  .account__header__buttons .icon,
+  [class*="_comp_account_header__buttons"] .icon,
   .detailed-status__action-bar .icon,
   .status__action-bar .icon,
   .notification__filter-bar .icon,
@@ -58,7 +58,7 @@
     width: var(--size-icon);
   }
 
-  .account__header__buttons .icon {
+  [class*="_comp_account_header__buttons"] .icon {
     background-position: center;
     background-size: var(--size-icon) var(--size-icon);
   }
@@ -83,7 +83,7 @@
   .notification-group--favourite > .notification-group__icon > .icon path,
   .notification-group--favourite .notification__message > .icon path,
   .notification-favourite .notification__message > .icon path,
-  .account__header__buttons .icon path,
+  [class*="_comp_account_header__buttons"] .icon path,
   .detailed-status__action-bar .icon path,
   .notification__filter-bar .icon path,
   .status__action-bar path,
@@ -104,10 +104,10 @@
   .icon-user-plus.column-link__icon path,
   .icon.icon-undefined path,
   .icon.icon-users path,
-  .account__header__buttons .optional path,
-  .account__header__buttons .icon.icon-user-plus path,
+  [class*="_comp_account_header__buttons"] .optional path,
+  [class*="_comp_account_header__buttons"] .icon.icon-user-plus path,
   .notification__filter-bar .icon.icon-user-plus path,
-  .account__header__buttons .icon.icon-tasks path,
+  [class*="_comp_account_header__buttons"] .icon.icon-tasks path,
   .notification__filter-bar .icon.icon-tasks path,
   .icon.icon-wrapstodon-planet path,
   .navigation-panel__legal .column-link[href="/about"] path {

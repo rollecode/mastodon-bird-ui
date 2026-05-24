@@ -1,8 +1,8 @@
 // Text color
 .layout-single-column,
 .layout-multiple-columns {
-  .account__header__tabs__name h1,
-  .account__header__bio .account__header__content,
+  ._comp_account_header__name h1,
+  ._comp_account_header__bioButtonsWrapper ._comp_account_header__bio,
   .reply-indicator__content,
   .status__content {
     color: var(--color-fg);

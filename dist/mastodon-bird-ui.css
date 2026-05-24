@@ -330,7 +330,7 @@ body.layout-single-column, body.layout-multiple-columns {
   line-height: var(--line-height-mid);
 }
 
-.layout-single-column .account__header__tabs__name h1, .layout-single-column .account__header__bio .account__header__content, .layout-single-column .reply-indicator__content, .layout-single-column .status__content, .layout-multiple-columns .account__header__tabs__name h1, .layout-multiple-columns .account__header__bio .account__header__content, .layout-multiple-columns .reply-indicator__content, .layout-multiple-columns .status__content {
+.layout-single-column ._comp_account_header__name h1, .layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__bio, .layout-single-column .reply-indicator__content, .layout-single-column .status__content, .layout-multiple-columns ._comp_account_header__name h1, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__bio, .layout-multiple-columns .reply-indicator__content, .layout-multiple-columns .status__content {
   color: var(--color-fg);
 }
 
@@ -364,17 +364,17 @@ body.layout-single-column, body.layout-multiple-columns {
   flex-grow: unset;
 }
 
-.layout-single-column .notification__message, .layout-single-column .status__content, .layout-single-column .account__header__tabs__name h1 small, .layout-single-column .button, .layout-single-column .status__content__read-more-button, .layout-single-column .status__prepend, .layout-single-column .status__info, .layout-single-column .status__relative-time, .layout-single-column .status__info .status__display-name, .layout-single-column .account__section-headline a, .layout-single-column .account__section-headline button, .layout-single-column .notification__filter-bar a, .layout-single-column .notification__filter-bar button, .layout-multiple-columns .notification__message, .layout-multiple-columns .status__content, .layout-multiple-columns .account__header__tabs__name h1 small, .layout-multiple-columns .button, .layout-multiple-columns .status__content__read-more-button, .layout-multiple-columns .status__prepend, .layout-multiple-columns .status__info, .layout-multiple-columns .status__relative-time, .layout-multiple-columns .status__info .status__display-name, .layout-multiple-columns .account__section-headline a, .layout-multiple-columns .account__section-headline button, .layout-multiple-columns .notification__filter-bar a, .layout-multiple-columns .notification__filter-bar button {
+.layout-single-column .notification__message, .layout-single-column .status__content, .layout-single-column ._comp_account_header__name h1 small, .layout-single-column .button, .layout-single-column .status__content__read-more-button, .layout-single-column .status__prepend, .layout-single-column .status__info, .layout-single-column .status__relative-time, .layout-single-column .status__info .status__display-name, .layout-single-column .account__section-headline a, .layout-single-column .account__section-headline button, .layout-single-column .notification__filter-bar a, .layout-single-column .notification__filter-bar button, .layout-multiple-columns .notification__message, .layout-multiple-columns .status__content, .layout-multiple-columns ._comp_account_header__name h1 small, .layout-multiple-columns .button, .layout-multiple-columns .status__content__read-more-button, .layout-multiple-columns .status__prepend, .layout-multiple-columns .status__info, .layout-multiple-columns .status__relative-time, .layout-multiple-columns .status__info .status__display-name, .layout-multiple-columns .account__section-headline a, .layout-multiple-columns .account__section-headline button, .layout-multiple-columns .notification__filter-bar a, .layout-multiple-columns .notification__filter-bar button {
   font-size: var(--font-size);
   line-height: var(--line-height);
 }
 
-.layout-single-column .account__header__extra__links, .layout-single-column .columns-area__panels__pane--compositional .account__header__account-note textarea, .layout-single-column .account__header__content, .layout-single-column .columns-area__panels__pane--compositional .compose-form .autosuggest-textarea__textarea, .layout-single-column .columns-area__panels__pane--compositional .compose-form .spoiler-input__input, .layout-multiple-columns .account__header__extra__links, .layout-multiple-columns .columns-area__panels__pane--compositional .account__header__account-note textarea, .layout-multiple-columns .account__header__content, .layout-multiple-columns .columns-area__panels__pane--compositional .compose-form .autosuggest-textarea__textarea, .layout-multiple-columns .columns-area__panels__pane--compositional .compose-form .spoiler-input__input {
+.layout-single-column ._comp_account_header__bioButtonsWrapper__links, .layout-single-column .columns-area__panels__pane--compositional .account__header__account-note textarea, .layout-single-column ._comp_account_header__bio, .layout-single-column .columns-area__panels__pane--compositional .compose-form .autosuggest-textarea__textarea, .layout-single-column .columns-area__panels__pane--compositional .compose-form .spoiler-input__input, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper__links, .layout-multiple-columns .columns-area__panels__pane--compositional .account__header__account-note textarea, .layout-multiple-columns ._comp_account_header__bio, .layout-multiple-columns .columns-area__panels__pane--compositional .compose-form .autosuggest-textarea__textarea, .layout-multiple-columns .columns-area__panels__pane--compositional .compose-form .spoiler-input__input {
   font-size: var(--font-size-mid);
   line-height: var(--line-height-mid);
 }
 
-.layout-single-column .account__header__content, .layout-multiple-columns .account__header__content {
+.layout-single-column ._comp_account_header__bio, .layout-multiple-columns ._comp_account_header__bio {
   line-height: 18px;
 }
 
@@ -659,7 +659,7 @@ body.layout-single-column, body.layout-multiple-columns {
   color: var(--color-dim);
 }
 
-.layout-single-column .search-results__section__header, .layout-single-column .account__header__bar, .layout-single-column .about__meta__divider, .layout-single-column .poll__footer, .layout-single-column .report-dialog-modal .poll__option.dialog-option, .layout-single-column .account, .layout-single-column .report-dialog-modal__container, .layout-single-column .dropdown-menu__item.edited-timestamp__history__item, .layout-single-column .dropdown-menu__container__header, .layout-single-column .compare-history-modal .report-modal__target, .layout-single-column .account__section-headline, .layout-single-column .detailed-status__action-bar, .layout-single-column .column-back-button, .layout-single-column .column-header, .layout-single-column .audio-player, .layout-single-column .video-player, .layout-single-column .media-gallery, .layout-single-column .compose-form .spoiler-input__input, .layout-single-column .compose-form__autosuggest-wrapper, .layout-single-column .compose-form__poll-wrapper, .layout-single-column .compose-form__poll-wrapper select, .layout-single-column .poll__option input[type="text"], .layout-single-column .report-dialog-modal__textarea, .layout-single-column .search__input, .layout-single-column .setting-text, .layout-single-column .dropdown-menu__separator, .layout-single-column .status, .layout-single-column .emoji-mart-search input, .layout-single-column .conversation, .layout-single-column .setting-text__wrapper, .layout-multiple-columns .search-results__section__header, .layout-multiple-columns .account__header__bar, .layout-multiple-columns .about__meta__divider, .layout-multiple-columns .poll__footer, .layout-multiple-columns .report-dialog-modal .poll__option.dialog-option, .layout-multiple-columns .account, .layout-multiple-columns .report-dialog-modal__container, .layout-multiple-columns .dropdown-menu__item.edited-timestamp__history__item, .layout-multiple-columns .dropdown-menu__container__header, .layout-multiple-columns .compare-history-modal .report-modal__target, .layout-multiple-columns .account__section-headline, .layout-multiple-columns .detailed-status__action-bar, .layout-multiple-columns .column-back-button, .layout-multiple-columns .column-header, .layout-multiple-columns .audio-player, .layout-multiple-columns .video-player, .layout-multiple-columns .media-gallery, .layout-multiple-columns .compose-form .spoiler-input__input, .layout-multiple-columns .compose-form__autosuggest-wrapper, .layout-multiple-columns .compose-form__poll-wrapper, .layout-multiple-columns .compose-form__poll-wrapper select, .layout-multiple-columns .poll__option input[type="text"], .layout-multiple-columns .report-dialog-modal__textarea, .layout-multiple-columns .search__input, .layout-multiple-columns .setting-text, .layout-multiple-columns .dropdown-menu__separator, .layout-multiple-columns .status, .layout-multiple-columns .emoji-mart-search input, .layout-multiple-columns .conversation, .layout-multiple-columns .setting-text__wrapper {
+.layout-single-column .search-results__section__header, .layout-single-column ._comp_account_header__barWrapper, .layout-single-column .about__meta__divider, .layout-single-column .poll__footer, .layout-single-column .report-dialog-modal .poll__option.dialog-option, .layout-single-column .account, .layout-single-column .report-dialog-modal__container, .layout-single-column .dropdown-menu__item.edited-timestamp__history__item, .layout-single-column .dropdown-menu__container__header, .layout-single-column .compare-history-modal .report-modal__target, .layout-single-column .account__section-headline, .layout-single-column .detailed-status__action-bar, .layout-single-column .column-back-button, .layout-single-column .column-header, .layout-single-column .audio-player, .layout-single-column .video-player, .layout-single-column .media-gallery, .layout-single-column .compose-form .spoiler-input__input, .layout-single-column .compose-form__autosuggest-wrapper, .layout-single-column .compose-form__poll-wrapper, .layout-single-column .compose-form__poll-wrapper select, .layout-single-column .poll__option input[type="text"], .layout-single-column .report-dialog-modal__textarea, .layout-single-column .search__input, .layout-single-column .setting-text, .layout-single-column .dropdown-menu__separator, .layout-single-column .status, .layout-single-column .emoji-mart-search input, .layout-single-column .conversation, .layout-single-column .setting-text__wrapper, .layout-multiple-columns .search-results__section__header, .layout-multiple-columns ._comp_account_header__barWrapper, .layout-multiple-columns .about__meta__divider, .layout-multiple-columns .poll__footer, .layout-multiple-columns .report-dialog-modal .poll__option.dialog-option, .layout-multiple-columns .account, .layout-multiple-columns .report-dialog-modal__container, .layout-multiple-columns .dropdown-menu__item.edited-timestamp__history__item, .layout-multiple-columns .dropdown-menu__container__header, .layout-multiple-columns .compare-history-modal .report-modal__target, .layout-multiple-columns .account__section-headline, .layout-multiple-columns .detailed-status__action-bar, .layout-multiple-columns .column-back-button, .layout-multiple-columns .column-header, .layout-multiple-columns .audio-player, .layout-multiple-columns .video-player, .layout-multiple-columns .media-gallery, .layout-multiple-columns .compose-form .spoiler-input__input, .layout-multiple-columns .compose-form__autosuggest-wrapper, .layout-multiple-columns .compose-form__poll-wrapper, .layout-multiple-columns .compose-form__poll-wrapper select, .layout-multiple-columns .poll__option input[type="text"], .layout-multiple-columns .report-dialog-modal__textarea, .layout-multiple-columns .search__input, .layout-multiple-columns .setting-text, .layout-multiple-columns .dropdown-menu__separator, .layout-multiple-columns .status, .layout-multiple-columns .emoji-mart-search input, .layout-multiple-columns .conversation, .layout-multiple-columns .setting-text__wrapper {
   border-color: var(--color-border);
 }
 
@@ -688,7 +688,7 @@ body.layout-single-column, body.layout-multiple-columns {
   display: none;
 }
 
-.layout-single-column .about__section__title, .layout-single-column .account__header__bio .account__header__fields a, .layout-single-column .column-back-button, .layout-single-column .emoji-mart-anchor.emoji-mart-anchor-selected, .layout-single-column .text-icon-button.active, .layout-single-column .empty-column-indicator a, .layout-single-column .follow_requests-unlocked_explanation a, .layout-single-column .column-header__back-button, .layout-single-column .link-button, .layout-single-column .reply-indicator__content a.unhandled-link, .layout-single-column .status__content a.unhandled-link, .layout-single-column .column-header > .column-header__back-button, .layout-single-column .reply-indicator__content a, .layout-single-column .status__content a, .layout-single-column .column-link--transparent.active, .layout-single-column .status__content__read-more-button, .layout-single-column .status__content__translate-button, .layout-multiple-columns .about__section__title, .layout-multiple-columns .account__header__bio .account__header__fields a, .layout-multiple-columns .column-back-button, .layout-multiple-columns .emoji-mart-anchor.emoji-mart-anchor-selected, .layout-multiple-columns .text-icon-button.active, .layout-multiple-columns .empty-column-indicator a, .layout-multiple-columns .follow_requests-unlocked_explanation a, .layout-multiple-columns .column-header__back-button, .layout-multiple-columns .link-button, .layout-multiple-columns .reply-indicator__content a.unhandled-link, .layout-multiple-columns .status__content a.unhandled-link, .layout-multiple-columns .column-header > .column-header__back-button, .layout-multiple-columns .reply-indicator__content a, .layout-multiple-columns .status__content a, .layout-multiple-columns .column-link--transparent.active, .layout-multiple-columns .status__content__read-more-button, .layout-multiple-columns .status__content__translate-button {
+.layout-single-column .about__section__title, .layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList a, .layout-single-column .column-back-button, .layout-single-column .emoji-mart-anchor.emoji-mart-anchor-selected, .layout-single-column .text-icon-button.active, .layout-single-column .empty-column-indicator a, .layout-single-column .follow_requests-unlocked_explanation a, .layout-single-column .column-header__back-button, .layout-single-column .link-button, .layout-single-column .reply-indicator__content a.unhandled-link, .layout-single-column .status__content a.unhandled-link, .layout-single-column .column-header > .column-header__back-button, .layout-single-column .reply-indicator__content a, .layout-single-column .status__content a, .layout-single-column .column-link--transparent.active, .layout-single-column .status__content__read-more-button, .layout-single-column .status__content__translate-button, .layout-multiple-columns .about__section__title, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList a, .layout-multiple-columns .column-back-button, .layout-multiple-columns .emoji-mart-anchor.emoji-mart-anchor-selected, .layout-multiple-columns .text-icon-button.active, .layout-multiple-columns .empty-column-indicator a, .layout-multiple-columns .follow_requests-unlocked_explanation a, .layout-multiple-columns .column-header__back-button, .layout-multiple-columns .link-button, .layout-multiple-columns .reply-indicator__content a.unhandled-link, .layout-multiple-columns .status__content a.unhandled-link, .layout-multiple-columns .column-header > .column-header__back-button, .layout-multiple-columns .reply-indicator__content a, .layout-multiple-columns .status__content a, .layout-multiple-columns .column-link--transparent.active, .layout-multiple-columns .status__content__read-more-button, .layout-multiple-columns .status__content__translate-button {
   color: var(--color-accent);
 }
 
@@ -836,7 +836,7 @@ body.layout-single-column, body.layout-multiple-columns {
   background-color: #0000;
 }
 
-.layout-single-column .notification .status-link.mention:not(.hashtag):not(.mention), .layout-single-column .notification .status-link.hashtag, .layout-single-column .notification .status-link.mention:not(.hashtag), .layout-single-column .compose-form .autosuggest-textarea__textarea::placeholder, .layout-single-column .compose-form .icon-button, .layout-single-column .compose-form .spoiler-input__input::placeholder, .layout-single-column .compose-form__poll-wrapper .button.button-secondary, .layout-single-column .language-dropdown__dropdown__results__item__common-name, .layout-single-column .report-dialog-modal__textarea::placeholder, .layout-single-column .poll__link, .layout-single-column .muted .poll, .layout-single-column .status .status__relative-time, .layout-single-column .status .status__visibility-icon, .layout-single-column .block-modal__action-bar > div, .layout-single-column .boost-modal__action-bar > div, .layout-single-column .confirmation-modal__action-bar > div, .layout-single-column .mute-modal__action-bar > div, .layout-single-column .search-popout > h4, .layout-single-column .search__popout > h4, .layout-single-column .status-check-box__status .detailed-status__display-name, .layout-single-column .report-dialog-modal .poll__option.dialog-option > .poll__option__text, .layout-single-column .status-card .status-card__description, .layout-single-column .report-dialog-modal .dialog-option .poll__input, .layout-single-column .dropdown-menu__container__header, .layout-single-column .sign-in-banner p, .layout-single-column .navigation-bar > a, .layout-single-column .character-counter, .layout-single-column .text-icon-button, .layout-single-column .empty-column-indicator, .layout-single-column .follow_requests-unlocked_explanation, .layout-single-column .poll__footer, .layout-single-column .server-banner h4, .layout-single-column .column-header__button, .layout-single-column .search__icon .icon-times-circle, .layout-single-column .timeline-hint, .layout-single-column .status__display-name.muted, .layout-single-column .setting-text-label, .layout-single-column .account__header__bio .account__header__fields dt, .layout-single-column .account__header__bio .account__header__fields dd, .layout-single-column .link-footer p, .layout-single-column .account__header__extra__links a, .layout-single-column .trends__item__current, .layout-single-column .emoji-mart-anchor, .layout-single-column .emoji-mart, .layout-single-column .emoji-mart-anchors, .layout-single-column .reply-indicator .display-name *, .layout-single-column .status__display-name, .layout-single-column .status__prepend .status__display-name strong, .layout-single-column .status__prepend, .layout-single-column .compose-form .compose-form__modifiers, .layout-single-column .compose-form .autosuggest-textarea__textarea, .layout-single-column .compose-form .spoiler-input__input, .layout-single-column .autosuggest-textarea__suggestions, .layout-single-column .compose-form .autosuggest-account .display-name__account, .layout-single-column .compose-panel .compose-form__autosuggest-wrapper, .layout-single-column .compose-form .compose-form__buttons-wrapper, .layout-single-column .account__section-headline a, .layout-single-column .account__section-headline button, .layout-single-column .notification__filter-bar a, .layout-single-column .notification__filter-bar button, .layout-single-column .attachment-list.compact .icon, .layout-single-column .attachment-list__list a, .layout-single-column .notification__message .icon-user-plus, .layout-single-column .notification__message .icon-home, .layout-single-column .notification__message .icon-retweet, .layout-single-column .link-footer p a, .layout-single-column .trends__item__name, .layout-single-column .muted .status__content, .layout-single-column .muted .status__content a, .layout-single-column .muted .status__content p, .layout-single-column .muted .status__display-name strong, .layout-single-column .privacy-dropdown__option:not(.active) .privacy-dropdown__option__content, .layout-multiple-columns .notification .status-link.mention:not(.hashtag):not(.mention), .layout-multiple-columns .notification .status-link.hashtag, .layout-multiple-columns .notification .status-link.mention:not(.hashtag), .layout-multiple-columns .compose-form .autosuggest-textarea__textarea::placeholder, .layout-multiple-columns .compose-form .icon-button, .layout-multiple-columns .compose-form .spoiler-input__input::placeholder, .layout-multiple-columns .compose-form__poll-wrapper .button.button-secondary, .layout-multiple-columns .language-dropdown__dropdown__results__item__common-name, .layout-multiple-columns .report-dialog-modal__textarea::placeholder, .layout-multiple-columns .poll__link, .layout-multiple-columns .muted .poll, .layout-multiple-columns .status .status__relative-time, .layout-multiple-columns .status .status__visibility-icon, .layout-multiple-columns .block-modal__action-bar > div, .layout-multiple-columns .boost-modal__action-bar > div, .layout-multiple-columns .confirmation-modal__action-bar > div, .layout-multiple-columns .mute-modal__action-bar > div, .layout-multiple-columns .search-popout > h4, .layout-multiple-columns .search__popout > h4, .layout-multiple-columns .status-check-box__status .detailed-status__display-name, .layout-multiple-columns .report-dialog-modal .poll__option.dialog-option > .poll__option__text, .layout-multiple-columns .status-card .status-card__description, .layout-multiple-columns .report-dialog-modal .dialog-option .poll__input, .layout-multiple-columns .dropdown-menu__container__header, .layout-multiple-columns .sign-in-banner p, .layout-multiple-columns .navigation-bar > a, .layout-multiple-columns .character-counter, .layout-multiple-columns .text-icon-button, .layout-multiple-columns .empty-column-indicator, .layout-multiple-columns .follow_requests-unlocked_explanation, .layout-multiple-columns .poll__footer, .layout-multiple-columns .server-banner h4, .layout-multiple-columns .column-header__button, .layout-multiple-columns .search__icon .icon-times-circle, .layout-multiple-columns .timeline-hint, .layout-multiple-columns .status__display-name.muted, .layout-multiple-columns .setting-text-label, .layout-multiple-columns .account__header__bio .account__header__fields dt, .layout-multiple-columns .account__header__bio .account__header__fields dd, .layout-multiple-columns .link-footer p, .layout-multiple-columns .account__header__extra__links a, .layout-multiple-columns .trends__item__current, .layout-multiple-columns .emoji-mart-anchor, .layout-multiple-columns .emoji-mart, .layout-multiple-columns .emoji-mart-anchors, .layout-multiple-columns .reply-indicator .display-name *, .layout-multiple-columns .status__display-name, .layout-multiple-columns .status__prepend .status__display-name strong, .layout-multiple-columns .status__prepend, .layout-multiple-columns .compose-form .compose-form__modifiers, .layout-multiple-columns .compose-form .autosuggest-textarea__textarea, .layout-multiple-columns .compose-form .spoiler-input__input, .layout-multiple-columns .autosuggest-textarea__suggestions, .layout-multiple-columns .compose-form .autosuggest-account .display-name__account, .layout-multiple-columns .compose-panel .compose-form__autosuggest-wrapper, .layout-multiple-columns .compose-form .compose-form__buttons-wrapper, .layout-multiple-columns .account__section-headline a, .layout-multiple-columns .account__section-headline button, .layout-multiple-columns .notification__filter-bar a, .layout-multiple-columns .notification__filter-bar button, .layout-multiple-columns .attachment-list.compact .icon, .layout-multiple-columns .attachment-list__list a, .layout-multiple-columns .notification__message .icon-user-plus, .layout-multiple-columns .notification__message .icon-home, .layout-multiple-columns .notification__message .icon-retweet, .layout-multiple-columns .link-footer p a, .layout-multiple-columns .trends__item__name, .layout-multiple-columns .muted .status__content, .layout-multiple-columns .muted .status__content a, .layout-multiple-columns .muted .status__content p, .layout-multiple-columns .muted .status__display-name strong, .layout-multiple-columns .privacy-dropdown__option:not(.active) .privacy-dropdown__option__content {
+.layout-single-column .notification .status-link.mention:not(.hashtag):not(.mention), .layout-single-column .notification .status-link.hashtag, .layout-single-column .notification .status-link.mention:not(.hashtag), .layout-single-column .compose-form .autosuggest-textarea__textarea::placeholder, .layout-single-column .compose-form .icon-button, .layout-single-column .compose-form .spoiler-input__input::placeholder, .layout-single-column .compose-form__poll-wrapper .button.button-secondary, .layout-single-column .language-dropdown__dropdown__results__item__common-name, .layout-single-column .report-dialog-modal__textarea::placeholder, .layout-single-column .poll__link, .layout-single-column .muted .poll, .layout-single-column .status .status__relative-time, .layout-single-column .status .status__visibility-icon, .layout-single-column .block-modal__action-bar > div, .layout-single-column .boost-modal__action-bar > div, .layout-single-column .confirmation-modal__action-bar > div, .layout-single-column .mute-modal__action-bar > div, .layout-single-column .search-popout > h4, .layout-single-column .search__popout > h4, .layout-single-column .status-check-box__status .detailed-status__display-name, .layout-single-column .report-dialog-modal .poll__option.dialog-option > .poll__option__text, .layout-single-column .status-card .status-card__description, .layout-single-column .report-dialog-modal .dialog-option .poll__input, .layout-single-column .dropdown-menu__container__header, .layout-single-column .sign-in-banner p, .layout-single-column .navigation-bar > a, .layout-single-column .character-counter, .layout-single-column .text-icon-button, .layout-single-column .empty-column-indicator, .layout-single-column .follow_requests-unlocked_explanation, .layout-single-column .poll__footer, .layout-single-column .server-banner h4, .layout-single-column .column-header__button, .layout-single-column .search__icon .icon-times-circle, .layout-single-column .timeline-hint, .layout-single-column .status__display-name.muted, .layout-single-column .setting-text-label, .layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dt, .layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dd, .layout-single-column .link-footer p, .layout-single-column ._comp_account_header__bioButtonsWrapper__links a, .layout-single-column .trends__item__current, .layout-single-column .emoji-mart-anchor, .layout-single-column .emoji-mart, .layout-single-column .emoji-mart-anchors, .layout-single-column .reply-indicator .display-name *, .layout-single-column .status__display-name, .layout-single-column .status__prepend .status__display-name strong, .layout-single-column .status__prepend, .layout-single-column .compose-form .compose-form__modifiers, .layout-single-column .compose-form .autosuggest-textarea__textarea, .layout-single-column .compose-form .spoiler-input__input, .layout-single-column .autosuggest-textarea__suggestions, .layout-single-column .compose-form .autosuggest-account .display-name__account, .layout-single-column .compose-panel .compose-form__autosuggest-wrapper, .layout-single-column .compose-form .compose-form__buttons-wrapper, .layout-single-column .account__section-headline a, .layout-single-column .account__section-headline button, .layout-single-column .notification__filter-bar a, .layout-single-column .notification__filter-bar button, .layout-single-column .attachment-list.compact .icon, .layout-single-column .attachment-list__list a, .layout-single-column .notification__message .icon-user-plus, .layout-single-column .notification__message .icon-home, .layout-single-column .notification__message .icon-retweet, .layout-single-column .link-footer p a, .layout-single-column .trends__item__name, .layout-single-column .muted .status__content, .layout-single-column .muted .status__content a, .layout-single-column .muted .status__content p, .layout-single-column .muted .status__display-name strong, .layout-single-column .privacy-dropdown__option:not(.active) .privacy-dropdown__option__content, .layout-multiple-columns .notification .status-link.mention:not(.hashtag):not(.mention), .layout-multiple-columns .notification .status-link.hashtag, .layout-multiple-columns .notification .status-link.mention:not(.hashtag), .layout-multiple-columns .compose-form .autosuggest-textarea__textarea::placeholder, .layout-multiple-columns .compose-form .icon-button, .layout-multiple-columns .compose-form .spoiler-input__input::placeholder, .layout-multiple-columns .compose-form__poll-wrapper .button.button-secondary, .layout-multiple-columns .language-dropdown__dropdown__results__item__common-name, .layout-multiple-columns .report-dialog-modal__textarea::placeholder, .layout-multiple-columns .poll__link, .layout-multiple-columns .muted .poll, .layout-multiple-columns .status .status__relative-time, .layout-multiple-columns .status .status__visibility-icon, .layout-multiple-columns .block-modal__action-bar > div, .layout-multiple-columns .boost-modal__action-bar > div, .layout-multiple-columns .confirmation-modal__action-bar > div, .layout-multiple-columns .mute-modal__action-bar > div, .layout-multiple-columns .search-popout > h4, .layout-multiple-columns .search__popout > h4, .layout-multiple-columns .status-check-box__status .detailed-status__display-name, .layout-multiple-columns .report-dialog-modal .poll__option.dialog-option > .poll__option__text, .layout-multiple-columns .status-card .status-card__description, .layout-multiple-columns .report-dialog-modal .dialog-option .poll__input, .layout-multiple-columns .dropdown-menu__container__header, .layout-multiple-columns .sign-in-banner p, .layout-multiple-columns .navigation-bar > a, .layout-multiple-columns .character-counter, .layout-multiple-columns .text-icon-button, .layout-multiple-columns .empty-column-indicator, .layout-multiple-columns .follow_requests-unlocked_explanation, .layout-multiple-columns .poll__footer, .layout-multiple-columns .server-banner h4, .layout-multiple-columns .column-header__button, .layout-multiple-columns .search__icon .icon-times-circle, .layout-multiple-columns .timeline-hint, .layout-multiple-columns .status__display-name.muted, .layout-multiple-columns .setting-text-label, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dt, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dd, .layout-multiple-columns .link-footer p, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper__links a, .layout-multiple-columns .trends__item__current, .layout-multiple-columns .emoji-mart-anchor, .layout-multiple-columns .emoji-mart, .layout-multiple-columns .emoji-mart-anchors, .layout-multiple-columns .reply-indicator .display-name *, .layout-multiple-columns .status__display-name, .layout-multiple-columns .status__prepend .status__display-name strong, .layout-multiple-columns .status__prepend, .layout-multiple-columns .compose-form .compose-form__modifiers, .layout-multiple-columns .compose-form .autosuggest-textarea__textarea, .layout-multiple-columns .compose-form .spoiler-input__input, .layout-multiple-columns .autosuggest-textarea__suggestions, .layout-multiple-columns .compose-form .autosuggest-account .display-name__account, .layout-multiple-columns .compose-panel .compose-form__autosuggest-wrapper, .layout-multiple-columns .compose-form .compose-form__buttons-wrapper, .layout-multiple-columns .account__section-headline a, .layout-multiple-columns .account__section-headline button, .layout-multiple-columns .notification__filter-bar a, .layout-multiple-columns .notification__filter-bar button, .layout-multiple-columns .attachment-list.compact .icon, .layout-multiple-columns .attachment-list__list a, .layout-multiple-columns .notification__message .icon-user-plus, .layout-multiple-columns .notification__message .icon-home, .layout-multiple-columns .notification__message .icon-retweet, .layout-multiple-columns .link-footer p a, .layout-multiple-columns .trends__item__name, .layout-multiple-columns .muted .status__content, .layout-multiple-columns .muted .status__content a, .layout-multiple-columns .muted .status__content p, .layout-multiple-columns .muted .status__display-name strong, .layout-multiple-columns .privacy-dropdown__option:not(.active) .privacy-dropdown__option__content {
   color: var(--color-dim);
 }
 
@@ -870,7 +870,7 @@ body.layout-single-column, body.layout-multiple-columns {
   color: var(--color-dim);
 }
 
-.layout-single-column .announcements__pagination .icon-button:hover i, .layout-single-column .server-banner__introduction, .layout-single-column .account__header__tabs__name h1 small, .layout-single-column .account .account__display-name, .layout-single-column .column-settings__section, .layout-single-column .setting-toggle__label, .layout-single-column .server-banner__number-label, .layout-multiple-columns .announcements__pagination .icon-button:hover i, .layout-multiple-columns .server-banner__introduction, .layout-multiple-columns .account__header__tabs__name h1 small, .layout-multiple-columns .account .account__display-name, .layout-multiple-columns .column-settings__section, .layout-multiple-columns .setting-toggle__label, .layout-multiple-columns .server-banner__number-label {
+.layout-single-column .announcements__pagination .icon-button:hover i, .layout-single-column .server-banner__introduction, .layout-single-column ._comp_account_header__name h1 small, .layout-single-column .account .account__display-name, .layout-single-column .column-settings__section, .layout-single-column .setting-toggle__label, .layout-single-column .server-banner__number-label, .layout-multiple-columns .announcements__pagination .icon-button:hover i, .layout-multiple-columns .server-banner__introduction, .layout-multiple-columns ._comp_account_header__name h1 small, .layout-multiple-columns .account .account__display-name, .layout-multiple-columns .column-settings__section, .layout-multiple-columns .setting-toggle__label, .layout-multiple-columns .server-banner__number-label {
   color: var(--color-light-purple);
 }
 
@@ -1157,7 +1157,7 @@ body.layout-single-column, body.layout-multiple-columns {
   top: 0;
 }
 
-.layout-single-column .account__header__tabs__name h1 small, .layout-multiple-columns .account__header__tabs__name h1 small {
+.layout-single-column ._comp_account_header__name h1 small, .layout-multiple-columns ._comp_account_header__name h1 small {
   gap: 4px;
   margin-top: 4px;
   display: flex;
@@ -1428,6 +1428,14 @@ body.layout-single-column, body.layout-multiple-columns {
 
 .layout-single-column .navigation-panel__menu > li[role="separator"], .layout-multiple-columns .navigation-panel__menu > li[role="separator"] {
   display: none;
+}
+
+.layout-single-column .navigation-panel__menu > li:has(button.column-link), .layout-multiple-columns .navigation-panel__menu > li:has(button.column-link) {
+  order: 1;
+}
+
+.layout-single-column .navigation-panel__menu > li.navigation-panel__legal, .layout-multiple-columns .navigation-panel__menu > li.navigation-panel__legal {
+  order: 0;
 }
 
 .layout-single-column .navigation-panel__logo hr, .layout-multiple-columns .navigation-panel__logo hr {
@@ -1723,11 +1731,11 @@ body.layout-single-column, body.layout-multiple-columns {
   opacity: 1;
 }
 
-.layout-single-column .getting-started__trends h4, .layout-single-column .account__header__bar, .layout-multiple-columns .getting-started__trends h4, .layout-multiple-columns .account__header__bar {
+.layout-single-column .getting-started__trends h4, .layout-single-column ._comp_account_header__barWrapper, .layout-multiple-columns .getting-started__trends h4, .layout-multiple-columns ._comp_account_header__barWrapper {
   border-color: var(--color-border);
 }
 
-.layout-single-column .account__header__bio .account__header__fields, .layout-multiple-columns .account__header__bio .account__header__fields {
+.layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList {
   color: var(--color-dim);
   gap: var(--gap-default);
   background-color: #0000;
@@ -1763,7 +1771,7 @@ body.layout-single-column, body.layout-multiple-columns {
   line-height: 1.3;
 }
 
-.layout-single-column .account__header__bio .account__header__fields span > a:only-of-type, .layout-multiple-columns .account__header__bio .account__header__fields span > a:only-of-type {
+.layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList span > a:only-of-type, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList span > a:only-of-type {
   text-overflow: ellipsis;
   white-space: nowrap;
   max-width: 220px;
@@ -1771,15 +1779,15 @@ body.layout-single-column, body.layout-multiple-columns {
   overflow: hidden;
 }
 
-.layout-single-column .account__header__bio .account__header__fields dt, .layout-multiple-columns .account__header__bio .account__header__fields dt {
+.layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dt, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dt {
   order: 1;
 }
 
-.layout-single-column .account__header__bio .account__header__fields dd, .layout-multiple-columns .account__header__bio .account__header__fields dd {
+.layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dd, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dd {
   order: 2;
 }
 
-.layout-single-column .account__header__bio .account__header__fields dl:before, .layout-single-column .account__header__bio .account__header__fields dl:after, .layout-multiple-columns .account__header__bio .account__header__fields dl:before, .layout-multiple-columns .account__header__bio .account__header__fields dl:after {
+.layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:before, .layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:after, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:before, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:after {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1788,101 +1796,101 @@ body.layout-single-column, body.layout-multiple-columns {
   display: inline-block;
 }
 
-.layout-single-column .account__header__bio .account__header__fields dl:has(dd[title*="github.com" i], dd[title*="youtube.com" i], dd[title*="youtu.be" i], dd[title*="twitch.tv" i], dd[title*="twitter.com" i], dd[title*="x.com" i], dd[title*="discord" i], dd[title*="linkedin.com" i], dd[title*="instagram.com" i], dd[title*="ko-fi.com" i], dd[title*="kofi.com" i], dd[title*="paypal" i], dd[title*="patreon.com" i], dd[title*="threads.net" i], dd[title*="bsky.app" i], dd[title*="bsky.social" i], dd[title*="facebook.com" i], dd[title*="fb.com" i], dd[title*="bandcamp.com" i], dd[title*="wordpress.com" i], dd[title*="wordpress.org" i], dd[title*="/@" i]), .layout-single-column .account__header__bio .account__header__fields dl:has(a):not(:first-of-type), .layout-multiple-columns .account__header__bio .account__header__fields dl:has(dd[title*="github.com" i], dd[title*="youtube.com" i], dd[title*="youtu.be" i], dd[title*="twitch.tv" i], dd[title*="twitter.com" i], dd[title*="x.com" i], dd[title*="discord" i], dd[title*="linkedin.com" i], dd[title*="instagram.com" i], dd[title*="ko-fi.com" i], dd[title*="kofi.com" i], dd[title*="paypal" i], dd[title*="patreon.com" i], dd[title*="threads.net" i], dd[title*="bsky.app" i], dd[title*="bsky.social" i], dd[title*="facebook.com" i], dd[title*="fb.com" i], dd[title*="bandcamp.com" i], dd[title*="wordpress.com" i], dd[title*="wordpress.org" i], dd[title*="/@" i]), .layout-multiple-columns .account__header__bio .account__header__fields dl:has(a):not(:first-of-type) {
+.layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="github.com" i], dd[title*="youtube.com" i], dd[title*="youtu.be" i], dd[title*="twitch.tv" i], dd[title*="twitter.com" i], dd[title*="x.com" i], dd[title*="discord" i], dd[title*="linkedin.com" i], dd[title*="instagram.com" i], dd[title*="ko-fi.com" i], dd[title*="kofi.com" i], dd[title*="paypal" i], dd[title*="patreon.com" i], dd[title*="threads.net" i], dd[title*="bsky.app" i], dd[title*="bsky.social" i], dd[title*="facebook.com" i], dd[title*="fb.com" i], dd[title*="bandcamp.com" i], dd[title*="wordpress.com" i], dd[title*="wordpress.org" i], dd[title*="/@" i]), .layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(a):not(:first-of-type), .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="github.com" i], dd[title*="youtube.com" i], dd[title*="youtu.be" i], dd[title*="twitch.tv" i], dd[title*="twitter.com" i], dd[title*="x.com" i], dd[title*="discord" i], dd[title*="linkedin.com" i], dd[title*="instagram.com" i], dd[title*="ko-fi.com" i], dd[title*="kofi.com" i], dd[title*="paypal" i], dd[title*="patreon.com" i], dd[title*="threads.net" i], dd[title*="bsky.app" i], dd[title*="bsky.social" i], dd[title*="facebook.com" i], dd[title*="fb.com" i], dd[title*="bandcamp.com" i], dd[title*="wordpress.com" i], dd[title*="wordpress.org" i], dd[title*="/@" i]), .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(a):not(:first-of-type) {
   order: 9999;
   width: auto;
   max-width: 50%;
 }
 
-.layout-single-column .account__header__bio .account__header__fields dl:has(dd[title*="github.com" i], dd[title*="youtube.com" i], dd[title*="youtu.be" i], dd[title*="twitch.tv" i], dd[title*="twitter.com" i], dd[title*="x.com" i], dd[title*="discord" i], dd[title*="linkedin.com" i], dd[title*="instagram.com" i], dd[title*="ko-fi.com" i], dd[title*="kofi.com" i], dd[title*="paypal" i], dd[title*="patreon.com" i], dd[title*="threads.net" i], dd[title*="bsky.app" i], dd[title*="bsky.social" i], dd[title*="bandcamp.com" i], dd[title*="facebook.com" i], dd[title*="fb.com" i], dd[title*="wordpress.com" i], dd[title*="wordpress.org" i], dd[title*="/@" i]) dt, .layout-single-column .account__header__bio .account__header__fields dl:has(a):not(:first-of-type) dt, .layout-multiple-columns .account__header__bio .account__header__fields dl:has(dd[title*="github.com" i], dd[title*="youtube.com" i], dd[title*="youtu.be" i], dd[title*="twitch.tv" i], dd[title*="twitter.com" i], dd[title*="x.com" i], dd[title*="discord" i], dd[title*="linkedin.com" i], dd[title*="instagram.com" i], dd[title*="ko-fi.com" i], dd[title*="kofi.com" i], dd[title*="paypal" i], dd[title*="patreon.com" i], dd[title*="threads.net" i], dd[title*="bsky.app" i], dd[title*="bsky.social" i], dd[title*="bandcamp.com" i], dd[title*="facebook.com" i], dd[title*="fb.com" i], dd[title*="wordpress.com" i], dd[title*="wordpress.org" i], dd[title*="/@" i]) dt, .layout-multiple-columns .account__header__bio .account__header__fields dl:has(a):not(:first-of-type) dt {
+.layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="github.com" i], dd[title*="youtube.com" i], dd[title*="youtu.be" i], dd[title*="twitch.tv" i], dd[title*="twitter.com" i], dd[title*="x.com" i], dd[title*="discord" i], dd[title*="linkedin.com" i], dd[title*="instagram.com" i], dd[title*="ko-fi.com" i], dd[title*="kofi.com" i], dd[title*="paypal" i], dd[title*="patreon.com" i], dd[title*="threads.net" i], dd[title*="bsky.app" i], dd[title*="bsky.social" i], dd[title*="bandcamp.com" i], dd[title*="facebook.com" i], dd[title*="fb.com" i], dd[title*="wordpress.com" i], dd[title*="wordpress.org" i], dd[title*="/@" i]) dt, .layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(a):not(:first-of-type) dt, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="github.com" i], dd[title*="youtube.com" i], dd[title*="youtu.be" i], dd[title*="twitch.tv" i], dd[title*="twitter.com" i], dd[title*="x.com" i], dd[title*="discord" i], dd[title*="linkedin.com" i], dd[title*="instagram.com" i], dd[title*="ko-fi.com" i], dd[title*="kofi.com" i], dd[title*="paypal" i], dd[title*="patreon.com" i], dd[title*="threads.net" i], dd[title*="bsky.app" i], dd[title*="bsky.social" i], dd[title*="bandcamp.com" i], dd[title*="facebook.com" i], dd[title*="fb.com" i], dd[title*="wordpress.com" i], dd[title*="wordpress.org" i], dd[title*="/@" i]) dt, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(a):not(:first-of-type) dt {
   display: none;
 }
 
-.layout-single-column .account__header__bio .account__header__fields dl:has(dd[title*="github.com" i]):after, .layout-multiple-columns .account__header__bio .account__header__fields dl:has(dd[title*="github.com" i]):after {
+.layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="github.com" i]):after, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="github.com" i]):after {
   background-image: var(--icon-github);
   content: "";
   width: 18.5px;
   height: 18.5px;
 }
 
-.layout-single-column .account__header__bio .account__header__fields dl:has(dd[title*="discord" i]):after, .layout-multiple-columns .account__header__bio .account__header__fields dl:has(dd[title*="discord" i]):after {
+.layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="discord" i]):after, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="discord" i]):after {
   background-image: var(--icon-discord);
   content: "";
   width: 18.5px;
   height: 18.5px;
 }
 
-.layout-single-column .account__header__bio .account__header__fields dl:has(dd[title*="linkedin.com" i]):after, .layout-multiple-columns .account__header__bio .account__header__fields dl:has(dd[title*="linkedin.com" i]):after {
+.layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="linkedin.com" i]):after, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="linkedin.com" i]):after {
   background-image: var(--icon-linkedin);
   content: "";
   width: 18.5px;
   height: 18.5px;
 }
 
-.layout-single-column .account__header__bio .account__header__fields dl:has(dd[title*="instagram.com" i]):after, .layout-multiple-columns .account__header__bio .account__header__fields dl:has(dd[title*="instagram.com" i]):after {
+.layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="instagram.com" i]):after, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="instagram.com" i]):after {
   background-image: var(--icon-instagram);
   content: "";
   width: 18.5px;
   height: 18.5px;
 }
 
-.layout-single-column .account__header__bio .account__header__fields dl:has(dd[title*="youtube.com" i]):after, .layout-single-column .account__header__bio .account__header__fields dl:has(dd[title*="youtu.be" i]):after, .layout-multiple-columns .account__header__bio .account__header__fields dl:has(dd[title*="youtube.com" i]):after, .layout-multiple-columns .account__header__bio .account__header__fields dl:has(dd[title*="youtu.be" i]):after {
+.layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="youtube.com" i]):after, .layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="youtu.be" i]):after, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="youtube.com" i]):after, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="youtu.be" i]):after {
   background-image: var(--icon-youtube);
   content: "";
   width: 18.5px;
   height: 18.5px;
 }
 
-.layout-single-column .account__header__bio .account__header__fields dl:has(dd[title*="twitch.tv" i]):after, .layout-multiple-columns .account__header__bio .account__header__fields dl:has(dd[title*="twitch.tv" i]):after {
+.layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="twitch.tv" i]):after, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="twitch.tv" i]):after {
   background-image: var(--icon-twitch);
   content: "";
   width: 18.5px;
   height: 18.5px;
 }
 
-.layout-single-column .account__header__bio .account__header__fields dl:has(dd[title*="twitter.com" i]):after, .layout-single-column .account__header__bio .account__header__fields dl:has(dd[title*="x.com" i]):after, .layout-multiple-columns .account__header__bio .account__header__fields dl:has(dd[title*="twitter.com" i]):after, .layout-multiple-columns .account__header__bio .account__header__fields dl:has(dd[title*="x.com" i]):after {
+.layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="twitter.com" i]):after, .layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="x.com" i]):after, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="twitter.com" i]):after, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="x.com" i]):after {
   background-image: var(--icon-twitter);
   content: "";
   width: 18.5px;
   height: 18.5px;
 }
 
-.layout-single-column .account__header__bio .account__header__fields dl:has(dd[title*="patreon.com" i]):after, .layout-multiple-columns .account__header__bio .account__header__fields dl:has(dd[title*="patreon.com" i]):after {
+.layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="patreon.com" i]):after, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="patreon.com" i]):after {
   background-image: var(--icon-patreon);
   content: "";
   width: 18.5px;
   height: 18.5px;
 }
 
-.layout-single-column .account__header__bio .account__header__fields dl:has(dd[title*="paypal" i]):after, .layout-multiple-columns .account__header__bio .account__header__fields dl:has(dd[title*="paypal" i]):after {
+.layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="paypal" i]):after, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="paypal" i]):after {
   background-image: var(--icon-paypal);
   content: "";
   width: 18.5px;
   height: 18.5px;
 }
 
-.layout-single-column .account__header__bio .account__header__fields dl:has(dd[title*="kofi.com" i]):after, .layout-single-column .account__header__bio .account__header__fields dl:has(dd[title*="ko-fi.com" i]):after, .layout-multiple-columns .account__header__bio .account__header__fields dl:has(dd[title*="kofi.com" i]):after, .layout-multiple-columns .account__header__bio .account__header__fields dl:has(dd[title*="ko-fi.com" i]):after {
+.layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="kofi.com" i]):after, .layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="ko-fi.com" i]):after, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="kofi.com" i]):after, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="ko-fi.com" i]):after {
   background-image: var(--icon-kofi);
   content: "";
   width: 18.5px;
   height: 18.5px;
 }
 
-.layout-single-column .account__header__bio .account__header__fields dl:has(dd[title*="bandcamp.com" i]):after, .layout-multiple-columns .account__header__bio .account__header__fields dl:has(dd[title*="bandcamp.com" i]):after {
+.layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="bandcamp.com" i]):after, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="bandcamp.com" i]):after {
   background-image: var(--icon-bandcamp);
   content: "";
   width: 18.5px;
   height: 18.5px;
 }
 
-.layout-single-column .account__header__bio .account__header__fields dl:has(dd[title*="facebook.com" i]):after, .layout-single-column .account__header__bio .account__header__fields dl:has(dd[title*="fb.com" i]):after, .layout-multiple-columns .account__header__bio .account__header__fields dl:has(dd[title*="facebook.com" i]):after, .layout-multiple-columns .account__header__bio .account__header__fields dl:has(dd[title*="fb.com" i]):after {
+.layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="facebook.com" i]):after, .layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="fb.com" i]):after, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="facebook.com" i]):after, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="fb.com" i]):after {
   background-image: var(--icon-facebook);
   content: "";
   width: 18.5px;
   height: 18.5px;
 }
 
-.layout-single-column .account__header__bio .account__header__fields dl:has(dd[title*="friendica" i]):after, .layout-multiple-columns .account__header__bio .account__header__fields dl:has(dd[title*="friendica" i]):after {
+.layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="friendica" i]):after, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="friendica" i]):after {
   background-image: var(--icon-friendica);
   content: "";
   width: 18.5px;
@@ -1890,66 +1898,66 @@ body.layout-single-column, body.layout-multiple-columns {
   transform: scale(.9);
 }
 
-.layout-single-column .account__header__bio .account__header__fields dl:has(dd[title*="wordpress.com" i]):after, .layout-single-column .account__header__bio .account__header__fields dl:has(dd[title*="wordpress.org" i]):after, .layout-multiple-columns .account__header__bio .account__header__fields dl:has(dd[title*="wordpress.com" i]):after, .layout-multiple-columns .account__header__bio .account__header__fields dl:has(dd[title*="wordpress.org" i]):after {
+.layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="wordpress.com" i]):after, .layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="wordpress.org" i]):after, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="wordpress.com" i]):after, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="wordpress.org" i]):after {
   background-image: var(--icon-wordpress);
   content: "";
   width: 18.5px;
   height: 18.5px;
 }
 
-.layout-single-column .account__header__bio .account__header__fields dl:has(dd[title*="/@" i]):after, .layout-single-column .account__header__bio .account__header__fields dl:has(dd[title*="mastodon.social" i]):after, .layout-single-column .account__header__bio .account__header__fields dl:has(dd[title*="mastodon.online" i]):after, .layout-single-column .account__header__bio .account__header__fields dl:has(dd[title*="masto.host" i]):after, .layout-multiple-columns .account__header__bio .account__header__fields dl:has(dd[title*="/@" i]):after, .layout-multiple-columns .account__header__bio .account__header__fields dl:has(dd[title*="mastodon.social" i]):after, .layout-multiple-columns .account__header__bio .account__header__fields dl:has(dd[title*="mastodon.online" i]):after, .layout-multiple-columns .account__header__bio .account__header__fields dl:has(dd[title*="masto.host" i]):after {
+.layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="/@" i]):after, .layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="mastodon.social" i]):after, .layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="mastodon.online" i]):after, .layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="masto.host" i]):after, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="/@" i]):after, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="mastodon.social" i]):after, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="mastodon.online" i]):after, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="masto.host" i]):after {
   background-image: var(--icon-mastodon);
   content: "";
   width: 18.5px;
   height: 18.5px;
 }
 
-.layout-single-column .account__header__bio .account__header__fields dl:has(dd[title*="threads.net" i]):after, .layout-multiple-columns .account__header__bio .account__header__fields dl:has(dd[title*="threads.net" i]):after {
+.layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="threads.net" i]):after, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="threads.net" i]):after {
   background-image: var(--icon-threads);
   content: "";
   width: 18.5px;
   height: 18.5px;
 }
 
-.layout-single-column .account__header__bio .account__header__fields dl:has(dd[title*="bsky.app" i]):after, .layout-single-column .account__header__bio .account__header__fields dl:has(dd[title*="bsky.social" i]):after, .layout-multiple-columns .account__header__bio .account__header__fields dl:has(dd[title*="bsky.app" i]):after, .layout-multiple-columns .account__header__bio .account__header__fields dl:has(dd[title*="bsky.social" i]):after {
+.layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="bsky.app" i]):after, .layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="bsky.social" i]):after, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="bsky.app" i]):after, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="bsky.social" i]):after {
   background-image: var(--icon-bluesky);
   content: "";
   width: 18.5px;
   height: 18.5px;
 }
 
-.layout-single-column .account__header__bio .account__header__fields dl:has(dd[title*="npub" i]):after, .layout-single-column .account__header__bio .account__header__fields dl:has(dd[title*="nostr:" i]):after, .layout-multiple-columns .account__header__bio .account__header__fields dl:has(dd[title*="npub" i]):after, .layout-multiple-columns .account__header__bio .account__header__fields dl:has(dd[title*="nostr:" i]):after {
+.layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="npub" i]):after, .layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="nostr:" i]):after, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="npub" i]):after, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title*="nostr:" i]):after {
   background-image: var(--icon-nostr);
   content: "";
   width: 18.5px;
   height: 18.5px;
 }
 
-.layout-single-column .account__header__bio .account__header__fields dl:has(dd[title^="http"]):not(:has(dd[title*="github.com" i], dd[title*="youtube.com" i], dd[title*="youtu.be" i], dd[title*="twitch.tv" i], dd[title*="twitter.com" i], dd[title*="x.com" i], dd[title*="discord" i], dd[title*="linkedin.com" i], dd[title*="instagram.com" i], dd[title*="ko-fi.com" i], dd[title*="kofi.com" i], dd[title*="paypal" i], dd[title*="patreon.com" i], dd[title*="threads.net" i], dd[title*="bsky.app" i], dd[title*="bsky.social" i], dd[title*="bandcamp.com" i], dd[title*="facebook.com" i], dd[title*="fb.com" i], dd[title*="wordpress.com" i], dd[title*="wordpress.org" i], dd[title*="/@" i], dd[title*="mastodon.social" i], dd[title*="mastodon.online" i], dd[title*="masto.host" i], dd[title*="friendica" i], dd[title*="npub" i], dd[title*="nostr:" i])):after, .layout-multiple-columns .account__header__bio .account__header__fields dl:has(dd[title^="http"]):not(:has(dd[title*="github.com" i], dd[title*="youtube.com" i], dd[title*="youtu.be" i], dd[title*="twitch.tv" i], dd[title*="twitter.com" i], dd[title*="x.com" i], dd[title*="discord" i], dd[title*="linkedin.com" i], dd[title*="instagram.com" i], dd[title*="ko-fi.com" i], dd[title*="kofi.com" i], dd[title*="paypal" i], dd[title*="patreon.com" i], dd[title*="threads.net" i], dd[title*="bsky.app" i], dd[title*="bsky.social" i], dd[title*="bandcamp.com" i], dd[title*="facebook.com" i], dd[title*="fb.com" i], dd[title*="wordpress.com" i], dd[title*="wordpress.org" i], dd[title*="/@" i], dd[title*="mastodon.social" i], dd[title*="mastodon.online" i], dd[title*="masto.host" i], dd[title*="friendica" i], dd[title*="npub" i], dd[title*="nostr:" i])):after {
+.layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title^="http"]):not(:has(dd[title*="github.com" i], dd[title*="youtube.com" i], dd[title*="youtu.be" i], dd[title*="twitch.tv" i], dd[title*="twitter.com" i], dd[title*="x.com" i], dd[title*="discord" i], dd[title*="linkedin.com" i], dd[title*="instagram.com" i], dd[title*="ko-fi.com" i], dd[title*="kofi.com" i], dd[title*="paypal" i], dd[title*="patreon.com" i], dd[title*="threads.net" i], dd[title*="bsky.app" i], dd[title*="bsky.social" i], dd[title*="bandcamp.com" i], dd[title*="facebook.com" i], dd[title*="fb.com" i], dd[title*="wordpress.com" i], dd[title*="wordpress.org" i], dd[title*="/@" i], dd[title*="mastodon.social" i], dd[title*="mastodon.online" i], dd[title*="masto.host" i], dd[title*="friendica" i], dd[title*="npub" i], dd[title*="nostr:" i])):after, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:has(dd[title^="http"]):not(:has(dd[title*="github.com" i], dd[title*="youtube.com" i], dd[title*="youtu.be" i], dd[title*="twitch.tv" i], dd[title*="twitter.com" i], dd[title*="x.com" i], dd[title*="discord" i], dd[title*="linkedin.com" i], dd[title*="instagram.com" i], dd[title*="ko-fi.com" i], dd[title*="kofi.com" i], dd[title*="paypal" i], dd[title*="patreon.com" i], dd[title*="threads.net" i], dd[title*="bsky.app" i], dd[title*="bsky.social" i], dd[title*="bandcamp.com" i], dd[title*="facebook.com" i], dd[title*="fb.com" i], dd[title*="wordpress.com" i], dd[title*="wordpress.org" i], dd[title*="/@" i], dd[title*="mastodon.social" i], dd[title*="mastodon.online" i], dd[title*="masto.host" i], dd[title*="friendica" i], dd[title*="npub" i], dd[title*="nostr:" i])):after {
   background-image: var(--icon-link);
   content: "";
   width: 18.5px;
   height: 18.5px;
 }
 
-.layout-single-column .account__header__bio .account__header__fields dl:not(:has(a)):not(:first-of-type):after, .layout-multiple-columns .account__header__bio .account__header__fields dl:not(:has(a)):not(:first-of-type):after {
+.layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:not(:has(a)):not(:first-of-type):after, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:not(:has(a)):not(:first-of-type):after {
   background-image: var(--icon-label);
   content: "";
   width: 18.5px;
   height: 18.5px;
 }
 
-.layout-single-column .account__details .verified-badge a, .layout-single-column .account__header__bar .account__header__fields .verified__mark, .layout-single-column .account__header__bar .account__header__fields .verified a, .layout-single-column .account__header__bar .account__header__bio .account__header__fields .verified a, .layout-single-column .account__header__bar .account__header__bio .account__header__fields .verified dd, .layout-multiple-columns .account__details .verified-badge a, .layout-multiple-columns .account__header__bar .account__header__fields .verified__mark, .layout-multiple-columns .account__header__bar .account__header__fields .verified a, .layout-multiple-columns .account__header__bar .account__header__bio .account__header__fields .verified a, .layout-multiple-columns .account__header__bar .account__header__bio .account__header__fields .verified dd {
+.layout-single-column .account__details .verified-badge a, .layout-single-column ._comp_account_header__barWrapper ._comp_account_header__fieldList .verified__mark, .layout-single-column ._comp_account_header__barWrapper ._comp_account_header__fieldList .verified a, .layout-single-column ._comp_account_header__barWrapper ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList .verified a, .layout-single-column ._comp_account_header__barWrapper ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList .verified dd, .layout-multiple-columns .account__details .verified-badge a, .layout-multiple-columns ._comp_account_header__barWrapper ._comp_account_header__fieldList .verified__mark, .layout-multiple-columns ._comp_account_header__barWrapper ._comp_account_header__fieldList .verified a, .layout-multiple-columns ._comp_account_header__barWrapper ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList .verified a, .layout-multiple-columns ._comp_account_header__barWrapper ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList .verified dd {
   color: var(--color-verified);
   font-weight: var(--font-weight-regular);
 }
 
-.layout-single-column .account__details .verified-badge a, .layout-single-column .account__header__bar:has(.account__header__fields .verified) .account__header__fields .verified__mark, .layout-single-column .account__header__bar:has(.account__header__fields .verified) .account__header__fields .verified a, .layout-single-column .account__header__bar:has(.account__header__fields .verified) .account__header__bio .account__header__fields .verified a, .layout-single-column .account__header__bar:has(.account__header__fields .verified) .account__header__bio .account__header__fields .verified dd, .layout-multiple-columns .account__details .verified-badge a, .layout-multiple-columns .account__header__bar:has(.account__header__fields .verified) .account__header__fields .verified__mark, .layout-multiple-columns .account__header__bar:has(.account__header__fields .verified) .account__header__fields .verified a, .layout-multiple-columns .account__header__bar:has(.account__header__fields .verified) .account__header__bio .account__header__fields .verified a, .layout-multiple-columns .account__header__bar:has(.account__header__fields .verified) .account__header__bio .account__header__fields .verified dd {
+.layout-single-column .account__details .verified-badge a, .layout-single-column ._comp_account_header__barWrapper:has(._comp_account_header__fieldList .verified) ._comp_account_header__fieldList .verified__mark, .layout-single-column ._comp_account_header__barWrapper:has(._comp_account_header__fieldList .verified) ._comp_account_header__fieldList .verified a, .layout-single-column ._comp_account_header__barWrapper:has(._comp_account_header__fieldList .verified) ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList .verified a, .layout-single-column ._comp_account_header__barWrapper:has(._comp_account_header__fieldList .verified) ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList .verified dd, .layout-multiple-columns .account__details .verified-badge a, .layout-multiple-columns ._comp_account_header__barWrapper:has(._comp_account_header__fieldList .verified) ._comp_account_header__fieldList .verified__mark, .layout-multiple-columns ._comp_account_header__barWrapper:has(._comp_account_header__fieldList .verified) ._comp_account_header__fieldList .verified a, .layout-multiple-columns ._comp_account_header__barWrapper:has(._comp_account_header__fieldList .verified) ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList .verified a, .layout-multiple-columns ._comp_account_header__barWrapper:has(._comp_account_header__fieldList .verified) ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList .verified dd {
   color: var(--color-accent);
   font-weight: var(--font-weight-regular);
 }
 
-.layout-single-column .account__details .verified-badge .verified-badge__mark, .layout-single-column .account__header__bar:has(.account__header__fields .verified) .account__header__fields .verified__mark, .layout-multiple-columns .account__details .verified-badge .verified-badge__mark, .layout-multiple-columns .account__header__bar:has(.account__header__fields .verified) .account__header__fields .verified__mark {
+.layout-single-column .account__details .verified-badge .verified-badge__mark, .layout-single-column ._comp_account_header__barWrapper:has(._comp_account_header__fieldList .verified) ._comp_account_header__fieldList .verified__mark, .layout-multiple-columns .account__details .verified-badge .verified-badge__mark, .layout-multiple-columns ._comp_account_header__barWrapper:has(._comp_account_header__fieldList .verified) ._comp_account_header__fieldList .verified__mark {
   background-image: var(--icon-verified-smaller);
   content: "";
   background-repeat: no-repeat;
@@ -1957,27 +1965,27 @@ body.layout-single-column, body.layout-multiple-columns {
   height: 15px;
 }
 
-.layout-single-column .account__details .verified-badge .verified-badge__mark path, .layout-single-column .account__header__bar:has(.account__header__fields .verified) .account__header__fields .verified__mark path, .layout-multiple-columns .account__details .verified-badge .verified-badge__mark path, .layout-multiple-columns .account__header__bar:has(.account__header__fields .verified) .account__header__fields .verified__mark path {
+.layout-single-column .account__details .verified-badge .verified-badge__mark path, .layout-single-column ._comp_account_header__barWrapper:has(._comp_account_header__fieldList .verified) ._comp_account_header__fieldList .verified__mark path, .layout-multiple-columns .account__details .verified-badge .verified-badge__mark path, .layout-multiple-columns ._comp_account_header__barWrapper:has(._comp_account_header__fieldList .verified) ._comp_account_header__fieldList .verified__mark path {
   display: none;
 }
 
-.layout-single-column .account__details .verified-badge, .layout-single-column .account__header__bar:has(.account__header__fields .verified) .account__header__fields .verified dd, .layout-multiple-columns .account__details .verified-badge, .layout-multiple-columns .account__header__bar:has(.account__header__fields .verified) .account__header__fields .verified dd {
+.layout-single-column .account__details .verified-badge, .layout-single-column ._comp_account_header__barWrapper:has(._comp_account_header__fieldList .verified) ._comp_account_header__fieldList .verified dd, .layout-multiple-columns .account__details .verified-badge, .layout-multiple-columns ._comp_account_header__barWrapper:has(._comp_account_header__fieldList .verified) ._comp_account_header__fieldList .verified dd {
   align-items: center;
   gap: 4px;
   display: inline-flex;
 }
 
-.layout-single-column .account__details .verified-badge .verified-badge__mark, .layout-single-column .account__header__bar:has(.account__header__fields .verified) .account__header__fields .verified dd span:first-child, .layout-multiple-columns .account__details .verified-badge .verified-badge__mark, .layout-multiple-columns .account__header__bar:has(.account__header__fields .verified) .account__header__fields .verified dd span:first-child {
+.layout-single-column .account__details .verified-badge .verified-badge__mark, .layout-single-column ._comp_account_header__barWrapper:has(._comp_account_header__fieldList .verified) ._comp_account_header__fieldList .verified dd span:first-child, .layout-multiple-columns .account__details .verified-badge .verified-badge__mark, .layout-multiple-columns ._comp_account_header__barWrapper:has(._comp_account_header__fieldList .verified) ._comp_account_header__fieldList .verified dd span:first-child {
   order: 2;
   align-items: center;
   display: flex;
 }
 
-.layout-single-column .account__details .verified-badge > span, .layout-single-column .account__header__bar:has(.account__header__fields .verified) .account__header__fields .verified dd span:nth-child(2), .layout-multiple-columns .account__details .verified-badge > span, .layout-multiple-columns .account__header__bar:has(.account__header__fields .verified) .account__header__fields .verified dd span:nth-child(2) {
+.layout-single-column .account__details .verified-badge > span, .layout-single-column ._comp_account_header__barWrapper:has(._comp_account_header__fieldList .verified) ._comp_account_header__fieldList .verified dd span:nth-child(2), .layout-multiple-columns .account__details .verified-badge > span, .layout-multiple-columns ._comp_account_header__barWrapper:has(._comp_account_header__fieldList .verified) ._comp_account_header__fieldList .verified dd span:nth-child(2) {
   order: 1;
 }
 
-.layout-single-column .account__header__bio .account__header__fields dl:first-of-type dt, .layout-multiple-columns .account__header__bio .account__header__fields dl:first-of-type dt {
+.layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:first-of-type dt, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl:first-of-type dt {
   font-weight: var(--font-weight-regular);
   gap: calc(var(--gap-default) / 2);
   text-transform: unset;
@@ -1988,14 +1996,14 @@ body.layout-single-column, body.layout-multiple-columns {
   text-transform: unset;
 }
 
-.layout-single-column .account__header__bio .account__header__fields dd, .layout-single-column .account__header__bio .account__header__fields dt, .layout-multiple-columns .account__header__bio .account__header__fields dd, .layout-multiple-columns .account__header__bio .account__header__fields dt {
+.layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dd, .layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dt, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dd, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dt {
   color: var(--color-dim);
   font-size: var(--font-size);
   font-weight: var(--font-weight-regular);
   text-transform: unset;
 }
 
-.layout-single-column .account__header__bio .account__header__fields dl, .layout-multiple-columns .account__header__bio .account__header__fields dl {
+.layout-single-column ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList dl {
   color: var(--color-dim);
   font-size: var(--font-size);
   font-weight: var(--font-weight-regular);
@@ -2008,7 +2016,7 @@ body.layout-single-column, body.layout-multiple-columns {
   display: inline-flex;
 }
 
-.layout-single-column .account__header__bio dl[class*="fieldList"], .layout-multiple-columns .account__header__bio dl[class*="fieldList"] {
+.layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"], .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] {
   gap: 5px var(--gap-default);
   flex-wrap: wrap;
   margin: 0 0 20px;
@@ -2016,7 +2024,7 @@ body.layout-single-column, body.layout-multiple-columns {
   line-height: var(--line-height-mid) !important;
 }
 
-.layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"], .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"] {
+.layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"], .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"] {
   font-size: var(--font-size);
   align-items: center;
   gap: calc(var(--gap-default) / 2);
@@ -2027,7 +2035,7 @@ body.layout-single-column, body.layout-multiple-columns {
   display: inline-flex;
 }
 
-.layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"] dt, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"] dt {
+.layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"] dt, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"] dt {
   color: var(--color-dim);
   font-size: var(--font-size);
   font-weight: var(--font-weight-regular);
@@ -2035,44 +2043,44 @@ body.layout-single-column, body.layout-multiple-columns {
   order: 1;
 }
 
-.layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"] dd, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"] dd {
+.layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"] dd, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"] dd {
   color: var(--color-dim);
   font-size: var(--font-size);
   font-weight: var(--font-weight-regular);
   order: 2;
 }
 
-.layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"] dd a, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"] dd a {
+.layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"] dd a, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"] dd a {
   color: var(--color-accent);
 }
 
-.layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldVerified"], .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldVerified"] {
+.layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldVerified"], .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldVerified"] {
   background-color: #0000;
 }
 
-.layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldVerified"] dd a, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldVerified"] dd a {
+.layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldVerified"] dd a, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldVerified"] dd a {
   color: var(--color-accent);
 }
 
-.layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"] span[class*="fieldVerifiedIcon"], .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"] span[class*="fieldVerifiedIcon"] {
+.layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"] span[class*="fieldVerifiedIcon"], .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"] span[class*="fieldVerifiedIcon"] {
   order: 3;
   position: relative;
   top: auto;
   right: auto;
 }
 
-.layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"] span[class*="fieldVerifiedIcon"] svg, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"] span[class*="fieldVerifiedIcon"] svg {
+.layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"] span[class*="fieldVerifiedIcon"] svg, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"] span[class*="fieldVerifiedIcon"] svg {
   background-image: var(--icon-verified-smaller);
   background-repeat: no-repeat;
   width: 15px;
   height: 15px;
 }
 
-.layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"] span[class*="fieldVerifiedIcon"] svg path, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"] span[class*="fieldVerifiedIcon"] svg path {
+.layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"] span[class*="fieldVerifiedIcon"] svg path, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"] span[class*="fieldVerifiedIcon"] svg path {
   display: none;
 }
 
-.layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:before, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:before {
+.layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:before, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:before {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -2084,112 +2092,112 @@ body.layout-single-column, body.layout-multiple-columns {
 }
 
 @media (width <= 700px) {
-  .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"], .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"] dt, .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"] dd, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"], .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"] dt, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"] dd {
+  .layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"], .layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"] dt, .layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"] dd, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"], .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"] dt, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"] dd {
     font-size: var(--font-size-mid);
   }
 }
 
-.layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a) dt, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a) dt {
+.layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a) dt, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a) dt {
   display: none;
 }
 
-.layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="github.com" i]):before, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="github.com" i]):before {
+.layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="github.com" i]):before, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="github.com" i]):before {
   background-image: var(--icon-github);
   content: "";
 }
 
-.layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="discord" i]):before, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="discord" i]):before {
+.layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="discord" i]):before, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="discord" i]):before {
   background-image: var(--icon-discord);
   content: "";
 }
 
-.layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="linkedin.com" i]):before, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="linkedin.com" i]):before {
+.layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="linkedin.com" i]):before, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="linkedin.com" i]):before {
   background-image: var(--icon-linkedin);
   content: "";
 }
 
-.layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="instagram.com" i]):before, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="instagram.com" i]):before {
+.layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="instagram.com" i]):before, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="instagram.com" i]):before {
   background-image: var(--icon-instagram);
   content: "";
 }
 
-.layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="youtube.com" i]):before, .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="youtu.be" i]):before, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="youtube.com" i]):before, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="youtu.be" i]):before {
+.layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="youtube.com" i]):before, .layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="youtu.be" i]):before, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="youtube.com" i]):before, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="youtu.be" i]):before {
   background-image: var(--icon-youtube);
   content: "";
 }
 
-.layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="twitch.tv" i]):before, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="twitch.tv" i]):before {
+.layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="twitch.tv" i]):before, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="twitch.tv" i]):before {
   background-image: var(--icon-twitch);
   content: "";
 }
 
-.layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="twitter.com" i]):before, .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="x.com" i]):before, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="twitter.com" i]):before, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="x.com" i]):before {
+.layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="twitter.com" i]):before, .layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="x.com" i]):before, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="twitter.com" i]):before, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="x.com" i]):before {
   background-image: var(--icon-twitter);
   content: "";
 }
 
-.layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="patreon.com" i]):before, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="patreon.com" i]):before {
+.layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="patreon.com" i]):before, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="patreon.com" i]):before {
   background-image: var(--icon-patreon);
   content: "";
 }
 
-.layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="paypal" i]):before, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="paypal" i]):before {
+.layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="paypal" i]):before, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="paypal" i]):before {
   background-image: var(--icon-paypal);
   content: "";
 }
 
-.layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="kofi.com" i]):before, .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="ko-fi.com" i]):before, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="kofi.com" i]):before, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="ko-fi.com" i]):before {
+.layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="kofi.com" i]):before, .layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="ko-fi.com" i]):before, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="kofi.com" i]):before, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="ko-fi.com" i]):before {
   background-image: var(--icon-kofi);
   content: "";
 }
 
-.layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="bandcamp.com" i]):before, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="bandcamp.com" i]):before {
+.layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="bandcamp.com" i]):before, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="bandcamp.com" i]):before {
   background-image: var(--icon-bandcamp);
   content: "";
 }
 
-.layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="facebook.com" i]):before, .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="fb.com" i]):before, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="facebook.com" i]):before, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="fb.com" i]):before {
+.layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="facebook.com" i]):before, .layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="fb.com" i]):before, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="facebook.com" i]):before, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="fb.com" i]):before {
   background-image: var(--icon-facebook);
   content: "";
 }
 
-.layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="friendica" i]):before, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="friendica" i]):before {
+.layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="friendica" i]):before, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="friendica" i]):before {
   background-image: var(--icon-friendica);
   content: "";
   transform: scale(.9);
 }
 
-.layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="wordpress.com" i]):before, .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="wordpress.org" i]):before, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="wordpress.com" i]):before, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="wordpress.org" i]):before {
+.layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="wordpress.com" i]):before, .layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="wordpress.org" i]):before, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="wordpress.com" i]):before, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="wordpress.org" i]):before {
   background-image: var(--icon-wordpress);
   content: "";
 }
 
-.layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="/@" i]):before, .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="mastodon.social" i]):before, .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="mastodon.online" i]):before, .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="masto.host" i]):before, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="/@" i]):before, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="mastodon.social" i]):before, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="mastodon.online" i]):before, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="masto.host" i]):before {
+.layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="/@" i]):before, .layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="mastodon.social" i]):before, .layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="mastodon.online" i]):before, .layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="masto.host" i]):before, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="/@" i]):before, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="mastodon.social" i]):before, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="mastodon.online" i]):before, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="masto.host" i]):before {
   background-image: var(--icon-mastodon);
   content: "";
 }
 
-.layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="threads.net" i]):before, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="threads.net" i]):before {
+.layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="threads.net" i]):before, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="threads.net" i]):before {
   background-image: var(--icon-threads);
   content: "";
 }
 
-.layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="bsky.app" i]):before, .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="bsky.social" i]):before, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="bsky.app" i]):before, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="bsky.social" i]):before {
+.layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="bsky.app" i]):before, .layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="bsky.social" i]):before, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="bsky.app" i]):before, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="bsky.social" i]):before {
   background-image: var(--icon-bluesky);
   content: "";
 }
 
-.layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="npub" i]):before, .layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="nostr:" i]):before, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="npub" i]):before, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="nostr:" i]):before {
+.layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="npub" i]):before, .layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="nostr:" i]):before, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="npub" i]):before, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href*="nostr:" i]):before {
   background-image: var(--icon-nostr);
   content: "";
 }
 
-.layout-single-column .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href^="http"]):not(:has(dd a[href*="github.com" i], dd a[href*="youtube.com" i], dd a[href*="youtu.be" i], dd a[href*="twitch.tv" i], dd a[href*="twitter.com" i], dd a[href*="x.com" i], dd a[href*="discord" i], dd a[href*="linkedin.com" i], dd a[href*="instagram.com" i], dd a[href*="ko-fi.com" i], dd a[href*="kofi.com" i], dd a[href*="paypal" i], dd a[href*="patreon.com" i], dd a[href*="threads.net" i], dd a[href*="bsky.app" i], dd a[href*="bsky.social" i], dd a[href*="bandcamp.com" i], dd a[href*="facebook.com" i], dd a[href*="fb.com" i], dd a[href*="wordpress.com" i], dd a[href*="wordpress.org" i], dd a[href*="/@" i], dd a[href*="mastodon.social" i], dd a[href*="mastodon.online" i], dd a[href*="masto.host" i], dd a[href*="friendica" i], dd a[href*="npub" i], dd a[href*="nostr:" i])):before, .layout-multiple-columns .account__header__bio dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href^="http"]):not(:has(dd a[href*="github.com" i], dd a[href*="youtube.com" i], dd a[href*="youtu.be" i], dd a[href*="twitch.tv" i], dd a[href*="twitter.com" i], dd a[href*="x.com" i], dd a[href*="discord" i], dd a[href*="linkedin.com" i], dd a[href*="instagram.com" i], dd a[href*="ko-fi.com" i], dd a[href*="kofi.com" i], dd a[href*="paypal" i], dd a[href*="patreon.com" i], dd a[href*="threads.net" i], dd a[href*="bsky.app" i], dd a[href*="bsky.social" i], dd a[href*="bandcamp.com" i], dd a[href*="facebook.com" i], dd a[href*="fb.com" i], dd a[href*="wordpress.com" i], dd a[href*="wordpress.org" i], dd a[href*="/@" i], dd a[href*="mastodon.social" i], dd a[href*="mastodon.online" i], dd a[href*="masto.host" i], dd a[href*="friendica" i], dd a[href*="npub" i], dd a[href*="nostr:" i])):before {
+.layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href^="http"]):not(:has(dd a[href*="github.com" i], dd a[href*="youtube.com" i], dd a[href*="youtu.be" i], dd a[href*="twitch.tv" i], dd a[href*="twitter.com" i], dd a[href*="x.com" i], dd a[href*="discord" i], dd a[href*="linkedin.com" i], dd a[href*="instagram.com" i], dd a[href*="ko-fi.com" i], dd a[href*="kofi.com" i], dd a[href*="paypal" i], dd a[href*="patreon.com" i], dd a[href*="threads.net" i], dd a[href*="bsky.app" i], dd a[href*="bsky.social" i], dd a[href*="bandcamp.com" i], dd a[href*="facebook.com" i], dd a[href*="fb.com" i], dd a[href*="wordpress.com" i], dd a[href*="wordpress.org" i], dd a[href*="/@" i], dd a[href*="mastodon.social" i], dd a[href*="mastodon.online" i], dd a[href*="masto.host" i], dd a[href*="friendica" i], dd a[href*="npub" i], dd a[href*="nostr:" i])):before, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] > div[class*="fieldItem"]:has(dd a[href^="http"]):not(:has(dd a[href*="github.com" i], dd a[href*="youtube.com" i], dd a[href*="youtu.be" i], dd a[href*="twitch.tv" i], dd a[href*="twitter.com" i], dd a[href*="x.com" i], dd a[href*="discord" i], dd a[href*="linkedin.com" i], dd a[href*="instagram.com" i], dd a[href*="ko-fi.com" i], dd a[href*="kofi.com" i], dd a[href*="paypal" i], dd a[href*="patreon.com" i], dd a[href*="threads.net" i], dd a[href*="bsky.app" i], dd a[href*="bsky.social" i], dd a[href*="bandcamp.com" i], dd a[href*="facebook.com" i], dd a[href*="fb.com" i], dd a[href*="wordpress.com" i], dd a[href*="wordpress.org" i], dd a[href*="/@" i], dd a[href*="mastodon.social" i], dd a[href*="mastodon.online" i], dd a[href*="masto.host" i], dd a[href*="friendica" i], dd a[href*="npub" i], dd a[href*="nostr:" i])):before {
   background-image: var(--icon-link);
   content: "";
 }
 
-.layout-single-column .account__header__badges [class*="_comp_badge__roleColored"], .layout-single-column .account__header__badges [class*="_comp_badge__default"], .layout-multiple-columns .account__header__badges [class*="_comp_badge__roleColored"], .layout-multiple-columns .account__header__badges [class*="_comp_badge__default"] {
+.layout-single-column ._comp_account_header__badges [class*="_comp_badge__roleColored"], .layout-single-column ._comp_account_header__badges [class*="_comp_badge__default"], .layout-multiple-columns ._comp_account_header__badges [class*="_comp_badge__roleColored"], .layout-multiple-columns ._comp_account_header__badges [class*="_comp_badge__default"] {
   background-color: #0000;
 }
 
@@ -2218,20 +2226,28 @@ body.layout-single-column, body.layout-multiple-columns {
   padding: 0;
 }
 
-.layout-single-column .account__header__extra, .layout-multiple-columns .account__header__extra {
+.layout-single-column ._comp_account_header__bioButtonsWrapper, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper {
   margin-top: 0;
 }
 
-.layout-single-column .account__header__badges, .layout-multiple-columns .account__header__badges, .layout-single-column .account__header__content, .layout-multiple-columns .account__header__content {
+.layout-single-column ._comp_account_header__badges, .layout-multiple-columns ._comp_account_header__badges {
   margin-bottom: 16px;
 }
 
-.layout-single-column .account__header__bar, .layout-multiple-columns .account__header__bar {
+.layout-single-column ._comp_account_header__displayNameWrapper:has([class*="_comp_account_header__badges"]), .layout-multiple-columns ._comp_account_header__displayNameWrapper:has([class*="_comp_account_header__badges"]) {
+  margin-bottom: 0;
+}
+
+.layout-single-column ._comp_account_header__bio, .layout-multiple-columns ._comp_account_header__bio {
+  margin-bottom: 16px;
+}
+
+.layout-single-column ._comp_account_header__barWrapper, .layout-multiple-columns ._comp_account_header__barWrapper {
   flex-direction: column;
   display: flex;
 }
 
-.layout-single-column .account__header__extra, .layout-multiple-columns .account__header__extra {
+.layout-single-column ._comp_account_header__bioButtonsWrapper, .layout-multiple-columns ._comp_account_header__bioButtonsWrapper {
   order: 4;
 }
 
@@ -2332,24 +2348,24 @@ body.layout-single-column, body.layout-multiple-columns {
   color: var(--color-light-text);
 }
 
-.layout-single-column .account__header__bar, .layout-multiple-columns .account__header__bar {
+.layout-single-column ._comp_account_header__barWrapper, .layout-multiple-columns ._comp_account_header__barWrapper {
   position: relative;
 }
 
-.layout-single-column .account__header__buttons[class*="_comp_account_header__buttonsDesktop"], .layout-multiple-columns .account__header__buttons[class*="_comp_account_header__buttonsDesktop"] {
+.layout-single-column [class*="_comp_account_header__buttons"][class*="_comp_account_header__buttonsDesktop"], .layout-multiple-columns [class*="_comp_account_header__buttons"][class*="_comp_account_header__buttonsDesktop"] {
   right: 16px;
   top: var(--gap-default);
   position: absolute;
 }
 
 @media (width <= 419px) {
-  .layout-single-column .account__header__buttons, .layout-multiple-columns .account__header__buttons {
+  .layout-single-column [class*="_comp_account_header__buttons"], .layout-multiple-columns [class*="_comp_account_header__buttons"] {
     padding-top: 0;
   }
 }
 
 @media (width <= 759px) {
-  .layout-single-column .account__header__buttons[class*="_comp_account_header__buttonsDesktop"], .layout-multiple-columns .account__header__buttons[class*="_comp_account_header__buttonsDesktop"] {
+  .layout-single-column [class*="_comp_account_header__buttons"][class*="_comp_account_header__buttonsDesktop"], .layout-multiple-columns [class*="_comp_account_header__buttons"][class*="_comp_account_header__buttonsDesktop"] {
     position: static;
   }
 
@@ -2360,6 +2376,13 @@ body.layout-single-column, body.layout-multiple-columns {
 
 .layout-single-column [class*="_comp_account_header__avatarWrapper"], .layout-multiple-columns [class*="_comp_account_header__avatarWrapper"] {
   margin-top: -64px;
+}
+
+.layout-single-column [class*="_comp_account_header__avatarWrapper"] .account__avatar, .layout-multiple-columns [class*="_comp_account_header__avatarWrapper"] .account__avatar {
+  background-color: #0000;
+  border: 0;
+  width: 133.5px !important;
+  height: 133.5px !important;
 }
 
 .layout-single-column ._comp_account_header__name, .layout-single-column ._comp_account_header__name > h1, .layout-single-column ._comp_account_header__name > h1 > bdi, .layout-multiple-columns ._comp_account_header__name, .layout-multiple-columns ._comp_account_header__name > h1, .layout-multiple-columns ._comp_account_header__name > h1 > bdi {
@@ -2488,7 +2511,7 @@ body.layout-single-column, body.layout-multiple-columns {
   display: none;
 }
 
-.layout-single-column .account__header__bar .avatar, .layout-multiple-columns .account__header__bar .avatar {
+.layout-single-column ._comp_account_header__avatarWrapper .account__avatar, .layout-multiple-columns ._comp_account_header__avatarWrapper .account__avatar {
   margin-left: 0 !important;
 }
 
@@ -2707,21 +2730,21 @@ body.layout-single-column, body.layout-multiple-columns {
   margin-bottom: 4px;
 }
 
-.layout-single-column .account__header__bar .avatar .account__avatar, .layout-multiple-columns .account__header__bar .avatar .account__avatar {
+.layout-single-column ._comp_account_header__avatarWrapper .account__avatar, .layout-multiple-columns ._comp_account_header__avatarWrapper .account__avatar {
   background-color: #0000;
   border: 0;
 }
 
-.layout-single-column .account__header__tabs, .layout-multiple-columns .account__header__tabs {
+.layout-single-column ._comp_account_header__barWrapper, .layout-multiple-columns ._comp_account_header__barWrapper {
   overflow: visible;
 }
 
-.layout-single-column .account__header__tabs .account-role, .layout-multiple-columns .account__header__tabs .account-role {
+.layout-single-column ._comp_account_header__barWrapper .account-role, .layout-multiple-columns ._comp_account_header__barWrapper .account-role {
   width: 133.5px;
   display: none;
 }
 
-.layout-single-column .notification__report__actions .button, .layout-single-column .column-inline-form button, .layout-single-column .explore__suggestions .account-card__actions__button button, .layout-single-column .account__header__buttons .button, .layout-single-column .account .account__relationship > .button, .layout-single-column .notification .account__relationship > .button, .layout-multiple-columns .notification__report__actions .button, .layout-multiple-columns .column-inline-form button, .layout-multiple-columns .explore__suggestions .account-card__actions__button button, .layout-multiple-columns .account__header__buttons .button, .layout-multiple-columns .account .account__relationship > .button, .layout-multiple-columns .notification .account__relationship > .button {
+.layout-single-column .notification__report__actions .button, .layout-single-column .column-inline-form button, .layout-single-column .explore__suggestions .account-card__actions__button button, .layout-single-column [class*="_comp_account_header__buttons"] .button, .layout-single-column .account .account__relationship > .button, .layout-single-column .notification .account__relationship > .button, .layout-multiple-columns .notification__report__actions .button, .layout-multiple-columns .column-inline-form button, .layout-multiple-columns .explore__suggestions .account-card__actions__button button, .layout-multiple-columns [class*="_comp_account_header__buttons"] .button, .layout-multiple-columns .account .account__relationship > .button, .layout-multiple-columns .notification .account__relationship > .button {
   color: var(--color-light-text);
   font-size: var(--font-size);
   text-overflow: ellipsis;
@@ -2735,15 +2758,15 @@ body.layout-single-column, body.layout-multiple-columns {
   overflow: hidden;
 }
 
-.layout-single-column .account__header__tabs .button.button-secondary.account__header__follow-button, .layout-single-column .notification__report__actions .button, .layout-single-column .column-inline-form button, .layout-single-column .explore__suggestions .account-card__actions__button button, .layout-single-column .account__header__buttons .button, .layout-single-column .account__header__buttons .icon-button, .layout-single-column .notification .account__relationship > .button, .layout-single-column .account .account__relationship > .button, .layout-multiple-columns .account__header__tabs .button.button-secondary.account__header__follow-button, .layout-multiple-columns .notification__report__actions .button, .layout-multiple-columns .column-inline-form button, .layout-multiple-columns .explore__suggestions .account-card__actions__button button, .layout-multiple-columns .account__header__buttons .button, .layout-multiple-columns .account__header__buttons .icon-button, .layout-multiple-columns .notification .account__relationship > .button, .layout-multiple-columns .account .account__relationship > .button {
+.layout-single-column ._comp_account_header__barWrapper .button.button-secondary._comp_account_header__followButton, .layout-single-column .notification__report__actions .button, .layout-single-column .column-inline-form button, .layout-single-column .explore__suggestions .account-card__actions__button button, .layout-single-column [class*="_comp_account_header__buttons"] .button, .layout-single-column [class*="_comp_account_header__buttons"] .icon-button, .layout-single-column .notification .account__relationship > .button, .layout-single-column .account .account__relationship > .button, .layout-multiple-columns ._comp_account_header__barWrapper .button.button-secondary._comp_account_header__followButton, .layout-multiple-columns .notification__report__actions .button, .layout-multiple-columns .column-inline-form button, .layout-multiple-columns .explore__suggestions .account-card__actions__button button, .layout-multiple-columns [class*="_comp_account_header__buttons"] .button, .layout-multiple-columns [class*="_comp_account_header__buttons"] .icon-button, .layout-multiple-columns .notification .account__relationship > .button, .layout-multiple-columns .account .account__relationship > .button {
   border: 1px solid var(--color-outer-space);
 }
 
-.layout-single-column .account__header__buttons, .layout-multiple-columns .account__header__buttons {
+.layout-single-column [class*="_comp_account_header__buttons"], .layout-multiple-columns [class*="_comp_account_header__buttons"] {
   overflow: visible;
 }
 
-.layout-single-column .account__header__buttons .icon-button, .layout-multiple-columns .account__header__buttons .icon-button {
+.layout-single-column [class*="_comp_account_header__buttons"] .icon-button, .layout-multiple-columns [class*="_comp_account_header__buttons"] .icon-button {
   color: var(--color-light-text);
   border-radius: 9999px;
   justify-content: center;
@@ -2754,24 +2777,24 @@ body.layout-single-column, body.layout-multiple-columns {
   display: inline-flex;
 }
 
-.layout-single-column .account__header__buttons .icon-button svg, .layout-multiple-columns .account__header__buttons .icon-button svg {
+.layout-single-column [class*="_comp_account_header__buttons"] .icon-button svg, .layout-multiple-columns [class*="_comp_account_header__buttons"] .icon-button svg {
   width: 18px;
   height: 18px;
 }
 
-.layout-single-column .column-inline-form button:hover, .layout-single-column .explore__suggestions .account-card__actions__button button:hover, .layout-single-column .account__header__buttons .icon-button.active, .layout-multiple-columns .column-inline-form button:hover, .layout-multiple-columns .explore__suggestions .account-card__actions__button button:hover, .layout-multiple-columns .account__header__buttons .icon-button.active {
+.layout-single-column .column-inline-form button:hover, .layout-single-column .explore__suggestions .account-card__actions__button button:hover, .layout-single-column [class*="_comp_account_header__buttons"] .icon-button.active, .layout-multiple-columns .column-inline-form button:hover, .layout-multiple-columns .explore__suggestions .account-card__actions__button button:hover, .layout-multiple-columns [class*="_comp_account_header__buttons"] .icon-button.active {
   color: var(--color-light-text);
 }
 
-.layout-single-column .account__header__buttons .icon-button .icon-bell-o, .layout-single-column .account__header__buttons .icon-button .icon-bell, .layout-multiple-columns .account__header__buttons .icon-button .icon-bell-o, .layout-multiple-columns .account__header__buttons .icon-button .icon-bell {
+.layout-single-column [class*="_comp_account_header__buttons"] .icon-button .icon-bell-o, .layout-single-column [class*="_comp_account_header__buttons"] .icon-button .icon-bell, .layout-multiple-columns [class*="_comp_account_header__buttons"] .icon-button .icon-bell-o, .layout-multiple-columns [class*="_comp_account_header__buttons"] .icon-button .icon-bell {
   background-image: var(--icon-bell-header-tabs);
 }
 
-.layout-single-column .account__header__buttons .icon-button.active .icon-bell-o, .layout-single-column .account__header__buttons .icon-button.active .icon-bell, .layout-multiple-columns .account__header__buttons .icon-button.active .icon-bell-o, .layout-multiple-columns .account__header__buttons .icon-button.active .icon-bell {
+.layout-single-column [class*="_comp_account_header__buttons"] .icon-button.active .icon-bell-o, .layout-single-column [class*="_comp_account_header__buttons"] .icon-button.active .icon-bell, .layout-multiple-columns [class*="_comp_account_header__buttons"] .icon-button.active .icon-bell-o, .layout-multiple-columns [class*="_comp_account_header__buttons"] .icon-button.active .icon-bell {
   background-image: var(--icon-bell-header-tabs-active);
 }
 
-.layout-single-column .account__header .icon-button:hover, .layout-single-column .account__header .icon-button:active, .layout-single-column .account__header .account__header__follow-button:hover, .layout-single-column .explore__suggestions .account-card__actions__button button:hover, .layout-single-column .account__header__buttons .button:focus, .layout-single-column .account__header__buttons .button:hover, .layout-single-column .notification .account__relationship > .button:hover, .layout-single-column .notification .account__relationship > .button:focus, .layout-single-column .account .account__relationship > .button:hover, .layout-single-column .account .account__relationship > .button:focus, .layout-multiple-columns .account__header .icon-button:hover, .layout-multiple-columns .account__header .icon-button:active, .layout-multiple-columns .account__header .account__header__follow-button:hover, .layout-multiple-columns .explore__suggestions .account-card__actions__button button:hover, .layout-multiple-columns .account__header__buttons .button:focus, .layout-multiple-columns .account__header__buttons .button:hover, .layout-multiple-columns .notification .account__relationship > .button:hover, .layout-multiple-columns .notification .account__relationship > .button:focus, .layout-multiple-columns .account .account__relationship > .button:hover, .layout-multiple-columns .account .account__relationship > .button:focus {
+.layout-single-column .account__header .icon-button:hover, .layout-single-column .account__header .icon-button:active, .layout-single-column .account__header ._comp_account_header__followButton:hover, .layout-single-column .explore__suggestions .account-card__actions__button button:hover, .layout-single-column [class*="_comp_account_header__buttons"] .button:focus, .layout-single-column [class*="_comp_account_header__buttons"] .button:hover, .layout-single-column .notification .account__relationship > .button:hover, .layout-single-column .notification .account__relationship > .button:focus, .layout-single-column .account .account__relationship > .button:hover, .layout-single-column .account .account__relationship > .button:focus, .layout-multiple-columns .account__header .icon-button:hover, .layout-multiple-columns .account__header .icon-button:active, .layout-multiple-columns .account__header ._comp_account_header__followButton:hover, .layout-multiple-columns .explore__suggestions .account-card__actions__button button:hover, .layout-multiple-columns [class*="_comp_account_header__buttons"] .button:focus, .layout-multiple-columns [class*="_comp_account_header__buttons"] .button:hover, .layout-multiple-columns .notification .account__relationship > .button:hover, .layout-multiple-columns .notification .account__relationship > .button:focus, .layout-multiple-columns .account .account__relationship > .button:hover, .layout-multiple-columns .account .account__relationship > .button:focus {
   background-color: var(--color-profile-button-hover);
   border-color: var(--color-light-text);
   color: var(--color-light-text);
@@ -2823,7 +2846,7 @@ body.layout-single-column, body.layout-multiple-columns {
 }
 
 @media (width >= 760px) {
-  .layout-single-column .account__header__image, .layout-multiple-columns .account__header__image {
+  .layout-single-column ._comp_account_header__header, .layout-multiple-columns ._comp_account_header__header {
     height: 200px;
   }
 }
@@ -2897,7 +2920,7 @@ body.layout-single-column, body.layout-multiple-columns {
   background-image: var(--icon-bookmark-status-hover);
 }
 
-.layout-single-column .account__header__buttons .icon, .layout-single-column .notification__filter-bar .icon, .layout-multiple-columns .account__header__buttons .icon, .layout-multiple-columns .notification__filter-bar .icon {
+.layout-single-column [class*="_comp_account_header__buttons"] .icon, .layout-single-column .notification__filter-bar .icon, .layout-multiple-columns [class*="_comp_account_header__buttons"] .icon, .layout-multiple-columns .notification__filter-bar .icon {
   --size-icon: 20px;
 }
 
@@ -2911,7 +2934,7 @@ body.layout-single-column, body.layout-multiple-columns {
   --size-icon: 19px;
 }
 
-.layout-single-column .notification-group--favourite .notification__message > .icon, .layout-single-column .notification-favourite .notification__message > .icon, .layout-single-column .notification-reblog .notification__message > .icon, .layout-single-column .account__header__buttons .icon, .layout-single-column .detailed-status__action-bar .icon, .layout-single-column .status__action-bar .icon, .layout-single-column .notification__filter-bar .icon, .layout-single-column .column-link .icon, .layout-multiple-columns .notification-group--favourite .notification__message > .icon, .layout-multiple-columns .notification-favourite .notification__message > .icon, .layout-multiple-columns .notification-reblog .notification__message > .icon, .layout-multiple-columns .account__header__buttons .icon, .layout-multiple-columns .detailed-status__action-bar .icon, .layout-multiple-columns .status__action-bar .icon, .layout-multiple-columns .notification__filter-bar .icon, .layout-multiple-columns .column-link .icon {
+.layout-single-column .notification-group--favourite .notification__message > .icon, .layout-single-column .notification-favourite .notification__message > .icon, .layout-single-column .notification-reblog .notification__message > .icon, .layout-single-column [class*="_comp_account_header__buttons"] .icon, .layout-single-column .detailed-status__action-bar .icon, .layout-single-column .status__action-bar .icon, .layout-single-column .notification__filter-bar .icon, .layout-single-column .column-link .icon, .layout-multiple-columns .notification-group--favourite .notification__message > .icon, .layout-multiple-columns .notification-favourite .notification__message > .icon, .layout-multiple-columns .notification-reblog .notification__message > .icon, .layout-multiple-columns [class*="_comp_account_header__buttons"] .icon, .layout-multiple-columns .detailed-status__action-bar .icon, .layout-multiple-columns .status__action-bar .icon, .layout-multiple-columns .notification__filter-bar .icon, .layout-multiple-columns .column-link .icon {
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
@@ -2923,7 +2946,7 @@ body.layout-single-column, body.layout-multiple-columns {
   width: var(--size-icon);
 }
 
-.layout-single-column .account__header__buttons .icon, .layout-multiple-columns .account__header__buttons .icon {
+.layout-single-column [class*="_comp_account_header__buttons"] .icon, .layout-multiple-columns [class*="_comp_account_header__buttons"] .icon {
   background-position: center;
   background-size: var(--size-icon) var(--size-icon);
 }
@@ -2935,11 +2958,11 @@ body.layout-single-column, body.layout-multiple-columns {
   top: 2px;
 }
 
-.layout-single-column .ui__navigation-bar__item[href="/home"] svg path, .layout-single-column .ui__navigation-bar__item[href="/notifications"] svg path, .layout-single-column .ui__navigation-bar__item[href="/explore"] svg path, .layout-single-column .list-adder__lists .icon-plus > path, .layout-single-column .list-adder__lists .icon-times > path, .layout-single-column .list-adder__lists .list__display-name svg > path, .layout-single-column .status__prepend .icon.icon-retweet path, .layout-single-column .notification-group--reblog > .notification-group__icon > .icon path, .layout-single-column .notification-reblog .notification__message > .icon path, .layout-single-column .notification-group--favourite > .notification-group__icon > .icon path, .layout-single-column .notification-group--favourite .notification__message > .icon path, .layout-single-column .notification-favourite .notification__message > .icon path, .layout-single-column .account__header__buttons .icon path, .layout-single-column .detailed-status__action-bar .icon path, .layout-single-column .notification__filter-bar .icon path, .layout-single-column .status__action-bar path, .layout-single-column .column-link .icon path, .layout-single-column .load-more path, .layout-single-column .account__domain-pill__popout__parts > div:nth-child(2) path, .layout-single-column .column-header__button .icon-sliders > path, .layout-single-column .compose-form .icon-close > path, .layout-single-column .item-list .lists__item__title path, .layout-single-column .lists__item .icon-button.active path, .layout-single-column .dialog-modal__content .lists__item__title path, .layout-single-column .hashtag-header__header__buttons .icon > path, .layout-single-column .lists__item .icon-button svg > path, .layout-multiple-columns .ui__navigation-bar__item[href="/home"] svg path, .layout-multiple-columns .ui__navigation-bar__item[href="/notifications"] svg path, .layout-multiple-columns .ui__navigation-bar__item[href="/explore"] svg path, .layout-multiple-columns .list-adder__lists .icon-plus > path, .layout-multiple-columns .list-adder__lists .icon-times > path, .layout-multiple-columns .list-adder__lists .list__display-name svg > path, .layout-multiple-columns .status__prepend .icon.icon-retweet path, .layout-multiple-columns .notification-group--reblog > .notification-group__icon > .icon path, .layout-multiple-columns .notification-reblog .notification__message > .icon path, .layout-multiple-columns .notification-group--favourite > .notification-group__icon > .icon path, .layout-multiple-columns .notification-group--favourite .notification__message > .icon path, .layout-multiple-columns .notification-favourite .notification__message > .icon path, .layout-multiple-columns .account__header__buttons .icon path, .layout-multiple-columns .detailed-status__action-bar .icon path, .layout-multiple-columns .notification__filter-bar .icon path, .layout-multiple-columns .status__action-bar path, .layout-multiple-columns .column-link .icon path, .layout-multiple-columns .load-more path, .layout-multiple-columns .account__domain-pill__popout__parts > div:nth-child(2) path, .layout-multiple-columns .column-header__button .icon-sliders > path, .layout-multiple-columns .compose-form .icon-close > path, .layout-multiple-columns .item-list .lists__item__title path, .layout-multiple-columns .lists__item .icon-button.active path, .layout-multiple-columns .dialog-modal__content .lists__item__title path, .layout-multiple-columns .hashtag-header__header__buttons .icon > path, .layout-multiple-columns .lists__item .icon-button svg > path {
+.layout-single-column .ui__navigation-bar__item[href="/home"] svg path, .layout-single-column .ui__navigation-bar__item[href="/notifications"] svg path, .layout-single-column .ui__navigation-bar__item[href="/explore"] svg path, .layout-single-column .list-adder__lists .icon-plus > path, .layout-single-column .list-adder__lists .icon-times > path, .layout-single-column .list-adder__lists .list__display-name svg > path, .layout-single-column .status__prepend .icon.icon-retweet path, .layout-single-column .notification-group--reblog > .notification-group__icon > .icon path, .layout-single-column .notification-reblog .notification__message > .icon path, .layout-single-column .notification-group--favourite > .notification-group__icon > .icon path, .layout-single-column .notification-group--favourite .notification__message > .icon path, .layout-single-column .notification-favourite .notification__message > .icon path, .layout-single-column [class*="_comp_account_header__buttons"] .icon path, .layout-single-column .detailed-status__action-bar .icon path, .layout-single-column .notification__filter-bar .icon path, .layout-single-column .status__action-bar path, .layout-single-column .column-link .icon path, .layout-single-column .load-more path, .layout-single-column .account__domain-pill__popout__parts > div:nth-child(2) path, .layout-single-column .column-header__button .icon-sliders > path, .layout-single-column .compose-form .icon-close > path, .layout-single-column .item-list .lists__item__title path, .layout-single-column .lists__item .icon-button.active path, .layout-single-column .dialog-modal__content .lists__item__title path, .layout-single-column .hashtag-header__header__buttons .icon > path, .layout-single-column .lists__item .icon-button svg > path, .layout-multiple-columns .ui__navigation-bar__item[href="/home"] svg path, .layout-multiple-columns .ui__navigation-bar__item[href="/notifications"] svg path, .layout-multiple-columns .ui__navigation-bar__item[href="/explore"] svg path, .layout-multiple-columns .list-adder__lists .icon-plus > path, .layout-multiple-columns .list-adder__lists .icon-times > path, .layout-multiple-columns .list-adder__lists .list__display-name svg > path, .layout-multiple-columns .status__prepend .icon.icon-retweet path, .layout-multiple-columns .notification-group--reblog > .notification-group__icon > .icon path, .layout-multiple-columns .notification-reblog .notification__message > .icon path, .layout-multiple-columns .notification-group--favourite > .notification-group__icon > .icon path, .layout-multiple-columns .notification-group--favourite .notification__message > .icon path, .layout-multiple-columns .notification-favourite .notification__message > .icon path, .layout-multiple-columns [class*="_comp_account_header__buttons"] .icon path, .layout-multiple-columns .detailed-status__action-bar .icon path, .layout-multiple-columns .notification__filter-bar .icon path, .layout-multiple-columns .status__action-bar path, .layout-multiple-columns .column-link .icon path, .layout-multiple-columns .load-more path, .layout-multiple-columns .account__domain-pill__popout__parts > div:nth-child(2) path, .layout-multiple-columns .column-header__button .icon-sliders > path, .layout-multiple-columns .compose-form .icon-close > path, .layout-multiple-columns .item-list .lists__item__title path, .layout-multiple-columns .lists__item .icon-button.active path, .layout-multiple-columns .dialog-modal__content .lists__item__title path, .layout-multiple-columns .hashtag-header__header__buttons .icon > path, .layout-multiple-columns .lists__item .icon-button svg > path {
   display: none;
 }
 
-.layout-single-column .icon-user-plus.column-link__icon path, .layout-single-column .icon.icon-undefined path, .layout-single-column .icon.icon-users path, .layout-single-column .account__header__buttons .optional path, .layout-single-column .account__header__buttons .icon.icon-user-plus path, .layout-single-column .notification__filter-bar .icon.icon-user-plus path, .layout-single-column .account__header__buttons .icon.icon-tasks path, .layout-single-column .notification__filter-bar .icon.icon-tasks path, .layout-single-column .icon.icon-wrapstodon-planet path, .layout-single-column .navigation-panel__legal .column-link[href="/about"] path, .layout-multiple-columns .icon-user-plus.column-link__icon path, .layout-multiple-columns .icon.icon-undefined path, .layout-multiple-columns .icon.icon-users path, .layout-multiple-columns .account__header__buttons .optional path, .layout-multiple-columns .account__header__buttons .icon.icon-user-plus path, .layout-multiple-columns .notification__filter-bar .icon.icon-user-plus path, .layout-multiple-columns .account__header__buttons .icon.icon-tasks path, .layout-multiple-columns .notification__filter-bar .icon.icon-tasks path, .layout-multiple-columns .icon.icon-wrapstodon-planet path, .layout-multiple-columns .navigation-panel__legal .column-link[href="/about"] path {
+.layout-single-column .icon-user-plus.column-link__icon path, .layout-single-column .icon.icon-undefined path, .layout-single-column .icon.icon-users path, .layout-single-column [class*="_comp_account_header__buttons"] .optional path, .layout-single-column [class*="_comp_account_header__buttons"] .icon.icon-user-plus path, .layout-single-column .notification__filter-bar .icon.icon-user-plus path, .layout-single-column [class*="_comp_account_header__buttons"] .icon.icon-tasks path, .layout-single-column .notification__filter-bar .icon.icon-tasks path, .layout-single-column .icon.icon-wrapstodon-planet path, .layout-single-column .navigation-panel__legal .column-link[href="/about"] path, .layout-multiple-columns .icon-user-plus.column-link__icon path, .layout-multiple-columns .icon.icon-undefined path, .layout-multiple-columns .icon.icon-users path, .layout-multiple-columns [class*="_comp_account_header__buttons"] .optional path, .layout-multiple-columns [class*="_comp_account_header__buttons"] .icon.icon-user-plus path, .layout-multiple-columns .notification__filter-bar .icon.icon-user-plus path, .layout-multiple-columns [class*="_comp_account_header__buttons"] .icon.icon-tasks path, .layout-multiple-columns .notification__filter-bar .icon.icon-tasks path, .layout-multiple-columns .icon.icon-wrapstodon-planet path, .layout-multiple-columns .navigation-panel__legal .column-link[href="/about"] path {
   display: block;
 }
 
@@ -3821,7 +3844,7 @@ body.layout-single-column, body.layout-multiple-columns {
     display: none;
   }
 
-  .layout-single-column .account__header__bar .avatar .account__avatar, .layout-multiple-columns .account__header__bar .avatar .account__avatar {
+  .layout-single-column ._comp_account_header__barWrapper .avatar .account__avatar, .layout-multiple-columns ._comp_account_header__barWrapper .avatar .account__avatar {
     width: 133.5px !important;
     height: 133.5px !important;
   }

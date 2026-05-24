@@ -20,16 +20,16 @@
     margin-bottom: 4px;
   }
 
-  .account__header__bar .avatar .account__avatar {
+  ._comp_account_header__avatarWrapper .account__avatar {
     background-color: transparent;
     border: 0;
   }
 
-  .account__header__tabs {
+  ._comp_account_header__barWrapper {
     overflow: visible;
   }
 
-  .account__header__tabs .account-role {
+  ._comp_account_header__barWrapper .account-role {
     display: none;
     width: 133.5px;
   }
@@ -38,7 +38,7 @@
   .notification__report__actions .button,
   .column-inline-form button,
   .explore__suggestions .account-card__actions__button button,
-  .account__header__buttons .button,
+  [class*="_comp_account_header__buttons"] .button,
   .account .account__relationship > .button,
   .notification .account__relationship > .button {
     background-color: transparent;
@@ -58,24 +58,24 @@
   }
 
   // Dark button borders and other things that have borders all around
-  .account__header__tabs
-    .button.button-secondary.account__header__follow-button,
+  ._comp_account_header__barWrapper
+    .button.button-secondary._comp_account_header__followButton,
   .notification__report__actions .button,
   .column-inline-form button,
   .explore__suggestions .account-card__actions__button button,
-  .account__header__buttons .button,
-  .account__header__buttons .icon-button,
+  [class*="_comp_account_header__buttons"] .button,
+  [class*="_comp_account_header__buttons"] .icon-button,
   .notification .account__relationship > .button,
   .account .account__relationship > .button {
     border: 1px solid var(--color-outer-space);
   }
 
   // Fix focus overflow for 4.1.4-nightly
-  .account__header__buttons {
+  [class*="_comp_account_header__buttons"] {
     overflow: visible;
   }
 
-  .account__header__buttons .icon-button {
+  [class*="_comp_account_header__buttons"] .icon-button {
     align-items: center;
     border-bottom-left-radius: 9999px;
     border-bottom-right-radius: 9999px;
@@ -90,33 +90,33 @@
   }
 
   // Copy-icon size in profile
-  .account__header__buttons .icon-button svg {
+  [class*="_comp_account_header__buttons"] .icon-button svg {
     height: 18px;
     width: 18px;
   }
 
   .column-inline-form button:hover,
   .explore__suggestions .account-card__actions__button button:hover,
-  .account__header__buttons .icon-button.active {
+  [class*="_comp_account_header__buttons"] .icon-button.active {
     color: var(--color-light-text);
   }
 
-  .account__header__buttons .icon-button .icon-bell-o,
-  .account__header__buttons .icon-button .icon-bell {
+  [class*="_comp_account_header__buttons"] .icon-button .icon-bell-o,
+  [class*="_comp_account_header__buttons"] .icon-button .icon-bell {
     background-image: var(--icon-bell-header-tabs);
   }
 
-  .account__header__buttons .icon-button.active .icon-bell-o,
-  .account__header__buttons .icon-button.active .icon-bell {
+  [class*="_comp_account_header__buttons"] .icon-button.active .icon-bell-o,
+  [class*="_comp_account_header__buttons"] .icon-button.active .icon-bell {
     background-image: var(--icon-bell-header-tabs-active);
   }
 
   .account__header .icon-button:hover,
   .account__header .icon-button:active,
-  .account__header .account__header__follow-button:hover,
+  .account__header ._comp_account_header__followButton:hover,
   .explore__suggestions .account-card__actions__button button:hover,
-  .account__header__buttons .button:focus,
-  .account__header__buttons .button:hover,
+  [class*="_comp_account_header__buttons"] .button:focus,
+  [class*="_comp_account_header__buttons"] .button:hover,
   .notification .account__relationship > .button:hover,
   .notification .account__relationship > .button:focus,
   .account .account__relationship > .button:hover,
@@ -177,7 +177,7 @@
   }
 
   @media (width >= 760px) {
-    .account__header__image {
+    ._comp_account_header__header {
       height: 200px;
     }
   }

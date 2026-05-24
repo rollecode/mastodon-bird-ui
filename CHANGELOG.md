@@ -1,5 +1,6 @@
 ### [Unreleased]
 
+* Adapt profile styles to the new account_header module classes and restore avatar size, badge spacing, and bar layout after upstream removed the old classes in #38920
 * Update profile tabs, name, avatar wrapper, badges, handle help, and familiar followers selectors to the new `_comp_account_header__*` and `_comp_tab_list__*` module classes (upstream rename in #38863)
 * Restore even profile tab distribution at all viewport widths
 * Add explicit `margin-bottom: 16px` on familiar followers under the new module class so spacing stays consistent when no role badges are rendered

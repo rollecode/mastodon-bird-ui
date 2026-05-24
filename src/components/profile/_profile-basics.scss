@@ -2,11 +2,11 @@
 .layout-single-column,
 .layout-multiple-columns {
   .getting-started__trends h4,
-  .account__header__bar {
+  ._comp_account_header__barWrapper {
     border-color: var(--color-border);
   }
 
-  .account__header__bio .account__header__fields {
+  ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList {
     background-color: transparent;
     border: 0;
     color: var(--color-dim);

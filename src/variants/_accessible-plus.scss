@@ -92,7 +92,7 @@
   }
 
   //  Define headings or larger font sizes
-  .account__header__tabs__name {
+  ._comp_account_header__name {
     font-size: var(--font-size-heading);
   }
 }
@@ -130,7 +130,7 @@ body .content-warning {
 .detailed-status__display-name,
 .notification-group__main__header__label,
 .account--minimal .account__display-name .display-name strong,
-.account__header__content p,
+._comp_account_header__bio p,
 .status__relative-time * {
   font-size: var(--font-size-mid) !important;
   line-height: var(--line-height-mid) !important;
@@ -143,8 +143,8 @@ body .content-warning {
   }
 }
 
-.layout-single-column .account__header__bio dl[class*="fieldList"],
-.layout-multiple-columns .account__header__bio dl[class*="fieldList"] {
+.layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"],
+.layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] {
   row-gap: 16px;
 }
 
@@ -245,8 +245,8 @@ body .content-warning {
 
 //  More visible button borders
 .account .account__relationship > .button,
-.account__header__tabs__buttons .button,
-.account__header__tabs__buttons .icon-button,
+._comp_account_header__barWrapper__buttons .button,
+._comp_account_header__barWrapper__buttons .icon-button,
 .column-inline-form button,
 .explore__suggestions .account-card__actions__button button,
 .notification .account__relationship > .button,

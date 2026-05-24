@@ -4,7 +4,7 @@
   // Things that should have the default font-size
   .notification__message,
   .status__content,
-  .account__header__tabs__name h1 small,
+  ._comp_account_header__name h1 small,
   .button,
   .status__content__read-more-button,
   .status__prepend,
@@ -20,11 +20,11 @@
   }
 
   // Things that should have the mid font-size
-  .account__header__extra__links,
+  ._comp_account_header__bioButtonsWrapper__links,
   .columns-area__panels__pane--compositional
     .account__header__account-note
     textarea,
-  .account__header__content,
+  ._comp_account_header__bio,
   .columns-area__panels__pane--compositional
     .compose-form
     .autosuggest-textarea__textarea,
@@ -36,7 +36,7 @@
   }
 
   // Exceptions
-  .account__header__content {
+  ._comp_account_header__bio {
     line-height: 18px;
   }
 

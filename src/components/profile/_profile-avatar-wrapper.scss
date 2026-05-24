@@ -4,4 +4,13 @@
   [class*="_comp_account_header__avatarWrapper"] {
     margin-top: -64px;
   }
+
+  // Avatar: restore the larger borderless Bird UI look (upstream renders it at
+  // 80px with a border via the account_header module).
+  [class*="_comp_account_header__avatarWrapper"] .account__avatar {
+    background-color: transparent;
+    border: 0;
+    height: 133.5px !important;
+    width: 133.5px !important;
+  }
 }
