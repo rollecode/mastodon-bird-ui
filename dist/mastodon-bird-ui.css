@@ -1422,6 +1422,11 @@ body.layout-single-column, body.layout-multiple-columns {
   visibility: hidden;
 }
 
+.layout-single-column .navigation-panel__menu, .layout-multiple-columns .navigation-panel__menu {
+  flex-direction: column;
+  display: flex;
+}
+
 .layout-single-column .navigation-panel__menu > li, .layout-multiple-columns .navigation-panel__menu > li {
   width: 100%;
 }
@@ -3844,7 +3849,7 @@ body.layout-single-column, body.layout-multiple-columns {
 
   .layout-single-column .navigation-panel__menu, .layout-multiple-columns .navigation-panel__menu {
     flex: unset;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: flex-start;
     gap: 0;
     display: flex;
