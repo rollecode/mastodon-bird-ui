@@ -1,3 +1,7 @@
+### [Unreleased]
+
+* Remove border-bottom from the trends heading
+
 ### 4.0.0-alpha.8.rc2: 2026-05-24
 
 * Hide the follows-you badge icon and nudge the badge with transform translate(-1px, 1px) for alignment

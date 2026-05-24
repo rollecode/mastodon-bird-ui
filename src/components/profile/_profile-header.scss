@@ -15,6 +15,10 @@
     margin-top: calc(var(--gap-default) * 2);
   }
 
+  .getting-started__trends-heading {
+    border-bottom: 0;
+  }
+
   .trends__item__name > a {
     font-size: var(--font-size);
     margin-bottom: 4px;
