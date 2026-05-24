@@ -2378,13 +2378,6 @@ body.layout-single-column, body.layout-multiple-columns {
   margin-top: -64px;
 }
 
-.layout-single-column [class*="_comp_account_header__avatarWrapper"] .account__avatar, .layout-multiple-columns [class*="_comp_account_header__avatarWrapper"] .account__avatar {
-  background-color: #0000;
-  border: 0;
-  width: 133.5px !important;
-  height: 133.5px !important;
-}
-
 .layout-single-column ._comp_account_header__name, .layout-single-column ._comp_account_header__name > h1, .layout-single-column ._comp_account_header__name > h1 > bdi, .layout-multiple-columns ._comp_account_header__name, .layout-multiple-columns ._comp_account_header__name > h1, .layout-multiple-columns ._comp_account_header__name > h1 > bdi {
   align-items: center;
   display: inline-flex;
@@ -3844,7 +3837,7 @@ body.layout-single-column, body.layout-multiple-columns {
     display: none;
   }
 
-  .layout-single-column ._comp_account_header__barWrapper .avatar .account__avatar, .layout-multiple-columns ._comp_account_header__barWrapper .avatar .account__avatar {
+  .layout-single-column ._comp_account_header__avatarWrapper .account__avatar, .layout-multiple-columns ._comp_account_header__avatarWrapper .account__avatar {
     width: 133.5px !important;
     height: 133.5px !important;
   }

@@ -1,5 +1,6 @@
 ### [Unreleased]
 
+* Scope the larger 133.5px profile avatar to viewports 760px and up so mobile keeps the smaller size
 * Keep the More navigation item last after upstream reordered it before the About and sign-in items
 * Adapt profile styles to the new account_header module classes and restore avatar size, badge spacing, and bar layout after upstream removed the old classes in #38920
 * Update profile tabs, name, avatar wrapper, badges, handle help, and familiar followers selectors to the new `_comp_account_header__*` and `_comp_tab_list__*` module classes (upstream rename in #38863)
