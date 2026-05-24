@@ -26,10 +26,9 @@
 
   // The legacy desktop `order` values in _mobile.scss were written for the old
   // flat .column-link flex children. After #39145 they land on the new <li>
-  // wrappers instead (e.g. .navigation-panel__list-panel gets order: 16,
-  // .navigation-panel__legal gets order: 66), scrambling the already correct
-  // DOM order and pushing the lists below More. Reset every item to source
-  // order so the menu just follows the DOM.
+  // wrappers instead (e.g. .navigation-panel__legal gets order: 66),
+  // scrambling the DOM order. Reset every item to source order, then re-apply
+  // only the two intentional placements below.
   .navigation-panel__menu > li {
     order: 0;
     width: 100%;
@@ -38,6 +37,13 @@
   // Hide the list-item separators that replaced the old <hr> elements.
   .navigation-panel__menu > li[role="separator"] {
     display: none;
+  }
+
+  // Keep the Lists and Followed tags panels at the bottom, just above More,
+  // as in the original Bird UI desktop layout (Followed tags ends up second
+  // last, right before More).
+  .navigation-panel__menu > li.navigation-panel__list-panel {
+    order: 1;
   }
 
   // Keep the "More" menu (the only item with a <button> styled as a column

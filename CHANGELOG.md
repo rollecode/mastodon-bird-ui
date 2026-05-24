@@ -2,7 +2,7 @@
 
 * Hide the follows-you badge icon and nudge the badge with transform translate(-1px, 1px) for alignment
 * Scope the larger 133.5px profile avatar to viewports 760px and up so mobile keeps the smaller size
-* Reset navigation menu item order and force More last after upstream wrapped the items in list elements, so the legacy desktop order values no longer push the lists below More
+* Restore navigation menu order after upstream wrapped items in list elements: Lists and Followed tags sit at the bottom with More last
 * Adapt profile styles to the new account_header module classes and restore avatar size, badge spacing, and bar layout after upstream removed the old classes in #38920
 * Update profile tabs, name, avatar wrapper, badges, handle help, and familiar followers selectors to the new `_comp_account_header__*` and `_comp_tab_list__*` module classes (upstream rename in #38863)
 * Restore even profile tab distribution at all viewport widths
