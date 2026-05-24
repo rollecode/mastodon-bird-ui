@@ -2214,10 +2214,10 @@ body.layout-single-column, body.layout-multiple-columns {
   padding: 4px 6px;
   padding-inline-end: 6px;
   line-height: 12px;
-  transform: translateY(-1px);
+  transform: translate(-1px, 1px);
 }
 
-.layout-single-column [class*="_comp_account_header__followerBadgeIcon"], .layout-multiple-columns [class*="_comp_account_header__followerBadgeIcon"] {
+.layout-single-column [class*="_comp_account_header__name"] > [class*="_comp_badge__badge"] > svg, .layout-multiple-columns [class*="_comp_account_header__name"] > [class*="_comp_badge__badge"] > svg {
   display: none;
 }
 

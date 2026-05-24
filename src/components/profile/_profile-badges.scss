@@ -22,11 +22,11 @@
     opacity: 1;
     padding: 4px 6px;
     padding-inline-end: 6px;
-    transform: translateY(-1px);
+    transform: translate(-1px, 1px);
   }
 
   // Hide the "Follows you" icon, keep text only
-  [class*="_comp_account_header__followerBadgeIcon"] {
+  [class*="_comp_account_header__name"] > [class*="_comp_badge__badge"] > svg {
     display: none;
   }
 
