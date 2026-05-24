@@ -1428,6 +1428,7 @@ body.layout-single-column, body.layout-multiple-columns {
 }
 
 .layout-single-column .navigation-panel__menu > li, .layout-multiple-columns .navigation-panel__menu > li {
+  order: 0;
   width: 100%;
 }
 
@@ -1436,11 +1437,7 @@ body.layout-single-column, body.layout-multiple-columns {
 }
 
 .layout-single-column .navigation-panel__menu > li:has(button.column-link), .layout-multiple-columns .navigation-panel__menu > li:has(button.column-link) {
-  order: 1;
-}
-
-.layout-single-column .navigation-panel__menu > li.navigation-panel__legal, .layout-multiple-columns .navigation-panel__menu > li.navigation-panel__legal {
-  order: 0;
+  order: 99;
 }
 
 .layout-single-column .navigation-panel__logo hr, .layout-multiple-columns .navigation-panel__logo hr {

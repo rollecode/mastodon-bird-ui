@@ -24,7 +24,14 @@
     flex-direction: column;
   }
 
+  // The legacy desktop `order` values in _mobile.scss were written for the old
+  // flat .column-link flex children. After #39145 they land on the new <li>
+  // wrappers instead (e.g. .navigation-panel__list-panel gets order: 16,
+  // .navigation-panel__legal gets order: 66), scrambling the already correct
+  // DOM order and pushing the lists below More. Reset every item to source
+  // order so the menu just follows the DOM.
   .navigation-panel__menu > li {
+    order: 0;
     width: 100%;
   }
 
@@ -34,13 +41,9 @@
   }
 
   // Keep the "More" menu (the only item with a <button> styled as a column
-  // link) last, after the About/legal list item that follows it in the DOM.
+  // link) last, past any leftover legacy order values.
   .navigation-panel__menu > li:has(button.column-link) {
-    order: 1;
-  }
-
-  .navigation-panel__menu > li.navigation-panel__legal {
-    order: 0;
+    order: 99;
   }
 
   .navigation-panel__logo hr {
