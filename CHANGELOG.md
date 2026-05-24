@@ -6,6 +6,7 @@
 * Override `object-fit` to `cover` on video previews when a content warning placeholder is shown, so portrait videos no longer letterbox the spoiler image
 * Fix main navigation items appearing side by side after upstream wrapped them in list items, Closes #187
 * Hide the navigation list-item separators that replaced the old `hr` elements
+* Reduce navigation panel right padding to 10px so long menu labels fit better
 
 ### 4.0.0-alpha.8.rc: 2026-05-03
 

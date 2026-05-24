@@ -3779,7 +3779,7 @@ body.layout-single-column, body.layout-multiple-columns {
 
   .layout-single-column .navigation-panel, .layout-multiple-columns .navigation-panel {
     margin-right: -20px;
-    padding-right: 20px;
+    padding-right: 10px;
     padding-left: 0 !important;
   }
 
