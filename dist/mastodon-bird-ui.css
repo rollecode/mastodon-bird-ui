@@ -1436,6 +1436,14 @@ body.layout-single-column, body.layout-multiple-columns {
   display: none;
 }
 
+.layout-single-column .navigation-panel__menu > li:has(a.navigation-panel__compose-button), .layout-multiple-columns .navigation-panel__menu > li:has(a.navigation-panel__compose-button) {
+  order: -2;
+}
+
+.layout-single-column .navigation-panel__menu > li:has(a[href="/notifications"]), .layout-multiple-columns .navigation-panel__menu > li:has(a[href="/notifications"]) {
+  order: -1;
+}
+
 .layout-single-column .navigation-panel__menu > li.navigation-panel__list-panel, .layout-multiple-columns .navigation-panel__menu > li.navigation-panel__list-panel {
   order: 1;
 }

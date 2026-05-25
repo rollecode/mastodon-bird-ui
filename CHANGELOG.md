@@ -1,5 +1,6 @@
 ### [Unreleased]
 
+* Move Notifications to the second slot in the navigation menu
 * Remove border-bottom from the trends heading
 
 ### 4.0.0-alpha.8.rc2: 2026-05-24

@@ -39,6 +39,15 @@
     display: none;
   }
 
+  // Move Notifications to the second slot, right after the compose button.
+  .navigation-panel__menu > li:has(a.navigation-panel__compose-button) {
+    order: -2;
+  }
+
+  .navigation-panel__menu > li:has(a[href="/notifications"]) {
+    order: -1;
+  }
+
   // Keep the Lists and Followed tags panels at the bottom, just above More,
   // as in the original Bird UI desktop layout (Followed tags ends up second
   // last, right before More).
