@@ -2034,6 +2034,29 @@ body.layout-single-column, body.layout-multiple-columns {
   display: inline-flex;
 }
 
+.layout-single-column [class*="_comp_account_list_item__verifiedBadge"], .layout-multiple-columns [class*="_comp_account_list_item__verifiedBadge"] {
+  background-color: #0000;
+  align-items: center;
+  gap: 4px;
+  display: inline-flex;
+}
+
+.layout-single-column [class*="_comp_account_list_item__verifiedBadge"] svg, .layout-multiple-columns [class*="_comp_account_list_item__verifiedBadge"] svg {
+  background-image: var(--icon-verified-smaller);
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 15px;
+}
+
+.layout-single-column [class*="_comp_account_list_item__verifiedBadge"] svg path, .layout-multiple-columns [class*="_comp_account_list_item__verifiedBadge"] svg path {
+  display: none;
+}
+
+.layout-single-column [class*="_comp_account_list_item__verifiedBadge"] a, .layout-multiple-columns [class*="_comp_account_list_item__verifiedBadge"] a {
+  color: var(--color-accent);
+  font-weight: var(--font-weight-regular);
+}
+
 .layout-single-column ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"], .layout-multiple-columns ._comp_account_header__bioButtonsWrapper dl[class*="fieldList"] {
   gap: 5px var(--gap-default);
   flex-wrap: wrap;

@@ -127,4 +127,30 @@
     padding: 0;
     width: 100%;
   }
+
+  // Verified badge in account list items (e.g. collections), mirrors the
+  // profile field verified style: transparent background, accent link color,
+  // Bird UI tick icon swapped in for the green gradient SVG.
+  [class*="_comp_account_list_item__verifiedBadge"] {
+    align-items: center;
+    background-color: transparent;
+    display: inline-flex;
+    gap: 4px;
+  }
+
+  [class*="_comp_account_list_item__verifiedBadge"] svg {
+    background-image: var(--icon-verified-smaller);
+    background-repeat: no-repeat;
+    height: 15px;
+    width: 15px;
+  }
+
+  [class*="_comp_account_list_item__verifiedBadge"] svg path {
+    display: none;
+  }
+
+  [class*="_comp_account_list_item__verifiedBadge"] a {
+    color: var(--color-accent);
+    font-weight: var(--font-weight-regular);
+  }
 }
