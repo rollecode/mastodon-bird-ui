@@ -3917,6 +3917,10 @@ body.layout-single-column, body.layout-multiple-columns {
     --gap-column-link: 7px;
     font-size: 17px;
   }
+
+  .layout-single-column .getting-started__trends .trends__item:nth-of-type(n+3), .layout-multiple-columns .getting-started__trends .trends__item:nth-of-type(n+3) {
+    display: none;
+  }
 }
 
 @media screen and (width >= 760px) {
