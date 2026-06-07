@@ -1,4 +1,4 @@
-### [Unreleased]
+### 4.0.0-beta.1.rc: 2026-06-07
 
 * Tighten badge spacing in account list items (override core padding on all badges, nudge Follows you down)
 * Style the verified link badge in account list items (e.g. collections) the same as profile field verified links
