@@ -1,5 +1,6 @@
 ### [Unreleased]
 
+* Remove the trends section top margin
 * Make the navigation menu scrollbar minimal (Firefox thin, WebKit 4px) to match the Bird UI aesthetic
 * Compact the navigation items (font-size 17px, gap 7px) on screen heights below 1080px
 

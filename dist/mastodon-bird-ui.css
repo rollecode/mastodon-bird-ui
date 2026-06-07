@@ -2794,10 +2794,6 @@ body.layout-single-column, body.layout-multiple-columns {
   line-height: 24px;
 }
 
-.layout-single-column .getting-started__trends, .layout-multiple-columns .getting-started__trends {
-  margin-top: calc(var(--gap-default) * 2);
-}
-
 .layout-single-column .getting-started__trends-heading, .layout-multiple-columns .getting-started__trends-heading {
   border-bottom: 0;
 }
