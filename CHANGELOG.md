@@ -1,5 +1,6 @@
 ### [Unreleased]
 
+* Make the navigation menu scrollbar minimal (Firefox thin, WebKit 4px) to match the Bird UI aesthetic
 * Compact the navigation items (font-size 17px, gap 7px) on screen heights below 1080px
 
 ### 4.0.0-beta.1.rc: 2026-06-07

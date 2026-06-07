@@ -1423,8 +1423,38 @@ body.layout-single-column, body.layout-multiple-columns {
 }
 
 .layout-single-column .navigation-panel__menu, .layout-multiple-columns .navigation-panel__menu {
+  scrollbar-color: var(--color-border) transparent;
+  scrollbar-width: thin;
   flex-direction: column;
   display: flex;
+}
+
+.layout-single-column .navigation-panel__menu::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.layout-multiple-columns .navigation-panel__menu::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.layout-single-column .navigation-panel__menu::-webkit-scrollbar-thumb {
+  background-color: var(--color-border);
+  border-radius: 50px;
+}
+
+.layout-multiple-columns .navigation-panel__menu::-webkit-scrollbar-thumb {
+  background-color: var(--color-border);
+  border-radius: 50px;
+}
+
+.layout-single-column .navigation-panel__menu::-webkit-scrollbar-track {
+  background-color: #0000;
+}
+
+.layout-multiple-columns .navigation-panel__menu::-webkit-scrollbar-track {
+  background-color: #0000;
 }
 
 .layout-single-column .navigation-panel__menu > li, .layout-multiple-columns .navigation-panel__menu > li {
