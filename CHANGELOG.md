@@ -1,5 +1,6 @@
 ### [Unreleased]
 
+* Show the Collections nav icon (was hidden by the column-link icon path reset)
 * Move Notifications to the second slot in the navigation menu
 * Remove border-bottom from the trends heading
 
