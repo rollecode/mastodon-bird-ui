@@ -12,8 +12,10 @@
     column-gap: 6px;
   }
 
-  // "Follows you" badge in the name area
-  [class*="_comp_account_header__name"] > [class*="_comp_badge__default"] {
+  // "Follows you" badge - in the profile name area and in account list items
+  // (e.g. inside collections, where the wrapper is _comp_account_list_item__badge).
+  [class*="_comp_account_header__name"] > [class*="_comp_badge__default"],
+  [class*="_comp_account_list_item__badge"] > [class*="_comp_badge__default"] {
     background-color: var(--color-dark);
     color: var(--color-light-text);
     font-size: var(--font-size-11);
@@ -25,8 +27,9 @@
     transform: translate(-1px, 1px);
   }
 
-  // Hide the "Follows you" icon, keep text only
-  [class*="_comp_account_header__name"] > [class*="_comp_badge__badge"] > svg {
+  // Hide the "Follows you" icon, keep text only.
+  [class*="_comp_account_header__name"] > [class*="_comp_badge__badge"] > svg,
+  [class*="_comp_account_list_item__badge"] > [class*="_comp_badge__badge"] > svg {
     display: none;
   }
 
