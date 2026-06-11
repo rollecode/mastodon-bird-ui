@@ -42,3 +42,10 @@
     transform: translateY(-4px);
   }
 }
+
+// The avatar follow badge hover uses --color-bg-secondary in core, which is
+// near transparent in Bird UI; use the solid secondary background instead
+.avatar-follow-badge:hover,
+.avatar-follow-badge:focus {
+  background: var(--color-bg-secondary-solid);
+}

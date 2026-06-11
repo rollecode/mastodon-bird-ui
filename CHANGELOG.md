@@ -1,5 +1,6 @@
 ### [Unreleased]
 
+* Use the solid secondary background for the avatar follow badge hover
 * Cap dropdown menus to the viewport height and make them scrollable on short or zoomed screens
 * Add z-index to status display name so the avatar follow badge stays clickable
 * Drop trends to 2 items on screen heights below 830px (4 items fit above that)
