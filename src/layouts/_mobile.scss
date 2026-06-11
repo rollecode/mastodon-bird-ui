@@ -20,8 +20,11 @@
       --gap-column-link: 7px;
       font-size: 17px;
     }
+  }
 
-    // Drop the trends panel to 2 items to save vertical space.
+  @media screen and (height < 830px) {
+    // Drop the trends panel to 2 items to save vertical space; 4 items
+    // still fit on heights down to 830px.
     .getting-started__trends .trends__item:nth-of-type(n+3) {
       display: none;
     }
