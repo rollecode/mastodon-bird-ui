@@ -1,0 +1,15 @@
+// Dropdown menus (e.g. the More menu in the navigation panel) can grow taller
+// than short or zoomed viewports; cap them to the viewport and let them
+// scroll with the same minimal scrollbar as the navigation menu
+.modal-root .dropdown-menu__container,
+.dropdown-menu__container {
+  max-height: calc(100vh - 16px);
+  overflow-y: auto;
+  scrollbar-color: var(--color-border) transparent;
+  scrollbar-width: thin;
+}
+
+.dropdown-menu__container::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}

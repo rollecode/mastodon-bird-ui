@@ -1,5 +1,6 @@
 ### [Unreleased]
 
+* Cap dropdown menus to the viewport height and make them scrollable on short or zoomed screens
 * Add z-index to status display name so the avatar follow badge stays clickable
 * Drop trends to 2 items on screen heights below 1080px
 * Remove the trends section top margin
