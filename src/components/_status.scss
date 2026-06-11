@@ -33,6 +33,12 @@
     z-index: 2;
   }
 
+  // Keep the post text clickable above the display name overlay
+  .status__content__text--visible {
+    position: relative;
+    z-index: 3;
+  }
+
   .status__info .display-name {
     display: flex;
     gap: calc(var(--gap-default) / 2);
