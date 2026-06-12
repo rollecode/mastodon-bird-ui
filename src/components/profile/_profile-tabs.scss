@@ -57,6 +57,11 @@
     padding: 0;
   }
 
+  // Keep the timeline filters above the profile header
+  ._feat_account_timeline__filtersWrapper {
+    z-index: 4;
+  }
+
   [class*="_v2__filterOverlay"] {
     border: 0;
     box-shadow: 2px 4px 16px rgb(0 0 0 / 1%);

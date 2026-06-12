@@ -1,5 +1,6 @@
 ### [Unreleased]
 
+* Raise account timeline filters above the profile header
 * Raise visible status text above the display name so the first row stays clickable
 * Use the solid secondary background for the avatar follow badge hover
 * Cap dropdown menus to the viewport height and make them scrollable on short or zoomed screens
