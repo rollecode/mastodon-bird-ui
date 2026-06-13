@@ -66,7 +66,7 @@
     var sr=document.getElementById('srays'),sb=document.getElementById('sballs'),m=7;
     for(var j=0;j<m;j++){var a2=(j/m)*Math.PI*2;
       var x1=Math.cos(a2)*16,y1=Math.sin(a2)*16,x2=Math.cos(a2)*30,y2=Math.sin(a2)*30;
-      var l=document.createElementNS(NS,'line');l.setAttribute('x1',x1.toFixed(1));l.setAttribute('y1',y1.toFixed(1));l.setAttribute('x2',x2.toFixed(1));l.setAttribute('y2',y2.toFixed(1));l.setAttribute('stroke','#ffac33');l.setAttribute('stroke-width','3');l.setAttribute('stroke-linecap','round');sr.appendChild(l);
+      var l=document.createElementNS(NS,'line');l.setAttribute('x1',x1.toFixed(1));l.setAttribute('y1',y1.toFixed(1));l.setAttribute('x2',x2.toFixed(1));l.setAttribute('y2',y2.toFixed(1));l.setAttribute('stroke','#f0602a');l.setAttribute('stroke-width','3.5');l.setAttribute('stroke-linecap','round');sr.appendChild(l);
       dot(sb,a2,60,2.2+Math.random()*0.8, j%3?'#ffac33':'#ff9500');}
     function go(){document.querySelectorAll('.btn').forEach(function(b){b.classList.remove('activate');void b.offsetWidth;b.classList.add('activate');});}
     document.querySelectorAll('.btn').forEach(function(b){b.addEventListener('click',function(){b.classList.remove('activate');void b.offsetWidth;b.classList.add('activate');});});go();
