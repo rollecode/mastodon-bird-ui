@@ -1,5 +1,6 @@
 ### [Unreleased]
 
+* Remove the border from the stuck mobile profile buttons bar
 * Raise account timeline filters above the profile header
 * Raise visible status text above the display name so the first row stays clickable
 * Use the solid secondary background for the avatar follow badge hover

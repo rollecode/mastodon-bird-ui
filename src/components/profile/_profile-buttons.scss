@@ -18,6 +18,10 @@
     }
   }
 
+  ._comp_account_header__buttonsMobileIsStuck {
+    border: 0;
+  }
+
   // On smaller viewports the absolutely positioned desktop buttons would
   // overlap badges; let them flow normally and push badges down 16px.
   @media (max-width: 759px) {
