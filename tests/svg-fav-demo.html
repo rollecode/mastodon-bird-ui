@@ -1,0 +1,73 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Bird UI fav burst</title>
+<style>
+  body{margin:0;font-family:sans-serif;display:flex;min-height:100vh}
+  .pane{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px}
+  .dark{background:#191b22;color:#fff}.light{background:#f4f7fb;color:#222}
+  .btn{position:relative;width:160px;height:160px;border:0;background:none;cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
+  .glyph{width:150px;height:150px;transform-origin:center;z-index:2;position:relative}
+  .glyph path{fill:#aab1c4}.light .glyph path{fill:#c9d1dc}
+  .heart.activate .glyph path{fill:#e0245e}.star.activate .glyph path{fill:#ffac33}
+  .activate .glyph{animation:glyph .85s cubic-bezier(.17,.89,.32,1.28) forwards}
+  @keyframes glyph{0%{transform:scale(1)}10%{transform:scale(0)}28%{transform:scale(0)}55%{transform:scale(1.2)}72%{transform:scale(.92)}100%{transform:scale(1)}}
+
+  .burst{position:absolute;left:50%;top:50%;width:360px;height:360px;transform:translate(-50%,-50%);pointer-events:none;z-index:1;overflow:visible}
+  .flashring,.grp{transform-box:fill-box;transform-origin:center;opacity:0}
+  .flashring{fill:none}
+  .heart .activate{}
+  .activate .flashring{animation:fr .52s ease-out forwards}
+  @keyframes fr{0%{transform:scale(.3);opacity:1;stroke-width:90;stroke:#dd4688}45%{transform:scale(1);opacity:1;stroke-width:86;stroke:#cc8ef5}100%{transform:scale(1.3);opacity:0;stroke-width:0}}
+  @keyframes frs{0%{transform:scale(.3);opacity:1;stroke-width:46}45%{transform:scale(1);opacity:1;stroke-width:44}100%{transform:scale(1.25);opacity:0;stroke-width:0}}
+  .heart .flashring{stroke:#cc8ef5}
+  .star .flashring{stroke:#ffa017}
+  .star.activate .flashring{animation-name:frs}
+
+  /* heart: two clustered confetti waves */
+  .activate .w1{animation:burst .5s ease-out .15s forwards}
+  .activate .w2{animation:burst .5s ease-out .24s forwards}
+  @keyframes burst{0%{transform:scale(0);opacity:1}65%{opacity:1}100%{transform:scale(1.05);opacity:0}}
+
+  /* star: rays first (early), then balls (later) */
+  .activate .srays{animation:srays .34s ease-out .06s forwards}
+  @keyframes srays{0%{transform:scale(.3);opacity:0}25%{opacity:1}100%{transform:scale(1);opacity:0}}
+  .activate .sballs{animation:burst .42s ease-out .26s forwards}
+
+  .replay{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#313543;color:#fff;border:0;padding:10px 16px;border-radius:6px;cursor:pointer;z-index:9}
+  .lbl{font-size:14px;opacity:.7}
+</style></head><body>
+  <div class="pane dark"><button class="btn heart" id="heart">
+    <svg class="burst" viewBox="-100 -100 200 200">
+      <circle class="flashring" r="40"></circle>
+      <g class="grp w1" id="hw1"></g>
+      <g class="grp w2" id="hw2"></g>
+    </svg>
+    <svg class="glyph" viewBox="0 -960 960 960"><path d="m480-147-43-39q-106-97-175-167T152-585q-23-49-23-94 0-90 60.5-150.5T340-890q53 0 100 25t80 71q33-46 80-71t100-25q90 0 150.5 60.5T911-679q0 45-23 94t-50 100q-41 70-110 140T583-186l-43 39q-12 11-30 11t-30-11Z"></path></svg>
+  </button><div class="lbl">Heart</div></div>
+
+  <div class="pane light"><button class="btn star" id="star">
+    <svg class="burst" viewBox="-100 -100 200 200">
+      <circle class="flashring" r="20"></circle>
+      <g class="grp srays" id="srays"></g>
+      <g class="grp sballs" id="sballs"></g>
+    </svg>
+    <svg class="glyph" viewBox="0 -960 960 960"><path d="m305-704 112-145q12-16 28.5-23.5T480-880q18 0 34.5 7.5T543-849l112 145 170 57q26 8 41 29.5t15 47.5q0 12-3.5 24T866-478L756-322l4 164q1 35-23 58.5T681-76q-2 0-22-3l-179-50-179 50q-5 2-11 2.5t-11 .5q-32 0-56-23.5T200-158l4-164L95-477q-8-11-11.5-23T80-524q0-25 14.5-46.5T135-602l170-102Z"></path></svg>
+  </button><div class="lbl">Star</div></div>
+
+  <button class="replay" onclick="go()">Replay both</button>
+  <script>
+    var NS='http://www.w3.org/2000/svg';
+    var A=['#ff8ac5','#66c8f5','#f5c542','#71d4c2','#cc8ef5'];   // wave 1 colours
+    var B=['#9b8af5','#7ed9c3','#f59ec5','#66c8f5','#ffb347'];   // wave 2 colours
+    function dot(g,a,rad,r,fill){var c=document.createElementNS(NS,'circle');c.setAttribute('r',r.toFixed(1));c.setAttribute('cx',(Math.cos(a)*rad).toFixed(1));c.setAttribute('cy',(Math.sin(a)*rad).toFixed(1));c.setAttribute('fill',fill);g.appendChild(c);}
+    // heart: two waves of 5, wave2 angle-offset + smaller + wider => reads as clusters/pairs
+    var w1=document.getElementById('hw1'),w2=document.getElementById('hw2'),n=5;
+    for(var i=0;i<n;i++){var a=(i/n)*Math.PI*2-0.3;dot(w1,a,68,4+Math.random(),A[i%A.length]);dot(w2,a+0.38,82,2.4+Math.random(),B[i%B.length]);}
+    // star rays (early) + balls (late), balls land at ray tips
+    var sr=document.getElementById('srays'),sb=document.getElementById('sballs'),m=7;
+    for(var j=0;j<m;j++){var a2=(j/m)*Math.PI*2;
+      var x1=Math.cos(a2)*16,y1=Math.sin(a2)*16,x2=Math.cos(a2)*30,y2=Math.sin(a2)*30;
+      var l=document.createElementNS(NS,'line');l.setAttribute('x1',x1.toFixed(1));l.setAttribute('y1',y1.toFixed(1));l.setAttribute('x2',x2.toFixed(1));l.setAttribute('y2',y2.toFixed(1));l.setAttribute('stroke','#ffac33');l.setAttribute('stroke-width','3');l.setAttribute('stroke-linecap','round');sr.appendChild(l);
+      dot(sb,a2,40,2.2+Math.random()*0.8, j%3?'#ffac33':'#ff9500');}
+    function go(){document.querySelectorAll('.btn').forEach(function(b){b.classList.remove('activate');void b.offsetWidth;b.classList.add('activate');});}
+    document.querySelectorAll('.btn').forEach(function(b){b.addEventListener('click',go)});go();
+  </script>
+</body></html>
