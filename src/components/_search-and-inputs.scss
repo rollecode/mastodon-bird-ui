@@ -55,6 +55,13 @@
     display: none;
   }
 
+  // type="search" inputs draw a native browser clear (X) on hover and when they
+  // have text; hide it so only our own clear button shows, not a second white X
+  .search__input::-webkit-search-cancel-button,
+  .search__input::-webkit-search-decoration {
+    display: none;
+  }
+
   .search.active .search__input,
   input.setting-text,
   .search__input {

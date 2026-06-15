@@ -1,5 +1,6 @@
 ### [Unreleased]
 
+* Hide the native search clear glyph so only the Bird UI X shows, not a second white one
 * Remove the border from the stuck mobile profile buttons bar
 * Raise account timeline filters above the profile header
 * Raise visible status text above the display name so the first row stays clickable
