@@ -102,6 +102,17 @@ fi
 echo -e "${GREEN}Mastodon Bird UI $VERSION${NC}"
 echo ""
 
+# Detect a native favourite animation. Some forks (mementomori.social) ship their
+# own favourite star/heart SVG with its own burst, see
+# https://github.com/mementomori-social/mastodon/pull/10. When that is present we
+# must not let Bird UI restyle the favourite button, so the native animation shows.
+NATIVE_FAVOURITES="n"
+if [ -f "$MASTODON_PATH/app/javascript/mastodon/components/favourite_star.tsx" ]; then
+  NATIVE_FAVOURITES="y"
+  echo -e "${YELLOW}Native favourite animation detected; Bird UI will not restyle the favourite button.${NC}"
+  echo ""
+fi
+
 # Ask about variations if not specified via flag
 if [ -z "$ADD_VARIATIONS" ]; then
   read -p "Add/update accessible theme variations (contrast, accessible, accessible-plus)? [y/N]: " ADD_VARIATIONS
@@ -160,8 +171,18 @@ for f in "$SRC_DIR/layouts/"_*.scss; do
 done
 
 # Micro-interactions
+# Favourite restyling lives in _heart.scss and _star.scss. When the target ships
+# a native favourite animation we replace them with empty stubs so the @use stays
+# valid but no rules are emitted, leaving the native SVG burst untouched.
 for f in "$SRC_DIR/micro-interactions/"_*.scss; do
-  [ -f "$f" ] && copy_if_exists "$f" "$BIRD_UI_PATH/micro-interactions/$(basename "$f")"
+  [ -f "$f" ] || continue
+  base=$(basename "$f")
+  if [[ "$NATIVE_FAVOURITES" =~ ^[Yy]$ && ( "$base" == "_heart.scss" || "$base" == "_star.scss" ) ]]; then
+    printf '// Skipped: this Mastodon ships a native favourite animation, so Bird UI leaves the favourite button alone.\n// See https://github.com/mementomori-social/mastodon/pull/10\n' > "$BIRD_UI_PATH/micro-interactions/$base"
+    echo -e "  ${YELLOW}Skipped (native favourites):${NC} $base"
+  else
+    copy_if_exists "$f" "$BIRD_UI_PATH/micro-interactions/$base"
+  fi
 done
 
 # Variants
