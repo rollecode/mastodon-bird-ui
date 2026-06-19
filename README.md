@@ -329,7 +329,9 @@ a Twitter designer [Brian Waddington](https://dribbble.com/shots/1884504-Twitter
 | ------------- | ------------- |------------ |
 | <img width="70%" src="https://user-images.githubusercontent.com/1534150/230135110-6391e061-10c9-4819-af8b-7144b31dac93.gif" alt="heart" /> | <img src="https://user-images.githubusercontent.com/1534150/230135096-4d1ac9b2-290b-41da-a136-985e908868fa.gif" alt="star"> | <img src="https://github.com/ronilaukkarinen/mastodon-bird-ui/assets/1534150/ef02d2b8-14bc-4dbc-9b48-112c723c71cb" alt="boost"> |
 
-If you like the heart, just remove everything between `Star animation micro-interactions start (depends on the heart icon above)` and `Star animation micro-interactions end`.
+Bird UI uses the **heart** by default. The **star** variant lives in `src/micro-interactions/_star.scss`; forks can expose a setting to switch to it, and Custom CSS users can swap it in.
+
+**Native favourite animations:** if your Mastodon already ships its own favourite animation as a real SVG component, like the [mementomori.social fork (PR #10)](https://github.com/mementomori-social/mastodon/pull/10) which renders a native star/heart burst (heart by default, star as an opt-in setting), the install script detects it and Bird UI steps aside for the favourite button so the native animation shows. Bird UI keeps styling the navigation and the sidebar/notification favourite icons, so nothing else changes and no configuration is needed.
 
 ## FAQ
 
@@ -379,11 +381,7 @@ If you like, you can always suggest something or create a pull request. You are 
 
 ### How to get to settings or faves on mobile?
 
-You can swipe the bottom bar. I know this is not the most obvious feature.
-
-![ezgif com-video-to-gif](https://github.com/ronilaukkarinen/mastodon-bird-ui/assets/1534150/18c832c0-2e3b-4bc2-8323-636cd08b107d)
-
-See issues [Many users don't recognize that the bottom menu is scrollable #26](https://github.com/ronilaukkarinen/mastodon-bird-ui/issues/26) and [Swiping bottom bar triggers multi-tasking on some phones #33](https://github.com/ronilaukkarinen/mastodon-bird-ui/issues/33).
+Use the navigation menu (the bottom navigation / hamburger), where Favourites, Bookmarks, Lists and Settings live. Older Bird UI versions relied on swiping the bottom bar; that no longer applies since Mastodon rebuilt its mobile navigation.
 
 ### Automatic dark/light mode possible?
 
