@@ -1,10 +1,13 @@
+### [Unreleased]
+
+* Reset the status prepend padding only in reply threads, where Mastodon 4.7.0-alpha.1 adds a thread margin (https://github.com/mastodon/mastodon/pull/39521)
+
 ### 4.0.0: 2026-06-19
 
 * Compatible with Mastodon 4.6.0 stable and 4.7.0-alpha.1
 * Indent the collection preview card in feeds so it aligns with the status content (full width in single posts)
 * Fix the heart favourite burst alignment in the single post view
 * Fix the white, unreadable native select options dropdown on settings pages (#188)
-* Reset the status prepend padding only in reply threads, where core now adds a thread margin (https://github.com/mastodon/mastodon/pull/39521)
 * Detect a native favourite animation and leave the favourite button alone so the fork's own star/heart shows (mementomori-social/mastodon#10)
 * Hide the native search clear glyph so only the Bird UI X shows, not a second white one
 * Remove the border from the stuck mobile profile buttons bar
