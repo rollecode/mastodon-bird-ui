@@ -171,15 +171,18 @@ for f in "$SRC_DIR/layouts/"_*.scss; do
 done
 
 # Micro-interactions
-# Favourite restyling lives in _heart.scss and _star.scss. When the target ships
-# a native favourite animation we replace them with empty stubs so the @use stays
-# valid but no rules are emitted, leaving the native SVG burst untouched.
+# The favourite restyling lives in _heart.scss and _star.scss. When the target
+# ships a native favourite animation we swap both for _native-favourites.scss,
+# which drops the favourite styling and only re-shows Mastodon's default icons
+# (Bird UI's icon reset would otherwise hide them). Navigation/layout that used
+# to be bundled in _heart.scss now lives in components/_mobile-navigation.scss,
+# so it is unaffected.
 for f in "$SRC_DIR/micro-interactions/"_*.scss; do
   [ -f "$f" ] || continue
   base=$(basename "$f")
   if [[ "$NATIVE_FAVOURITES" =~ ^[Yy]$ && ( "$base" == "_heart.scss" || "$base" == "_star.scss" ) ]]; then
-    printf '// Skipped: this Mastodon ships a native favourite animation, so Bird UI leaves the favourite button alone.\n// See https://github.com/mementomori-social/mastodon/pull/10\n' > "$BIRD_UI_PATH/micro-interactions/$base"
-    echo -e "  ${YELLOW}Skipped (native favourites):${NC} $base"
+    cp "$SRC_DIR/micro-interactions/_native-favourites.scss" "$BIRD_UI_PATH/micro-interactions/$base"
+    echo -e "  ${YELLOW}Native favourites:${NC} $base (Bird UI favourite styling dropped)"
   else
     copy_if_exists "$f" "$BIRD_UI_PATH/micro-interactions/$base"
   fi

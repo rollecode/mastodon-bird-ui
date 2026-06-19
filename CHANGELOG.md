@@ -1,6 +1,6 @@
 ### 4.0.0: 2026-06-19
 
-* Compatible with Mastodon 4.6.0 and 4.7.0-alpha.1
+* Compatible with Mastodon 4.6.0 stable and 4.7.0-alpha.1
 * Detect a native favourite animation and leave the favourite button alone so the fork's own star/heart shows (mementomori-social/mastodon#10)
 * Hide the native search clear glyph so only the Bird UI X shows, not a second white one
 * Remove the border from the stuck mobile profile buttons bar

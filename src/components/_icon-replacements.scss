@@ -315,11 +315,6 @@
     color: var(--color-green);
   }
 
-  button.icon-button:hover .icon-star ~ span,
-  button.icon-button.active .icon-star ~ span {
-    color: var(--color-red);
-  }
-
   // Replace reply icon
   .notification__filter-bar .icon-mail-reply,
   .notification__filter-bar .icon-reply,

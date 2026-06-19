@@ -1,0 +1,102 @@
+// Navigation and layout rules that were historically bundled into the heart
+// micro-interaction. Kept in their own always-loaded file so the heart/star
+// favourite styling can be dropped (when a native favourite animation is used)
+// without losing the navigation layout.
+.layout-single-column,
+.layout-multiple-columns {
+  .animated-number {
+    z-index: 99;
+  }
+
+  //  New navigation bar for mobile in v4.4.0-beta.1+mementomods-2025-06-14
+  .columns-area__panels__pane {
+    z-index: 22;
+  }
+
+  .ui__navigation-bar {
+    background-color: var(--color-bg);
+  }
+
+  .ui__navigation-bar .icon {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 22px auto;
+  }
+
+  .navigation-panel__compose-button {
+    align-self: center;
+    display: inline-flex;
+    font-size: 14px;
+    padding-bottom: 6px;
+    padding-left: 10px;
+    padding-right: 18px;
+    padding-top: 6px;
+  }
+
+  //  Speed up animation in the new mobile slideout navigation for v4.4.0-beta.1
+  &.columns-area__panels__pane__inner,
+  &.ui::after,
+  &.ui__header,
+  &.tabs-bar__wrapper,
+  &.scroll-down .tabs-bar__portal {
+    transition-duration: 100ms;
+    transition-timing-function: linear;
+  }
+
+  .ui__navigation-bar__sign-up {
+    gap: 12px;
+  }
+
+  //  Hide separators in the new navigation panel, for now, v4.4.0-beta.2
+  .navigation-panel__list-panel__header__sep {
+    display: none;
+  }
+
+  //  Fix indent for the new navigation panel, v4.4.0-beta.2
+  .navigation-panel__list-panel__items {
+    padding-inline-start: 40px;
+  }
+
+  @media screen and (width >= 760px) {
+    .columns-area__panels__pane--compositional
+      .columns-area__panels__pane__inner {
+      position: static;
+    }
+
+    .columns-area__panels__pane--compositional
+      .columns-area__panels__pane__inner,
+    .compose-panel {
+      width: 100% !important;
+    }
+  }
+
+  @media screen and (width <= 759px) {
+    .columns-area__panels__pane--navigational
+      .columns-area__panels__pane__inner
+      .navigation-panel {
+      padding: 0;
+
+      .column-link {
+        font-size: 16px;
+        padding-bottom: 1vh;
+        padding-top: 1vh;
+      }
+
+      .icon {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 20px auto;
+      }
+
+      hr {
+        max-width: 100%;
+        visibility: visible;
+        width: 100%;
+      }
+
+      .navigation-panel__legal {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+// Used in place of _heart.scss / _star.scss when the target Mastodon ships its
+// own native favourite animation, see
+// https://github.com/mementomori-social/mastodon/pull/10
+//
+// Bird UI does not restyle the favourite button itself (the native SVG handles
+// it), but the sidebar and notification Favourites icons are not native, so
+// they are still themed here: heart by default, star when the viewer chose
+// stars (the use-stars class).
+.layout-single-column,
+.layout-multiple-columns {
+  // Re-show the native favourite SVG in the action bar. Bird UI's icon reset
+  // hides every action-bar icon path; this stays less specific than core's
+  // outline/solid toggle so that toggle keeps working.
+  .status__action-bar .star-icon path,
+  .detailed-status__action-bar .star-icon path {
+    display: block;
+  }
+
+  // Sidebar column links and notifications: heart by default.
+  .column-link .icon-star {
+    background-image: var(--icon-heart-column-link);
+  }
+
+  .column-link.active .icon-star {
+    background-image: var(--icon-heart-column-link-active);
+  }
+
+  .notification-group--favourite .icon-star,
+  .notification-favourite .icon-star {
+    background-image: var(--icon-heart-notification);
+    background-repeat: no-repeat;
+  }
+}
+
+// When the viewer chose stars, the sidebar/notification icons follow.
+html.use-stars {
+  .layout-single-column,
+  .layout-multiple-columns {
+    .column-link .icon-star {
+      background-image: var(--icon-star-column-link);
+    }
+
+    .column-link.active .icon-star {
+      background-image: var(--icon-star-column-link-active);
+    }
+
+    .notification-group--favourite .icon-star,
+    .notification-favourite .icon-star {
+      background-image: var(--icon-star-notification);
+    }
+  }
+}
