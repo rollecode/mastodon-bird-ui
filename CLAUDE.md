@@ -75,3 +75,8 @@ This theme targets Mastodon v4.6.0+ which uses a new semantic token system with 
 - Update README badge version when releasing
 - No empty lines after // comments in SCSS
 - Always commit `dist/` build files together with source changes, because users rely on the compiled CSS via the Custom CSS panel
+## Building dist/ Custom CSS variants
+
+`npm run build` MUST compile all five Custom CSS variants (the README list), not just the main file:
+mastodon-bird-ui.css, mastodon-bird-ui-light.css, mastodon-bird-ui-stars.css, mastodon-bird-ui-accessible.css, mastodon-bird-ui-accessible-plus.css.
+build:custom-css passes all five entry SCSS files to parcel. Always run `npm run clean && npm run build` and commit the rebuilt dist/ before tagging a release, otherwise Custom CSS users get stale CSS for every variant except the main one. dist/ uses --no-source-maps, so there are no .css.map files.

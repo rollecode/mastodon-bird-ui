@@ -32,7 +32,7 @@
     "sync:mementomods": "browser-sync start --config bs-config.mementomods.js",
     "sync:mastodon": "browser-sync start --config bs-config.mastodon.js",
     "build": "npm run build:custom-css",
-    "build:custom-css": "parcel build src/mastodon-bird-ui.scss --dist-dir dist --no-source-maps --no-optimize && npm run banner",
+    "build:custom-css": "parcel build src/mastodon-bird-ui.scss src/mastodon-bird-ui-light.scss src/mastodon-bird-ui-stars.scss src/mastodon-bird-ui-accessible.scss src/mastodon-bird-ui-accessible-plus.scss --dist-dir dist --no-source-maps --no-optimize && npm run banner",
     "banner": "for f in dist/*.css; do echo \"/* Mastodon Bird UI v$npm_package_version - https://github.com/ronilaukkarinen/mastodon-bird-ui */\" | cat - \"$f\" > temp && mv temp \"$f\"; done",
     "clean": "rm -rf dist .parcel-cache"
   },
