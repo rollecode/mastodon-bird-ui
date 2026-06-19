@@ -16,14 +16,6 @@
     display: block;
   }
 
-  // Center the hover glow on the favourite SVG icon rather than on the whole
-  // button, which the counter widens and pulls the default glow off-centre.
-  .status__action-bar .icon-button.star-icon.icon-button--with-counter::after,
-  .detailed-status__action-bar
-    .icon-button.star-icon.icon-button--with-counter::after {
-    transform: translateX(-5.6px) translateY(1px);
-  }
-
   // Sidebar column links and notifications: heart by default.
   .column-link .icon-star {
     background-image: var(--icon-heart-column-link);
