@@ -1,0 +1,11 @@
+// The native <select> options popup paints the field's own background colour, so
+// the translucent --color-bg-secondary that core gives selects renders as a
+// white, unreadable popup under the Bird UI themes (#188). Use the solid overlay
+// surface (dark in dark themes, white in light) with readable primary text so
+// both the closed field and the open popup match the theme. Not scoped to the
+// web app columns because the settings pages live under .admin-wrapper instead.
+.simple_form select,
+.simple_form select option {
+  background-color: var(--color-bg-overlay);
+  color: var(--color-text-primary);
+}
