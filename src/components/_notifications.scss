@@ -179,6 +179,17 @@
     margin-top: calc(var(--gap-default) / 2);
   }
 
+  .status__prepend {
+    padding-left: calc(var(--size-avatar) + 2px);
+  }
+
+  // Reply threads already get core's --thread-margin on the prepend
+  // (https://github.com/mastodon/mastodon/pull/39521), so drop our padding there
+  // to avoid doubling the indent.
+  .status__wrapper-reply .status__prepend {
+    padding-left: 0;
+  }
+
   .notification.notification-update .account__display-name,
   .notification.notification-follow .account__display-name {
     display: inline-flex;
