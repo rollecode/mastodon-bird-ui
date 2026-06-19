@@ -4759,6 +4759,26 @@ html.no-reduce-motion .detailed-status__action-bar .icon-button.star-icon.activa
   color: var(--color-fg);
 }
 
+.admin-wrapper span {
+  line-height: 1.4;
+}
+
+footer *, .inline-follow-suggestions__title, .inline-follow-suggestions__header__actions *, .inline-follow-suggestions__body * {
+  font-size: var(--font-size-smaller) !important;
+}
+
+._feat_account_timeline__filtersWrapper, ._feat_account_timeline__filtersWrapper *, ._feat_account_timeline__tagsWrapper, ._feat_account_timeline__tagsWrapper *, ._comp_account_bio__bio .translate, ._comp_account_header__handleHelpButton {
+  font-size: var(--font-size) !important;
+}
+
+._comp_number_fields__list, ._comp_number_fields__list *, ._comp_account_header__numberFields, ._comp_account_header__numberFields *, .detailed-status__meta, .detailed-status__meta * {
+  font-size: var(--font-size-smaller) !important;
+}
+
+.navigation-panel__menu {
+  overflow: visible !important;
+}
+
 :root {
   --color-bg-primary: #000;
   --color-text-brand: #0a9ff9;

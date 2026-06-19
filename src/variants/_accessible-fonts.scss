@@ -1,0 +1,46 @@
+// Mastodon Bird UI - Accessible variants: shared font-size and line-height tuning
+// Used by both the accessible and accessible-plus (ultra) variants. Rules read the
+// per-variant --font-size / --font-size-smaller tokens, so each variant scales them.
+// stylelint-disable plugin/no-unused-custom-properties, declaration-no-important, no-descending-specificity
+
+// Admin: comfortable line height for text such as spans
+.admin-wrapper span {
+  line-height: 1.4;
+}
+
+// Smaller text: footer, and the inline follow suggestions block
+footer *,
+.inline-follow-suggestions__title,
+.inline-follow-suggestions__header__actions *,
+.inline-follow-suggestions__body * {
+  font-size: var(--font-size-smaller) !important;
+}
+
+// Base font size: profile timeline filters and tags, bio translate, handle help
+._feat_account_timeline__filtersWrapper,
+._feat_account_timeline__filtersWrapper *,
+._feat_account_timeline__tagsWrapper,
+._feat_account_timeline__tagsWrapper *,
+._comp_account_bio__bio .translate,
+._comp_account_header__handleHelpButton {
+  font-size: var(--font-size) !important;
+}
+
+// Smaller font: profile number fields
+._comp_number_fields__list,
+._comp_number_fields__list *,
+._comp_account_header__numberFields,
+._comp_account_header__numberFields * {
+  font-size: var(--font-size-smaller) !important;
+}
+
+// Smaller font: detailed status meta
+.detailed-status__meta,
+.detailed-status__meta * {
+  font-size: var(--font-size-smaller) !important;
+}
+
+// Force the navigation menu to let its overflow show
+.navigation-panel__menu {
+  overflow: visible !important;
+}
