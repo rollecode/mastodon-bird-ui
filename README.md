@@ -1,4 +1,4 @@
-## Mastodon with modern birdsite-like UI
+## 🐦 Mastodon with modern birdsite-like UI
 
 ![Mastodon](https://img.shields.io/badge/mastodon-v4.6.0+-6364FF?style=for-the-badge&logo=mastodon&logoColor=white) ![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white) [![Build Status](https://img.shields.io/github/actions/workflow/status/ronilaukkarinen/mastodon-bird-ui/styles.yml?style=for-the-badge&logo=github)](https://github.com/ronilaukkarinen/mastodon-bird-ui/actions/workflows/styles.yml) <a href="https://github.com/sponsors/ronilaukkarinen"><img src="https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white" alt="GitHub Sponsor" height="28px"></a> <a href="https://ko-fi.com/rolle"><img src="https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white" alt="Ko-fi" height="28px"></a>
 
@@ -146,8 +146,12 @@ The following instances have enabled Mastodon Bird UI for their users, based on 
 | [social.vivaldi.net](https://social.vivaldi.net)                         | Site theme                | Mastodon Bird UI | 6700+          | No          |
 | [wxw.moe](https://wxw.moe)                                               | Site theme                | Mastodon Bird UI | 3500+          | Yes         |
 | [mastodon.com.pl](https://mastodon.com.pl)                               | Site theme                | Mastodon Bird UI | 100+           | No          |
-| [mastodon.sg](https://mastodon.sg)                                       | Custom CSS                | Mastodon Bird UI | 100+           | Yes          |
-| [FaithTree.social](https://faithtree.social)                             | Site theme                | Mastodon Bird UI | 19+            | Yes          |
+| [mastodon.sg](https://mastodon.sg)                                       | Custom CSS                | Mastodon Bird UI | 100+           | Yes         |
+| [FaithTree.social](https://faithtree.social)                             | Site theme                | Mastodon Bird UI | 19+            | Yes         |
+| [mustard.blog](https://mustard.blog)                                     | Site theme                | Mastodon Bird UI | 2000+          | Yes         |
+| [c.im](https://c.im)                                                     | Site theme                | Mastodon Bird UI | 2000+          | No          |
+| [datasci.social](https://datasci.social)                                 | Custom CSS                | Mastodon Bird UI | 80+            | Yes         |
+| [billys.mom](https://billys.mom)                                         | Custom CSS                | N/A              | 10+            | Yes         |
 
 ## Installation for Mastodon instance admins
 
@@ -323,9 +327,7 @@ There is support for threads available for the nightly version since ([see PR #2
 There are two micro-interaction animations in this UI, both are inspired by the Twitter's original UI animation. The star is originally a work of
 a Twitter designer [Brian Waddington](https://dribbble.com/shots/1884504-Twitter-Fav). The heart is by Twitter design team. Both animations have been completely re-created by me, frame by frame. The star animation itself contains 100 hand made frames.
 
-| Twitter likes | Twitter fave star (2015) | Boost animation |
-| ------------- | ------------- |------------ |
-| <img width="70%" src="https://user-images.githubusercontent.com/1534150/230135110-6391e061-10c9-4819-af8b-7144b31dac93.gif" alt="heart" /> | <img src="https://user-images.githubusercontent.com/1534150/230135096-4d1ac9b2-290b-41da-a136-985e908868fa.gif" alt="star"> | <img src="https://github.com/ronilaukkarinen/mastodon-bird-ui/assets/1534150/ef02d2b8-14bc-4dbc-9b48-112c723c71cb" alt="boost"> |
+<img width="720" height="465" alt="gif-20260613-221105" src="https://github.com/user-attachments/assets/e6056177-6277-4952-ae56-0d7a44d2ba32" />
 
 Bird UI uses the **heart** by default. The **star** variant lives in `src/micro-interactions/_star.scss`; forks can expose a setting to switch to it, and Custom CSS users can swap it in.
 
