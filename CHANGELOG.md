@@ -1,3 +1,7 @@
+### [Unreleased]
+
+* Center the favourite hover glow on the native favourite icon instead of the whole button (native favourite installs only)
+
 ### 4.0.0: 2026-06-19
 
 * Compatible with Mastodon 4.6.0 stable and 4.7.0-alpha.1
