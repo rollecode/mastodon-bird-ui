@@ -40,7 +40,27 @@ footer *,
   font-size: var(--font-size-smaller) !important;
 }
 
-// Force the navigation menu to let its overflow show
+// Force the navigation panel and its menu to let their overflow show
+.navigation-panel,
 .navigation-panel__menu {
   overflow: visible !important;
+}
+
+// Bio paragraphs: readable size (were tiny / unset, especially in the ultra variant)
+// and restore paragraph spacing (core leaves it at 0 here).
+._comp_account_bio__bio p {
+  font-size: var(--font-size) !important;
+  margin-bottom: 18px !important;
+}
+
+// Smaller font: badges and the secondary follow button
+._comp_badge__content,
+._comp_account_header__followButton .button-secondary {
+  font-size: var(--font-size-smaller) !important;
+}
+
+// Action bar: all text (counters, etc.) at the smaller size
+.status__action-bar,
+.status__action-bar * {
+  font-size: var(--font-size-smaller) !important;
 }

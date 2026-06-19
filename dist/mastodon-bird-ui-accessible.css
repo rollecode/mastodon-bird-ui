@@ -4775,8 +4775,17 @@ footer *, .inline-follow-suggestions__title, .inline-follow-suggestions__header_
   font-size: var(--font-size-smaller) !important;
 }
 
-.navigation-panel__menu {
+.navigation-panel, .navigation-panel__menu {
   overflow: visible !important;
+}
+
+._comp_account_bio__bio p {
+  font-size: var(--font-size) !important;
+  margin-bottom: 18px !important;
+}
+
+._comp_badge__content, ._comp_account_header__followButton .button-secondary, .status__action-bar, .status__action-bar * {
+  font-size: var(--font-size-smaller) !important;
 }
 
 :root {
