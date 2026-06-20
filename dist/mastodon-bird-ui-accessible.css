@@ -2374,7 +2374,7 @@ body.layout-single-column, body.layout-multiple-columns {
   margin-bottom: 16px;
 }
 
-.layout-single-column ._comp_account_bio__bio p:last-child, .layout-multiple-columns ._comp_account_bio__bio p:last-child {
+.layout-single-column ._comp_account_bio__bio, .layout-multiple-columns ._comp_account_bio__bio {
   margin-bottom: 20px;
 }
 
@@ -4783,9 +4783,8 @@ footer *, .inline-follow-suggestions__title, .inline-follow-suggestions__header_
   overflow: visible !important;
 }
 
-._comp_account_bio__bio p {
+._comp_account_bio__bio {
   font-size: var(--font-size) !important;
-  margin-bottom: 18px !important;
 }
 
 ._comp_badge__content, ._comp_account_header__followButton .button-secondary, .status__action-bar, .status__action-bar * {

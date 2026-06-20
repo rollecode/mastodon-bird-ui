@@ -46,11 +46,10 @@ footer *,
   overflow: visible !important;
 }
 
-// Bio paragraphs: readable size (were tiny / unset, especially in the ultra variant)
-// and restore paragraph spacing (core leaves it at 0 here).
-._comp_account_bio__bio p {
+// Bio readable size, on the container so it covers plain-text bios with no <p>
+// (tiny otherwise), not just paragraph bios.
+._comp_account_bio__bio {
   font-size: var(--font-size) !important;
-  margin-bottom: 18px !important;
 }
 
 // Smaller font: badges and the secondary follow button

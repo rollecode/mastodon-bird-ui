@@ -5,10 +5,10 @@
     margin-bottom: 16px;
   }
 
-  // Core zeroes the trailing margin on the last bio paragraph
-  // (account_bio__bio p:last-child), leaving no space after the profile
-  // description; restore it to match the other paragraphs.
-  ._comp_account_bio__bio p:last-child {
+  // A bio leaves no space after it: core zeroes the last paragraph's margin, and
+  // a bio can be plain text with no <p> at all. Put the margin on the container
+  // so it works in both cases.
+  ._comp_account_bio__bio {
     margin-bottom: 20px;
   }
 }

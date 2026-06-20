@@ -2374,7 +2374,7 @@ body.layout-single-column, body.layout-multiple-columns {
   margin-bottom: 16px;
 }
 
-.layout-single-column ._comp_account_bio__bio p:last-child, .layout-multiple-columns ._comp_account_bio__bio p:last-child {
+.layout-single-column ._comp_account_bio__bio, .layout-multiple-columns ._comp_account_bio__bio {
   margin-bottom: 20px;
 }
 
