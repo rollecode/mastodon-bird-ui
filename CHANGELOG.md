@@ -17,6 +17,7 @@
 * Make the navigation menu scrollbar minimal (Firefox thin, WebKit 4px) to match the Bird UI aesthetic
 * Compact the navigation items (font-size 17px, gap 7px) on screen heights below 1080px
 * Tune font sizes and line heights across the accessible variants and let the navigation panel overflow show
+* Restore the margin after the profile bio that core removes on the last paragraph
 
 ### 4.0.0-beta.1.rc: 2026-06-07
 
