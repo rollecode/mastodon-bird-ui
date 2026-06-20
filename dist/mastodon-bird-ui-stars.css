@@ -1,8 +1,4 @@
 /* Mastodon Bird UI v4.0.0 - https://github.com/ronilaukkarinen/mastodon-bird-ui */
-/* Mastodon Bird UI v4.0.0 - https://github.com/ronilaukkarinen/mastodon-bird-ui */
-/* Mastodon Bird UI v4.0.0 - https://github.com/ronilaukkarinen/mastodon-bird-ui */
-/* Mastodon Bird UI v4.0.0 - https://github.com/ronilaukkarinen/mastodon-bird-ui */
-/* Mastodon Bird UI v4.0.0 - https://github.com/ronilaukkarinen/mastodon-bird-ui */
 :root {
   --color-text-primary: #fff;
   --color-text-secondary: #717c9b;
@@ -2376,6 +2372,10 @@ body.layout-single-column, body.layout-multiple-columns {
 
 .layout-single-column ._comp_account_header__bio, .layout-multiple-columns ._comp_account_header__bio {
   margin-bottom: 16px;
+}
+
+.layout-single-column ._comp_account_bio__bio p:last-child, .layout-multiple-columns ._comp_account_bio__bio p:last-child {
+  margin-bottom: 20px;
 }
 
 .layout-single-column ._comp_account_header__barWrapper, .layout-multiple-columns ._comp_account_header__barWrapper {

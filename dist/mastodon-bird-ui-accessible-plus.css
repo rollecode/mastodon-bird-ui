@@ -2374,6 +2374,10 @@ body.layout-single-column, body.layout-multiple-columns {
   margin-bottom: 16px;
 }
 
+.layout-single-column ._comp_account_bio__bio p:last-child, .layout-multiple-columns ._comp_account_bio__bio p:last-child {
+  margin-bottom: 20px;
+}
+
 .layout-single-column ._comp_account_header__barWrapper, .layout-multiple-columns ._comp_account_header__barWrapper {
   flex-direction: column;
   display: flex;

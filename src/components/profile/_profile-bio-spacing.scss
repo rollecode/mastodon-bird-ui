@@ -4,4 +4,11 @@
   ._comp_account_header__bio {
     margin-bottom: 16px;
   }
+
+  // Core zeroes the trailing margin on the last bio paragraph
+  // (account_bio__bio p:last-child), leaving no space after the profile
+  // description; restore it to match the other paragraphs.
+  ._comp_account_bio__bio p:last-child {
+    margin-bottom: 20px;
+  }
 }
