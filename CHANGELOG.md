@@ -22,6 +22,7 @@
 * Compact the navigation items (font-size 17px, gap 7px) on screen heights below 1080px
 * Tune font sizes and line heights across the accessible variants and let the navigation panel overflow show
 * Restore the margin after the profile bio, including plain-text bios with no paragraphs
+* Ship a mastodon-bird-ui-auto.css Custom CSS variant that follows each user's light/dark color scheme
 
 ### 4.0.0-beta.1.rc: 2026-06-07
 

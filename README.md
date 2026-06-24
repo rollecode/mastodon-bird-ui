@@ -155,9 +155,9 @@ The following instances have enabled Mastodon Bird UI for their users, based on 
 
 ## Installation for Mastodon instance admins
 
-1. Copy the contents of `dist/mastodon-bird-ui.css` and paste it to the **Custom CSS** in the Appearance settings in your instance (https://_yourinstance_/admin/settings/appearance). This single file covers both single-column and multiple-columns (advanced web interface) layouts.
+1. Copy the contents of `dist/mastodon-bird-ui.css` and paste it to the **Custom CSS** in the Appearance settings in your instance (https://_yourinstance_/admin/settings/appearance). This single file covers both single-column and multiple-columns (advanced web interface) layouts. It is a dark theme; if you want Bird UI to follow each user's light or dark choice in the Appearance settings, use `dist/mastodon-bird-ui-auto.css` instead.
 
-   Other prebuilt variants live in `dist/` for Custom CSS users: `mastodon-bird-ui-stars.css` (a yellow Twitter-style **star** favourite instead of the heart), `mastodon-bird-ui-light.css`, `mastodon-bird-ui-accessible.css` and `mastodon-bird-ui-accessible-plus.css`. Use whichever one you prefer. Rebuild a variant with `npx parcel build src/<entry>.scss --dist-dir dist` (for example `src/mastodon-bird-ui-stars.scss`).
+   Other prebuilt variants live in `dist/` for Custom CSS users: `mastodon-bird-ui-auto.css` (follows each user's light/dark color scheme from the Appearance settings), `mastodon-bird-ui-stars.css` (a yellow Twitter-style **star** favourite instead of the heart), `mastodon-bird-ui-light.css` (always light), `mastodon-bird-ui-accessible.css` and `mastodon-bird-ui-accessible-plus.css`. Use whichever one you prefer. Rebuild a variant with `npx parcel build src/<entry>.scss --dist-dir dist` (for example `src/mastodon-bird-ui-stars.scss`).
 
 ![Screen-Shot-2023-03-31-13-25-52](https://user-images.githubusercontent.com/1534150/229111630-c8975708-134b-4887-b259-a87857193387.png)
 
