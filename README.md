@@ -153,6 +153,7 @@ The following instances have enabled Mastodon Bird UI for their users, based on 
 | [datasci.social](https://datasci.social)                                 | Custom CSS                | Mastodon Bird UI | 80+            | Yes         |
 | [billys.mom](https://billys.mom)                                         | Custom CSS                | N/A              | 10+            | Yes         |
 | [circlewithadot.net](https://mastodon.circlewithadot.net)                | Custom CSS                | Mastodon Bird UI | 3              | Yes         |
+| [erica.moe](https://erica.moe)                                           | Site theme                | Mastodon Bird UI | 20+            | Yes         |
 
 ## Installation for Mastodon instance admins
 
