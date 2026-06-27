@@ -134,6 +134,7 @@ The following instances have enabled Mastodon Bird UI for their users, based on 
 | [mastodon.sg](https://mastodon.sg)                                       | Custom CSS                | N/A              | 100+           | Yes         |
 | [krassestegang.social](https://krassestegang.social/explore)             | Site theme                | Elephant         | 3              | Yes         |
 | [artsculture.media](https://artsculture.media/explore)                   | Site theme                | Mastodon Bird UI | 60+            | No          |
+| [gayfr.social](https://gayfr.social/explore)                             | Site theme                | Mastodon Bird UI | 230+           | No          |
 | [furry.energy](https://furry.energy/explore)                             | Site theme                | Elephant         | 90+            | Yes         |
 | [vkl.world](https://vkl.world/explore)                                   | Modified Custom CSS       | N/A              | 2000+          | Yes         |
 | [duk.space](https://duk.space/explore)                                   | Site theme                | Bird UI          | 80+            | No          |
