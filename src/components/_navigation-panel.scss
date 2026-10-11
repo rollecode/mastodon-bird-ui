@@ -1,6 +1,29 @@
 // Navigation panel, column links, notification filter bar, badges
 .layout-single-column,
 .layout-multiple-columns {
+  // The navigation pane is position: fixed but its inner wrapper is not always
+  // height-bounded (notably at very high browser zoom on low-resolution screens,
+  // where the layout collapses to the narrow breakpoint), so the nav overflows
+  // the viewport with no way to scroll and items below Bookmarks (Settings, More)
+  // become unreachable. Bound it to the viewport and let it scroll. overflow-y:
+  // auto (not scroll) keeps the scrollbar hidden when the nav fits, so nothing
+  // changes for users with the screen space; it only appears when actually needed.
+  // Desktop only. The single-column desktop layout has the fixed left sidebar
+  // that can outgrow the viewport at high zoom (e.g. the accessible themes at
+  // 300% zoom), so bound it and let it scroll. Mobile (<= 759px) is a separate
+  // full-screen drawer that scrolls on its own; applying this there makes it
+  // overflow, so keep it out of the mobile breakpoint entirely.
+  @media screen and (width >= 760px) {
+    .columns-area__panels__pane--navigational .columns-area__panels__pane__inner {
+      height: 100dvh;
+      // Vertical scroll only; an explicit overflow-x stops the browser turning
+      // overflow-x into auto, which would add a horizontal scrollbar from the
+      // column-link hover pills that extend sideways.
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+  }
+
   // Right side panel
   .navigation-panel {
     box-sizing: border-box;
@@ -19,11 +42,42 @@
   // Upstream PR mastodon#39145 wrapped each nav item in an <li>. Make the menu
   // a flex column so the items stack and CSS `order` works (used below to keep
   // More last).
+  // `flex: 1 1 auto` + `min-height: 0` + `overflow-y: auto` make the menu itself
+  // the scroll region (upstream's model), so when the list is taller than the
+  // viewport (e.g. the accessible theme at 200% zoom) the items below Bookmarks,
+  // Settings and More stay reachable by scrolling instead of being clipped.
   .navigation-panel__menu {
     display: flex;
+    flex: 1 1 auto;
     flex-direction: column;
+    min-height: 0;
+    overflow-y: auto;
     scrollbar-color: var(--color-border) transparent;
     scrollbar-width: thin;
+  }
+
+  // The navigation pane scroll (bounded height + overflow) exists only to keep
+  // items reachable when the pane outgrows the viewport, which happens at high
+  // browser zoom and on very short screens. On a screen with room the whole nav
+  // fits (it self-compacts below 980px and 830px height), so scrolling is never
+  // needed and the overflow clipping only serves to shave the inline-start
+  // rounded end of the column-link hover pills, worst on the advanced
+  // multi-column layout. Restore overflow: visible on the pane inner, the panel
+  // and the menu there so the pills render in full. Mastodon core scopes its own
+  // overflow rules to .pane__inner .navigation-panel[__menu] (three classes), so
+  // these overrides must repeat that chain to outrank it; a plain
+  // .navigation-panel__menu (two classes) loses and the pill stays clipped.
+  // Gated to the desktop layout so the mobile drawer keeps its own scroll.
+  @media screen and (width >= 760px) and (height >= 800px) {
+    .columns-area__panels__pane--navigational .columns-area__panels__pane__inner,
+    .columns-area__panels__pane--navigational
+      .columns-area__panels__pane__inner
+      .navigation-panel,
+    .columns-area__panels__pane--navigational
+      .columns-area__panels__pane__inner
+      .navigation-panel__menu {
+      overflow: visible;
+    }
   }
 
   // Minimal scrollbar on the menu (matches Bird UI's compact aesthetic, not

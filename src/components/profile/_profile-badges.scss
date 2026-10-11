@@ -60,8 +60,14 @@
     margin-top: 0;
   }
 
+  // Badges are inline-flex in a plain block, so a Muted or Blocked notice ends
+  // up flush against the role badge next to it
   ._comp_account_header__badges {
+    column-gap: 6px;
+    display: flex;
+    flex-wrap: wrap;
     margin-bottom: 16px;
+    row-gap: 4px;
   }
 
   // Upstream added margin-bottom to the display name wrapper; drop it when a

@@ -39,6 +39,16 @@
     top: 100%;
   }
 
+  // Lists render over the trends section on short viewports, so they carry the
+  // panel background themselves and drop the trailing gap under each link (#193)
+  .navigation-panel__list-panel__items {
+    background-color: var(--color-bg);
+  }
+
+  .navigation-panel__list-panel__items .column-link:not(:last-child) {
+    padding-bottom: 0;
+  }
+
   .lists__item__title span {
     color: var(--color-fg);
   }

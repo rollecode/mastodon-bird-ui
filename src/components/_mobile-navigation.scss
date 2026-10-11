@@ -71,6 +71,14 @@
   }
 
   @media screen and (width <= 759px) {
+    // The slideout pane (.columns-area__panels__pane, z-index: 22 above) would
+    // otherwise stack over the navigation bar, covering the hamburger menu.
+    // Lift the bar above the pane so it stays tappable. Vanilla Mastodon does
+    // not hit this because it does not raise the pane's z-index.
+    .ui__navigation-bar {
+      z-index: 30;
+    }
+
     .columns-area__panels__pane--navigational
       .columns-area__panels__pane__inner
       .navigation-panel {
@@ -79,6 +87,8 @@
       .column-link {
         font-size: 16px;
         padding-bottom: 1vh;
+        padding-left: 16px;
+        padding-right: 16px;
         padding-top: 1vh;
       }
 

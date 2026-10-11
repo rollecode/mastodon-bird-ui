@@ -26,6 +26,88 @@
     margin-left: 0 !important;
   }
 
+  // Media modal footer. Core spreads oversized 24px buttons with a rounded
+  // rectangle hover; match the status action bar instead, small icons with a
+  // readable counter beside them and a round hover behind the icon, spread
+  // across the media rather than bunched at one edge.
+  .media-modal__overlay .picture-in-picture__footer {
+    display: flex;
+    justify-content: space-between;
+    overflow: visible;
+    padding: 8px 24px 12px;
+  }
+
+  .media-modal__overlay .picture-in-picture__footer .icon-button {
+    // It's inlined so we have to use !important
+    background-color: transparent !important;
+    gap: 6px;
+    height: 24px !important;
+    min-width: 0 !important;
+    padding: 0;
+    position: relative;
+    width: unset !important;
+  }
+
+  // Core drops a shadow behind every icon over media; the action bar does not
+  .media-modal__overlay .picture-in-picture__footer .icon-button .icon {
+    filter: none;
+    height: 18px;
+    min-width: 18px;
+    width: 18px;
+  }
+
+  // The counter inherits the button colour, which does not resolve to the
+  // on-media white here, so it reads dimmer than the icon beside it
+  .media-modal__overlay .picture-in-picture__footer .icon-button__counter {
+    color: var(--color-text-on-media);
+    font-size: 13px;
+    font-weight: var(--font-weight-semibold);
+  }
+
+  // Round hover behind the icon only, the same shape regular posts use
+  .media-modal__overlay .picture-in-picture__footer .icon-button::after {
+    background-color: rgba(96, 105, 132, 15%);
+    border-radius: 50%;
+    content: "";
+    height: 34px;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translate(-8px, -50%);
+    width: 34px;
+    z-index: -1;
+  }
+
+  .media-modal__overlay .picture-in-picture__footer .icon-button:hover::after {
+    opacity: 1;
+  }
+
+  // Narrower than core's 600px so the bar tracks the media more closely
+  .media-modal__overlay {
+    max-width: 500px;
+  }
+
+  // Bird UI paints the boost glyph as a background, so the core path underneath
+  // has to go or both show at once. White here, since it sits over media.
+  .media-modal__overlay .picture-in-picture__footer .icon-retweet {
+    background-image: var(--icon-boost-on-media);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .media-modal__overlay .picture-in-picture__footer .icon-retweet > path {
+    display: none;
+  }
+
+  .media-modal__overlay
+    .picture-in-picture__footer
+    .icon-button.active
+    .icon-retweet {
+    background-image: var(--icon-boost-active);
+  }
+
   // Report modal
   .report-dialog-modal .poll__option.dialog-option > .poll__option__text {
     display: grid;

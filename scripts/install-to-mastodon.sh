@@ -7,7 +7,8 @@
 # It is idempotent - safe to run multiple times. It will:
 #   - Copy/update all Bird UI module files
 #   - Ensure entry point SCSS files exist (creates missing ones, preserves existing)
-#   - Rebuild themes.yml from scratch (removes stale entries pointing to missing files)
+#   - Update themes.yml, preserving other installed themes (e.g. Tangerine) and
+#     only dropping stale entries whose SCSS file no longer exists
 #   - Ensure locale entries exist
 #
 # Usage: sudo bash scripts/install-to-mastodon.sh --path /opt/mastodon
@@ -277,6 +278,31 @@ add_theme_entry() {
   fi
 }
 
+# Preserve existing non-Bird-UI themes (e.g. Tangerine) before we rewrite the file,
+# so installing Bird UI does not wipe other installed themes. Bird UI's own entries
+# (default, mastodon-dark, mastodon-bird-ui-*) are re-added below; entries whose SCSS
+# file no longer exists are dropped as stale.
+PRESERVED_THEMES=""
+if [ -f "$THEMES_FILE" ]; then
+  while IFS= read -r theme_line; do
+    theme_key="${theme_line%%:*}"
+    theme_key="${theme_key//[[:space:]]/}"
+    [ -z "$theme_key" ] && continue
+    case "$theme_key" in
+      default|mastodon-dark|mastodon-bird-ui-auto|mastodon-bird-ui-accessible|mastodon-bird-ui-accessible-plus)
+        continue ;;
+    esac
+    theme_value="${theme_line#*:}"
+    theme_value="${theme_value//[[:space:]]/}"
+    if [ -n "$theme_value" ] && [ -f "$MASTODON_PATH/app/javascript/$theme_value" ]; then
+      PRESERVED_THEMES+="${theme_key}: ${theme_value}"$'\n'
+      echo -e "  ${GREEN}Preserved:${NC} $theme_key (existing theme)"
+    else
+      echo -e "  ${YELLOW}Dropped stale:${NC} $theme_key (${theme_value:-no path} not found)"
+    fi
+  done < "$THEMES_FILE"
+fi
+
 # Set default theme entry
 if [[ "$SET_DEFAULT" =~ ^[Yy]$ ]]; then
   echo "default: styles/mastodon-bird-ui-auto.scss" > "$THEMES_FILE"
@@ -292,6 +318,11 @@ fi
 if [[ "$ADD_VARIATIONS" =~ ^[Yy]$ ]]; then
   add_theme_entry "mastodon-bird-ui-accessible" "styles/mastodon-bird-ui-accessible.scss"
   add_theme_entry "mastodon-bird-ui-accessible-plus" "styles/mastodon-bird-ui-accessible-plus.scss"
+fi
+
+# Re-add any preserved third-party themes (e.g. Tangerine) captured above
+if [ -n "$PRESERVED_THEMES" ]; then
+  printf '%s' "$PRESERVED_THEMES" >> "$THEMES_FILE"
 fi
 
 # --- Step 4: Update locale files ---

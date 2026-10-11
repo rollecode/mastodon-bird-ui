@@ -15,8 +15,13 @@
   }
 
   @media screen and (height < 1080px) {
-    // Compact navigation items so more fit on shorter laptop screens.
-    .column-link {
+    // Compact navigation items so more fit on shorter laptop screens. Scoped
+    // under .navigation-panel so it outranks the equal-specificity desktop
+    // `.column-link { font-size: 18px }` rule in the width >= 760px block below:
+    // both would otherwise be (0,2,0) and, being later in source order, the
+    // 18px rule won on short widescreen laptops (width >= 760 and height < 1080),
+    // so this compact rule never actually applied there.
+    .navigation-panel .column-link {
       --gap-column-link: 7px;
       font-size: 17px;
     }
