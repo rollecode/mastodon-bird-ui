@@ -1,5 +1,6 @@
-### [Unreleased]
+### 4.8.0-alpha.3-2026-10-11: 2026-10-11
 
+* Versions now follow the targeted Mastodon version
 * Show the media modal counters in white like the icons beside them
 
 ### 4.0.1rc1: 2026-08-23
