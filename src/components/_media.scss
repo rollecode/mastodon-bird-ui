@@ -20,7 +20,9 @@
     object-fit: cover;
   }
 
+  .detailed-status .status.status--is-quote .audio-player,
   .detailed-status .status.status--is-quote .media-gallery,
+  .detailed-status .status.status--is-quote .video-player,
   .status .audio-player,
   .status .media-gallery,
   .status .video-player,

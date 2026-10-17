@@ -1,3 +1,7 @@
+### [Unreleased]
+
+* Fix quoted video and audio alignment in post view
+
 ### 4.8.0-alpha.3-2026-10-11: 2026-10-11
 
 * Versions now follow the targeted Mastodon version
