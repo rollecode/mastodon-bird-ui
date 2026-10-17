@@ -2,6 +2,7 @@
 
 * Fix quoted video and audio alignment in post view
 * Link the CSS banner to rollecode
+* Fix duplicated CSS banner lines
 
 ### 4.7.3-2026-10-11: 2026-10-11
 
