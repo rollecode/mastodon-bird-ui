@@ -1215,6 +1215,20 @@ body.layout-single-column, body.layout-multiple-columns {
   width: unset !important;
 }
 
+.layout-single-column .media-gallery.media-gallery--layout-1:has(.media-gallery__preview--hidden), .layout-multiple-columns .media-gallery.media-gallery--layout-1:has(.media-gallery__preview--hidden) {
+  height: auto;
+  aspect-ratio: auto !important;
+  width: fit-content !important;
+}
+
+.layout-single-column .media-gallery.media-gallery--layout-1:has(.media-gallery__preview--hidden) .media-gallery__item-thumbnail img, .layout-multiple-columns .media-gallery.media-gallery--layout-1:has(.media-gallery__preview--hidden) .media-gallery__item-thumbnail img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 428px;
+  display: block;
+}
+
 .layout-single-column canvas[class="media-gallery__preview"], .layout-multiple-columns canvas[class="media-gallery__preview"], .layout-single-column .media-gallery:has(.spoiler-button) .media-gallery__preview, .layout-multiple-columns .media-gallery:has(.spoiler-button) .media-gallery__preview {
   width: 100% !important;
 }

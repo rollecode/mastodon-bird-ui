@@ -92,6 +92,24 @@
     width: unset !important;
   }
 
+  // Safari keeps a block's full width when max-height caps an aspect-ratio box,
+  // so once the image has loaded, size the frame from the image instead
+  .media-gallery.media-gallery--layout-1:has(.media-gallery__preview--hidden) {
+    aspect-ratio: auto !important;
+    height: auto;
+    width: fit-content !important;
+  }
+
+  .media-gallery.media-gallery--layout-1:has(.media-gallery__preview--hidden)
+    .media-gallery__item-thumbnail
+    img {
+    display: block;
+    height: auto;
+    max-height: 428px;
+    max-width: 100%;
+    width: auto;
+  }
+
   // When image is still loading up, reset width to 100%, Fixes #150
   // When images are still loading the placeholder only shows up partly #150
   // @link https://github.com/ronilaukkarinen/mastodon-bird-ui/issues/150
