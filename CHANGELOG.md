@@ -3,6 +3,7 @@
 * Fix quoted video and audio alignment in post view
 * Link the CSS banner to rollecode
 * Fix duplicated CSS banner lines
+* Fix media frame wider than narrow images
 
 ### 4.8.0-alpha.3-2026-10-11: 2026-10-11
 
