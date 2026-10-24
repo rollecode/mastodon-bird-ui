@@ -2,7 +2,6 @@
 const { createProxyMiddleware, responseInterceptor } = require('http-proxy-middleware');
 const variant = process.env.VARIANT;
 const cssFile = variant || 'mastodon-bird-ui';
-const theme = variant || 'mastodon-bird-ui-dark';
 
 const proxy = createProxyMiddleware({
   target: 'https://mementomori.social',
@@ -18,8 +17,6 @@ const proxy = createProxyMiddleware({
       const contentType = proxyRes.headers['content-type'] || '';
       if (contentType.includes('text/html')) {
         let html = responseBuffer.toString('utf8');
-        // Override data-user-theme attribute in HTML tag
-        html = html.replace(/data-user-theme="[^"]*"/, `data-user-theme="${theme}"`);
         // Inject CSS before </head>
         const injection = `
     <link rel="stylesheet" href="/mastodon-bird-ui/${cssFile}.css">
