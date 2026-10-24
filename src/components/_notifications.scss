@@ -1,0 +1,23 @@
+// Icon column the width of an avatar, like v4
+.notification-group {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: minmax(0, 48px) minmax(0, 1fr);
+
+  .notification-group__icon {
+    justify-self: end;
+    margin-right: 4px;
+
+    .icon {
+      height: 27px;
+      margin-right: 0;
+      max-width: 30px;
+      place-self: start end;
+      width: 27px;
+    }
+  }
+
+  .icon-person-add {
+    color: var(--color-accent-dark);
+  }
+}

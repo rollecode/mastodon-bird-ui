@@ -1,0 +1,171 @@
+// Media keeps its own shape up to 430px tall, framed like v4
+.media-gallery,
+.audio-player,
+.video-player,
+.media-gallery__gifv,
+.media-gallery__preview {
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.media-gallery__preview {
+  width: 100% !important;
+}
+
+.media-gallery--layout-1,
+.media-gallery--layout-2,
+.media-gallery--layout-3,
+.media-gallery--layout-4,
+.media-gallery__preview,
+.audio-player,
+.video-player {
+  max-height: 430px;
+  width: unset !important;
+}
+
+canvas[class='media-gallery__preview'],
+.media-gallery:has(.spoiler-button) .media-gallery__preview {
+  width: 100% !important;
+}
+
+.media-gallery__item__badges > span {
+  border-radius: 4px;
+}
+
+.media-gallery__item {
+  outline: 0;
+}
+
+.media-gallery .media-gallery__item .media-gallery__gifv {
+  border: 0;
+}
+
+.media-gallery__item.standalone img,
+.video-player .media-gallery__preview {
+  object-fit: contain;
+}
+
+.video-player:has(.spoiler-button) .media-gallery__preview {
+  object-fit: cover;
+}
+
+.media-gallery--layout-1:has(.media-gallery__preview--hidden) {
+  aspect-ratio: auto !important;
+  height: auto;
+  width: fit-content !important;
+
+  .media-gallery__item-thumbnail img {
+    display: block;
+    height: auto;
+    max-height: 428px;
+    max-width: 100%;
+    width: auto;
+  }
+}
+
+.media-gallery > .media-gallery__item:nth-of-type(2n + 1) {
+  border-end-end-radius: 0;
+  border-start-end-radius: 0;
+}
+
+.media-gallery > .media-gallery__item:nth-of-type(2n) {
+  border-end-start-radius: 0;
+  border-start-start-radius: 0;
+}
+
+// v5 indents post content past the avatar already
+._comp_status__root .media-gallery,
+._comp_status__root .video-player,
+._comp_status__root .audio-player,
+._comp_status__root .status-card {
+  margin-left: 0 !important;
+}
+
+// One rounded, bordered frame around the gallery; no inner corners
+._comp_status_attachments__galleryWrapper .media-gallery {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+._comp_status_attachments__galleryWrapper .media-gallery__item,
+._comp_status_attachments__galleryWrapper .media-gallery__item-thumbnail,
+._comp_status_attachments__galleryWrapper .media-gallery__preview {
+  border-radius: 0 !important;
+}
+
+// v5 blurs and dots the hidden media; v4 showed the plain blurhash
+._comp_status_attachments__galleryContent::after {
+  display: none;
+}
+
+// Hidden portrait media hugs the blurhash instead of filling the width
+._comp_status_attachments__galleryWrapper:has(
+    .media-gallery--layout-1[style*='aspect-ratio: 0']
+      > .media-gallery__item
+      > canvas.media-gallery__preview:not(.media-gallery__preview--hidden)
+  ) {
+  max-width: 100%;
+  width: fit-content;
+}
+
+._comp_status_attachments__galleryWrapper
+  .media-gallery--layout-1[style*='aspect-ratio: 0']:has(
+    > .media-gallery__item > canvas.media-gallery__preview:not(.media-gallery__preview--hidden)
+  ) {
+  height: 430px;
+  width: fit-content !important;
+
+  // The blurhash canvas carries the ratio so the frame can shrink to it
+  > .media-gallery__item {
+    aspect-ratio: inherit;
+  }
+
+  canvas.media-gallery__preview {
+    aspect-ratio: inherit;
+    display: block;
+    height: 430px;
+    width: auto !important;
+  }
+}
+
+// Hide pill top right, ALT tag bottom left, as in v4
+.media-gallery .media-gallery__actions.media-gallery__actions {
+  inset: 7px 7px auto auto;
+}
+
+.media-gallery .media-gallery__actions__pill.media-gallery__actions__pill {
+  backdrop-filter: blur(10px) saturate(1.8) contrast(0.75) brightness(0.7);
+  background: rgb(0 0 0 / 65%) !important;
+  border: 0 !important;
+  border-radius: 99px !important;
+  color: #fff !important;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  min-height: 0;
+  padding: 3px 12px;
+}
+
+.media-gallery .media-gallery__item__badges.media-gallery__item__badges {
+  inset: auto auto 13px 13px;
+}
+
+.media-gallery .media-gallery__alt__label.media-gallery__alt__label {
+  backdrop-filter: blur(10px) saturate(1.8) contrast(0.75) brightness(0.7);
+  background: rgb(0 0 0 / 65%) !important;
+  border: 0 !important;
+  border-radius: 4px !important;
+  color: #fff !important;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 20px;
+  min-height: 0;
+  padding: 3px 8px;
+}
+
+.media-gallery .media-gallery__actions__pill ._comp_button_redesign__label,
+.media-gallery .media-gallery__alt__label ._comp_button_redesign__label {
+  line-height: inherit;
+  padding: 0;
+}

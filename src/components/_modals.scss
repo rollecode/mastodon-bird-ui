@@ -1,0 +1,72 @@
+.modal-root__overlay {
+  background-color: var(--color-modal-overlay) !important;
+  color: var(--color-light-text) !important;
+}
+
+.media-modal__navigation .icon {
+  color: var(--color-light-text);
+  height: 32px;
+  width: 32px;
+}
+
+// Media viewer: plain icons with a round hover, counts beside them
+.media-modal__overlay {
+  max-width: 500px;
+
+  .picture-in-picture__footer {
+    display: flex;
+    justify-content: space-between;
+    overflow: visible;
+    padding: 8px 24px 12px;
+
+    .icon-button {
+      background-color: transparent !important;
+      gap: 6px;
+      height: 24px !important;
+      min-width: 0 !important;
+      padding: 0;
+      position: relative;
+      width: unset !important;
+
+      &::after {
+        background-color: rgb(96 105 132 / 15%);
+        border-radius: 50%;
+        content: '';
+        height: 34px;
+        left: 0;
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        top: 50%;
+        transform: translate(-8px, -50%);
+        width: 34px;
+        z-index: -1;
+      }
+
+      &:hover::after {
+        opacity: 1;
+      }
+
+      .icon {
+        filter: none;
+        height: 18px;
+        min-width: 18px;
+        width: 18px;
+      }
+    }
+
+    .icon-button__counter {
+      color: var(--color-text-on-media);
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .icon-retweet {
+      background: var(--icon-boost-on-media) center no-repeat;
+
+      > path {
+        display: none;
+      }
+    }
+  }
+}

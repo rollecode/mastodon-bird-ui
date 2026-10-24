@@ -1,0 +1,46 @@
+.trends__item__name {
+  color: var(--color-dim);
+
+  a {
+    color: var(--color-light-text);
+  }
+
+  > a {
+    font-size: var(--font-size);
+    margin-bottom: 4px;
+  }
+}
+
+.trends__item__sparkline path:last-child {
+  stroke: var(--color-accent) !important;
+}
+
+.dismissable-banner,
+.about__meta,
+.about__section__title {
+  background-color: var(--color-dark);
+  border-color: var(--color-dark);
+  color: var(--color-light-text);
+}
+
+.dismissable-banner {
+  border: 1px solid var(--color-dark);
+}
+
+.dismissable-banner__message {
+  color: var(--color-light-text);
+}
+
+.about__section__title {
+  color: var(--color-accent);
+}
+
+.about__meta__divider,
+.search-results__section__header {
+  border-color: var(--color-border);
+}
+
+.explore__search-header,
+.search-results__section__header {
+  background-color: transparent;
+}
