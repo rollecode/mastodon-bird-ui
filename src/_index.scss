@@ -1,0 +1,24 @@
+@use "sass:meta";
+@use "variables";
+@use "micro-interactions/heart";
+
+// The :root prefix keeps these ahead of the CSS modules Mastodon loads later
+:root {
+  @include meta.load-css("components/layout");
+  @include meta.load-css("components/navigation");
+  @include meta.load-css("components/buttons");
+  @include meta.load-css("components/column-header");
+  @include meta.load-css("components/status");
+  @include meta.load-css("components/search");
+  @include meta.load-css("components/profile");
+  @include meta.load-css("components/profile-fields");
+  @include meta.load-css("components/menus");
+  @include meta.load-css("components/media");
+  @include meta.load-css("components/tabs");
+  @include meta.load-css("components/accounts");
+  @include meta.load-css("components/notifications");
+  @include meta.load-css("components/modals");
+  @include meta.load-css("components/explore");
+  @include meta.load-css("components/scrollbars");
+  @include meta.load-css("components/mobile");
+}
