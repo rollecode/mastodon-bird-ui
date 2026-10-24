@@ -1,0 +1,35 @@
+// Thin rounded scrollbars
+::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-border);
+  border: 0 solid var(--color-border);
+  border-radius: 50px;
+
+  &:hover {
+    background-color: var(--color-light-purple);
+  }
+
+  &:active {
+    background-color: var(--color-black-coral);
+  }
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-bg-primary);
+  border: 0 solid var(--color-border);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+@media (width <= 500px) {
+  .layout-single-column::-webkit-scrollbar {
+    display: none;
+  }
+}

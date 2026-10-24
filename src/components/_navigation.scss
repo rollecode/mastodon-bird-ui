@@ -1,0 +1,202 @@
+// Left navigation like v4: icon logo, 44px links, Bird UI icons, pill hover
+._navigation_panel_redesign_header__root {
+  margin-bottom: 12px;
+  padding: 10px 0 0;
+}
+
+._navigation_panel_redesign_header__siteNameLink {
+  background: var(--logo) center / 32px auto no-repeat;
+  height: 50px;
+  width: 50px;
+}
+
+._navigation_panel_redesign_header__content,
+._navigation_panel_redesign_header__appIcon {
+  display: none;
+}
+
+._navigation_panel_redesign__list {
+  margin-inline: 0;
+}
+
+._navigation_panel_redesign_navigation_link__wrapper {
+  padding-bottom: 0;
+}
+
+._navigation_panel_redesign_navigation_link__link {
+  --icon-size: 22px;
+  --border-radius: 32px;
+  column-gap: 14px;
+  font-size: 16px;
+  line-height: 20px;
+  max-width: 100%;
+  min-height: 40px;
+  min-width: 0;
+  padding: 9px 18px 9px 10px;
+
+  width: fit-content;
+
+  &[aria-current='page'] {
+    background-color: transparent;
+    font-weight: 700;
+  }
+
+  &:hover {
+    background-color: var(--color-column-link-hover);
+  }
+}
+
+._navigation_panel_redesign_navigation_link__linkStacked,
+._navigation_panel_redesign_navigation_link__linkMobile {
+  column-gap: 0;
+  font-size: 12px;
+  line-height: 16px;
+  min-height: 0;
+  width: 100%;
+}
+
+// Footer links: soft corners and no word breaks in the labels
+._navigation_panel_redesign_navigation_link__linkStacked {
+  --border-radius: 12px;
+  font-size: 11px;
+
+  padding-inline: 4px;
+
+  ._navigation_panel_redesign_navigation_link__label {
+    hyphens: none;
+    white-space: nowrap;
+  }
+}
+
+._navigation_panel_redesign__footer {
+  padding-inline: 10px;
+}
+
+// Bird UI icons on the main links
+._navigation_panel_redesign_navigation_link__link[href='/home'],
+._navigation_panel_redesign_navigation_link__link[href^='/explore'],
+._navigation_panel_redesign_navigation_link__link[href^='/public'],
+._navigation_panel_redesign_navigation_link__link[href^='/notifications'],
+._navigation_panel_redesign_navigation_link__link[href^='/conversations'],
+._navigation_panel_redesign_navigation_link__link[href^='/bookmarks'],
+._navigation_panel_redesign_navigation_link__link[href^='/favourites'] {
+  ._navigation_panel_redesign_navigation_link__icon svg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    path {
+      display: none;
+    }
+  }
+}
+
+._navigation_panel_redesign_navigation_link__link[href='/home'] svg {
+  background-image: var(--icon-home);
+}
+
+._navigation_panel_redesign_navigation_link__link[href='/home'][aria-current='page'] svg {
+  background-image: var(--icon-home-column-link-active);
+}
+
+._navigation_panel_redesign_navigation_link__link[href^='/explore'] svg {
+  background-image: var(--icon-hashtag);
+}
+
+._navigation_panel_redesign_navigation_link__link[href^='/explore'][aria-current='page'] svg {
+  background-image: var(--icon-hashtag-active);
+}
+
+._navigation_panel_redesign_navigation_link__link[href^='/public'] svg {
+  background-image: var(--icon-globe);
+}
+
+._navigation_panel_redesign_navigation_link__link[href^='/public'][aria-current='page'] svg {
+  background-image: var(--icon-globe-active);
+}
+
+._navigation_panel_redesign_navigation_link__link[href^='/notifications'] svg {
+  background-image: var(--icon-bell);
+}
+
+._navigation_panel_redesign_navigation_link__link[href^='/notifications'][aria-current='page'] svg {
+  background-image: var(--icon-bell-active);
+}
+
+._navigation_panel_redesign_navigation_link__link[href^='/conversations'] svg {
+  background-image: var(--icon-direct-messages);
+}
+
+._navigation_panel_redesign_navigation_link__link[href^='/conversations'][aria-current='page'] svg {
+  background-image: var(--icon-direct-messages-active);
+}
+
+._navigation_panel_redesign_navigation_link__link[href^='/bookmarks'] svg {
+  background-image: var(--icon-bookmark-column-link);
+}
+
+._navigation_panel_redesign_navigation_link__link[href^='/bookmarks'][aria-current='page'] svg {
+  background-image: var(--icon-bookmark-column-link-active);
+}
+
+._navigation_panel_redesign_navigation_link__link[href^='/favourites'] svg {
+  background-image: var(--icon-heart-column-link);
+}
+
+._navigation_panel_redesign_navigation_link__link[href^='/favourites'][aria-current='page'] svg {
+  background-image: var(--icon-heart-column-link-active);
+}
+
+// Links inside collapsible sections (custom feeds, followed hashtags) at v5 size
+._navigation_panel_redesign_list_section__root ._navigation_panel_redesign_navigation_link__link {
+  --icon-size: 20px;
+  font-size: 15px;
+
+  min-height: 34px;
+  padding-block: 7px;
+}
+
+._navigation_panel_redesign_list_section__root {
+  padding-top: 8px;
+}
+
+// Section headers: plain caption with the v4 chevron button, no hover pill
+._navigation_panel_redesign_list_section__title {
+  border-radius: 0;
+  color: var(--color-dim);
+  font-size: 13px;
+  min-height: 32px;
+  padding-inline: 10px 30px;
+
+  &:hover,
+  &:focus-visible {
+    background-color: transparent;
+    color: var(--color-fg);
+  }
+}
+
+._navigation_panel_redesign_list_section__toggleIcon {
+
+  background: currentColor;
+  border-radius: 50%;
+  box-sizing: content-box;
+  color: var(--color-dim);
+  height: 24px;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960'%3E%3Cpath d='M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z'/%3E%3C/svg%3E") center / 24px no-repeat;
+  padding: 2px;
+  transition: background-color 200ms, rotate 100ms ease-in;
+  width: 24px;
+
+  // v4's material chevron instead of v5's caret
+  path {
+    display: none;
+  }
+
+  &::before {
+    content: '';
+  }
+
+  ._navigation_panel_redesign_list_section__title:hover & {
+    color: var(--color-fg);
+  }
+}

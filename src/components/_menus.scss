@@ -1,0 +1,46 @@
+// Context menus like v4: compact dark purple panel with small corners
+._comp_menu__card {
+  background: var(--color-dark);
+  border: 1px solid var(--color-dark);
+  border-radius: 4px;
+  box-shadow: var(--dropdown-shadow);
+}
+
+._comp_menu__scrollableInnerCard,
+._comp_menu__card > div {
+  padding: 4px;
+}
+
+._comp_menu__item {
+  border-radius: 4px;
+  color: var(--color-light-text);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+  padding: 10px 14px;
+
+  &:hover,
+  &:focus-visible {
+    background-color: var(--color-column-link-hover);
+  }
+}
+
+// v4 kept mute, block and report in the normal text colour
+._comp_menu__itemDestructive {
+  color: var(--color-light-text);
+}
+
+._comp_menu__itemDescription {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+._comp_menu__itemDivider {
+  background-color: var(--color-border);
+  margin: 4px -4px;
+}
+
+// Text-only menus, as in v4
+._comp_menu__itemIcon {
+  display: none;
+}

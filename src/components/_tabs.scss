@@ -1,0 +1,105 @@
+// Tabs: full-width, dim until active, accent underline
+._comp_tab_list__tabList._comp_tab_list__withSpaceAndBorder {
+  background-color: transparent;
+  border-bottom: 1px solid var(--color-border);
+  border-left: 0;
+  border-right: 0;
+  border-top: 1px solid var(--color-border);
+  gap: 0;
+  margin-top: 20px;
+  padding: 0;
+}
+
+._comp_tab_list__tabList ._comp_tab_list__tab,
+.account__section-headline a,
+.account__section-headline button,
+.notification__filter-bar button {
+  color: var(--color-dim);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  position: relative;
+}
+
+._comp_tab_list__tabList ._comp_tab_list__tab {
+  flex: 1 1 0;
+  font-weight: 500;
+  padding: 12px 20px;
+  text-align: center;
+  transition: background 0.2s;
+}
+
+._comp_tab_list__tabList ._comp_tab_list__tab.active,
+.account__section-headline a.active,
+.account__section-headline button.active,
+.notification__filter-bar button.active {
+  color: var(--color-light-text);
+}
+
+._comp_tab_list__tabList ._comp_tab_list__tab.active {
+  border-bottom: 0;
+  font-weight: 700;
+  padding-bottom: 12px;
+}
+
+._comp_tab_list__tabList ._comp_tab_list__tab:hover,
+.account__section-headline a:hover,
+.notification__filter-bar button:hover {
+  background-color: var(--color-column-link-hover);
+}
+
+._comp_tab_list__tabList ._comp_tab_list__tab:hover {
+  color: var(--color-light-text);
+}
+
+._comp_tab_list__tabList ._comp_tab_list__tab.active::after,
+.account__section-headline a.active::after,
+.account__section-headline button.active::after,
+.notification__filter-bar button.active::after {
+  background-color: var(--color-accent);
+  border: 0;
+  border-radius: 9999px;
+  bottom: -1px;
+  content: '';
+  display: block;
+  height: 4px;
+  left: 50%;
+  min-width: 56px;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.account__section-headline a.active::before,
+.account__section-headline button.active::before,
+.notification__filter-bar button.active::before {
+  display: none;
+}
+
+.account__section-headline {
+  border-color: var(--color-border);
+  border-left: 0;
+  border-right: 0;
+}
+
+.account__section-headline,
+.account__section-headline button,
+.notification__filter-bar,
+.notification__filter-bar button {
+  background-color: transparent;
+}
+
+.account__section-headline a {
+  transition: background 0.2s;
+}
+
+.notification__filter-bar {
+  border-bottom: 1px solid var(--color-border);
+  border-left: 0;
+  border-right: 0;
+}
+
+@media (hover: none) {
+  .account__section-headline a.active:hover,
+  .notification__filter-bar button.active:hover {
+    background-color: transparent;
+  }
+}

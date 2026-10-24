@@ -1,0 +1,50 @@
+// Column header like v4: 51px, 13px in from every edge, title centred vertically
+._comp_column_header__root {
+  background: var(--color-bg-primary);
+  border-bottom: 1px solid var(--color-border-primary);
+  padding-top: 0;
+
+  &::after {
+    display: none;
+  }
+}
+
+._comp_column_header__layout {
+  align-items: center;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  min-height: 50px;
+  text-align: start;
+}
+
+// The 32px back button holds a 24px arrow, so 9px puts the arrow 13px in
+._comp_column_header__leftButton {
+  padding: 0 0 0 9px;
+
+  svg {
+    height: 24px;
+    width: 24px;
+  }
+}
+
+._comp_column_header__rightButtons {
+  padding: 0 9px 0 0;
+}
+
+._comp_column_header__title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 0 13px;
+
+  > button {
+    text-align: start;
+  }
+}
+
+// Next to a back arrow the title reads like v4's "Back" link: 16px regular, 5px from the arrow
+._comp_column_header__leftButton + ._comp_column_header__title {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  padding-inline-start: 1px;
+}

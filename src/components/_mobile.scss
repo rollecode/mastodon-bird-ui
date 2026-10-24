@@ -1,0 +1,23 @@
+// Mobile: a flat bottom bar instead of the floating card
+._navigation_panel_redesign_mobile_nav__root {
+  gap: 0;
+  padding: 0;
+}
+
+._navigation_panel_redesign_mobile_nav__floatingCard {
+  background-color: var(--color-bg-primary);
+  border: 0;
+  border-radius: 0;
+  border-top: 1px solid var(--color-border-primary);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+@media (width <= 760px) {
+  ._comp_columns_area__main {
+    border-inline: 0;
+  }
+
+  ._comp_status_content__text {
+    font-size: 16px;
+  }
+}

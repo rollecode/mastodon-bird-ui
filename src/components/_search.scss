@@ -1,0 +1,64 @@
+// Search field like v4: filled pill, icon on the right
+input._compose_components_search__search {
+  background-color: var(--color-mud);
+  border-color: var(--color-mud);
+  border-radius: 32px;
+  color: var(--color-dim);
+  font-size: 15px;
+  height: 42px;
+  padding: 0 44px 0 20px;
+
+  &:focus {
+    color: var(--color-light-text);
+  }
+}
+
+.search.active input._compose_components_search__search {
+  color: var(--color-light-text);
+}
+
+.search__icon-wrapper {
+  right: 0;
+  top: 0;
+
+  .search__icon {
+    background: var(--icon-search) center / 20px auto no-repeat;
+    display: inline-block;
+    height: 24px;
+    inset-inline-start: unset;
+    position: absolute;
+    right: 14px;
+    top: 9px;
+    width: 24px;
+
+    path {
+      display: none;
+    }
+  }
+
+  &.has-value .search__icon {
+    background-image: var(--icon-close-action-bar);
+  }
+}
+
+.search__icon .icon-times-circle {
+  top: 9px;
+}
+
+.icon-search {
+  background-image: var(--icon-search-opaque);
+}
+
+.search__popout {
+  background-color: var(--color-dark);
+  border-color: var(--color-dark);
+  box-shadow: none;
+  color: var(--color-dim);
+  left: 15px;
+  max-width: calc(100% - 30px) !important;
+  width: calc(100% - 30px) !important;
+
+  > h4 {
+    color: var(--color-dim);
+  }
+}
