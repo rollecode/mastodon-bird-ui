@@ -1,7 +1,0 @@
-// Explore -> For you shade in bio
-.layout-single-column,
-.layout-multiple-columns {
-  .scrollable .account-card__bio::after {
-    background: linear-gradient(270deg, var(--color-bg), transparent);
-  }
-}

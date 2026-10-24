@@ -1,9 +1,0 @@
-// Hide labels for any field that has a link (show icon + URL only)
-@use "field-selectors" as *;
-
-.layout-single-column,
-.layout-multiple-columns {
-  #{$field-list} > #{$field-item}:has(dd a) dt {
-    display: none;
-  }
-}

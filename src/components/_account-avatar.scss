@@ -1,9 +1,0 @@
-// The default background for avatars that are loading up
-.layout-single-column
-  .inline-follow-suggestions__body__scrollable__card
-  .account__avatar,
-.inline-follow-suggestions__body__scrollable__card .account__avatar,
-.account__avatar.account__avatar--loading {
-  background-color: var(--color-bg-tertiary);
-  border-radius: 50%;
-}

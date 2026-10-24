@@ -1,8 +1,0 @@
-// More distinct focus color for accessibility, instead of just white
-.layout-single-column,
-.layout-multiple-columns {
-  input:focus-visible {
-    outline-color: var(--color-accent);
-    outline-style: solid;
-  }
-}

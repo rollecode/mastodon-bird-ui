@@ -1,9 +1,0 @@
-@use "../field-selectors" as *;
-
-.layout-single-column,
-.layout-multiple-columns {
-  #{$field-list} > #{$field-item}:has(dd a[href*="bandcamp.com" i])::before {
-    background-image: var(--icon-bandcamp);
-    content: "";
-  }
-}
