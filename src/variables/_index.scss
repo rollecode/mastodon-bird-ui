@@ -1,0 +1,37 @@
+@use "colors";
+@use "icons";
+
+:root {
+  @include icons.dark;
+  --font-body: mastodon-font-sans-serif, sans-serif;
+  --font-heading: mastodon-font-sans-serif, sans-serif;
+  --font-size: 15px;
+  --line-height: 22px;
+}
+
+@media (width <= 500px) {
+  :root {
+    --font-size: 16px;
+    --line-height: 1.4;
+  }
+}
+
+// The doubled :root outranks the accent colour picked in v5's settings
+:root:root:is([data-color-scheme='dark'], :not([data-color-scheme])) {
+  @include colors.dark-tokens;
+}
+
+:root:root[data-color-scheme='light'] {
+  @include colors.light-tokens;
+}
+
+// Parts of the page can set their own scheme, such as media in dark
+:root:not([data-color-scheme]),
+[data-color-scheme='dark'] {
+  @include colors.dark-palette;
+}
+
+[data-color-scheme='light'] {
+  @include colors.light-palette;
+  @include icons.light;
+}

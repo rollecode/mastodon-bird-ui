@@ -1,0 +1,144 @@
+// stylelint-disable plugin/no-unused-custom-properties
+
+// Bird UI colours
+@mixin dark-palette {
+  --color-accent: #858afa;
+  --color-accent-dark: #6364ff;
+  --color-black-coral: #5a5371;
+  --color-border: #38384d;
+  --color-column-link-hover: #f7f7f91a;
+  --color-dark: #232543;
+  --color-dim: #717c9b;
+  --color-fg: #fff;
+  --color-focusable-toot: rgb(255 255 255 / 3.5%);
+  --color-green: #00ba7c;
+  --color-light-purple: #9baec8;
+  --color-light-shade: rgb(255 255 255 / 2%);
+  --color-light-text: #f7f9f9;
+  --color-modal-overlay: #2b2b33;
+  --color-mud: rgb(39 44 64 / 50%);
+  --color-outer-space: #42485a;
+  --color-red: #f91880;
+}
+
+// Mastodon 5 tokens in Bird UI colours
+@mixin dark-tokens {
+  --base-color-bg: #1e2028;
+  --base-color-bg-accent: #6364ff;
+  --base-color-bg-desktop: #1e2028;
+  --base-color-danger: #f91880;
+  --base-color-fg: #fff;
+  --base-color-fg-accent: #858afa;
+  --base-color-fg-on-accent: #fff;
+  --base-highlight-strength: 6%;
+  --color-bg-brand-base-hover: #5253e0;
+  --color-bg-brand-soft: rgb(99 100 255 / 15%);
+  --color-bg-disabled: #393f4f;
+  --color-bg-error-base-hover: #d91570;
+  --color-bg-error-soft: rgb(249 24 128 / 18%);
+  --color-bg-highlight: rgb(255 255 255 / 4%);
+  --color-bg-overlay: #2b2b33;
+  --color-bg-secondary: rgb(255 255 255 / 5%);
+  --color-bg-success-base: #00ba7c;
+  --color-bg-success-soft: rgb(0 186 124 / 22%);
+  --color-bg-tertiary: rgb(255 255 255 / 10%);
+  --color-bg-warning-base: #ffac33;
+  --color-bg-warning-soft: rgb(255 172 51 / 15%);
+  --color-border-media: rgb(255 255 255 / 15%);
+  --color-border-primary: #38384d;
+  --color-border-warning-soft: rgb(255 172 51 / 50%);
+  --color-graph-disabled-fill: #393f4f;
+  --color-graph-disabled-stroke: #717c9b;
+  --color-graph-primary-fill: rgb(99 100 255 / 10%);
+  --color-graph-primary-stroke: #6364ff;
+  --color-graph-warning-fill: rgb(255 172 51 / 10%);
+  --color-graph-warning-stroke: #ffac33;
+  --color-text-brand-on-inverted: #6364ff;
+  --color-text-brand-soft: #858afa;
+  --color-text-disabled: #717c9b;
+  --color-text-favourite-highlight: #ffac33;
+  --color-text-on-disabled: #9baec8;
+  --color-text-on-error-base: #fff;
+  --color-text-secondary: #717c9b;
+  --color-text-status-links: #858afa;
+  --color-text-success: #00ba7c;
+  --color-text-tertiary: #717c9b;
+  --color-text-warning: #ffac33;
+  --dropdown-shadow: none;
+  --overlay-strength-secondary: 8%;
+}
+
+// Bird UI colours
+@mixin light-palette {
+  --color-accent: #6364ff;
+  --color-accent-dark: #6364ff;
+  --color-black-coral: #9188a6;
+  --color-border: #e6e1ed;
+  --color-column-link-hover: #1e1b231a;
+  --color-dark: #f7f9f9;
+  --color-dim: #9388a6;
+  --color-fg: #000;
+  --color-focusable-toot: rgb(0 0 0 / 3.5%);
+  --color-green: #17bf63;
+  --color-light-purple: #9588a6;
+  --color-light-shade: rgb(0 0 0 / 2%);
+  --color-light-text: #1f1b23;
+  --color-modal-overlay: rgb(106 91 131 / 40%);
+  --color-mud: #e5e1ed;
+  --color-outer-space: #42485a;
+  --color-red: #e0245e;
+}
+
+// Mastodon 5 tokens in Bird UI colours
+@mixin light-tokens {
+  --base-color-bg: #fff;
+  --base-color-bg-accent: #6364ff;
+  --base-color-bg-desktop: #fff;
+  --base-color-danger: #e0245e;
+  --base-color-fg: #000;
+  --base-color-fg-accent: #6364ff;
+  --base-color-fg-on-accent: #fff;
+  --base-highlight-strength: 6%;
+  --color-bg-brand-base-hover: #5253e0;
+  --color-bg-brand-soft: rgb(99 100 255 / 15%);
+  --color-bg-disabled: #393f4f;
+  --color-bg-error-base: #f91880;
+  --color-bg-error-base-hover: #d91570;
+  --color-bg-error-soft: rgb(249 24 128 / 18%);
+  --color-bg-highlight: rgb(0 0 0 / 3%);
+  --color-bg-inverted: #1f1b23;
+  --color-bg-overlay: #fff;
+  --color-bg-secondary: rgb(0 0 0 / 5%);
+  --color-bg-success-base: #00ba7c;
+  --color-bg-success-soft: rgb(0 186 124 / 22%);
+  --color-bg-tertiary: rgb(0 0 0 / 8%);
+  --color-bg-warning-base: #ffac33;
+  --color-bg-warning-soft: rgb(255 172 51 / 15%);
+  --color-border-media: rgb(255 255 255 / 15%);
+  --color-border-primary: #e6e1ed;
+  --color-border-warning-soft: rgb(255 172 51 / 50%);
+  --color-graph-disabled-fill: #393f4f;
+  --color-graph-disabled-stroke: #717c9b;
+  --color-graph-primary-fill: rgb(99 100 255 / 10%);
+  --color-graph-warning-fill: rgb(255 172 51 / 10%);
+  --color-graph-warning-stroke: #ffac33;
+  --color-text-bookmark-highlight: #f91880;
+  --color-text-brand-on-inverted: #6364ff;
+  --color-text-brand-soft: #6364ff;
+  --color-text-disabled: #717c9b;
+  --color-text-error: #f91880;
+  --color-text-favourite-highlight: #ffac33;
+  --color-text-on-disabled: #9baec8;
+  --color-text-primary: #1f1b23;
+  --color-text-secondary: #8b7fa0;
+  --color-text-status-links: #6364ff;
+  --color-text-success: #00ba7c;
+  --color-text-tertiary: #8b7fa0;
+  --color-text-warning: #ffac33;
+  --dropdown-shadow: none;
+  --overlay-strength-secondary: 8%;
+  --rich-text-container-color: #57183c;
+  --rich-text-decorations-color: #803a5f;
+  --rich-text-text-color: #ffafd4;
+  --shadow-strength-primary: 80%;
+}
