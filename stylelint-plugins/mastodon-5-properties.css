@@ -1,0 +1,24 @@
+/* Mastodon 5 custom properties that Bird UI reads or sets, for linting only */
+:root {
+  --avatar-size: initial;
+  --bg: initial;
+  --bg-hover: initial;
+  --border-radius: initial;
+  --col-gap: initial;
+  --color-bg-primary: initial;
+  --color-text-on-media: initial;
+  --fg: initial;
+  --font-body: initial;
+  --font-heading: initial;
+  --icon-size: initial;
+  --radius-round: initial;
+}
+
+.mastodon {
+  background: var(--bg) var(--bg-hover) var(--color-bg-primary);
+  border-radius: var(--border-radius) var(--radius-round);
+  color: var(--fg) var(--color-text-on-media);
+  font-family: var(--font-body) var(--font-heading);
+  gap: var(--col-gap);
+  width: var(--avatar-size) var(--icon-size);
+}

@@ -71,11 +71,11 @@
     "csstools/value-no-unknown-custom-properties": [
       true,
       {
-        "importFrom": ["dist/mastodon-bird-ui.css"]
+        "importFrom": ["dist/mastodon-bird-ui.css", "stylelint-plugins/mastodon-5-properties.css"]
       }
     ],
     "plugin/no-unused-custom-properties": [true, {
-      "cssFiles": ["dist/mastodon-bird-ui.css"]
+      "cssFiles": ["dist/mastodon-bird-ui.css", "stylelint-plugins/mastodon-5-properties.css"]
     }],
     "rule-empty-line-before": [
       "always-multi-line",
