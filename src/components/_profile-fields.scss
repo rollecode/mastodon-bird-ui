@@ -1,0 +1,150 @@
+// Profile fields in one row, links with a platform icon instead of the label
+@use "sass:list";
+
+$platforms: (
+  github: ("github.com"),
+  discord: ("discord"),
+  linkedin: ("linkedin.com"),
+  instagram: ("instagram.com"),
+  youtube: ("youtube.com", "youtu.be"),
+  twitch: ("twitch.tv"),
+  twitter: ("twitter.com", "x.com"),
+  patreon: ("patreon.com"),
+  paypal: ("paypal"),
+  kofi: ("kofi.com", "ko-fi.com"),
+  bandcamp: ("bandcamp.com"),
+  facebook: ("facebook.com", "fb.com"),
+  friendica: ("friendica"),
+  wordpress: ("wordpress.com", "wordpress.org"),
+  mastodon: ("/@", "mastodon.social", "mastodon.online", "masto.host"),
+  threads: ("threads.net"),
+  bluesky: ("bsky.app", "bsky.social"),
+  nostr: ("npub", "nostr:"),
+);
+
+@function has-links($domains) {
+  $selectors: ();
+
+  @each $domain in $domains {
+    $selectors: list.append($selectors, 'dd a[href*="#{$domain}" i]', $separator: comma);
+  }
+
+  @return $selectors;
+}
+
+$known-links: ();
+
+@each $icon, $domains in $platforms {
+  $known-links: list.join($known-links, has-links($domains), $separator: comma);
+}
+
+._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList {
+  background-color: transparent;
+  border: 0;
+  color: var(--color-dim);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 12px;
+  line-height: 20px !important;
+  margin: 0 0 20px;
+  padding: 0;
+
+  span > a:only-of-type {
+    display: block;
+    max-width: 220px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  > ._comp_account_header__fieldItem {
+    align-items: center;
+    border: 0;
+    border-radius: 0;
+    display: inline-flex;
+    font-size: 15px;
+    gap: 6px;
+    grid-template-rows: none;
+    padding: 0;
+
+    &::before {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: inline-block;
+      flex-shrink: 0;
+      height: 18.5px;
+      order: -1;
+      width: 18.5px;
+    }
+
+    dt,
+    dd {
+      color: var(--color-dim);
+      font-size: 15px;
+      font-weight: 400;
+      text-transform: unset;
+    }
+
+    dt {
+      order: 1;
+    }
+
+    dd {
+      order: 2;
+    }
+
+    dd a {
+      color: var(--color-accent);
+    }
+
+    &:has(dd a) dt {
+      display: none;
+    }
+
+    &:has(dd a[href^="http"]):not(:has(#{$known-links}))::before {
+      background-image: var(--icon-link);
+      content: "";
+    }
+
+    @each $icon, $domains in $platforms {
+      &:has(#{has-links($domains)})::before {
+        // stylelint-disable-next-line csstools/value-no-unknown-custom-properties
+        background-image: var(--icon-#{$icon});
+        content: "";
+      }
+    }
+  }
+
+  > ._comp_account_header__fieldVerified {
+    background-color: transparent;
+  }
+
+  ._comp_account_header__fieldVerifiedIcon {
+    order: 3;
+    position: relative;
+    right: auto;
+    top: auto;
+
+    svg {
+      background-image: var(--icon-verified-smaller);
+      background-repeat: no-repeat;
+      height: 15px;
+      width: 15px;
+
+      path {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (width <= 700px) {
+  ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList > ._comp_account_header__fieldItem {
+    &,
+    dt,
+    dd {
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,267 @@
+// Profile header like v4: 200px banner, avatar over its edge, buttons on the right
+@media (width >= 760px) {
+  ._comp_account_header__header {
+    height: 200px;
+  }
+
+  ._comp_account_header__avatarWrapper .account__avatar {
+    height: 133.5px !important;
+    width: 133.5px !important;
+  }
+}
+
+._comp_account_header__avatarWrapper {
+  margin-top: -64px;
+
+  .account__avatar {
+    background-color: transparent;
+    border: 0;
+    margin-left: 0 !important;
+  }
+}
+
+._comp_account_header__barWrapper {
+  border-color: var(--color-border);
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+  position: relative;
+}
+
+._comp_account_header__bioButtonsWrapper {
+  margin-top: 0;
+  order: 4;
+}
+
+._comp_account_bio__bio {
+  margin-bottom: 20px;
+}
+
+._comp_account_header__nameWrapper,
+._comp_account_header__name {
+  column-gap: 6px;
+}
+
+._comp_account_header__name {
+
+  &,
+  > h1,
+  > h1 > bdi {
+    align-items: center;
+    display: inline-flex;
+  }
+
+  h1 {
+    color: var(--color-fg);
+  }
+
+  > h1 span {
+    font-size: 17px;
+  }
+
+  h1 small {
+    color: var(--color-light-purple);
+  }
+
+  // "Follows you"
+  > ._comp_badge__default._comp_badge__badge {
+    background-color: var(--color-dark);
+    color: var(--color-light-text);
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 12px;
+    opacity: 1;
+    padding: 4px 6px;
+    transform: translate(-1px, 1px);
+
+    > svg {
+      display: none;
+    }
+  }
+}
+
+._comp_familiar_followers__wrapper._comp_account_header__familiarFollowers {
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+
+[class*='_comp_account_header__buttons'] {
+  overflow: visible;
+
+  .icon {
+    position: relative;
+  }
+}
+
+._comp_account_header__buttonsDesktop {
+  position: absolute;
+  right: 16px;
+  top: 12px;
+}
+
+._comp_account_header__buttonsMobileIsStuck {
+  border: 0;
+}
+
+@media (width <= 759px) {
+  ._comp_account_header__buttonsDesktop {
+    position: static;
+  }
+}
+
+@media (width <= 419px) {
+  [class*='_comp_account_header__buttons'] {
+    padding-top: 0;
+  }
+}
+
+// Follow, Message and Unfollow: outlined, 38px tall with 10px sides
+[class*='_comp_account_header__buttons'] button._comp_button_redesign__base:not(._comp_button_redesign__iconOnly) {
+  font-size: 15px;
+  height: 38px;
+  line-height: 22px;
+  min-height: 38px;
+  padding-inline: 10px;
+}
+
+[class*='_comp_account_header__buttons'] button._comp_button_redesign__accent._comp_button_redesign__solid {
+  background: transparent;
+  box-shadow: inset 0 0 0 1px var(--color-outer-space);
+  color: var(--color-fg);
+}
+
+[class*='_comp_account_header__buttons'] button._comp_button_redesign__iconOnly {
+  background: transparent;
+  box-shadow: inset 0 0 0 1px var(--color-outer-space);
+  color: var(--color-fg);
+  height: 38px;
+  width: 38px;
+}
+
+[class*='_comp_account_header__buttons'] button._comp_button_redesign__iconOnly[aria-haspopup='menu'] svg {
+  background: var(--icon-more) center / 18px no-repeat;
+
+  path {
+    display: none;
+  }
+}
+
+// Counts as bold numbers before dim labels
+._comp_number_fields__list {
+  font-size: 13px;
+  gap: 4px 18px;
+  line-height: 20px !important;
+  margin: 0;
+  order: 5;
+}
+
+._comp_number_fields__item {
+  color: var(--color-dim);
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: row-reverse;
+  font-size: 14px;
+  font-weight: 500;
+  gap: 4px;
+  text-transform: lowercase;
+
+  a,
+  strong {
+    color: var(--color-light-text);
+    display: inline;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: none;
+  }
+}
+
+// Role badges as bordered pills in the accent colour
+._comp_account_header__displayNameWrapper:has(._comp_account_header__badges) {
+  margin-bottom: 0;
+}
+
+._comp_account_header__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 6px;
+  margin-bottom: 16px;
+
+  ._comp_badge__badge._comp_badge__badge {
+    background: transparent;
+    border: 1px solid currentColor;
+    border-radius: 8px;
+    color: var(--color-accent);
+    font-size: 13px;
+    gap: 4px;
+    line-height: 20px;
+    padding: 4px 8px 4px 4px;
+
+    // v5 paints the shield with its own gradient
+    > svg {
+      height: 17px;
+
+      path:first-child {
+        fill: currentColor;
+      }
+    }
+  }
+}
+
+@media (width <= 759px) {
+  ._comp_account_header__badges {
+    margin-top: 16px;
+  }
+}
+
+._feat_account_timeline__filtersWrapper {
+  z-index: 4;
+}
+
+// Only the "View all pinned posts" row carries the bottom border
+._feat_account_timeline__statusWrapper > article:has(+ [data-id='pinned-view-all']) ._comp_status__variantFeed {
+  border-bottom: 0;
+}
+
+// Verified marks in account lists
+._comp_account_list_item__verifiedBadge {
+  align-items: center;
+  background-color: transparent;
+  display: inline-flex;
+  gap: 4px;
+
+  svg {
+    background-image: var(--icon-verified-smaller);
+    background-repeat: no-repeat;
+    height: 15px;
+    width: 15px;
+
+    path {
+      display: none;
+    }
+  }
+
+  a {
+    color: var(--color-accent);
+    font-weight: 400;
+  }
+}
+
+._comp_account_list_item__badge > ._comp_badge__badge,
+._comp_badge__badge._comp_account_list_item__verifiedBadge {
+  padding: 0;
+}
+
+._comp_account_list_item__badge > ._comp_badge__default {
+  background-color: var(--color-dark);
+  color: var(--color-light-text);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 12px;
+  opacity: 1;
+  padding: 4px 6px;
+  transform: translate(-1px, 1px);
+
+  > svg {
+    display: none;
+  }
+}
