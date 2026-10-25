@@ -1908,6 +1908,7 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 :root .notification-group {
   grid-template-columns: minmax(0, 48px) minmax(0, 1fr);
   gap: 12px;
+  padding-inline: 16px;
   display: grid;
 }
 
@@ -1926,6 +1927,34 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 
 :root .notification-group .icon-person-add {
   color: var(--color-accent-dark);
+}
+
+:root .notification-ungrouped__header {
+  padding-inline-start: 76px;
+}
+
+:root .notification-ungrouped--mention {
+  padding-top: 0;
+}
+
+:root .notification-ungrouped--mention .notification-ungrouped__header {
+  display: none;
+}
+
+:root .notification-group--favourite .notification-group__icon {
+  color: var(--color-red);
+}
+
+:root .notification-group__main ._comp_card__root {
+  border-radius: 8px;
+}
+
+:root .notification-group__main ._comp_card__title, :root ._feat_notifications_v2__unreadBar, :root ._comp_status__isMessage:before {
+  display: none;
+}
+
+:root ._comp_column_header__layout + ._comp_column_header__extraStickyContent {
+  border-top: 1px solid var(--color-border-primary);
 }
 
 :root .modal-root__overlay {

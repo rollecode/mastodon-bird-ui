@@ -3,6 +3,7 @@
   display: grid;
   gap: 12px;
   grid-template-columns: minmax(0, 48px) minmax(0, 1fr);
+  padding-inline: 16px;
 }
 
 .notification-group .notification-group__icon {
@@ -20,4 +21,43 @@
 
 .notification-group .icon-person-add {
   color: var(--color-accent-dark);
+}
+
+// Labels such as "edited a post" line up with the post text, as in v4
+.notification-ungrouped__header {
+  padding-inline-start: 76px;
+}
+
+// Mentions and replies read as plain posts, without a label on top
+.notification-ungrouped--mention {
+  padding-top: 0;
+}
+
+.notification-ungrouped--mention .notification-ungrouped__header {
+  display: none;
+}
+
+// Favourites in Bird UI pink
+.notification-group--favourite .notification-group__icon {
+  color: var(--color-red);
+}
+
+// The quoted post shows only its text, in a plain rounded box
+.notification-group__main ._comp_card__root {
+  border-radius: 8px;
+}
+
+.notification-group__main ._comp_card__title {
+  display: none;
+}
+
+// v4 had no unread bar or message pattern
+._feat_notifications_v2__unreadBar,
+._comp_status__isMessage::before {
+  display: none;
+}
+
+// A line between the title and the tabs
+._comp_column_header__layout + ._comp_column_header__extraStickyContent {
+  border-top: 1px solid var(--color-border-primary);
 }

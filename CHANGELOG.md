@@ -17,6 +17,7 @@
 * Style thread replies like timeline posts
 * Bring back v4 action hover bubbles
 * Align post actions like X
+* Match v4 notification layout
 * Fix quoted video and audio alignment in post view
 * Link the CSS banner to rollecode
 * Fix duplicated CSS banner lines
