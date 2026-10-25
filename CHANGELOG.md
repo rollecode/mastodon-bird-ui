@@ -6,6 +6,7 @@
 * Remove the star, light and language variants
 * Start advanced columns from the left edge
 * Flatten dialogs to square dark panels
+* Fix Edit profile button style
 * Fix quoted video and audio alignment in post view
 * Link the CSS banner to rollecode
 * Fix duplicated CSS banner lines

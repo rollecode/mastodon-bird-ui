@@ -1118,7 +1118,7 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   }
 }
 
-:root [class*="_comp_account_header__buttons"] button._comp_button_redesign__base:not(._comp_button_redesign__iconOnly) {
+:root [class*="_comp_account_header__buttons"] :is(a, button)._comp_button_redesign__base:not(._comp_button_redesign__iconOnly) {
   height: 38px;
   min-height: 38px;
   padding-inline: 10px;
@@ -1126,7 +1126,7 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   line-height: 22px;
 }
 
-:root [class*="_comp_account_header__buttons"] button._comp_button_redesign__accent._comp_button_redesign__solid {
+:root [class*="_comp_account_header__buttons"] :is(a, button):is(._comp_button_redesign__accent._comp_button_redesign__solid, ._comp_button_redesign__neutral._comp_button_redesign__tonal) {
   box-shadow: inset 0 0 0 1px var(--color-outer-space);
   color: var(--color-fg);
   background: none;
