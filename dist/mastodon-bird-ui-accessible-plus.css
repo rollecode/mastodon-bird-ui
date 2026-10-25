@@ -2106,12 +2106,12 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   font-size: 137.5%;
 }
 
-:root ._comp_status_content__text, :root ._comp_status_header__nameLink, :root ._comp_status_header__handle, :root ._comp_status_header__date, :root ._comp_status_prepend__root, :root ._comp_account_bio__bio, :root ._comp_menu__item, :root ._navigation_panel_redesign_navigation_link__link, :root .display-name__html, :root .notification-group__main, :root .trends__item__name, :root [role="dialog"] textarea {
+:root ._comp_status_content__text, :root ._comp_status_header__nameLink, :root ._comp_status_header__handle, :root ._comp_status_header__date, :root ._comp_status_prepend__root, :root ._comp_account_bio__bio, :root ._comp_menu__item, :root ._navigation_panel_redesign_navigation_link__link, :root .display-name__html, :root .notification-group__main, :root .notification-group__main__header__label, :root .notification-group__main__additional-content, :root .trends__item__name, :root ._comp_account_list_item__displayName, :root ._navigation_panel_redesign_account_card_and_menu__accountLink, :root ._feat_account_timeline__filterSelectButton, :root ._feat_notifications_v2__unreadBar, :root .inline-follow-suggestions__title, :root .hover-card__numbers, :root .account-card__bio, :root ._comp_lockup__title, :root ._comp_card__body, :root ._comp_card__primaryCardLink, :root .story__details__title, :root ._comp_account_header__fieldItem dt, :root ._comp_account_header__fieldItem dd, :root ._comp_account_header__fieldItem dd *, :root .about__header p, :root .about__footer p, :root .about__meta__column h4, :root .about__mail, :root .prose, :root .prose *, :root [role="dialog"] textarea {
   font-size: var(--font-size) !important;
   line-height: var(--line-height) !important;
 }
 
-:root ._comp_status__actions button, :root ._comp_status__actions ._comp_button_redesign__label, :root ._comp_status__hashtags > button, :root ._comp_status_meta__meta, :root ._comp_number_fields__list, :root ._comp_number_fields__list *, :root ._comp_badge__content, :root ._comp_tab_list__tabList ._comp_tab_list__tab, :root .account__section-headline a, :root .account__section-headline button, :root .notification__filter-bar button, :root .inline-follow-suggestions__body * {
+:root ._comp_status__actions button, :root ._comp_status__actions ._comp_button_redesign__label, :root ._comp_status__hashtags > button, :root ._comp_status_meta__meta, :root ._comp_number_fields__list, :root ._comp_number_fields__list *, :root ._comp_badge__content, :root ._comp_tab_list__tabList ._comp_tab_list__tab, :root .account__section-headline a, :root .account__section-headline button, :root .notification__filter-bar button, :root .inline-follow-suggestions__body *, :root ._comp_button_redesign__label, :root ._comp_lockup__subtitle, :root ._comp_lockup__subtitle *, :root ._comp_mini_card__card, :root ._comp_tags__tag, :root ._comp_familiar_followers__wrapper, :root ._comp_menu__itemDescription, :root ._comp_status_meta__editedButton, :root ._comp_account_list_item__handle, :root ._comp_account_header__handleHelpButton, :root ._navigation_panel_redesign_list_section__title, :root ._navigation_panel_redesign_list_section__viewAll, :root ._feat_discovery_panel_footer_links__heading, :root ._feat_discovery_panel_footer_links__list, :root ._feat_discovery_panel_footer_links__sponsor, :root ._feat_followers__subtitle, :root ._feat_status_redesign__threadEnd, :root ._account_featured_components_subheading__subheading h2, :root .display-name__account, :root .account-card__counters__item, :root .account-card__counters__item small, :root .account__details, :root .explore-suggestions-card__source, :root .story__details__publisher, :root .story__details__shared, :root .story__details__shared__pill, :root .search-results__section__header h3, :root .search-results__section__header button, :root .empty-column-indicator, :root .follow_requests-unlocked_explanation, :root .radio-button, :root .load-more, :root ._comp_card__title, :root ._comp_card__title a, :root ._ui_components_link_footer__heading, :root ._ui_components_link_footer__list a, :root ._ui_components_link_footer__version, :root .button {
   font-size: 20px !important;
 }
 
@@ -2119,7 +2119,7 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   font-size: 14px !important;
 }
 
-:root ._comp_column_header__title, :root ._comp_account_header__name, :root ._comp_account_header__name h1 span {
+:root ._comp_column_header__title, :root .about__section__title, :root ._comp_account_header__name, :root ._comp_account_header__name h1 span {
   font-size: var(--font-size-heading) !important;
 }
 
