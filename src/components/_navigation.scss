@@ -166,13 +166,17 @@
   color: var(--color-dim);
   font-size: 13px;
   min-height: 32px;
-  padding-inline: 10px 30px;
 
   &:hover,
   &:focus-visible {
     background-color: transparent;
     color: var(--color-fg);
   }
+}
+
+// Only the left navigation indents its section headers
+._navigation_panel_redesign__root ._navigation_panel_redesign_list_section__title {
+  padding-inline: 10px 30px;
 }
 
 ._navigation_panel_redesign_list_section__toggleIcon {

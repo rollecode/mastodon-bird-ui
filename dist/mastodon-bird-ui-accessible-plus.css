@@ -514,13 +514,16 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   color: var(--color-dim);
   border-radius: 0;
   min-height: 32px;
-  padding-inline: 10px 30px;
   font-size: 13px;
 }
 
 :root ._navigation_panel_redesign_list_section__title:hover, :root ._navigation_panel_redesign_list_section__title:focus-visible {
   color: var(--color-fg);
   background-color: #0000;
+}
+
+:root ._navigation_panel_redesign__root ._navigation_panel_redesign_list_section__title {
+  padding-inline: 10px 30px;
 }
 
 :root ._navigation_panel_redesign_list_section__toggleIcon {

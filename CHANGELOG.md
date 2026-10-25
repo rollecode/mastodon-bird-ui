@@ -8,6 +8,7 @@
 * Flatten dialogs to square dark panels
 * Fix Edit profile button style
 * Fix faded secondary buttons
+* Indent section headers in navigation only
 * Fix quoted video and audio alignment in post view
 * Link the CSS banner to rollecode
 * Fix duplicated CSS banner lines
