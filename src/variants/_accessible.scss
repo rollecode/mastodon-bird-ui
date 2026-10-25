@@ -1,0 +1,8 @@
+@use "accessible-base";
+@include accessible-base.theme(
+  $font-size: 18px,
+  $font-size-smaller: 18px,
+  $font-size-heading: 20px,
+  $line-height: 24px,
+  $root-scale: 112.5%
+);

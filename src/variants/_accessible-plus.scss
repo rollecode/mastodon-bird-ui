@@ -1,0 +1,13 @@
+@use "accessible-base";
+@include accessible-base.theme(
+  $font-size: 22px,
+  $font-size-smaller: 20px,
+  $font-size-heading: 24px,
+  $line-height: 30px,
+  $root-scale: 137.5%
+);
+
+:root ._comp_status_content__text .emojione {
+  height: 32px;
+  width: 32px;
+}
