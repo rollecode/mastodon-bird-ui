@@ -510,6 +510,10 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   padding-top: 8px;
 }
 
+:root ._navigation_panel_redesign_list_section__root ._navigation_panel_redesign_navigation_link__link:not(:has(._navigation_panel_redesign_navigation_link__icon)) {
+  padding-inline: 10px;
+}
+
 :root ._navigation_panel_redesign_list_section__title {
   color: var(--color-dim);
   border-radius: 0;
@@ -524,6 +528,10 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 
 :root ._navigation_panel_redesign__root ._navigation_panel_redesign_list_section__title {
   padding-inline: 10px 30px;
+}
+
+:root ._navigation_panel_redesign__root ._navigation_panel_redesign_list_section__viewAll {
+  padding-inline: 10px;
 }
 
 :root ._navigation_panel_redesign_list_section__toggleIcon {

@@ -12,6 +12,7 @@
 * Limit SCSS nesting depth
 * Add pre-commit stylelint hook
 * Fix small text in accessible themes
+* Even out followed hashtag paddings
 * Fix quoted video and audio alignment in post view
 * Link the CSS banner to rollecode
 * Fix duplicated CSS banner lines
