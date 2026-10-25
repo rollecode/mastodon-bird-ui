@@ -9,6 +9,8 @@
 * Fix Edit profile button style
 * Fix faded secondary buttons
 * Indent section headers in navigation only
+* Limit SCSS nesting depth
+* Add pre-commit stylelint hook
 * Fix quoted video and audio alignment in post view
 * Link the CSS banner to rollecode
 * Fix duplicated CSS banner lines

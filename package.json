@@ -22,7 +22,8 @@
     "build": "npm run build:custom-css",
     "build:custom-css": "parcel build src/mastodon-bird-ui.scss src/mastodon-bird-ui-accessible.scss src/mastodon-bird-ui-accessible-plus.scss --dist-dir dist --no-source-maps --no-optimize && npm run banner",
     "banner": "for f in dist/*.css; do sed -i '/^\\/\\* Mastodon Bird UI v.* \\*\\/$/d' \"$f\" && echo \"/* Mastodon Bird UI v$npm_package_version - https://github.com/rollecode/mastodon-bird-ui */\" | cat - \"$f\" > temp && mv temp \"$f\"; done",
-    "clean": "rm -rf dist .parcel-cache"
+    "clean": "rm -rf dist .parcel-cache",
+    "prepare": "husky"
   },
   "author": "",
   "license": "ISC",
@@ -30,6 +31,8 @@
     "@parcel/transformer-sass": "^2.16.1",
     "browser-sync": "^3.0.4",
     "http-proxy-middleware": "^3.0.5",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.0",
     "npm-run-all": "^4.1.5",
     "onchange": "^7.1.0",
     "parcel": "^2.16.1",
@@ -42,5 +45,8 @@
     "stylelint-config-standard-scss": "^16.0.0",
     "stylelint-order": "^6.0.3",
     "stylelint-value-no-unknown-custom-properties": "^6.1.0"
+  },
+  "lint-staged": {
+    "src/**/*.scss": "stylelint"
   }
 }
