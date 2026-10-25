@@ -1,10 +1,12 @@
 ## 🐦 Mastodon with modern birdsite-like UI
 
-![Mastodon](https://img.shields.io/badge/mastodon-v4.6.0+-6364FF?style=for-the-badge&logo=mastodon&logoColor=white) ![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white) [![Build Status](https://img.shields.io/github/actions/workflow/status/ronilaukkarinen/mastodon-bird-ui/styles.yml?style=for-the-badge&logo=github)](https://github.com/ronilaukkarinen/mastodon-bird-ui/actions/workflows/styles.yml) <a href="https://github.com/sponsors/ronilaukkarinen"><img src="https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white" alt="GitHub Sponsor" height="28px"></a> <a href="https://ko-fi.com/rolle"><img src="https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white" alt="Ko-fi" height="28px"></a>
+![Mastodon](https://img.shields.io/badge/mastodon-v5.0.0+-6364FF?style=for-the-badge&logo=mastodon&logoColor=white) ![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=for-the-badge&logo=sass&logoColor=white) [![Build Status](https://img.shields.io/github/actions/workflow/status/ronilaukkarinen/mastodon-bird-ui/styles.yml?style=for-the-badge&logo=github)](https://github.com/ronilaukkarinen/mastodon-bird-ui/actions/workflows/styles.yml) <a href="https://github.com/sponsors/ronilaukkarinen"><img src="https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white" alt="GitHub Sponsor" height="28px"></a> <a href="https://ko-fi.com/rolle"><img src="https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white" alt="Ko-fi" height="28px"></a>
 
 Blasphemy! Yes, I know, but I just had to do this. I wanted to see if it's possible to get <a href="https://github.com/mastodon/mastodon">Mastodon</a> default user interface to resemble Twitter, but be a lot better than it ever was.
 
 **Please note** that this started as a personal experiment _for fun_, but then got more serious.
+
+**This branch is for Mastodon 5.** For Mastodon 4, use the [main branch](https://github.com/rollecode/mastodon-bird-ui/tree/main).
 
 **See my [original Mastodon post](https://mementomori.social/@rolle/109984108360395822).<br>
 Read the blog post: [The day I decided to build my own "Twitter"](https://rolle.design/the-day-i-decided-to-build-my-own-twitter).**
@@ -25,9 +27,7 @@ Read the blog post: [The day I decided to build my own "Twitter"](https://rolle.
 8. [Updating instructions](#updating-instructions)
 9. [Other tweaks and customizations](#other-tweaks-and-customizations)
     1. [Status bar color on Android PWA](#status-bar-color-on-android-pwa)
-    2. [Hide translate link for multiple languages](#hide-translate-link-for-multiple-languages)
-    3. [Thread lines](#thread-lines)
-    4. [Micro-interactions](#micro-interactions)
+    2. [Micro-interactions](#micro-interactions)
 10. [FAQ](#faq)
     1. [I want to make changes to the UI, can I do that?](#i-want-to-make-changes-to-the-ui-can-i-do-that)
     2. [Can you implement feature X?](#can-you-implement-feature-x)
@@ -74,22 +74,17 @@ Here are some of the UI things Mastodon Bird UI is trying to solve (read [the Ma
 
 As this is CSS-only, they are not really "features" but more like aesthetic changes.
 
-- Respects the profile **Site theme** setting and sets dark/light based on this alone
-- Subtle deep purple ribbon in the right corner for private messages
+- Follows the light/dark **Mode** in the Appearance settings
 - CSS variables for everything
-- Threaded replies (limited, see issue [#4](https://github.com/ronilaukkarinen/mastodon-bird-ui/issues/4#issuecomment-1493274306))
 - Avatars on the left in feed view
 - Unified transparent backgrounds
 - Dark patterns for dropdowns and other pop overs like emoji picker
 - Tinted deep purple, subtle beautiness
 - Action bar in the bottom on mobile
 - Micro-interaction in the like/favourite icon (see more about [this](#micro-interactions))
-- Circling boost animation
 - Support for RTL languages
-- Hide lists by default, show them on hover
 - Carefully polished UI with hand picked/designed icons based on open source versions of Iconoir, Ionicons and Feather
-- Show added follows in green, indicate unfollow with red
-- Show added to list in green, indicate removing with red
+- Profile links get an icon for their platform (GitHub, Bluesky, Ko-fi and more)
 
 ## List of instances that use Mastodon Bird UI
 
@@ -155,9 +150,9 @@ The following instances have enabled Mastodon Bird UI for their users, based on 
 
 ## Installation for Mastodon instance admins
 
-1. Copy the contents of `dist/mastodon-bird-ui.css` and paste it to the **Custom CSS** in the Appearance settings in your instance (https://_yourinstance_/admin/settings/appearance). This single file covers both single-column and multiple-columns (advanced web interface) layouts. It is a dark theme; if you want Bird UI to follow each user's light or dark choice in the Appearance settings, use `dist/mastodon-bird-ui-auto.css` instead.
+1. Copy the contents of `dist/mastodon-bird-ui.css` and paste it to the **Custom CSS** in the Appearance settings in your instance (https://_yourinstance_/admin/settings/appearance). It follows each user's light or dark **Mode** from the Appearance settings.
 
-   Other prebuilt variants live in `dist/` for Custom CSS users: `mastodon-bird-ui-auto.css` (follows each user's light/dark color scheme from the Appearance settings), `mastodon-bird-ui-stars.css` (a yellow Twitter-style **star** favourite instead of the heart), `mastodon-bird-ui-light.css` (always light), `mastodon-bird-ui-accessible.css` and `mastodon-bird-ui-accessible-plus.css`. Use whichever one you prefer. Rebuild a variant with `npx parcel build src/<entry>.scss --dist-dir dist` (for example `src/mastodon-bird-ui-stars.scss`).
+   The accessible versions are in `dist/` too: `mastodon-bird-ui-accessible.css` (Ultra accessible) and `mastodon-bird-ui-accessible-plus.css` (Ultra accessible Plus+, even larger text). Rebuild them with `npm run build`.
 
 ![Screen-Shot-2023-03-31-13-25-52](https://user-images.githubusercontent.com/1534150/229111630-c8975708-134b-4887-b259-a87857193387.png)
 
@@ -165,7 +160,7 @@ The following instances have enabled Mastodon Bird UI for their users, based on 
 
 Mastodon Bird UI can be integrated as a **Site theme** for all instance users as optional.
 
-**Please note**: This requires Mastodon v4.6.0+ and modifies Mastodon's styles directory. Do this at your own risk! I recommend testing in a development environment first.
+**Please note**: This requires Mastodon 5.0+ and modifies Mastodon's styles directory. Do this at your own risk! I recommend testing in a development environment first.
 
 ![image](https://github.com/ronilaukkarinen/mastodon-bird-ui/assets/1534150/b30f19e2-2835-4d92-b40d-cac9922f64b3)
 
@@ -176,16 +171,17 @@ If you'd like a different branding for your instance like "Elephant" without any
 Clone this repository and run the install script:
 
 ```bash
-git clone https://github.com/ronilaukkarinen/mastodon-bird-ui.git
+git clone -b v5 https://github.com/rollecode/mastodon-bird-ui.git
 cd mastodon-bird-ui
-npm install
 sudo bash scripts/install-to-mastodon.sh --path /path/to/mastodon
 ```
 
+Options: `--variations` adds the Ultra accessible themes, `--default` makes Bird UI the server's default theme.
+
 The script will:
 - Copy Bird UI source files to `app/javascript/styles/mastodon-bird-ui/`
-- Generate theme entry points for all variants (dark, light, contrast, accessible, etc.)
-- Update `config/themes.yml` with the new themes
+- Generate the theme entry points
+- Update `config/themes.yml` and the theme names in the English and Finnish locales, keeping other installed themes
 
 After running the script, rebuild assets and restart services:
 
@@ -248,11 +244,9 @@ Open `http://localhost:3999` instead of your Mastodon instance directly. Any cha
 
 ```bash
 # Development with hot-reload (watch + browsersync + lint)
-npm run dev                      # Default dark theme
-npm run dev:stars                # Stars animation variant
-npm run dev:accessible           # Accessible variant
-npm run dev:accessible-plus      # Accessible plus variant
-npm run dev:accessible-hide-finnish  # Accessible + hide Finnish translate
+npm run dev                      # Bird UI
+npm run dev:accessible           # Ultra accessible
+npm run dev:accessible-plus      # Ultra accessible Plus+
 
 # Individual tools
 npm run watch                    # Parcel watch only
@@ -307,31 +301,11 @@ While Mastodon Bird UI works perfectly fine out of the box, there are some thing
 
 Edit [this line](https://github.com/mastodon/mastodon/blob/f4f3e2b46e619fcc2eda48c2eb66c517b4f466aa/app/views/layouts/application.html.haml#L24) and recompile assets with `yarn build:production`.
 
-### Hide translate link for multiple languages
-
-If you're a polyglot like me, you can hide the translate link on other languages than default by adding this at the end of the **Custom CSS** (this example is for people who understand Finnish and German):
-
-```css
-.status__content__text[lang="de"].translate ~ .status__content__read-more-button,
-.status__content__text[lang="fi"].translate ~ .status__content__read-more-button {
-  display: none;
-}
-```
-
-### Thread lines
-
-There is support for threads available for the nightly version since ([see PR #24549](https://github.com/mastodon/mastodon/pull/24549)) and if you want to use the native threaded lines, just use main branch from Mastodon. There's a related [issue](https://github.com/mastodon/mastodon/issues/19570#issuecomment-1493057424) about it that I have commented. You should also see the discussion on a Mastodon Bird UI issue [#4](https://github.com/ronilaukkarinen/mastodon-bird-ui/issues/4#issuecomment-1493274306).
-
 ### Micro-interactions
 
-There are two micro-interaction animations in this UI, both are inspired by the Twitter's original UI animation. The star is originally a work of
-a Twitter designer [Brian Waddington](https://dribbble.com/shots/1884504-Twitter-Fav). The heart is by Twitter design team. Both animations have been completely re-created by me, frame by frame. The star animation itself contains 100 hand made frames.
+The like button plays a heart burst inspired by Twitter's original UI animation, by the Twitter design team, re-created by me frame by frame.
 
 <img width="720" height="465" alt="gif-20260613-221105" src="https://github.com/user-attachments/assets/e6056177-6277-4952-ae56-0d7a44d2ba32" />
-
-Bird UI uses the **heart** by default. The **star** variant lives in `src/micro-interactions/_star.scss`; forks can expose a setting to switch to it, and Custom CSS users can swap it in.
-
-**Native favourite animations:** if your Mastodon already ships its own favourite animation as a real SVG component, like the [mementomori.social fork (PR #10)](https://github.com/mementomori-social/mastodon/pull/10) which renders a native star/heart burst (heart by default, star as an opt-in setting), the install script detects it and Bird UI steps aside for the favourite button so the native animation shows. Bird UI keeps styling the navigation and the sidebar/notification favourite icons, so nothing else changes and no configuration is needed.
 
 ## FAQ
 
@@ -363,7 +337,7 @@ If you really would want this to run in a separate URL, you could in theory set 
 
 ### Is the advanced web interface styled?
 
-Yes! The unified `mastodon-bird-ui.css` covers both single-column and multiple-columns (advanced web interface) layouts automatically.
+Yes! `mastodon-bird-ui.css` covers both single-column and multiple-columns (advanced web interface) layouts.
 
 ### Why the admin interface is not styled?
 
@@ -385,11 +359,7 @@ Use the navigation menu (the bottom navigation / hamburger), where Favourites, B
 
 ### Automatic dark/light mode possible?
 
-Not at the moment, for following reasons:
-
-1. Original Mastodon themes were built using CSS classes in body level, Mastodon Bird UI merely follows this logic.
-2. `@media (prefers-color-scheme: dark/light)` does not support `@import` in SCSS inside them, so it's not currently possible to implement new themes with one file. I'm not going to create separate files for dark and light themes, because it would be too much work to maintain.
-3. Many choose to use either dark or light theme.
+Yes. Bird UI follows the **Mode** (auto, light or dark) in the Appearance settings, and auto follows your device.
 
 ### I like it so much, why it can't be the default Mastodon UI?
 
@@ -425,4 +395,4 @@ My wife has Retinitis Pigmentosa and a form of Achromatopsia so it was her wish 
 ![Screenshot of Accessible Mastodon Bird UI theme](https://github.com/ronilaukkarinen/mastodon-bird-ui/assets/1534150/0fbf3300-d0cf-4fe6-9365-f6c323c09e02)
 
 
-Accessible themes are included in the installation scripts since Mastodon 4.6.0.
+Install them as site themes with `--variations`, or use `dist/mastodon-bird-ui-accessible.css` or `dist/mastodon-bird-ui-accessible-plus.css` as Custom CSS.
