@@ -727,46 +727,46 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   line-height: 20px;
 }
 
-:root ._comp_status__variantFeed {
+:root ._comp_status__variantFeed, :root ._comp_status__variantThread {
   --avatar-size: 48px;
   --col-gap: 12px;
   row-gap: 4px;
   padding: 16px;
 }
 
-:root ._comp_status__variantFeed ._comp_status_header__avatar {
+:root ._comp_status__variantFeed ._comp_status_header__avatar, :root ._comp_status__variantThread ._comp_status_header__avatar {
   align-self: start;
   height: 22px;
 }
 
-:root ._comp_status__variantFeed ._comp_status_header__root > div {
+:root ._comp_status__variantFeed ._comp_status_header__root > div, :root ._comp_status__variantThread ._comp_status_header__root > div {
   align-items: baseline;
   min-width: 0;
   display: flex;
 }
 
-:root ._comp_status__variantFeed ._comp_status_header__name {
+:root ._comp_status__variantFeed ._comp_status_header__name, :root ._comp_status__variantThread ._comp_status_header__name {
   font-size: 0;
   display: contents;
 }
 
-:root ._comp_status__variantFeed a._comp_status_header__nameLink {
+:root ._comp_status__variantFeed a._comp_status_header__nameLink, :root ._comp_status__variantThread a._comp_status_header__nameLink {
   order: -1;
 }
 
-:root ._comp_status__variantFeed ._comp_status_header__handle {
+:root ._comp_status__variantFeed ._comp_status_header__handle, :root ._comp_status__variantThread ._comp_status_header__handle {
   white-space: nowrap;
   margin-inline-start: 4px;
   font-size: 15px;
 }
 
-:root ._comp_status__variantFeed ._comp_status_header__date {
+:root ._comp_status__variantFeed ._comp_status_header__date, :root ._comp_status__variantThread ._comp_status_header__date {
   order: 1;
   margin-inline-start: auto;
   font-size: 15px;
 }
 
-:root ._comp_status__variantFeed ._comp_status__actions {
+:root ._comp_status__variantFeed ._comp_status__actions, :root ._comp_status__variantThread ._comp_status__actions {
   justify-content: space-between;
   max-width: 100%;
 }
@@ -1013,7 +1013,7 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   margin-top: 6px;
 }
 
-:root ._comp_status__variantFeed ._comp_status__footer {
+:root ._comp_status__variantFeed ._comp_status__footer, :root ._comp_status__variantThread ._comp_status__footer {
   margin-top: 8px;
 }
 
