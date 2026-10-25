@@ -73,21 +73,23 @@
 }
 
 // Bird UI icons on the main links
-._navigation_panel_redesign_navigation_link__link[href='/home'],
-._navigation_panel_redesign_navigation_link__link[href^='/explore'],
-._navigation_panel_redesign_navigation_link__link[href^='/public'],
-._navigation_panel_redesign_navigation_link__link[href^='/notifications'],
-._navigation_panel_redesign_navigation_link__link[href^='/conversations'],
-._navigation_panel_redesign_navigation_link__link[href^='/bookmarks'],
-._navigation_panel_redesign_navigation_link__link[href^='/favourites'] {
-  ._navigation_panel_redesign_navigation_link__icon svg {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+._navigation_panel_redesign_navigation_link__link:is(
+    [href='/home'],
+    [href^='/explore'],
+    [href^='/public'],
+    [href^='/notifications'],
+    [href^='/conversations'],
+    [href^='/bookmarks'],
+    [href^='/favourites']
+  )
+  ._navigation_panel_redesign_navigation_link__icon
+  svg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 
-    path {
-      display: none;
-    }
+  path {
+    display: none;
   }
 }
 

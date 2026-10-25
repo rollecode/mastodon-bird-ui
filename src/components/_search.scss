@@ -21,23 +21,23 @@ input._compose_components_search__search {
   right: 0;
   top: 0;
 
-  .search__icon {
-    background: var(--icon-search) center / 20px auto no-repeat;
-    display: inline-block;
-    height: 24px;
-    inset-inline-start: unset;
-    position: absolute;
-    right: 14px;
-    top: 9px;
-    width: 24px;
-
-    path {
-      display: none;
-    }
-  }
-
   &.has-value .search__icon {
     background-image: var(--icon-close-action-bar);
+  }
+}
+
+.search__icon-wrapper .search__icon {
+  background: var(--icon-search) center / 20px auto no-repeat;
+  display: inline-block;
+  height: 24px;
+  inset-inline-start: unset;
+  position: absolute;
+  right: 14px;
+  top: 9px;
+  width: 24px;
+
+  path {
+    display: none;
   }
 }
 

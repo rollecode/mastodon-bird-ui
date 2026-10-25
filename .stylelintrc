@@ -1,5 +1,5 @@
 {
-  "defaultSeverity": "warning",
+  "defaultSeverity": "error",
   "plugins": [
     "stylelint-value-no-unknown-custom-properties",
     "./stylelint-plugins/no-unused-custom-properties.js",
@@ -98,9 +98,10 @@
     ],
     "no-descending-specificity": null,
     "max-nesting-depth": [
-      3,
+      1,
       {
-        "ignore": ["blockless-at-rules", "pseudo-classes"]
+        "ignore": ["blockless-at-rules", "pseudo-classes"],
+        "ignoreAtRules": ["each", "if", "else", "include", "media", "mixin", "supports"]
       }
     ],
     "declaration-property-unit-allowed-list": [

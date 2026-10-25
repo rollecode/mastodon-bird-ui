@@ -62,21 +62,21 @@
   h1 small {
     color: var(--color-light-purple);
   }
+}
 
-  // "Follows you"
-  > ._comp_badge__default._comp_badge__badge {
-    background-color: var(--color-dark);
-    color: var(--color-light-text);
-    font-size: 11px;
-    font-weight: 500;
-    line-height: 12px;
-    opacity: 1;
-    padding: 4px 6px;
-    transform: translate(-1px, 1px);
+// "Follows you"
+._comp_account_header__name > ._comp_badge__default._comp_badge__badge {
+  background-color: var(--color-dark);
+  color: var(--color-light-text);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 12px;
+  opacity: 1;
+  padding: 4px 6px;
+  transform: translate(-1px, 1px);
 
-    > svg {
-      display: none;
-    }
+  > svg {
+    display: none;
   }
 }
 
@@ -188,25 +188,25 @@
   flex-wrap: wrap;
   gap: 4px 6px;
   margin-bottom: 16px;
+}
 
-  ._comp_badge__badge._comp_badge__badge {
-    background: transparent;
-    border: 1px solid currentColor;
-    border-radius: 8px;
-    color: var(--color-accent);
-    font-size: 13px;
-    gap: 4px;
-    line-height: 20px;
-    padding: 4px 8px 4px 4px;
+._comp_account_header__badges ._comp_badge__badge._comp_badge__badge {
+  background: transparent;
+  border: 1px solid currentColor;
+  border-radius: 8px;
+  color: var(--color-accent);
+  font-size: 13px;
+  gap: 4px;
+  line-height: 20px;
+  padding: 4px 8px 4px 4px;
 
-    // v5 paints the shield with its own gradient
-    > svg {
-      height: 17px;
+  > svg {
+    height: 17px;
+  }
 
-      path:first-child {
-        fill: currentColor;
-      }
-    }
+  // v5 paints the shield with its own gradient
+  > svg path:first-child {
+    fill: currentColor;
   }
 }
 
@@ -232,20 +232,20 @@
   display: inline-flex;
   gap: 4px;
 
-  svg {
-    background-image: var(--icon-verified-smaller);
-    background-repeat: no-repeat;
-    height: 15px;
-    width: 15px;
-
-    path {
-      display: none;
-    }
-  }
-
   a {
     color: var(--color-accent);
     font-weight: 400;
+  }
+}
+
+._comp_account_list_item__verifiedBadge svg {
+  background-image: var(--icon-verified-smaller);
+  background-repeat: no-repeat;
+  height: 15px;
+  width: 15px;
+
+  path {
+    display: none;
   }
 }
 

@@ -433,13 +433,13 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   padding-inline: 10px;
 }
 
-:root ._navigation_panel_redesign_navigation_link__link[href="/home"] ._navigation_panel_redesign_navigation_link__icon svg, :root ._navigation_panel_redesign_navigation_link__link[href^="/explore"] ._navigation_panel_redesign_navigation_link__icon svg, :root ._navigation_panel_redesign_navigation_link__link[href^="/public"] ._navigation_panel_redesign_navigation_link__icon svg, :root ._navigation_panel_redesign_navigation_link__link[href^="/notifications"] ._navigation_panel_redesign_navigation_link__icon svg, :root ._navigation_panel_redesign_navigation_link__link[href^="/conversations"] ._navigation_panel_redesign_navigation_link__icon svg, :root ._navigation_panel_redesign_navigation_link__link[href^="/bookmarks"] ._navigation_panel_redesign_navigation_link__icon svg, :root ._navigation_panel_redesign_navigation_link__link[href^="/favourites"] ._navigation_panel_redesign_navigation_link__icon svg {
+:root ._navigation_panel_redesign_navigation_link__link:is([href="/home"], [href^="/explore"], [href^="/public"], [href^="/notifications"], [href^="/conversations"], [href^="/bookmarks"], [href^="/favourites"]) ._navigation_panel_redesign_navigation_link__icon svg {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-:root ._navigation_panel_redesign_navigation_link__link[href="/home"] ._navigation_panel_redesign_navigation_link__icon svg path, :root ._navigation_panel_redesign_navigation_link__link[href^="/explore"] ._navigation_panel_redesign_navigation_link__icon svg path, :root ._navigation_panel_redesign_navigation_link__link[href^="/public"] ._navigation_panel_redesign_navigation_link__icon svg path, :root ._navigation_panel_redesign_navigation_link__link[href^="/notifications"] ._navigation_panel_redesign_navigation_link__icon svg path, :root ._navigation_panel_redesign_navigation_link__link[href^="/conversations"] ._navigation_panel_redesign_navigation_link__icon svg path, :root ._navigation_panel_redesign_navigation_link__link[href^="/bookmarks"] ._navigation_panel_redesign_navigation_link__icon svg path, :root ._navigation_panel_redesign_navigation_link__link[href^="/favourites"] ._navigation_panel_redesign_navigation_link__icon svg path {
+:root ._navigation_panel_redesign_navigation_link__link:is([href="/home"], [href^="/explore"], [href^="/public"], [href^="/notifications"], [href^="/conversations"], [href^="/bookmarks"], [href^="/favourites"]) ._navigation_panel_redesign_navigation_link__icon svg path {
   display: none;
 }
 
@@ -839,6 +839,14 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   line-height: 22px;
 }
 
+:root ._comp_status_prepend__root .account__avatar, :root ._comp_status_prepend__root ._comp_status_prepend__time {
+  display: none;
+}
+
+:root ._comp_status_prepend__root ._comp_status_prepend__account {
+  color: inherit;
+}
+
 :root ._comp_status_prepend__root ._comp_status_prepend__reblogIcon {
   background: var(--icon-boost-status-prepend) center/16px no-repeat;
   width: 16px;
@@ -847,12 +855,8 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   padding: 0;
 }
 
-:root ._comp_status_prepend__root ._comp_status_prepend__reblogIcon path, :root ._comp_status_prepend__root .account__avatar, :root ._comp_status_prepend__root ._comp_status_prepend__time {
+:root ._comp_status_prepend__root ._comp_status_prepend__reblogIcon path {
   display: none;
-}
-
-:root ._comp_status_prepend__root ._comp_status_prepend__account {
-  color: inherit;
 }
 
 :root ._comp_status__variantPage ._comp_status_meta__meta {
@@ -970,6 +974,10 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   right: 0;
 }
 
+:root .search__icon-wrapper.has-value .search__icon {
+  background-image: var(--icon-close-action-bar);
+}
+
 :root .search__icon-wrapper .search__icon {
   background: var(--icon-search) center/20px auto no-repeat;
   height: 24px;
@@ -983,10 +991,6 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 
 :root .search__icon-wrapper .search__icon path {
   display: none;
-}
-
-:root .search__icon-wrapper.has-value .search__icon {
-  background-image: var(--icon-close-action-bar);
 }
 
 :root .search__icon .icon-times-circle {
@@ -1228,6 +1232,11 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   display: inline-flex;
 }
 
+:root ._comp_account_list_item__verifiedBadge a {
+  color: var(--color-accent);
+  font-weight: 400;
+}
+
 :root ._comp_account_list_item__verifiedBadge svg {
   background-image: var(--icon-verified-smaller);
   background-repeat: no-repeat;
@@ -1237,11 +1246,6 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 
 :root ._comp_account_list_item__verifiedBadge svg path {
   display: none;
-}
-
-:root ._comp_account_list_item__verifiedBadge a {
-  color: var(--color-accent);
-  font-weight: 400;
 }
 
 :root ._comp_account_list_item__badge > ._comp_badge__badge, :root ._comp_badge__badge._comp_account_list_item__verifiedBadge {
@@ -1281,6 +1285,10 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   max-width: 220px;
   display: block;
   overflow: hidden;
+}
+
+:root ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList > ._comp_account_header__fieldVerified {
+  background-color: #0000;
 }
 
 :root ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList > ._comp_account_header__fieldItem {
@@ -1421,10 +1429,6 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 :root ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList > ._comp_account_header__fieldItem:has(dd a[href*="npub" i], dd a[href*="nostr:" i]):before {
   background-image: var(--icon-nostr);
   content: "";
-}
-
-:root ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList > ._comp_account_header__fieldVerified {
-  background-color: #0000;
 }
 
 :root ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList ._comp_account_header__fieldVerifiedIcon {
