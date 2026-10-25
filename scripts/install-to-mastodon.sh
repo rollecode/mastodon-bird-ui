@@ -221,23 +221,34 @@ set_locale_entry() {
   echo -e "  ${GREEN}Set in $(basename "$file"):${NC} $key"
 }
 
+# Keeps a name the admin has already changed
+add_locale_entry() {
+  local file="$1"
+  local key="$2"
+
+  [ ! -f "$file" ] && return
+  grep -q "^    ${key}:" "$file" && return
+
+  set_locale_entry "$@"
+}
+
 if [[ "$SET_DEFAULT" =~ ^[Yy]$ ]]; then
   set_locale_entry "$EN_LOCALE" "default" "Mastodon Bird UI"
   set_locale_entry "$FI_LOCALE" "default" "Mastodon Bird UI"
-  set_locale_entry "$EN_LOCALE" "mastodon-dark" "Mastodon"
-  set_locale_entry "$FI_LOCALE" "mastodon-dark" "Mastodon"
+  add_locale_entry "$EN_LOCALE" "mastodon-dark" "Mastodon"
+  add_locale_entry "$FI_LOCALE" "mastodon-dark" "Mastodon"
 else
   set_locale_entry "$EN_LOCALE" "default" "Mastodon"
   set_locale_entry "$FI_LOCALE" "default" "Mastodon"
-  set_locale_entry "$EN_LOCALE" "mastodon-bird-ui-auto" "Mastodon Bird UI"
-  set_locale_entry "$FI_LOCALE" "mastodon-bird-ui-auto" "Mastodon Bird UI"
+  add_locale_entry "$EN_LOCALE" "mastodon-bird-ui-auto" "Mastodon Bird UI"
+  add_locale_entry "$FI_LOCALE" "mastodon-bird-ui-auto" "Mastodon Bird UI"
 fi
 
 if [[ "$ADD_VARIATIONS" =~ ^[Yy]$ ]]; then
-  set_locale_entry "$EN_LOCALE" "mastodon-bird-ui-accessible" "Mastodon Bird UI (Ultra accessible)"
-  set_locale_entry "$EN_LOCALE" "mastodon-bird-ui-accessible-plus" "Mastodon Bird UI (Ultra accessible Plus+)"
-  set_locale_entry "$FI_LOCALE" "mastodon-bird-ui-accessible" "Mastodon Bird UI (saavutettava)"
-  set_locale_entry "$FI_LOCALE" "mastodon-bird-ui-accessible-plus" "Mastodon Bird UI (saavutettava Plus)"
+  add_locale_entry "$EN_LOCALE" "mastodon-bird-ui-accessible" "Mastodon Bird UI (Ultra accessible)"
+  add_locale_entry "$EN_LOCALE" "mastodon-bird-ui-accessible-plus" "Mastodon Bird UI (Ultra accessible Plus+)"
+  add_locale_entry "$FI_LOCALE" "mastodon-bird-ui-accessible" "Mastodon Bird UI (saavutettava)"
+  add_locale_entry "$FI_LOCALE" "mastodon-bird-ui-accessible-plus" "Mastodon Bird UI (saavutettava Plus)"
 fi
 
 # --- Ownership and permissions ---
