@@ -237,7 +237,7 @@ if [[ "$ADD_VARIATIONS" =~ ^[Yy]$ ]]; then
   set_locale_entry "$EN_LOCALE" "mastodon-bird-ui-accessible" "Mastodon Bird UI (Ultra accessible)"
   set_locale_entry "$EN_LOCALE" "mastodon-bird-ui-accessible-plus" "Mastodon Bird UI (Ultra accessible Plus+)"
   set_locale_entry "$FI_LOCALE" "mastodon-bird-ui-accessible" "Mastodon Bird UI (saavutettava)"
-  set_locale_entry "$FI_LOCALE" "mastodon-bird-ui-accessible-plus" "Mastodon Bird UI (saavutettava Plus+)"
+  set_locale_entry "$FI_LOCALE" "mastodon-bird-ui-accessible-plus" "Mastodon Bird UI (saavutettava Plus)"
 fi
 
 # --- Ownership and permissions ---
