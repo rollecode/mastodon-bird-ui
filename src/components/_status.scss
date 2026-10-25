@@ -101,9 +101,11 @@ a._comp_status_header__nameLink {
   }
 }
 
-// Action bar: 19px icons with 13px counters in the dim colour, as in v4
+// Action bar: 19px icons with 13px counters in the dim colour and a round
+// grey bubble behind the icon on hover, as in v4
 ._comp_status__actions > button._comp_button_redesign__base,
 ._comp_status__actions .status__action-bar__button-wrapper > button._comp_button_redesign__base {
+  --bg-hover: transparent;
   color: var(--color-dim);
   font-size: 13px;
   font-weight: 500;
@@ -112,7 +114,28 @@ a._comp_status_header__nameLink {
   line-height: 19px;
   margin: 0 !important;
   min-height: 24px;
+  overflow: visible;
   padding: 0;
+  position: relative;
+
+  &::after {
+    background-color: rgb(96 105 132 / 15%);
+    border-radius: 50%;
+    content: '';
+    height: 34px;
+    left: calc(9.5px - 17px);
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: calc(50% - 17px);
+    transition: opacity 150ms;
+    width: 34px;
+  }
+
+  &:hover::after,
+  &:focus-visible::after {
+    opacity: 1;
+  }
 
   svg {
     height: 19px;
@@ -125,6 +148,18 @@ a._comp_status_header__nameLink {
     line-height: 19px;
     padding: 0;
   }
+}
+
+._comp_status__actions > button:nth-of-type(1):hover {
+  color: var(--color-accent);
+}
+
+._comp_status__actions > button:nth-of-type(2):hover {
+  color: var(--color-green);
+}
+
+._comp_status__actions > button:nth-of-type(2):hover svg {
+  background-image: var(--icon-boost-active);
 }
 
 // v4 had no share button in the bar

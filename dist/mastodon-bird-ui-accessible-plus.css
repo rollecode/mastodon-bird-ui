@@ -823,6 +823,7 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 }
 
 :root ._comp_status__actions > button._comp_button_redesign__base, :root ._comp_status__actions .status__action-bar__button-wrapper > button._comp_button_redesign__base {
+  --bg-hover: transparent;
   color: var(--color-dim);
   gap: 6px;
   height: 24px;
@@ -831,7 +832,27 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   font-size: 13px;
   font-weight: 500;
   line-height: 19px;
+  position: relative;
+  overflow: visible;
   margin: 0 !important;
+}
+
+:root ._comp_status__actions > button._comp_button_redesign__base:after, :root ._comp_status__actions .status__action-bar__button-wrapper > button._comp_button_redesign__base:after {
+  content: "";
+  opacity: 0;
+  pointer-events: none;
+  background-color: #60698426;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  transition: opacity .15s;
+  position: absolute;
+  top: calc(50% - 17px);
+  left: -7.5px;
+}
+
+:root ._comp_status__actions > button._comp_button_redesign__base:hover:after, :root ._comp_status__actions > button._comp_button_redesign__base:focus-visible:after, :root ._comp_status__actions .status__action-bar__button-wrapper > button._comp_button_redesign__base:hover:after, :root ._comp_status__actions .status__action-bar__button-wrapper > button._comp_button_redesign__base:focus-visible:after {
+  opacity: 1;
 }
 
 :root ._comp_status__actions > button._comp_button_redesign__base svg, :root ._comp_status__actions .status__action-bar__button-wrapper > button._comp_button_redesign__base svg {
@@ -844,6 +865,18 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   font-size: 13px;
   font-weight: 500;
   line-height: 19px;
+}
+
+:root ._comp_status__actions > button:first-of-type:hover {
+  color: var(--color-accent);
+}
+
+:root ._comp_status__actions > button:nth-of-type(2):hover {
+  color: var(--color-green);
+}
+
+:root ._comp_status__actions > button:nth-of-type(2):hover svg {
+  background-image: var(--icon-boost-active);
 }
 
 :root ._comp_status__actions > button:nth-of-type(4) {
