@@ -20,5 +20,6 @@
   @include meta.load-css("components/modals");
   @include meta.load-css("components/explore");
   @include meta.load-css("components/scrollbars");
+  @include meta.load-css("components/advanced");
   @include meta.load-css("components/mobile");
 }

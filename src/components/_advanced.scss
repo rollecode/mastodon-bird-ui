@@ -1,0 +1,20 @@
+// Advanced web interface: columns start from the left edge and the
+// navigation comes last, as in v4
+.layout-multiple-columns {
+  ._comp_columns_area_styles_multi_column__root {
+    --multi-column-gap: 0px;
+
+    padding-inline-end: 0;
+    scroll-padding-inline-start: 0;
+  }
+
+  ._comp_columns_area_styles_multi_column__navigationWrapper {
+    border-inline-start: 1px solid var(--color-border);
+    order: 1;
+  }
+
+  ._comp_column__root {
+    border-inline-end: 1px solid var(--color-border);
+    width: 380px;
+  }
+}
