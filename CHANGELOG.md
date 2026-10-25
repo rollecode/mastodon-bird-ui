@@ -16,6 +16,7 @@
 * Add high contrast support for Mastodon 5
 * Style thread replies like timeline posts
 * Bring back v4 action hover bubbles
+* Align post actions like X
 * Fix quoted video and audio alignment in post view
 * Link the CSS banner to rollecode
 * Fix duplicated CSS banner lines

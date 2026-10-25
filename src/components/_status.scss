@@ -42,9 +42,16 @@
     order: 1;
   }
 
+  // Like X: reply, boost and like in equal slots, bookmark and menu on the right
   ._comp_status__actions {
-    justify-content: space-between;
+    gap: 12px;
+    justify-content: flex-start;
     max-width: 100%;
+  }
+
+  ._comp_status__actions > button:nth-of-type(-n + 3) {
+    flex: 1 1 0;
+    justify-content: flex-start;
   }
 }
 
