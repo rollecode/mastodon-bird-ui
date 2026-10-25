@@ -35,3 +35,18 @@
   @include colors.light-palette;
   @include icons.light;
 }
+
+// High contrast setting; after the scheme blocks so it wins, before the
+// accessible themes, which keep their own colours
+// :root lifts it to the same weight as the token blocks above
+:root[data-contrast='high']:not([data-color-scheme='light']),
+[data-contrast='high'] [data-color-scheme='dark'] {
+  @include colors.dark-high-contrast;
+  @include icons.high-contrast-dark;
+}
+
+:root[data-contrast='high'][data-color-scheme='light'],
+[data-contrast='high'] [data-color-scheme='light'] {
+  @include colors.light-high-contrast;
+  @include icons.high-contrast-light;
+}

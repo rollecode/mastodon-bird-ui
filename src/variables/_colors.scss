@@ -142,3 +142,29 @@
   --rich-text-text-color: #ffafd4;
   --shadow-strength-primary: 80%;
 }
+
+// High contrast setting: brighter secondary text and borders on dark, as in v4
+@mixin dark-high-contrast {
+  --color-border: #505070;
+  --color-border-primary: #505070;
+  --color-dim: #b8b3c0;
+  --color-text-brand: #8080ff;
+  --color-text-brand-soft: #a0a0ff;
+  --color-text-primary: #fff;
+  --color-text-secondary: #b8b3c0;
+  --color-text-status-links: #a0a0ff;
+  --color-text-tertiary: #a0a8c0;
+}
+
+// Darker secondary text and borders on light
+@mixin light-high-contrast {
+  --color-border: #b5aec2;
+  --color-border-primary: #b5aec2;
+  --color-dim: #4f4a58;
+  --color-text-brand: #3f40d9;
+  --color-text-brand-soft: #3f40d9;
+  --color-text-primary: #000;
+  --color-text-secondary: #4f4a58;
+  --color-text-status-links: #3f40d9;
+  --color-text-tertiary: #5f5868;
+}

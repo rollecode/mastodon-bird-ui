@@ -13,6 +13,7 @@
 * Add pre-commit stylelint hook
 * Fix small text in accessible themes
 * Even out followed hashtag paddings
+* Add high contrast support for Mastodon 5
 * Fix quoted video and audio alignment in post view
 * Link the CSS banner to rollecode
 * Fix duplicated CSS banner lines
