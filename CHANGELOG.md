@@ -1,5 +1,9 @@
 ### [Unreleased]
 
+* Rewrite the theme for Mastodon 5
+* Add Ultra accessible themes for Mastodon 5
+* Rewrite the install script for Mastodon 5
+* Remove the star, light and language variants
 * Fix quoted video and audio alignment in post view
 * Link the CSS banner to rollecode
 * Fix duplicated CSS banner lines
