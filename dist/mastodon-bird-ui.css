@@ -577,7 +577,6 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 }
 
 :root .layout-single-column .button, :root .layout-multiple-columns .button {
-  background-color: var(--color-accent-dark);
   font-size: var(--font-size);
   line-height: var(--line-height);
   border-radius: 9999px;
