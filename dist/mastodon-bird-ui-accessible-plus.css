@@ -1826,6 +1826,13 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   color: var(--color-light-text) !important;
 }
 
+:root ._comp_modal_shell_redesign__modal {
+  background-color: var(--color-dark);
+  box-shadow: none;
+  border: 0;
+  border-radius: 0;
+}
+
 :root .media-modal__navigation .icon {
   color: var(--color-light-text);
   width: 32px;

@@ -3,6 +3,13 @@
   color: var(--color-light-text) !important;
 }
 
+._comp_modal_shell_redesign__modal {
+  background-color: var(--color-dark);
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
 .media-modal__navigation .icon {
   color: var(--color-light-text);
   height: 32px;
