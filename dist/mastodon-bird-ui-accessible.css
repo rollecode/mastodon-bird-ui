@@ -1885,9 +1885,39 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   color: var(--color-dim);
   background-color: #0000;
   flex: none;
-  order: 2;
+  order: 1;
+  align-self: baseline;
+  align-items: baseline;
+  gap: 4px;
+  margin-inline-start: auto;
   padding: 0;
+  font-size: 15px;
+  font-weight: 400;
   display: flex;
+}
+
+:root ._comp_status_header__pinnedBadge._comp_badge__default .icon {
+  align-self: center;
+  width: 15px;
+  height: 15px;
+}
+
+:root div._comp_status_header__accountWrapper:has( + ._comp_status_header__pinnedBadge) {
+  display: contents !important;
+}
+
+:root div._comp_status_header__accountWrapper:has( + ._comp_status_header__pinnedBadge) ._comp_status_header__date {
+  order: 2;
+  margin-inline-start: 8px !important;
+}
+
+:root ._comp_status_header__root:has(._comp_status_header__pinnedBadge) {
+  align-items: baseline;
+}
+
+:root ._comp_status_header__root:has(._comp_status_header__pinnedBadge) ._comp_status_header__avatar {
+  order: -2;
+  align-self: start;
 }
 
 :root [data-id="pinned-view-all"], :root [data-id="pinned-view-all"]:hover, :root [data-id="pinned-view-all"]:focus-within {
@@ -1937,9 +1967,9 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 
 :root .notification-group .notification-group__icon .icon {
   place-self: start end;
-  width: 27px;
-  max-width: 30px;
-  height: 27px;
+  width: 24px;
+  height: 24px;
+  margin-top: 2px;
   margin-right: 0;
 }
 

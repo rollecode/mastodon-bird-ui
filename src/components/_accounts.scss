@@ -58,12 +58,43 @@
 
 // Pinned posts: a dim label and a plain "View all" link
 ._comp_status_header__pinnedBadge._comp_badge__default {
+  align-items: baseline;
+  align-self: baseline;
   background-color: transparent;
   color: var(--color-dim);
   display: flex;
   flex: none;
-  order: 2;
+  font-size: 15px;
+  font-weight: 400;
+  gap: 4px;
+  margin-inline-start: auto;
+  order: 1;
   padding: 0;
+
+  .icon {
+    align-self: center;
+    height: 15px;
+    width: 15px;
+  }
+}
+
+// Pinned posts: name, handle, then "Pinned" and the date at the right, as in v4
+div._comp_status_header__accountWrapper:has(+ ._comp_status_header__pinnedBadge) {
+  display: contents !important;
+
+  ._comp_status_header__date {
+    margin-inline-start: 8px !important;
+    order: 2;
+  }
+}
+
+._comp_status_header__root:has(._comp_status_header__pinnedBadge) {
+  align-items: baseline;
+
+  ._comp_status_header__avatar {
+    align-self: start;
+    order: -2;
+  }
 }
 
 [data-id='pinned-view-all'],

@@ -2,6 +2,8 @@
 
 * Fix pinned post header and View all link
 * Show View all pinned posts as plain text
+* Show Pinned before the date like v4
+* Shrink notification icons to v4 size
 * Fix bookmark hover bubble position
 * Use the Bird UI boost icon in notifications
 * Tighten notification post previews like v4
