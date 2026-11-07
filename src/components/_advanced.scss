@@ -23,3 +23,20 @@
 .layout-multiple-columns ._comp_status__variantFeed ._comp_status__mainWrapper {
   padding-inline-start: calc(var(--avatar-size) + var(--col-gap));
 }
+
+// Narrow columns stack link cards: image on top, text below, as in v4
+.layout-multiple-columns ._comp_card__root:has(._comp_card__image) {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding-inline-end: 12px;
+}
+
+.layout-multiple-columns ._comp_card__image {
+  aspect-ratio: 1.91;
+  contain: none;
+  margin: -12px -12px 8px;
+  min-height: 0;
+  order: -1;
+  overflow: hidden;
+}
