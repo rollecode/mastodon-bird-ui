@@ -1,6 +1,7 @@
 ### 5.0.0-beta.1-2026-11-08: 2026-11-08
 
 * Give the post view v4 breathing space
+* Pad the advanced view navigation
 * Stack link cards in advanced view columns
 * Show notified posts as plain text like v4
 * Make content warnings look and hide like v4

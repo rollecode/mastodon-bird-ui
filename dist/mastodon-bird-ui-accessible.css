@@ -2433,7 +2433,9 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 
 :root .layout-multiple-columns ._comp_columns_area_styles_multi_column__navigationWrapper {
   border-inline-start: 1px solid var(--color-border);
+  box-sizing: border-box;
   order: 1;
+  padding-inline: 16px;
 }
 
 :root .layout-multiple-columns ._comp_column__root {
