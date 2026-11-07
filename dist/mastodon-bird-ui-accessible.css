@@ -2363,6 +2363,10 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   width: 380px;
 }
 
+:root .layout-multiple-columns ._comp_status__variantFeed ._comp_status__mainWrapper {
+  padding-inline-start: calc(var(--avatar-size) + var(--col-gap));
+}
+
 :root ._navigation_panel_redesign_mobile_nav__root {
   gap: 0;
   padding: 0;

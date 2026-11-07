@@ -18,3 +18,8 @@
     width: 380px;
   }
 }
+
+// Posts keep their text beside the avatar in columns, as in v4
+.layout-multiple-columns ._comp_status__variantFeed ._comp_status__mainWrapper {
+  padding-inline-start: calc(var(--avatar-size) + var(--col-gap));
+}

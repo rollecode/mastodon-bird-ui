@@ -1,6 +1,7 @@
 ### 5.0.0-beta.1-2026-11-08: 2026-11-08
 
 * Give the post view v4 breathing space
+* Keep post text beside the avatar in advanced columns
 * Run thread lines on to the next reply
 * Drop the thread line under the post above the opened one
 * Accent the back link like v4
