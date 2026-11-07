@@ -432,3 +432,8 @@ html.no-reduce-motion ._comp_status__actions > button[data-like-burst] svg {
 ._feat_status__thread:has(~ ._feat_status__mainStatus) > article:first-child > ._comp_status__connectNextReply::after {
   display: none;
 }
+
+// The thread line runs on to the next reply's avatar, as in v4
+._feat_status__thread > article[data-connect-next='true'] > ._comp_status__connectNextReply::after {
+  inset-block-end: -32px;
+}
