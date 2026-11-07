@@ -2,6 +2,7 @@
 
 * Use v4 heart and more icons in the action bar
 * Group reply, boost and like on the left
+* Move reply, boost and like closer together
 * Line up notification labels with the post text
 * Fix square corners and dots on hidden media
 * Line up the boosted-by line with the post text
