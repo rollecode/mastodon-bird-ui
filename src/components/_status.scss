@@ -183,6 +183,7 @@ a._comp_status_header__nameLink {
 ._comp_status__actions > button:nth-of-type(1) svg,
 ._comp_status__actions > button:nth-of-type(2) svg,
 ._comp_status__actions > button:nth-of-type(5) svg,
+._comp_status__actions > button:last-of-type svg,
 ._comp_status__actions .status__action-bar__button-wrapper svg {
   background-position: center;
   background-repeat: no-repeat;
@@ -222,8 +223,53 @@ a._comp_status_header__nameLink {
   background-image: var(--icon-bookmark-active);
 }
 
+._comp_status__actions > button:last-of-type svg,
 ._comp_status__actions .status__action-bar__button-wrapper svg {
   background-image: var(--icon-more-status-action-bar);
+}
+
+// The v4 heart; the ring and confetti of Mastodon's own burst stay visible
+._comp_status__actions > button._comp_status__actionsButtonGap svg {
+  background: var(--icon-heart) center / 19px 19px no-repeat;
+
+  > path {
+    display: none;
+  }
+}
+
+._comp_status__actions > button._comp_status__actionsButtonGap:hover svg {
+  background-image: var(--icon-heart-hover);
+}
+
+._comp_status__actions > button._comp_status__actionsButtonGap[aria-pressed='true'] svg {
+  background-image: var(--icon-heart-active-red);
+}
+
+html.no-reduce-motion ._comp_status__actions > button[data-like-burst] svg {
+  animation: bird-heart-pop 0.85s cubic-bezier(0.17, 0.89, 0.32, 1.28);
+}
+
+@keyframes bird-heart-pop {
+  0%,
+  18% {
+    background-size: 19px 19px;
+  }
+
+  28% {
+    background-size: 0 0;
+  }
+
+  55% {
+    background-size: 23px 23px;
+  }
+
+  72% {
+    background-size: 17px 17px;
+  }
+
+  100% {
+    background-size: 19px 19px;
+  }
 }
 
 // Boost line: Bird UI boost icon, no avatar or time, like v4

@@ -1,5 +1,6 @@
 ### 5.0.0-beta.1-2026-11-07: 2026-11-07
 
+* Use v4 heart and more icons in the action bar
 * Fix pinned post header and View all link
 * Show View all pinned posts as plain text
 * Show Pinned before the date like v4
