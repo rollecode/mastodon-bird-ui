@@ -9,6 +9,11 @@
   }
 }
 
+// The header already draws the bottom line under the tabs
+._comp_column_header__extraStickyContent .notification__filter-bar {
+  border-bottom: 0;
+}
+
 ._comp_column_header__layout {
   align-items: center;
   grid-template-columns: auto minmax(0, 1fr) auto;

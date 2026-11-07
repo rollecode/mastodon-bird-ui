@@ -8,6 +8,8 @@
 * Line up the boosted-by line with the post text
 * Fix a 4px offset in the boosted-by line
 * Restyle the minimized composer bar
+* Flatten the composer language picker
+* Remove the double line under notification tabs
 * Use Bird UI dark for mobile menus and notification banners
 * Fix pinned post header and View all link
 * Show View all pinned posts as plain text
