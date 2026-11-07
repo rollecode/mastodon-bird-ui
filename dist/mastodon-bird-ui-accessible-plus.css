@@ -2202,11 +2202,27 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 }
 
 :root .notification-group__main ._comp_card__root {
-  border-radius: 8px;
-  padding: 8px 10px;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
 }
 
-:root .notification-group__main ._comp_card__title, :root ._comp_status__isMessage:before {
+:root .notification-group__main ._comp_card__title, :root .notification-group__main ._comp_status_quote__reply {
+  display: none;
+}
+
+:root .notification-group__main ._comp_status_quote__body {
+  color: var(--color-dim);
+  font-size: 15px;
+  line-height: 22px;
+}
+
+:root .notification-group__main {
+  gap: 8px;
+}
+
+:root ._comp_status__isMessage:before {
   display: none;
 }
 

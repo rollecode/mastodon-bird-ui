@@ -58,14 +58,28 @@
   color: var(--color-red);
 }
 
-// The quoted post shows only its text, in a plain rounded box
+// The post a notification is about shows only its text, dimmed and
+// without a box, as in v4
 .notification-group__main ._comp_card__root {
-  border-radius: 8px;
-  padding: 8px 10px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
 }
 
-.notification-group__main ._comp_card__title {
+.notification-group__main ._comp_card__title,
+.notification-group__main ._comp_status_quote__reply {
   display: none;
+}
+
+.notification-group__main ._comp_status_quote__body {
+  color: var(--color-dim);
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.notification-group__main {
+  gap: 8px;
 }
 
 // v4 had no message pattern
