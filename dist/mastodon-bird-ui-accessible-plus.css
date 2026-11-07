@@ -1890,12 +1890,14 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   display: flex;
 }
 
-:root [data-id="pinned-view-all"] {
+:root [data-id="pinned-view-all"], :root [data-id="pinned-view-all"]:hover, :root [data-id="pinned-view-all"]:focus-within {
+  background-color: #0000;
   margin-top: -10px;
 }
 
 :root ._feat_account_timeline__pinnedViewAllButton:is(.button, ._comp_button__base) {
   --bg: transparent;
+  --bg-hover: transparent;
   --fg: var(--color-dim);
   color: var(--color-dim);
   background-color: #0000;
@@ -1908,6 +1910,10 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   padding: 8px 16px;
   font-size: 13px;
   display: flex;
+}
+
+:root ._feat_account_timeline__pinnedViewAllButton:is(.button, ._comp_button__base) .icon {
+  display: none;
 }
 
 :root ._feat_account_timeline__pinnedViewAllButton:is(.button, ._comp_button__base):hover, :root ._feat_account_timeline__pinnedViewAllButton:is(.button, ._comp_button__base):focus {

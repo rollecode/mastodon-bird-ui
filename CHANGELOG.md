@@ -1,6 +1,7 @@
 ### 5.0.0-beta.1-2026-11-07: 2026-11-07
 
 * Fix pinned post header and View all link
+* Show View all pinned posts as plain text
 * Fix bookmark hover bubble position
 * Use the Bird UI boost icon in notifications
 * Tighten notification post previews like v4

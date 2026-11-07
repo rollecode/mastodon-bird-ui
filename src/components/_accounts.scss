@@ -66,13 +66,18 @@
   padding: 0;
 }
 
-[data-id='pinned-view-all'] {
+[data-id='pinned-view-all'],
+[data-id='pinned-view-all']:hover,
+[data-id='pinned-view-all']:focus-within {
+  background-color: transparent;
   margin-top: -10px;
 }
 
 ._feat_account_timeline__pinnedViewAllButton:is(.button, ._comp_button__base) {
   --bg: transparent;
+  --bg-hover: transparent;
   --fg: var(--color-dim);
+
   align-items: center;
   background-color: transparent;
   border: 0;
@@ -81,10 +86,13 @@
   font-size: 13px;
   gap: 4px;
   margin: 0 0 0 auto;
-
   min-height: 0;
   padding: 8px 16px;
   width: auto;
+
+  .icon {
+    display: none;
+  }
 
   &:hover,
   &:focus {
