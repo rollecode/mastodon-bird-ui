@@ -1,4 +1,4 @@
-### [Unreleased]
+### 5.0.0-beta.1-2026-11-07: 2026-11-07
 
 * Update class names for Mastodon 5.0.0-beta.1
 * Use Mastodon's own Like burst when available
