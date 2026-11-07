@@ -88,3 +88,8 @@
 
   box-shadow: inset 0 0 0 1px var(--color-border-primary);
 }
+
+// Button labels never wrap onto a second line
+._comp_button__base {
+  white-space: nowrap;
+}
