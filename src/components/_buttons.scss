@@ -79,3 +79,12 @@
   background-color: var(--color-bg-overlay);
   color: var(--color-text-primary);
 }
+
+// Explore suggestions follow buttons are outlined like in v4
+.explore-suggestions-card__actions ._comp_button__solid {
+  --bg: transparent;
+  --bg-hover: var(--color-bg-highlight);
+  --fg: var(--color-text-primary);
+
+  box-shadow: inset 0 0 0 1px var(--color-border-primary);
+}
