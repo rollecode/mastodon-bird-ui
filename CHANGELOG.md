@@ -1,5 +1,8 @@
 ### 5.0.0-beta.1-2026-11-07: 2026-11-07
 
+* Fix bookmark hover bubble position
+* Use the Bird UI boost icon in notifications
+* Tighten notification post previews like v4
 * Fix large boost icon in the media viewer
 * Keep the For you feed's own icon in navigation
 * Fix post date sticking to the handle
