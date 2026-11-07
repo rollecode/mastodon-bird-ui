@@ -2040,7 +2040,9 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 }
 
 :root .notification-ungrouped__header {
-  padding-inline-start: 76px;
+  color: var(--color-dim);
+  padding-inline-start: 52px;
+  font-weight: 500;
 }
 
 :root .notification-ungrouped--mention {

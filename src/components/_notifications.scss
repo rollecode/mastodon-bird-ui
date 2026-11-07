@@ -23,9 +23,11 @@
   color: var(--color-accent-dark);
 }
 
-// Labels such as "edited a post" line up with the post text, as in v4
+// Labels such as "edited a post" line up with the post text, icon in front, as in v4
 .notification-ungrouped__header {
-  padding-inline-start: 76px;
+  color: var(--color-dim);
+  font-weight: 500;
+  padding-inline-start: 52px;
 }
 
 // Mentions and replies read as plain posts, without a label on top
