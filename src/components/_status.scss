@@ -345,6 +345,12 @@ html.no-reduce-motion ._comp_status__actions > button[data-like-burst] svg {
     color: inherit;
   }
 
+  // The date is a button or link; one size for every item
+  :is(a, button, time) {
+    font-size: inherit;
+    line-height: inherit;
+  }
+
   .animated-number {
     color: var(--color-fg);
     font-weight: 700;

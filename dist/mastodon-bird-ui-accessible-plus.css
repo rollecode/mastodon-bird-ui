@@ -1082,6 +1082,11 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   color: inherit;
 }
 
+:root ._comp_status__variantPage ._comp_status_meta__meta ._comp_status_meta__list :is(a, button, time) {
+  font-size: inherit;
+  line-height: inherit;
+}
+
 :root ._comp_status__variantPage ._comp_status_meta__meta ._comp_status_meta__list .animated-number {
   color: var(--color-fg);
   font-weight: 700;
