@@ -2180,6 +2180,17 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   display: none;
 }
 
+:root [data-fullscreen="false"] ._feat_compose__root {
+  box-shadow: none;
+}
+
+:root ._feat_compose_trigger__composerMinimized {
+  background: var(--color-dark);
+  box-shadow: none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
 :root .trends__item__name {
   color: var(--color-dim);
 }

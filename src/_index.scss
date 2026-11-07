@@ -18,6 +18,7 @@
   @include meta.load-css("components/accounts");
   @include meta.load-css("components/notifications");
   @include meta.load-css("components/modals");
+  @include meta.load-css("components/composer");
   @include meta.load-css("components/explore");
   @include meta.load-css("components/scrollbars");
   @include meta.load-css("components/advanced");

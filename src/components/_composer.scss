@@ -1,0 +1,11 @@
+// Docked composer and its minimized bar: Bird UI dark, no elevation shadow
+[data-fullscreen='false'] ._feat_compose__root {
+  box-shadow: none;
+}
+
+._feat_compose_trigger__composerMinimized {
+  background: var(--color-dark);
+  box-shadow: none;
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
