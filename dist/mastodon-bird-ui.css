@@ -698,6 +698,15 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   white-space: nowrap;
 }
 
+:root svg:has( > path:is([d^="M136,128a8,8"], [d^="M138,128a10,10"], [d^="M140,128a12,12"], [d^="M144,128a16,16"])) {
+  mask: var(--icon-more) center/100% no-repeat;
+  background-color: currentColor;
+}
+
+:root svg:has( > path:is([d^="M136,128a8,8"], [d^="M138,128a10,10"], [d^="M140,128a12,12"], [d^="M144,128a16,16"])) > path {
+  display: none;
+}
+
 :root ._comp_column_header__root {
   background: var(--color-bg-primary);
   border-bottom: 1px solid var(--color-border-primary);

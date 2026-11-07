@@ -93,3 +93,13 @@
 ._comp_button__base {
   white-space: nowrap;
 }
+
+// Every three-dots icon uses the Bird UI one, in the button's own colour
+svg:has(> path:is([d^='M136,128a8,8'], [d^='M138,128a10,10'], [d^='M140,128a12,12'], [d^='M144,128a16,16'])) {
+  background-color: currentcolor;
+  mask: var(--icon-more) center / 100% no-repeat;
+
+  > path {
+    display: none;
+  }
+}
