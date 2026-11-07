@@ -1845,25 +1845,18 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   display: none;
 }
 
-:root ._comp_status_attachments__galleryWrapper:has(.media-gallery--layout-1[style*="aspect-ratio: 0"] > .media-gallery__item > canvas.media-gallery__preview:not(.media-gallery__preview--hidden)) {
-  width: fit-content;
-  max-width: 100%;
-}
-
 :root ._comp_status_attachments__galleryWrapper .media-gallery--layout-1[style*="aspect-ratio: 0"]:has( > .media-gallery__item > canvas.media-gallery__preview:not(.media-gallery__preview--hidden)) {
-  height: 430px;
-  width: fit-content !important;
-}
-
-:root ._comp_status_attachments__galleryWrapper .media-gallery--layout-1[style*="aspect-ratio: 0"]:has( > .media-gallery__item > canvas.media-gallery__preview:not(.media-gallery__preview--hidden)) > .media-gallery__item {
-  aspect-ratio: inherit;
-}
-
-:root ._comp_status_attachments__galleryWrapper .media-gallery--layout-1[style*="aspect-ratio: 0"]:has( > .media-gallery__item > canvas.media-gallery__preview:not(.media-gallery__preview--hidden)) canvas.media-gallery__preview {
-  aspect-ratio: inherit;
-  height: 430px;
+  height: auto;
+  min-height: 0;
+  max-height: 430px;
   display: block;
   width: auto !important;
+}
+
+:root ._comp_status_attachments__galleryWrapper .media-gallery--layout-1[style*="aspect-ratio: 0"]:has( > .media-gallery__item > canvas.media-gallery__preview:not(.media-gallery__preview--hidden)) > .media-gallery__item, :root ._comp_status_attachments__galleryWrapper .media-gallery--layout-1[style*="aspect-ratio: 0"]:has( > .media-gallery__item > canvas.media-gallery__preview:not(.media-gallery__preview--hidden)) canvas.media-gallery__preview {
+  aspect-ratio: auto;
+  height: 100%;
+  width: 100% !important;
 }
 
 :root .media-gallery .media-gallery__actions.media-gallery__actions {

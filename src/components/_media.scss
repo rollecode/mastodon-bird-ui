@@ -99,33 +99,22 @@ canvas[class='media-gallery__preview'],
   display: none;
 }
 
-// Hidden portrait media hugs the blurhash instead of filling the width
-._comp_status_attachments__galleryWrapper:has(
-    .media-gallery--layout-1[style*='aspect-ratio: 0']
-      > .media-gallery__item
-      > canvas.media-gallery__preview:not(.media-gallery__preview--hidden)
-  ) {
-  max-width: 100%;
-  width: fit-content;
-}
-
+// Portrait blurhash (loading or hidden) keeps the media ratio, at most 430px tall
 ._comp_status_attachments__galleryWrapper
   .media-gallery--layout-1[style*='aspect-ratio: 0']:has(
     > .media-gallery__item > canvas.media-gallery__preview:not(.media-gallery__preview--hidden)
   ) {
-  height: 430px;
-  width: fit-content !important;
+  display: block;
+  height: auto;
+  max-height: 430px;
+  min-height: 0;
+  width: auto !important;
 
-  // The blurhash canvas carries the ratio so the frame can shrink to it
-  > .media-gallery__item {
-    aspect-ratio: inherit;
-  }
-
+  > .media-gallery__item,
   canvas.media-gallery__preview {
-    aspect-ratio: inherit;
-    display: block;
-    height: 430px;
-    width: auto !important;
+    aspect-ratio: auto;
+    height: 100%;
+    width: 100% !important;
   }
 }
 
