@@ -83,7 +83,7 @@
     [href^='/favourites']
   )
   ._navigation_panel_redesign_navigation_link__icon
-  svg {
+  svg:not([data-for-you]) {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -93,11 +93,11 @@
   }
 }
 
-._navigation_panel_redesign_navigation_link__link[href='/home'] svg {
+._navigation_panel_redesign_navigation_link__link[href='/home'] svg:not([data-for-you]) {
   background-image: var(--icon-home);
 }
 
-._navigation_panel_redesign_navigation_link__link[href='/home'][aria-current='page'] svg {
+._navigation_panel_redesign_navigation_link__link[href='/home'][aria-current='page'] svg:not([data-for-you]) {
   background-image: var(--icon-home-column-link-active);
 }
 

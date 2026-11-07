@@ -487,21 +487,21 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   padding-inline: 10px;
 }
 
-:root ._navigation_panel_redesign_navigation_link__link:is([href="/home"], [href^="/explore"], [href^="/public"], [href^="/notifications"], [href^="/conversations"], [href^="/bookmarks"], [href^="/favourites"]) ._navigation_panel_redesign_navigation_link__icon svg {
+:root ._navigation_panel_redesign_navigation_link__link:is([href="/home"], [href^="/explore"], [href^="/public"], [href^="/notifications"], [href^="/conversations"], [href^="/bookmarks"], [href^="/favourites"]) ._navigation_panel_redesign_navigation_link__icon svg:not([data-for-you]) {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-:root ._navigation_panel_redesign_navigation_link__link:is([href="/home"], [href^="/explore"], [href^="/public"], [href^="/notifications"], [href^="/conversations"], [href^="/bookmarks"], [href^="/favourites"]) ._navigation_panel_redesign_navigation_link__icon svg path {
+:root ._navigation_panel_redesign_navigation_link__link:is([href="/home"], [href^="/explore"], [href^="/public"], [href^="/notifications"], [href^="/conversations"], [href^="/bookmarks"], [href^="/favourites"]) ._navigation_panel_redesign_navigation_link__icon svg:not([data-for-you]) path {
   display: none;
 }
 
-:root ._navigation_panel_redesign_navigation_link__link[href="/home"] svg {
+:root ._navigation_panel_redesign_navigation_link__link[href="/home"] svg:not([data-for-you]) {
   background-image: var(--icon-home);
 }
 
-:root ._navigation_panel_redesign_navigation_link__link[href="/home"][aria-current="page"] svg {
+:root ._navigation_panel_redesign_navigation_link__link[href="/home"][aria-current="page"] svg:not([data-for-you]) {
   background-image: var(--icon-home-column-link-active);
 }
 
