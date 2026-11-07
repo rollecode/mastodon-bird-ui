@@ -937,6 +937,10 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   background-image: var(--icon-more-status-action-bar);
 }
 
+:root ._comp_status__root:has( > ._comp_status_prepend__root) {
+  padding-top: 10px;
+}
+
 :root ._comp_status_prepend__root {
   color: var(--color-dim);
   padding-inline-start: 34px;

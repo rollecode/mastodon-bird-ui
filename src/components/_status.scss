@@ -227,6 +227,10 @@ a._comp_status_header__nameLink {
 }
 
 // Boost line: Bird UI boost icon, no avatar or time, like v4
+._comp_status__root:has(> ._comp_status_prepend__root) {
+  padding-top: 10px;
+}
+
 ._comp_status_prepend__root {
   color: var(--color-dim);
   font-size: 15px;
