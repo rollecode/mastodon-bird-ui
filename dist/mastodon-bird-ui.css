@@ -1896,10 +1896,43 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   padding: 0;
 }
 
+:root ._comp_card__root {
+  padding: 16px;
+}
+
+:root ._comp_card__root:has(._comp_card__image) {
+  flex-direction: column;
+  padding-inline-end: 16px;
+  display: flex;
+}
+
+:root ._comp_card__image {
+  aspect-ratio: 1.91;
+  contain: none;
+  order: -1;
+  min-height: 0;
+  margin: -16px -16px 12px;
+  overflow: hidden;
+}
+
+:root ._comp_card__title, :root ._comp_card__description {
+  color: var(--color-dim);
+  font-size: var(--font-size);
+}
+
+:root ._comp_card__body:not(._comp_card__description) {
+  color: var(--color-fg);
+  font-size: var(--font-size);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
 :root ._comp_card__actions:has(._comp_status_attachments__cardAuthor) {
   color: var(--color-dim);
   gap: 4px 8px;
+  margin-inline: -16px;
   padding-block: 10px 6px;
+  padding-inline: 16px;
   font-size: 14px;
   font-weight: 400;
 }
@@ -2444,22 +2477,6 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 
 :root .layout-multiple-columns ._comp_status__variantFeed ._comp_status__mainWrapper {
   padding-inline-start: calc(var(--avatar-size) + var(--col-gap));
-}
-
-:root .layout-multiple-columns ._comp_card__root:has(._comp_card__image) {
-  flex-direction: column;
-  padding-inline-end: 12px;
-  display: flex;
-  overflow: hidden;
-}
-
-:root .layout-multiple-columns ._comp_card__image {
-  aspect-ratio: 1.91;
-  contain: none;
-  order: -1;
-  min-height: 0;
-  margin: -12px -12px 8px;
-  overflow: hidden;
 }
 
 :root ._navigation_panel_redesign_mobile_nav__root {

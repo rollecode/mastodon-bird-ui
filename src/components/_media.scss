@@ -159,13 +159,48 @@ canvas[class='media-gallery__preview'],
   padding: 0;
 }
 
+// Link cards like v4: image on top, then site, title and description
+._comp_card__root {
+  padding: 16px;
+}
+
+._comp_card__root:has(._comp_card__image) {
+  display: flex;
+  flex-direction: column;
+  padding-inline-end: 16px;
+}
+
+._comp_card__image {
+  aspect-ratio: 1.91;
+  contain: none;
+  margin: -16px -16px 12px;
+  min-height: 0;
+  order: -1;
+  overflow: hidden;
+}
+
+._comp_card__title,
+._comp_card__description {
+  color: var(--color-dim);
+  font-size: var(--font-size);
+}
+
+._comp_card__body:not(._comp_card__description) {
+  color: var(--color-fg);
+  font-size: var(--font-size);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
 // The link card author row like v4's "More from" line
 ._comp_card__actions:has(._comp_status_attachments__cardAuthor) {
   color: var(--color-dim);
   font-size: 14px;
   font-weight: 400;
   gap: 4px 8px;
+  margin-inline: -16px;
   padding-block: 10px 6px;
+  padding-inline: 16px;
 
   > span {
     margin-inline-end: 0;

@@ -1,5 +1,6 @@
 ### 5.0.0-beta.1-2026-11-08: 2026-11-08
 
+* Stack link cards like v4
 * Blur all overlays and round opened images
 * Keep portrait media ratio while loading
 * Give the post view v4 breathing space
