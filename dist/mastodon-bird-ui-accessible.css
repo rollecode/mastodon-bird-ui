@@ -2195,6 +2195,11 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   padding-bottom: 8px;
 }
 
+:root ._feat_compose_trigger__rootTop[data-fullscreen="false"] ._feat_compose_trigger__backdrop {
+  backdrop-filter: blur(4px);
+  background: #000000b3;
+}
+
 :root .trends__item__name {
   color: var(--color-dim);
 }
