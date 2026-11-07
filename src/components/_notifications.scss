@@ -37,6 +37,15 @@
   display: none;
 }
 
+// Boosts with the Bird UI boost icon
+.notification-group--reblog .notification-group__icon .icon {
+  background: var(--icon-boost-active) center / contain no-repeat;
+
+  path {
+    display: none;
+  }
+}
+
 // Favourites in Bird UI pink
 .notification-group--favourite .notification-group__icon {
   color: var(--color-red);
@@ -45,6 +54,7 @@
 // The quoted post shows only its text, in a plain rounded box
 .notification-group__main ._comp_card__root {
   border-radius: 8px;
+  padding: 8px 10px;
 }
 
 .notification-group__main ._comp_card__title {
