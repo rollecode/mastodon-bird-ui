@@ -51,3 +51,12 @@
 ._comp_menu__itemIcon {
   display: none;
 }
+
+// Composer language picker: the list sits flat in the dark menu panel
+._feat_compose__languageListBox {
+  background: transparent;
+}
+
+._feat_compose__languageListBox [role='option']:not(:hover, [aria-selected='true']) {
+  background: transparent;
+}
