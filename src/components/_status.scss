@@ -417,3 +417,13 @@ html.no-reduce-motion ._comp_status__actions > button[data-like-burst] svg {
 ._comp_status__variantThread footer {
   margin-top: 8px;
 }
+
+// Thread replies get v4's room above the author and below the actions
+._feat_status__thread > article._comp_status__variantThread {
+  padding-block-start: 16px;
+
+  &[data-connect-next='false'],
+  &:last-child {
+    padding-block-end: 20px;
+  }
+}
