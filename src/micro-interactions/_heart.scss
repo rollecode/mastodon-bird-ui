@@ -20,7 +20,11 @@ html ._comp_status__actions > button._comp_status__actionsButtonGap {
   position: relative;
 }
 
-html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButtonGap[aria-pressed='true']:focus {
+html.no-reduce-motion
+  ._comp_status__actions
+  > button._comp_status__actionsButtonGap[aria-pressed='true']:focus:not(
+    :has(._comp_status_like_burst_icon__likeBurstIcon)
+  ) {
   svg {
     opacity: 0;
   }

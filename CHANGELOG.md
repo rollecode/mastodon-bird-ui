@@ -1,5 +1,6 @@
 ### [Unreleased]
 
+* Use Mastodon's own Like burst when available
 * Rewrite the theme for Mastodon 5
 * Add Ultra accessible themes for Mastodon 5
 * Rewrite the install script for Mastodon 5
