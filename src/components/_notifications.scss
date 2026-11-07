@@ -67,6 +67,11 @@
   padding: 0;
 }
 
+// The notification row already highlights on hover
+.notification-group__main ._comp_card__root:is(:hover, :has(a:hover)) {
+  background-color: transparent;
+}
+
 .notification-group__main ._comp_card__title,
 .notification-group__main ._comp_status_quote__reply {
   display: none;

@@ -2208,6 +2208,10 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   padding: 0;
 }
 
+:root .notification-group__main ._comp_card__root:is(:hover, :has(a:hover)) {
+  background-color: #0000;
+}
+
 :root .notification-group__main ._comp_card__title, :root .notification-group__main ._comp_status_quote__reply {
   display: none;
 }
