@@ -750,14 +750,14 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   text-align: start;
 }
 
-:root ._comp_column_header__leftButton + ._comp_column_header__title {
+:root ._comp_column_header__leftButton:not(:has(path[d^="M224,128a8,8,0,0,1-8,8H40"])) + ._comp_column_header__title {
   padding-inline-start: 1px;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
 }
 
-:root ._comp_column_header__leftButton, :root ._comp_column_header__leftButton :is(a, button, svg), :root ._comp_column_header__leftButton + ._comp_column_header__title, :root ._comp_column_header__leftButton + ._comp_column_header__title * {
+:root ._comp_column_header__leftButton:not(:has(path[d^="M224,128a8,8,0,0,1-8,8H40"])), :root ._comp_column_header__leftButton:not(:has(path[d^="M224,128a8,8,0,0,1-8,8H40"])) :is(a, button, svg), :root ._comp_column_header__leftButton:not(:has(path[d^="M224,128a8,8,0,0,1-8,8H40"])) + ._comp_column_header__title, :root ._comp_column_header__leftButton:not(:has(path[d^="M224,128a8,8,0,0,1-8,8H40"])) + ._comp_column_header__title * {
   color: var(--color-accent);
 }
 

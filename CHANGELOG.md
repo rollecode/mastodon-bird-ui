@@ -1,5 +1,6 @@
 ### 5.0.0-beta.1-2026-11-08: 2026-11-08
 
+* Keep the mobile column title and menu white
 * Use one font size in the post meta line
 * Stack link cards like v4
 * Blur all overlays and round opened images

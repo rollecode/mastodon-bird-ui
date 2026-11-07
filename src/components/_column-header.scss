@@ -46,8 +46,11 @@
   }
 }
 
-// Next to a back arrow the title reads like v4's "Back" link: 16px regular, 5px from the arrow
-._comp_column_header__leftButton + ._comp_column_header__title {
+// Next to a back arrow the title reads like v4's "Back" link: 16px regular, 5px from the arrow.
+// The mobile menu button (three lines) keeps the plain white, bold title.
+$back-button: '._comp_column_header__leftButton:not(:has(path[d^="M224,128a8,8,0,0,1-8,8H40"]))';
+
+#{$back-button} + ._comp_column_header__title {
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
@@ -55,9 +58,9 @@
 }
 
 // The back arrow and its title in the accent colour, as in v4
-._comp_column_header__leftButton,
-._comp_column_header__leftButton :is(a, button, svg),
-._comp_column_header__leftButton + ._comp_column_header__title,
-._comp_column_header__leftButton + ._comp_column_header__title * {
+#{$back-button},
+#{$back-button} :is(a, button, svg),
+#{$back-button} + ._comp_column_header__title,
+#{$back-button} + ._comp_column_header__title * {
   color: var(--color-accent);
 }
