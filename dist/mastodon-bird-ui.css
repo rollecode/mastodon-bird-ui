@@ -740,6 +740,7 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 }
 
 :root ._comp_status__variantFeed ._comp_status_header__root > div, :root ._comp_status__variantThread ._comp_status_header__root > div {
+  flex: 1;
   align-items: baseline;
   min-width: 0;
   display: flex;
