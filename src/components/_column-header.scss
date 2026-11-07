@@ -53,3 +53,11 @@
   line-height: 20px;
   padding-inline-start: 1px;
 }
+
+// The back arrow and its title in the accent colour, as in v4
+._comp_column_header__leftButton,
+._comp_column_header__leftButton :is(a, button, svg),
+._comp_column_header__leftButton + ._comp_column_header__title,
+._comp_column_header__leftButton + ._comp_column_header__title * {
+  color: var(--color-accent);
+}

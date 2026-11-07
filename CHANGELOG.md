@@ -1,6 +1,7 @@
 ### 5.0.0-beta.1-2026-11-08: 2026-11-08
 
 * Give the post view v4 breathing space
+* Accent the back link like v4
 * Give thread replies v4 breathing space
 * Outline the Explore suggestion follow buttons
 * Style the link card author like v4

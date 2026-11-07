@@ -746,6 +746,10 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   line-height: 20px;
 }
 
+:root ._comp_column_header__leftButton, :root ._comp_column_header__leftButton :is(a, button, svg), :root ._comp_column_header__leftButton + ._comp_column_header__title, :root ._comp_column_header__leftButton + ._comp_column_header__title * {
+  color: var(--color-accent);
+}
+
 :root ._comp_status__variantFeed, :root ._comp_status__variantThread {
   --avatar-size: 48px;
   --col-gap: 12px;
