@@ -1,5 +1,6 @@
 ### 5.0.0-beta.1-2026-11-07: 2026-11-07
 
+* Fix install script on piped runs and reruns
 * Darken and blur the composer backdrop
 * Widen search popouts
 * Use v4 heart and more icons in the action bar

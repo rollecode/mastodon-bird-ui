@@ -95,12 +95,12 @@ echo -e "${GREEN}Mastodon Bird UI $VERSION${NC}"
 echo ""
 
 if [ -z "$ADD_VARIATIONS" ]; then
-  read -p "Add the accessible themes (Ultra accessible, Ultra accessible Plus+)? [y/N]: " ADD_VARIATIONS
+  read -p "Add the accessible themes (Ultra accessible, Ultra accessible Plus+)? [y/N]: " ADD_VARIATIONS || true
   ADD_VARIATIONS=${ADD_VARIATIONS:-n}
 fi
 
 if [ -z "$SET_DEFAULT" ]; then
-  read -p "Set Mastodon Bird UI as the server default theme? [y/N]: " SET_DEFAULT
+  read -p "Set Mastodon Bird UI as the server default theme? [y/N]: " SET_DEFAULT || true
   SET_DEFAULT=${SET_DEFAULT:-n}
 fi
 
@@ -216,9 +216,17 @@ set_locale_entry() {
   [ ! -f "$file" ] && return
   grep -q "^  themes:" "$file" || return
 
-  sed -i "/^    ${key}:/d" "$file"
-  sed -i "/^  themes:/a\\    ${key}: ${value}" "$file"
+  if grep -q "^    ${key}:" "$file"; then
+    sed -i "s/^    ${key}:.*/    ${key}: ${value}/" "$file"
+  else
+    sed -i "/^  themes:/a\\    ${key}: ${value}" "$file"
+  fi
   echo -e "  ${GREEN}Set in $(basename "$file"):${NC} $key"
+}
+
+remove_locale_entry() {
+  [ -f "$1" ] && sed -i "/^    ${2}:/d" "$1"
+  return 0
 }
 
 # Keeps a name the admin has already changed
@@ -232,12 +240,17 @@ add_locale_entry() {
   set_locale_entry "$@"
 }
 
+# The theme key that the other default choice uses is gone from themes.yml
 if [[ "$SET_DEFAULT" =~ ^[Yy]$ ]]; then
+  remove_locale_entry "$EN_LOCALE" "mastodon-bird-ui-auto"
+  remove_locale_entry "$FI_LOCALE" "mastodon-bird-ui-auto"
   set_locale_entry "$EN_LOCALE" "default" "Mastodon Bird UI"
   set_locale_entry "$FI_LOCALE" "default" "Mastodon Bird UI"
   add_locale_entry "$EN_LOCALE" "mastodon-dark" "Mastodon"
   add_locale_entry "$FI_LOCALE" "mastodon-dark" "Mastodon"
 else
+  remove_locale_entry "$EN_LOCALE" "mastodon-dark"
+  remove_locale_entry "$FI_LOCALE" "mastodon-dark"
   set_locale_entry "$EN_LOCALE" "default" "Mastodon"
   set_locale_entry "$FI_LOCALE" "default" "Mastodon"
   add_locale_entry "$EN_LOCALE" "mastodon-bird-ui-auto" "Mastodon Bird UI"
@@ -249,6 +262,11 @@ if [[ "$ADD_VARIATIONS" =~ ^[Yy]$ ]]; then
   add_locale_entry "$EN_LOCALE" "mastodon-bird-ui-accessible-plus" "Mastodon Bird UI (Ultra accessible Plus+)"
   add_locale_entry "$FI_LOCALE" "mastodon-bird-ui-accessible" "Mastodon Bird UI (saavutettava)"
   add_locale_entry "$FI_LOCALE" "mastodon-bird-ui-accessible-plus" "Mastodon Bird UI (saavutettava Plus)"
+else
+  for locale_file in "$EN_LOCALE" "$FI_LOCALE"; do
+    remove_locale_entry "$locale_file" "mastodon-bird-ui-accessible"
+    remove_locale_entry "$locale_file" "mastodon-bird-ui-accessible-plus"
+  done
 fi
 
 # --- Ownership and permissions ---
