@@ -441,3 +441,14 @@ html.no-reduce-motion ._comp_status__actions > button[data-like-burst] svg {
 ._feat_status__thread > article[data-connect-next='true'] > ._comp_status__connectNextReply::after {
   inset-block-end: -32px;
 }
+
+// The avatar sits above the thread line, so the line starts below it
+._comp_status__variantThread ._comp_status_header__avatar {
+  position: relative;
+  z-index: 1;
+}
+
+// The line starts under the avatar instead of running through it
+._feat_status__thread > article > ._comp_status__connectNextReply::after {
+  inset-block-start: 22px;
+}

@@ -1,6 +1,7 @@
 ### 5.0.0-beta.1-2026-11-08: 2026-11-08
 
 * Give the post view v4 breathing space
+* Start thread lines below the avatar
 * Drop the dots between post stats
 * Keep post text beside the avatar in advanced columns
 * Run thread lines on to the next reply
