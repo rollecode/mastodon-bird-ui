@@ -1173,7 +1173,7 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   border-color: var(--color-dark);
   box-shadow: none;
   color: var(--color-dim);
-  left: 15px;
+  left: 5px;
   width: calc(100% - 10px) !important;
   max-width: calc(100% - 10px) !important;
 }
