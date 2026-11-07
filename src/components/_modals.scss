@@ -64,6 +64,20 @@
   }
 }
 
+.media-modal__overlay .picture-in-picture__footer ._comp_button__base {
+  color: var(--color-text-on-media);
+  font-size: 13px;
+  font-weight: 500;
+  gap: 6px;
+  min-height: 24px;
+  padding: 0;
+
+  .icon {
+    height: 18px;
+    width: 18px;
+  }
+}
+
 .media-modal__overlay .picture-in-picture__footer .icon-button__counter {
   color: var(--color-text-on-media);
   font-size: 13px;

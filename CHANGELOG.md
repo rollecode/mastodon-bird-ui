@@ -1,5 +1,6 @@
 ### 5.0.0-beta.1-2026-11-07: 2026-11-07
 
+* Fix large boost icon in the media viewer
 * Keep the For you feed's own icon in navigation
 * Fix post date sticking to the handle
 * Update class names for Mastodon 5.0.0-beta.1
