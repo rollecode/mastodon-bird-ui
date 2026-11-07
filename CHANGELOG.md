@@ -1,5 +1,6 @@
 ### 5.0.0-beta.1-2026-11-07: 2026-11-07
 
+* Bring back Mark all as read
 * Show unread notifications like v4
 * Center search popouts under the field
 * Fix install script on piped runs and reruns

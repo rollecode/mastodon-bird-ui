@@ -68,8 +68,7 @@
   display: none;
 }
 
-// v4 had no unread bar or message pattern
-._feat_notifications_v2__unreadBar,
+// v4 had no message pattern
 ._comp_status__isMessage::before {
   display: none;
 }
