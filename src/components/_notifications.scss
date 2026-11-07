@@ -48,6 +48,11 @@
   }
 }
 
+// Follow requests and filtered notifications banners in Bird UI dark
+._notifications_components_filtered_notifications_banner__lockup {
+  background: var(--color-dark);
+}
+
 // Favourites in Bird UI pink
 .notification-group--favourite .notification-group__icon {
   color: var(--color-red);

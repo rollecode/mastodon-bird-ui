@@ -1630,6 +1630,12 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   border-radius: 4px;
 }
 
+:root ._comp_bottom_sheet__sheet {
+  background: var(--color-dark);
+  box-shadow: var(--dropdown-shadow);
+  border: 0;
+}
+
 :root ._comp_menu__scrollableInnerCard, :root ._comp_menu__card > div {
   padding: 4px;
 }
@@ -1741,7 +1747,7 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   border-radius: 0 !important;
 }
 
-:root ._comp_status_attachments__galleryFilterBlur:after {
+:root ._comp_status_attachments__galleryFilterBlur:after, :root ._comp_status__contentWarningBlur:after {
   display: none;
 }
 
@@ -2059,6 +2065,10 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 
 :root .notification-group--reblog .notification-group__icon .icon path {
   display: none;
+}
+
+:root ._notifications_components_filtered_notifications_banner__lockup {
+  background: var(--color-dark);
 }
 
 :root .notification-group--favourite .notification-group__icon {

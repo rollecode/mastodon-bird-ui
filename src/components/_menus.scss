@@ -6,6 +6,13 @@
   box-shadow: var(--dropdown-shadow);
 }
 
+// Mobile menus open as a bottom sheet: same dark panel, no bright top edge
+._comp_bottom_sheet__sheet {
+  background: var(--color-dark);
+  border: 0;
+  box-shadow: var(--dropdown-shadow);
+}
+
 ._comp_menu__scrollableInnerCard,
 ._comp_menu__card > div {
   padding: 4px;

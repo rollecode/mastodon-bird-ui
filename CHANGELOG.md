@@ -3,6 +3,8 @@
 * Use v4 heart and more icons in the action bar
 * Group reply, boost and like on the left
 * Line up notification labels with the post text
+* Fix square corners and dots on hidden media
+* Use Bird UI dark for mobile menus and notification banners
 * Fix pinned post header and View all link
 * Show View all pinned posts as plain text
 * Show Pinned before the date like v4
