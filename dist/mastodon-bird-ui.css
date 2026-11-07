@@ -179,7 +179,6 @@
   --color-light-purple: #9baec8;
   --color-light-shade: #ffffff05;
   --color-light-text: #f7f9f9;
-  --color-modal-overlay: #2b2b33;
   --color-mud: #272c4080;
   --color-outer-space: #42485a;
   --color-red: #f91880;
@@ -199,7 +198,6 @@
   --color-light-purple: #9588a6;
   --color-light-shade: #00000005;
   --color-light-text: #1f1b23;
-  --color-modal-overlay: #6a5b8366;
   --color-mud: #e5e1ed;
   --color-outer-space: #42485a;
   --color-red: #e0245e;
@@ -2235,9 +2233,18 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   display: none;
 }
 
+:root .modal-root__overlay, :root .drawer__backdrop, :root ._feat_compose_trigger__rootTop[data-fullscreen="false"] ._feat_compose_trigger__backdrop {
+  backdrop-filter: blur(4px);
+  opacity: 1;
+  background: #000000b3 !important;
+}
+
 :root .modal-root__overlay {
-  background-color: var(--color-modal-overlay) !important;
   color: var(--color-light-text) !important;
+}
+
+:root .media-modal .zoomable-image img {
+  border-radius: 16px;
 }
 
 :root ._comp_modal_shell_redesign__modal {
@@ -2337,11 +2344,6 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   box-shadow: none;
   padding-top: 8px;
   padding-bottom: 8px;
-}
-
-:root ._feat_compose_trigger__rootTop[data-fullscreen="false"] ._feat_compose_trigger__backdrop {
-  backdrop-filter: blur(4px);
-  background: #000000b3;
 }
 
 :root .trends__item__name {

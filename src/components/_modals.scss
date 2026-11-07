@@ -1,6 +1,19 @@
+// One darker, blurred backdrop behind every overlay
+.modal-root__overlay,
+.drawer__backdrop,
+._feat_compose_trigger__rootTop[data-fullscreen='false'] ._feat_compose_trigger__backdrop {
+  backdrop-filter: blur(4px);
+  background: rgb(0 0 0 / 70%) !important;
+  opacity: 1;
+}
+
 .modal-root__overlay {
-  background-color: var(--color-modal-overlay) !important;
   color: var(--color-light-text) !important;
+}
+
+// Opened images get the same rounded corners as in the feed
+.media-modal .zoomable-image img {
+  border-radius: 16px;
 }
 
 ._comp_modal_shell_redesign__modal {

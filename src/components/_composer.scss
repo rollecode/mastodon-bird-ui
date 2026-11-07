@@ -9,9 +9,3 @@
   padding-bottom: 8px;
   padding-top: 8px;
 }
-
-// Open composer: darker, blurred page behind it
-._feat_compose_trigger__rootTop[data-fullscreen='false'] ._feat_compose_trigger__backdrop {
-  backdrop-filter: blur(4px);
-  background: rgb(0 0 0 / 70%);
-}
