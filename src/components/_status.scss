@@ -427,3 +427,8 @@ html.no-reduce-motion ._comp_status__actions > button[data-like-burst] svg {
     padding-block-end: 20px;
   }
 }
+
+// The post above the opened one gets no thread line
+._feat_status__thread:has(~ ._feat_status__mainStatus) > article:first-child > ._comp_status__connectNextReply::after {
+  display: none;
+}
