@@ -739,7 +739,7 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   height: 22px;
 }
 
-:root ._comp_status__variantFeed ._comp_status_header__root > div, :root ._comp_status__variantThread ._comp_status_header__root > div {
+:root ._comp_status__variantFeed ._comp_status_header__root > div:not(._comp_status_header__pinnedBadge), :root ._comp_status__variantThread ._comp_status_header__root > div:not(._comp_status_header__pinnedBadge) {
   flex: 1;
   align-items: baseline;
   min-width: 0;
@@ -1884,28 +1884,35 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 :root ._comp_status_header__pinnedBadge._comp_badge__default {
   color: var(--color-dim);
   background-color: #0000;
+  flex: none;
   order: 2;
   padding: 0;
+  display: flex;
 }
 
 :root [data-id="pinned-view-all"] {
   margin-top: -10px;
 }
 
-:root ._feat_account_timeline__pinnedViewAllButton.button {
+:root ._feat_account_timeline__pinnedViewAllButton:is(.button, ._comp_button__base) {
+  --bg: transparent;
+  --fg: var(--color-dim);
   color: var(--color-dim);
   background-color: #0000;
   border: 0;
   align-items: center;
   gap: 4px;
   width: auto;
+  min-height: 0;
   margin: 0 0 0 auto;
   padding: 8px 16px;
   font-size: 13px;
   display: flex;
 }
 
-:root ._feat_account_timeline__pinnedViewAllButton.button:hover, :root ._feat_account_timeline__pinnedViewAllButton.button:focus {
+:root ._feat_account_timeline__pinnedViewAllButton:is(.button, ._comp_button__base):hover, :root ._feat_account_timeline__pinnedViewAllButton:is(.button, ._comp_button__base):focus {
+  --bg: transparent;
+  --fg: var(--color-accent);
   color: var(--color-accent);
   background-color: #0000;
 }

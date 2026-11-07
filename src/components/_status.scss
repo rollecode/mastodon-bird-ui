@@ -14,7 +14,7 @@
   }
 
   // No flex gap: the bullet text node between name and date would get one too
-  ._comp_status_header__root > div {
+  ._comp_status_header__root > div:not(._comp_status_header__pinnedBadge) {
     align-items: baseline;
     display: flex;
     flex: 1;

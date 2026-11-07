@@ -60,6 +60,8 @@
 ._comp_status_header__pinnedBadge._comp_badge__default {
   background-color: transparent;
   color: var(--color-dim);
+  display: flex;
+  flex: none;
   order: 2;
   padding: 0;
 }
@@ -68,7 +70,9 @@
   margin-top: -10px;
 }
 
-._feat_account_timeline__pinnedViewAllButton.button {
+._feat_account_timeline__pinnedViewAllButton:is(.button, ._comp_button__base) {
+  --bg: transparent;
+  --fg: var(--color-dim);
   align-items: center;
   background-color: transparent;
   border: 0;
@@ -77,11 +81,16 @@
   font-size: 13px;
   gap: 4px;
   margin: 0 0 0 auto;
+
+  min-height: 0;
   padding: 8px 16px;
   width: auto;
 
   &:hover,
   &:focus {
+    --bg: transparent;
+    --fg: var(--color-accent);
+
     background-color: transparent;
     color: var(--color-accent);
   }
