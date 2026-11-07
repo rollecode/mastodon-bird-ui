@@ -4,6 +4,7 @@
 * Group reply, boost and like on the left
 * Line up notification labels with the post text
 * Fix square corners and dots on hidden media
+* Line up the boosted-by line with the post text
 * Use Bird UI dark for mobile menus and notification banners
 * Fix pinned post header and View all link
 * Show View all pinned posts as plain text

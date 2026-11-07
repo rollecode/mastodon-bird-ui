@@ -1001,7 +1001,6 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 
 :root ._comp_status_prepend__root {
   color: var(--color-dim);
-  padding-inline-start: 34px;
   font-size: 15px;
   font-weight: 500;
   line-height: 22px;
