@@ -1006,7 +1006,7 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   line-height: 22px;
 }
 
-:root ._comp_status_prepend__root .account__avatar, :root ._comp_status_prepend__root ._comp_status_prepend__time {
+:root ._comp_status_prepend__root .account__avatar, :root ._comp_status_prepend__root ._comp_status_prepend__time, :root ._comp_status_prepend__root ._comp_status_prepend__contents > a:has(.account__avatar) {
   display: none;
 }
 

@@ -288,7 +288,8 @@ html.no-reduce-motion ._comp_status__actions > button[data-like-burst] svg {
   line-height: 22px;
 
   .account__avatar,
-  ._comp_status_prepend__time {
+  ._comp_status_prepend__time,
+  ._comp_status_prepend__contents > a:has(.account__avatar) {
     display: none;
   }
 

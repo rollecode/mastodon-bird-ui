@@ -5,6 +5,7 @@
 * Line up notification labels with the post text
 * Fix square corners and dots on hidden media
 * Line up the boosted-by line with the post text
+* Fix a 4px offset in the boosted-by line
 * Restyle the minimized composer bar
 * Use Bird UI dark for mobile menus and notification banners
 * Fix pinned post header and View all link
