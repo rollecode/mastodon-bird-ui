@@ -170,3 +170,37 @@ canvas[class='media-gallery__preview'],
   line-height: inherit;
   padding: 0;
 }
+
+// The link card author row like v4's "More from" line
+._comp_card__actions:has(._comp_status_attachments__cardAuthor) {
+  color: var(--color-dim);
+  font-size: 14px;
+  font-weight: 400;
+  gap: 4px 8px;
+  padding-block: 10px 6px;
+
+  > span {
+    margin-inline-end: 0;
+  }
+}
+
+._comp_status_attachments__cardAuthor {
+  --bg-hover: transparent;
+  color: var(--color-fg);
+  font-size: 14px;
+  font-weight: 500;
+  gap: 4px;
+  height: auto;
+  min-height: 0;
+  padding: 0;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--color-accent);
+  }
+
+  .account__avatar {
+    height: 16px !important;
+    width: 16px !important;
+  }
+}
