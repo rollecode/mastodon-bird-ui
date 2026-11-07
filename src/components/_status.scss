@@ -329,9 +329,13 @@ html.no-reduce-motion ._comp_status__actions > button[data-like-burst] svg {
   color: var(--color-dim);
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 4px 16px;
   padding: 8px 0;
   width: 100%;
+
+  li::before {
+    display: none;
+  }
 
   + ._comp_status_meta__list {
     border-top: 1px solid var(--color-border);

@@ -1053,10 +1053,14 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 :root ._comp_status__variantPage ._comp_status_meta__meta ._comp_status_meta__list {
   color: var(--color-dim);
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 4px 16px;
   width: 100%;
   padding: 8px 0;
   display: flex;
+}
+
+:root ._comp_status__variantPage ._comp_status_meta__meta ._comp_status_meta__list li:before {
+  display: none;
 }
 
 :root ._comp_status__variantPage ._comp_status_meta__meta ._comp_status_meta__list + ._comp_status_meta__list {
