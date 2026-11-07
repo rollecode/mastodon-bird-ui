@@ -45,14 +45,14 @@
 
   // Reply, boost and like together on the left, bookmark and menu on the right
   ._comp_status__actions {
-    gap: 12px;
+    gap: 8px;
     justify-content: flex-start;
     max-width: 100%;
   }
 
   ._comp_status__actions > button:nth-of-type(-n + 3) {
     justify-content: flex-start;
-    min-width: 56px;
+    min-width: 50px;
   }
 
   ._comp_status__actions > button._comp_status__actionsButtonGap {

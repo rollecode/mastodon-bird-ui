@@ -781,13 +781,13 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 
 :root ._comp_status__variantFeed ._comp_status__actions, :root ._comp_status__variantThread ._comp_status__actions {
   justify-content: flex-start;
-  gap: 12px;
+  gap: 8px;
   max-width: 100%;
 }
 
 :root ._comp_status__variantFeed ._comp_status__actions > button:nth-of-type(-n+3), :root ._comp_status__variantThread ._comp_status__actions > button:nth-of-type(-n+3) {
   justify-content: flex-start;
-  min-width: 56px;
+  min-width: 50px;
 }
 
 :root ._comp_status__variantFeed ._comp_status__actions > button._comp_status__actionsButtonGap, :root ._comp_status__variantThread ._comp_status__actions > button._comp_status__actionsButtonGap {
