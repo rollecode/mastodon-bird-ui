@@ -1177,6 +1177,42 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   inset-block-start: 22px;
 }
 
+:root ._comp_status__spoiler {
+  background-color: var(--color-focusable-toot);
+  border: 1px solid var(--color-border);
+  color: var(--color-light-purple);
+  border-radius: 16px;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 10px 16px;
+  font-size: 14px;
+}
+
+:root ._comp_status__spoiler ._comp_callout_redesign__icon {
+  display: none;
+}
+
+:root ._comp_status__spoiler ._comp_callout_redesign__textWrapper {
+  font-size: 14px;
+}
+
+:root ._comp_status__spoiler ._comp_button__base {
+  --bg: transparent;
+  --bg-hover: transparent;
+  box-shadow: none;
+  color: var(--color-fg);
+  border: 0;
+  align-self: flex-start;
+  min-height: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+:root ._comp_status__contentWarningBlurActive {
+  display: none;
+}
+
 :root input._comp_search__search {
   background-color: var(--color-mud);
   border-color: var(--color-mud);
@@ -1805,7 +1841,7 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   border-radius: 0 !important;
 }
 
-:root ._comp_status_attachments__galleryFilterBlur:after, :root ._comp_status__contentWarningBlur:after {
+:root ._comp_status_attachments__galleryFilterBlur:after {
   display: none;
 }
 

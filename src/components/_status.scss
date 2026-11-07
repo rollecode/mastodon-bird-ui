@@ -452,3 +452,43 @@ html.no-reduce-motion ._comp_status__actions > button[data-like-burst] svg {
 ._feat_status__thread > article > ._comp_status__connectNextReply::after {
   inset-block-start: 22px;
 }
+
+// Content warnings and filter notices like v4: a quiet box, text left,
+// a plain "Show post" link right, no warning icon
+._comp_status__spoiler {
+  align-items: flex-start;
+  background-color: var(--color-focusable-toot);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  color: var(--color-light-purple);
+  font-size: 14px;
+  gap: 16px;
+  padding: 10px 16px;
+
+  ._comp_callout_redesign__icon {
+    display: none;
+  }
+
+  ._comp_callout_redesign__textWrapper {
+    font-size: 14px;
+  }
+
+  ._comp_button__base {
+    --bg: transparent;
+    --bg-hover: transparent;
+
+    align-self: flex-start;
+    border: 0;
+    box-shadow: none;
+    color: var(--color-fg);
+    font-size: 14px;
+    font-weight: 600;
+    min-height: 0;
+    padding: 0;
+  }
+}
+
+// Text and media behind a content warning stay hidden until shown, as in v4
+._comp_status__contentWarningBlurActive {
+  display: none;
+}

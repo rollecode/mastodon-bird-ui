@@ -95,8 +95,7 @@ canvas[class='media-gallery__preview'],
 }
 
 // v5 blurs and dots the hidden media; v4 showed the plain blurhash
-._comp_status_attachments__galleryFilterBlur::after,
-._comp_status__contentWarningBlur::after {
+._comp_status_attachments__galleryFilterBlur::after {
   display: none;
 }
 
