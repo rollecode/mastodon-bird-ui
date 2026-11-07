@@ -116,7 +116,7 @@
 }
 
 // Follow, Message, Unfollow and Edit profile: outlined, 38px tall with 10px sides
-[class*='_comp_account_header__buttons'] :is(a, button)._comp_button_redesign__base:not(._comp_button_redesign__iconOnly) {
+[class*='_comp_account_header__buttons'] :is(a, button)._comp_button__base:not(._comp_button__iconOnly) {
   font-size: 15px;
   height: 38px;
   line-height: 22px;
@@ -125,15 +125,15 @@
 }
 
 [class*='_comp_account_header__buttons'] :is(a, button):is(
-    ._comp_button_redesign__accent._comp_button_redesign__solid,
-    ._comp_button_redesign__neutral._comp_button_redesign__tonal
+    ._comp_button__accent._comp_button__solid,
+    ._comp_button__neutral._comp_button__tonal
   ) {
   background: transparent;
   box-shadow: inset 0 0 0 1px var(--color-outer-space);
   color: var(--color-fg);
 }
 
-[class*='_comp_account_header__buttons'] button._comp_button_redesign__iconOnly {
+[class*='_comp_account_header__buttons'] button._comp_button__iconOnly {
   background: transparent;
   box-shadow: inset 0 0 0 1px var(--color-outer-space);
   color: var(--color-fg);
@@ -141,7 +141,7 @@
   width: 38px;
 }
 
-[class*='_comp_account_header__buttons'] button._comp_button_redesign__iconOnly[aria-haspopup='menu'] svg {
+[class*='_comp_account_header__buttons'] button._comp_button__iconOnly[aria-haspopup='menu'] svg {
   background: var(--icon-more) center / 18px no-repeat;
 
   path {

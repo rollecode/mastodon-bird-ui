@@ -1,5 +1,5 @@
 // Search field like v4: filled pill, icon on the right
-input._compose_components_search__search {
+input._comp_search__search {
   background-color: var(--color-mud);
   border-color: var(--color-mud);
   border-radius: 32px;
@@ -13,7 +13,7 @@ input._compose_components_search__search {
   }
 }
 
-.search.active input._compose_components_search__search {
+.search.active input._comp_search__search {
   color: var(--color-light-text);
 }
 

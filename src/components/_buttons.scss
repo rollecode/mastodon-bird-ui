@@ -1,14 +1,14 @@
 // Pill buttons sized like v4
-._comp_button_redesign__base:not(._comp_button_redesign__iconOnly) {
+._comp_button__base:not(._comp_button__iconOnly) {
   border-radius: var(--radius-round);
   font-weight: 500;
 }
 
 // Text-only buttons get v4's size; buttons with an icon keep v5's own spacing
 // :where keeps this general rule weak, so specific buttons can override it
-._comp_button_redesign__base:where(
+._comp_button__base:where(
     :not(
-      ._comp_button_redesign__iconOnly,
+      ._comp_button__iconOnly,
       .media-gallery__actions__pill,
       .media-gallery__alt__label,
       :has(.icon-leading, .icon-trailing)
@@ -20,7 +20,7 @@
   padding: 6px 16px;
 }
 
-._comp_button_redesign__neutral._comp_button_redesign__tonal {
+._comp_button__neutral._comp_button__tonal {
   background: transparent;
   box-shadow: inset 0 0 0 1px var(--color-dim);
   color: var(--color-dim);

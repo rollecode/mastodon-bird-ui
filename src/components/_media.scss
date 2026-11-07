@@ -95,7 +95,7 @@ canvas[class='media-gallery__preview'],
 }
 
 // v5 blurs and dots the hidden media; v4 showed the plain blurhash
-._comp_status_attachments__galleryContent::after {
+._comp_status_attachments__galleryFilterBlur::after {
   display: none;
 }
 
@@ -164,8 +164,8 @@ canvas[class='media-gallery__preview'],
   padding: 3px 8px;
 }
 
-.media-gallery .media-gallery__actions__pill ._comp_button_redesign__label,
-.media-gallery .media-gallery__alt__label ._comp_button_redesign__label {
+.media-gallery .media-gallery__actions__pill ._comp_button__label,
+.media-gallery .media-gallery__alt__label ._comp_button__label {
   line-height: inherit;
   padding: 0;
 }

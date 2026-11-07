@@ -1,5 +1,6 @@
 ### [Unreleased]
 
+* Update class names for Mastodon 5.0.0-beta.1
 * Use Mastodon's own Like burst when available
 * Rewrite the theme for Mastodon 5
 * Add Ultra accessible themes for Mastodon 5

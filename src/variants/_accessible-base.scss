@@ -89,7 +89,7 @@
 
     // Secondary text a little smaller
     ._comp_status__actions button,
-    ._comp_status__actions ._comp_button_redesign__label,
+    ._comp_status__actions ._comp_button__label,
     ._comp_status__hashtags > button,
     ._comp_status_meta__meta,
     ._comp_number_fields__list,
@@ -100,7 +100,7 @@
     .account__section-headline button,
     .notification__filter-bar button,
     .inline-follow-suggestions__body *,
-    ._comp_button_redesign__label,
+    ._comp_button__label,
     ._comp_lockup__subtitle,
     ._comp_lockup__subtitle *,
     ._comp_mini_card__card,
@@ -116,7 +116,7 @@
     ._feat_discovery_panel_footer_links__list,
     ._feat_discovery_panel_footer_links__sponsor,
     ._feat_followers__subtitle,
-    ._feat_status_redesign__threadEnd,
+    ._feat_status__threadEnd,
     ._account_featured_components_subheading__subheading h2,
     .display-name__account,
     .account-card__counters__item,
@@ -171,7 +171,7 @@
     }
 
     // Inputs, search and composer on a visible background
-    input._compose_components_search__search,
+    input._comp_search__search,
     textarea,
     input[type='text'],
     input[type='search'] {
@@ -188,8 +188,8 @@
     }
 
     // Outlined buttons with clearly visible borders
-    [class*='_comp_account_header__buttons'] button._comp_button_redesign__base,
-    ._comp_button_redesign__neutral._comp_button_redesign__tonal {
+    [class*='_comp_account_header__buttons'] button._comp_button__base,
+    ._comp_button__neutral._comp_button__tonal {
       box-shadow: inset 0 0 0 1px var(--color-light-text);
     }
 
