@@ -78,3 +78,13 @@
 ._comp_column_header__layout + ._comp_column_header__extraStickyContent {
   border-top: 1px solid var(--color-border-primary);
 }
+
+// Unread notifications get the darker background instead of the left bar, as in v4
+.notification-group--unread,
+.notification-ungrouped--unread {
+  background-color: var(--color-dark);
+
+  &::before {
+    display: none;
+  }
+}

@@ -1814,6 +1814,38 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   padding: 0;
 }
 
+:root ._comp_card__actions:has(._comp_status_attachments__cardAuthor) {
+  color: var(--color-dim);
+  gap: 4px 8px;
+  padding-block: 10px 6px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+:root ._comp_card__actions:has(._comp_status_attachments__cardAuthor) > span {
+  margin-inline-end: 0;
+}
+
+:root ._comp_status_attachments__cardAuthor {
+  --bg-hover: transparent;
+  color: var(--color-fg);
+  gap: 4px;
+  height: auto;
+  min-height: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+:root ._comp_status_attachments__cardAuthor:hover, :root ._comp_status_attachments__cardAuthor:focus-visible {
+  color: var(--color-accent);
+}
+
+:root ._comp_status_attachments__cardAuthor .account__avatar {
+  width: 16px !important;
+  height: 16px !important;
+}
+
 :root ._comp_tab_list__tabList._comp_tab_list__withSpaceAndBorder {
   border-bottom: 1px solid var(--color-border);
   border-left: 0;
@@ -2083,12 +2115,20 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   padding: 8px 10px;
 }
 
-:root .notification-group__main ._comp_card__title, :root ._feat_notifications_v2__unreadBar, :root ._comp_status__isMessage:before {
+:root .notification-group__main ._comp_card__title, :root ._comp_status__isMessage:before {
   display: none;
 }
 
 :root ._comp_column_header__layout + ._comp_column_header__extraStickyContent {
   border-top: 1px solid var(--color-border-primary);
+}
+
+:root .notification-group--unread, :root .notification-ungrouped--unread {
+  background-color: var(--color-dark);
+}
+
+:root .notification-group--unread:before, :root .notification-ungrouped--unread:before {
+  display: none;
 }
 
 :root .modal-root__overlay {

@@ -1,5 +1,6 @@
 ### 5.0.0-beta.1-2026-11-07: 2026-11-07
 
+* Show unread notifications like v4
 * Center search popouts under the field
 * Fix install script on piped runs and reruns
 * Darken and blur the composer backdrop
