@@ -124,15 +124,7 @@
   --bg: var(--color-bg-brand-soft);
 }
 
-// A notification about a post highlights as one row, header included
-.notification-ungrouped {
-  transition: background-color 0.2s;
-}
-
-.notification-ungrouped:not(.notification-ungrouped--unread):is(:focus, :hover) {
-  background-color: var(--color-light-shade);
-}
-
+// The feed article around the row gives the hover shade, header included
 .notification-ungrouped article:is(:focus, :hover),
 .notification-ungrouped ._comp_card__root:is(:hover, :has(a:hover)) {
   background-color: transparent;

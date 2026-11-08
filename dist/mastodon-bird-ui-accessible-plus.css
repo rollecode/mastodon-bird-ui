@@ -2315,14 +2315,6 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   --bg: var(--color-bg-brand-soft);
 }
 
-:root .notification-ungrouped {
-  transition: background-color .2s;
-}
-
-:root .notification-ungrouped:not(.notification-ungrouped--unread):is(:focus, :hover) {
-  background-color: var(--color-light-shade);
-}
-
 :root .notification-ungrouped article:is(:focus, :hover), :root .notification-ungrouped ._comp_card__root:is(:hover, :has(a:hover)) {
   background-color: #0000;
 }

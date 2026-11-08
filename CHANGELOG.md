@@ -1,6 +1,6 @@
 ### Unreleased
 
-* Fix double post hover shade
+* Fix double post hover shade in feeds and notifications
 * Keep hashtag pills visible on unread notifications
 * Fix sensitive media hidden inside open content warnings, Closes #199
 * Keep unread notification background on hover
