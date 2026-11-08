@@ -1,5 +1,6 @@
 ### Unreleased
 
+* Keep hashtag pills visible on unread notifications
 * Fix sensitive media hidden inside open content warnings, Closes #199
 * Keep unread notification background on hover
 * Hide quoted post cards in notifications like v4

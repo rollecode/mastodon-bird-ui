@@ -2307,6 +2307,10 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   display: none;
 }
 
+:root :is(.notification-group--unread, .notification-ungrouped--unread) ._comp_status__hashtags > button._comp_button__base._comp_button__base:not(:hover, :focus-visible) {
+  --bg: var(--color-bg-brand-soft);
+}
+
 :root .notification-ungrouped {
   transition: background-color .2s;
 }
