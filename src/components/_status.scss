@@ -544,12 +544,12 @@ html.no-reduce-motion ._comp_status__actions > button[data-like-burst] svg {
   }
 }
 
-// Reply, boost and like sit in fixed slots, so nothing moves when a count appears
+// Reply, boost and like sit in slots 53px apart like in core, so short counts move nothing
 ._comp_status__actions > button:nth-of-type(-n + 3) {
   aspect-ratio: auto;
   flex: 0 0 auto;
   justify-content: flex-start;
-  width: 50px;
+  min-width: 45px;
 
   // The hover bubble stays on the icon, not the middle of the slot
   &._comp_button__iconOnly::after {

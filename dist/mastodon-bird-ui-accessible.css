@@ -1320,7 +1320,7 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   aspect-ratio: auto;
   flex: none;
   justify-content: flex-start;
-  width: 50px;
+  min-width: 45px;
 }
 
 :root ._comp_status__actions > button:nth-of-type(-n+3)._comp_button__iconOnly:after {
