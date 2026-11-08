@@ -238,3 +238,39 @@
   padding: 0 0.4em;
   position: absolute;
 }
+
+// New post as a soft pill the size of the menu links, filled with the accent on hover
+._navigation_panel_redesign__newPostButton {
+  padding-inline: 0;
+}
+
+._navigation_panel_redesign__newPostButton ._comp_button__base._comp_button__base {
+  --bg: var(--color-bg-brand-soft);
+  --bg-hover: var(--color-accent-dark);
+  background: var(--bg);
+  border-radius: 32px;
+  box-shadow: none;
+  color: var(--color-accent);
+  column-gap: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  min-height: 40px;
+  padding: 9px 18px 9px 12px;
+  transition: background-color 0.2s, color 0.2s;
+
+  svg {
+    height: 18px;
+    width: 18px;
+  }
+
+  ._comp_button__label {
+    padding-inline: 0;
+  }
+
+  &:hover,
+  &:focus-visible {
+    --bg: var(--color-accent-dark);
+    color: #fff;
+  }
+}

@@ -643,6 +643,40 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   inset: 2px auto auto 22px;
 }
 
+:root ._navigation_panel_redesign__newPostButton {
+  padding-inline: 0;
+}
+
+:root ._navigation_panel_redesign__newPostButton ._comp_button__base._comp_button__base {
+  --bg: var(--color-bg-brand-soft);
+  --bg-hover: var(--color-accent-dark);
+  background: var(--bg);
+  box-shadow: none;
+  color: var(--color-accent);
+  border-radius: 32px;
+  column-gap: 6px;
+  min-height: 40px;
+  padding: 9px 18px 9px 12px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  transition: background-color .2s, color .2s;
+}
+
+:root ._navigation_panel_redesign__newPostButton ._comp_button__base._comp_button__base svg {
+  width: 18px;
+  height: 18px;
+}
+
+:root ._navigation_panel_redesign__newPostButton ._comp_button__base._comp_button__base ._comp_button__label {
+  padding-inline: 0;
+}
+
+:root ._navigation_panel_redesign__newPostButton ._comp_button__base._comp_button__base:hover, :root ._navigation_panel_redesign__newPostButton ._comp_button__base._comp_button__base:focus-visible {
+  --bg: var(--color-accent-dark);
+  color: #fff;
+}
+
 :root ._comp_button__base:not(._comp_button__iconOnly) {
   border-radius: var(--radius-round);
   font-weight: 500;
