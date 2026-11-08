@@ -438,6 +438,11 @@ html.no-reduce-motion ._comp_status__actions > button[data-like-burst] svg {
   margin-top: 6px;
 }
 
+// 16px between the post text and a quoted post, as in v4
+._comp_status_content__root > ._comp_card__root:has(._comp_status_quote__title) {
+  margin-top: 8px;
+}
+
 ._comp_status__variantFeed footer,
 ._comp_status__variantThread footer {
   margin-top: 8px;

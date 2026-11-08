@@ -1,5 +1,6 @@
 ### Unreleased
 
+* Space quoted posts from the post text like v4
 * Show the link card author row as the v4 strip
 * Show menu unread counts on the icon like v4
 * Space and weight the boost line like v4

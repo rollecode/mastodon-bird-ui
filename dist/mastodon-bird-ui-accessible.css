@@ -1192,7 +1192,7 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   margin-top: 6px;
 }
 
-:root ._comp_status__variantFeed footer, :root ._comp_status__variantThread footer {
+:root ._comp_status_content__root > ._comp_card__root:has(._comp_status_quote__title), :root ._comp_status__variantFeed footer, :root ._comp_status__variantThread footer {
   margin-top: 8px;
 }
 
