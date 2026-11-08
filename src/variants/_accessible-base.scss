@@ -150,6 +150,24 @@
       line-height: 18px !important;
     }
 
+    // Own account card on one line: the name is cut short, the handle hidden
+    ._navigation_panel_redesign_account_card_and_menu__root {
+      ._comp_lockup__main {
+        min-width: 0;
+      }
+
+      ._comp_lockup__title,
+      ._comp_lockup__title * {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      ._comp_lockup__subtitle {
+        display: none;
+      }
+    }
+
     // Room for long setting labels, so the toggles stay inside the menu
     ._comp_menu__card:has([role='menuitemcheckbox']) {
       max-width: calc(100vw - 32px);
@@ -219,6 +237,19 @@
       font-size: var(--font-size);
       line-height: 1.2;
       white-space: pre-line;
+    }
+  }
+
+  // Large text fills a short window, so the whole left column scrolls as one
+  // instead of squeezing the menu behind the fixed bottom part
+  @media (height < 900px) {
+    :root ._navigation_panel_redesign__footer {
+      flex: 0 0 auto;
+      position: relative;
+
+      &::before {
+        display: none;
+      }
     }
   }
 

@@ -2784,6 +2784,20 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   line-height: 18px !important;
 }
 
+:root ._navigation_panel_redesign_account_card_and_menu__root ._comp_lockup__main {
+  min-width: 0;
+}
+
+:root ._navigation_panel_redesign_account_card_and_menu__root ._comp_lockup__title, :root ._navigation_panel_redesign_account_card_and_menu__root ._comp_lockup__title * {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+:root ._navigation_panel_redesign_account_card_and_menu__root ._comp_lockup__subtitle {
+  display: none;
+}
+
 :root ._comp_menu__card:has([role="menuitemcheckbox"]) {
   width: max-content;
   min-width: 280px;
@@ -2834,6 +2848,17 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   font-size: var(--font-size);
   white-space: pre-line;
   line-height: 1.2;
+}
+
+@media (height < 900px) {
+  :root ._navigation_panel_redesign__footer {
+    flex: none;
+    position: relative;
+  }
+
+  :root ._navigation_panel_redesign__footer:before {
+    display: none;
+  }
 }
 
 @media (width <= 700px) {

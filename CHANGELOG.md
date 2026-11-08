@@ -1,5 +1,6 @@
 ### Unreleased
 
+* Keep the left menu usable on short windows in the accessible themes
 * Turn the language button yellow when the text looks like another language
 * Style hashtag bar pills that are links
 * Enlarge the character counter in the accessible themes
