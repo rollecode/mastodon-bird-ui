@@ -1,5 +1,6 @@
 ### Unreleased
 
+* Turn the language button yellow when the text looks like another language
 * Style hashtag bar pills that are links
 * Enlarge the character counter in the accessible themes
 * Keep settings toggles inside the menu in the accessible themes

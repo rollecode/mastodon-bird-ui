@@ -50,3 +50,12 @@
     color: var(--color-accent);
   }
 }
+
+// The language button turns yellow when the text looks like another language, as in v4
+._feat_compose__root ._comp_button__base[data-language-mismatch] {
+  --fg: var(--color-text-warning);
+
+  border-color: var(--color-text-warning);
+  box-shadow: inset 0 0 0 1px var(--color-text-warning);
+  color: var(--color-text-warning);
+}

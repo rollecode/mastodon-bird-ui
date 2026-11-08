@@ -2549,6 +2549,13 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   color: var(--color-accent);
 }
 
+:root ._feat_compose__root ._comp_button__base[data-language-mismatch] {
+  --fg: var(--color-text-warning);
+  border-color: var(--color-text-warning);
+  box-shadow: inset 0 0 0 1px var(--color-text-warning);
+  color: var(--color-text-warning);
+}
+
 :root .trends__item__name {
   color: var(--color-dim);
 }
