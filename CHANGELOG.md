@@ -1,5 +1,6 @@
 ### Unreleased
 
+* Fix missing thread line under the first post in a thread
 * Keep icons in the account menu
 * Remove the empty band above the Blocked tabs
 * Space reply, boost and like 53px apart like core
