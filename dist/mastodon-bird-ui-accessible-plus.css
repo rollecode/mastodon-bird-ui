@@ -825,6 +825,7 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   --col-gap: 12px;
   gap: 16px;
   padding-top: 16px;
+  padding-bottom: 0;
 }
 
 :root ._comp_status_content__text {
@@ -860,9 +861,19 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 
 :root ._comp_status__variantPage ._comp_status__actions {
   border-top: 1px solid var(--color-border-primary);
-  justify-content: space-around;
+  justify-content: flex-start;
+  gap: 8px;
   margin-inline: -16px;
   padding: 10px 16px;
+}
+
+:root ._comp_status__variantPage ._comp_status__actions > button:nth-of-type(-n+3) {
+  justify-content: flex-start;
+  min-width: 50px;
+}
+
+:root ._comp_status__variantPage ._comp_status__actions > button._comp_status__actionsButtonGap {
+  margin-inline-end: auto !important;
 }
 
 :root ._comp_status__variantPage ._comp_status__actions ._comp_button__label {

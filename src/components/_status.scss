@@ -69,6 +69,7 @@ a._comp_status_header__nameLink {
   --col-gap: 12px;
 
   gap: 16px;
+  padding-bottom: 0;
   padding-top: 16px;
 }
 
@@ -99,7 +100,7 @@ a._comp_status_header__nameLink {
   font-size: 15px;
 }
 
-// Post view: stats above an evenly spread action bar, like v4
+// Post view: stats above the action bar, which is grouped like in the feed
 ._comp_status__variantPage footer {
   display: flex;
   flex-direction: column-reverse;
@@ -107,9 +108,19 @@ a._comp_status_header__nameLink {
 
 ._comp_status__variantPage ._comp_status__actions {
   border-top: 1px solid var(--color-border-primary);
-  justify-content: space-around;
+  gap: 8px;
+  justify-content: flex-start;
   margin-inline: -16px;
   padding: 10px 16px;
+
+  > button:nth-of-type(-n + 3) {
+    justify-content: flex-start;
+    min-width: 50px;
+  }
+
+  > button._comp_status__actionsButtonGap {
+    margin-inline-end: auto !important;
+  }
 
   ._comp_button__label {
     display: none;
