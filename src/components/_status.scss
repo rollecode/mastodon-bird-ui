@@ -385,7 +385,7 @@ html.no-reduce-motion ._comp_status__actions > button[data-like-burst] svg {
   color: var(--fg);
   font-size: 13px;
   font-weight: 500;
-  line-height: 19.5px;
+  line-height: 20px; // whole pixels, so posts below never land on half pixels and shift
   margin: 0 4px 4px 0;
 
   min-height: 0;
@@ -409,7 +409,7 @@ html.no-reduce-motion ._comp_status__actions > button[data-like-burst] svg {
   color: var(--color-accent);
   font-size: 13px;
   font-weight: 400;
-  line-height: 19.5px;
+  line-height: 20px; // whole pixels, so posts below never land on half pixels and shift
   margin: 0 0 4px;
 
   min-height: 0;
@@ -569,4 +569,21 @@ html.no-reduce-motion ._comp_status__actions > button[data-like-burst] svg {
     color: var(--color-text-brand);
     font-weight: inherit;
   }
+}
+
+// Whole-pixel line heights in posts: a half pixel here puts every post below
+// on a fraction of a pixel, and those shift by a pixel when anything repaints
+._comp_status_content__text p,
+._comp_status_quote__body p {
+  line-height: 22px;
+}
+
+a._comp_status_header__nameLink,
+._comp_status_header__date {
+  line-height: 22px;
+}
+
+._comp_status_header__handle,
+.poll__footer {
+  line-height: 20px;
 }

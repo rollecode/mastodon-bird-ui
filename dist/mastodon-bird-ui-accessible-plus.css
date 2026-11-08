@@ -1194,7 +1194,7 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   padding: 4px 8px;
   font-size: 13px;
   font-weight: 500;
-  line-height: 19.5px;
+  line-height: 20px;
   text-decoration: none;
 }
 
@@ -1215,7 +1215,7 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   padding: 4px 2px;
   font-size: 13px;
   font-weight: 400;
-  line-height: 19.5px;
+  line-height: 20px;
 }
 
 :root ._comp_status__contentWrapper {
@@ -1338,6 +1338,14 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 :root ._comp_card__root:has(._comp_status_quote__title) > ._comp_card__body:not(._comp_status_quote__body) a {
   color: var(--color-text-brand);
   font-weight: inherit;
+}
+
+:root ._comp_status_content__text p, :root ._comp_status_quote__body p, :root a._comp_status_header__nameLink, :root ._comp_status_header__date {
+  line-height: 22px;
+}
+
+:root ._comp_status_header__handle, :root .poll__footer {
+  line-height: 20px;
 }
 
 :root input._comp_search__search {
