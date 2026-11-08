@@ -185,7 +185,7 @@ canvas[class='media-gallery__preview'],
   font-size: var(--font-size);
 }
 
-._comp_card__body:not(._comp_card__description, ._comp_status_quote__body) {
+._comp_card__body:not(._comp_card__description):has(> ._comp_card__primaryCardLink) {
   color: var(--color-fg);
   font-size: var(--font-size);
   font-weight: 600;

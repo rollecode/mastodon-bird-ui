@@ -509,3 +509,9 @@ html.no-reduce-motion ._comp_status__actions > button[data-like-burst] svg {
 ._comp_status__contentWarningBlurActive {
   display: none;
 }
+
+// Links, mentions and hashtags in quoted posts read as links like in v4, not bold
+._comp_status_quote__body strong:has(> span) {
+  color: var(--color-text-brand);
+  font-weight: inherit;
+}

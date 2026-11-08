@@ -1227,6 +1227,11 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   display: none;
 }
 
+:root ._comp_status_quote__body strong:has( > span) {
+  color: var(--color-text-brand);
+  font-weight: inherit;
+}
+
 :root input._comp_search__search {
   background-color: var(--color-mud);
   border-color: var(--color-mud);
@@ -1936,7 +1941,7 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   font-size: var(--font-size);
 }
 
-:root ._comp_card__body:not(._comp_card__description, ._comp_status_quote__body) {
+:root ._comp_card__body:not(._comp_card__description):has( > ._comp_card__primaryCardLink) {
   color: var(--color-fg);
   font-size: var(--font-size);
   font-weight: 600;
@@ -2267,10 +2272,15 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   display: none;
 }
 
-:root .notification-group__main ._comp_status_quote__body {
+:root .notification-group__main ._comp_card__body {
   color: var(--color-dim);
+  padding-top: 0;
   font-size: 15px;
   line-height: 22px;
+}
+
+:root .notification-group__main ._comp_card__body :is(a, strong:has( > span)) {
+  color: inherit;
 }
 
 :root .notification-group__main {
@@ -2303,6 +2313,18 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 
 :root .notification-ungrouped article:is(:focus, :hover), :root .notification-ungrouped ._comp_card__root:is(:hover, :has(a:hover)) {
   background-color: #0000;
+}
+
+:root .notification-group__main__header__wrapper {
+  align-items: center;
+}
+
+:root .notification-group__main__header__wrapper ._comp_button__base {
+  min-height: 0;
+  padding: 3px 12px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
 }
 
 :root .modal-root__overlay, :root .drawer__backdrop, :root ._feat_compose_trigger__rootTop[data-fullscreen="false"] ._feat_compose_trigger__backdrop {

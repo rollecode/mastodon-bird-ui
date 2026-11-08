@@ -77,10 +77,15 @@
   display: none;
 }
 
-.notification-group__main ._comp_status_quote__body {
+.notification-group__main ._comp_card__body {
   color: var(--color-dim);
   font-size: 15px;
   line-height: 22px;
+  padding-top: 0;
+
+  :is(a, strong:has(> span)) {
+    color: inherit;
+  }
 }
 
 .notification-group__main {
@@ -119,4 +124,17 @@
 .notification-ungrouped article:is(:focus, :hover),
 .notification-ungrouped ._comp_card__root:is(:hover, :has(a:hover)) {
   background-color: transparent;
+}
+
+// Follow back button as compact as v4, level with the avatars
+.notification-group__main__header__wrapper {
+  align-items: center;
+
+  ._comp_button__base {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    min-height: 0;
+    padding: 3px 12px;
+  }
 }
