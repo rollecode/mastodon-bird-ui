@@ -1,5 +1,6 @@
 ### Unreleased
 
+* Tighten the link card author row padding
 * Use whole-pixel line heights in posts to stop 1px shifts
 * Show the link in quoted posts as a normal link like v4
 * Space the link card author row from the description like v4
