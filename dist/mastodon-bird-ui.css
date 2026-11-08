@@ -1191,6 +1191,10 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   inset-block-end: -32px;
 }
 
+:root ._feat_status__thread:has( + ._feat_status__mainStatus) > article[data-connect-next="true"]:last-child > ._comp_status__connectNextReply:after {
+  inset-block-end: 0;
+}
+
 :root ._comp_status__variantThread ._comp_status_header__avatar {
   z-index: 1;
   position: relative;

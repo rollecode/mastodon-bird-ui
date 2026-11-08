@@ -460,6 +460,13 @@ html.no-reduce-motion ._comp_status__actions > button[data-like-burst] svg {
   inset-block-end: -32px;
 }
 
+// but stops at the divider above the opened post, which has no line in v4
+._feat_status__thread:has(+ ._feat_status__mainStatus)
+  > article[data-connect-next='true']:last-child
+  > ._comp_status__connectNextReply::after {
+  inset-block-end: 0;
+}
+
 // The avatar sits above the thread line, so the line starts below it
 ._comp_status__variantThread ._comp_status_header__avatar {
   position: relative;
