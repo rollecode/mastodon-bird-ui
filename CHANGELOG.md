@@ -12,7 +12,7 @@
 * Keep hashtag pills visible on unread notifications
 * Fix sensitive media hidden inside open content warnings, Closes #199 (kudos to @cadusilva)
 * Keep unread notification background on hover
-* Hide quoted post cards in notifications like v4
+* Hide link and quoted post lines in notifications like v4
 * Show links in quoted posts like v4, not bold
 * Make the follow back button compact like v4
 * Match v4 spacing and colours in notification previews
