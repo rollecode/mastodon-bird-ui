@@ -2,7 +2,7 @@
 
 * Fix double post hover shade in feeds and notifications
 * Keep hashtag pills visible on unread notifications
-* Fix sensitive media hidden inside open content warnings, Closes #199
+* Fix sensitive media hidden inside open content warnings, Closes #199 (kudos to @cadusilva)
 * Keep unread notification background on hover
 * Hide quoted post cards in notifications like v4
 * Show links in quoted posts like v4, not bold
