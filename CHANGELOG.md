@@ -1,5 +1,7 @@
 ### Unreleased
 
+* Enlarge the character counter in the accessible themes
+* Keep settings toggles inside the menu in the accessible themes
 * Size notification labels like post text in the accessible themes
 * Tighten Follow buttons in Explore suggestions
 * Redesign composer suggestions as a compact dark list

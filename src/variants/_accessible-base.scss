@@ -103,6 +103,7 @@
     .notification__filter-bar button,
     .inline-follow-suggestions__body *,
     ._comp_button__label,
+    ._feat_compose__counter,
     ._comp_status__spoiler ._comp_callout_redesign__textWrapper,
     ._comp_status__spoiler ._comp_callout_redesign__textWrapper *,
     ._comp_lockup__subtitle,
@@ -147,6 +148,18 @@
       color: #a6a6a6 !important; // 8.6:1 on black, passes WCAG AAA
       font-size: 13px !important;
       line-height: 18px !important;
+    }
+
+    // Room for long setting labels, so the toggles stay inside the menu
+    ._comp_menu__card:has([role='menuitemcheckbox']) {
+      max-width: calc(100vw - 32px);
+      min-width: 280px;
+      width: max-content;
+    }
+
+    ._comp_menu__itemTrailingContent {
+      flex-shrink: 0;
+      margin-inline-start: auto;
     }
 
     // The stacked footer links share a narrow row

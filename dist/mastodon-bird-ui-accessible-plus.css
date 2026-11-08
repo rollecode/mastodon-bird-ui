@@ -2766,7 +2766,7 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   line-height: var(--line-height) !important;
 }
 
-:root ._comp_status__actions button, :root ._comp_status__actions ._comp_button__label, :root ._comp_status__hashtags > button, :root ._comp_status_meta__meta, :root ._comp_number_fields__list, :root ._comp_number_fields__list *, :root ._comp_badge__content, :root ._comp_tab_list__tabList ._comp_tab_list__tab, :root .account__section-headline a, :root .account__section-headline button, :root .notification__filter-bar button, :root .inline-follow-suggestions__body *, :root ._comp_button__label, :root ._comp_status__spoiler ._comp_callout_redesign__textWrapper, :root ._comp_status__spoiler ._comp_callout_redesign__textWrapper *, :root ._comp_lockup__subtitle, :root ._comp_lockup__subtitle *, :root ._comp_mini_card__card, :root ._comp_tags__tag, :root ._comp_familiar_followers__wrapper, :root ._comp_menu__itemDescription, :root ._comp_status_meta__editedButton, :root ._comp_account_list_item__handle, :root ._comp_account_header__handleHelpButton, :root ._navigation_panel_redesign_list_section__title, :root ._navigation_panel_redesign_list_section__viewAll, :root ._feat_followers__subtitle, :root ._feat_status__threadEnd, :root ._account_featured_components_subheading__subheading h2, :root .display-name__account, :root .account-card__counters__item, :root .account-card__counters__item small, :root .account__details, :root .explore-suggestions-card__source, :root .story__details__publisher, :root .story__details__shared, :root .story__details__shared__pill, :root .search-results__section__header h3, :root .search-results__section__header button, :root .empty-column-indicator, :root .follow_requests-unlocked_explanation, :root .radio-button, :root .load-more, :root ._comp_card__title, :root ._comp_card__title a, :root .button {
+:root ._comp_status__actions button, :root ._comp_status__actions ._comp_button__label, :root ._comp_status__hashtags > button, :root ._comp_status_meta__meta, :root ._comp_number_fields__list, :root ._comp_number_fields__list *, :root ._comp_badge__content, :root ._comp_tab_list__tabList ._comp_tab_list__tab, :root .account__section-headline a, :root .account__section-headline button, :root .notification__filter-bar button, :root .inline-follow-suggestions__body *, :root ._comp_button__label, :root ._feat_compose__counter, :root ._comp_status__spoiler ._comp_callout_redesign__textWrapper, :root ._comp_status__spoiler ._comp_callout_redesign__textWrapper *, :root ._comp_lockup__subtitle, :root ._comp_lockup__subtitle *, :root ._comp_mini_card__card, :root ._comp_tags__tag, :root ._comp_familiar_followers__wrapper, :root ._comp_menu__itemDescription, :root ._comp_status_meta__editedButton, :root ._comp_account_list_item__handle, :root ._comp_account_header__handleHelpButton, :root ._navigation_panel_redesign_list_section__title, :root ._navigation_panel_redesign_list_section__viewAll, :root ._feat_followers__subtitle, :root ._feat_status__threadEnd, :root ._account_featured_components_subheading__subheading h2, :root .display-name__account, :root .account-card__counters__item, :root .account-card__counters__item small, :root .account__details, :root .explore-suggestions-card__source, :root .story__details__publisher, :root .story__details__shared, :root .story__details__shared__pill, :root .search-results__section__header h3, :root .search-results__section__header button, :root .empty-column-indicator, :root .follow_requests-unlocked_explanation, :root .radio-button, :root .load-more, :root ._comp_card__title, :root ._comp_card__title a, :root .button {
   font-size: 20px !important;
 }
 
@@ -2774,6 +2774,17 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   color: #a6a6a6 !important;
   font-size: 13px !important;
   line-height: 18px !important;
+}
+
+:root ._comp_menu__card:has([role="menuitemcheckbox"]) {
+  width: max-content;
+  min-width: 280px;
+  max-width: calc(100vw - 32px);
+}
+
+:root ._comp_menu__itemTrailingContent {
+  flex-shrink: 0;
+  margin-inline-start: auto;
 }
 
 :root ._navigation_panel_redesign_navigation_link__linkStacked {
