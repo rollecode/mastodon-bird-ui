@@ -1,5 +1,6 @@
 ### Unreleased
 
+* Fix sensitive media hidden inside open content warnings, Closes #199
 * Keep unread notification background on hover
 * Hide quoted post cards in notifications like v4
 * Show links in quoted posts like v4, not bold

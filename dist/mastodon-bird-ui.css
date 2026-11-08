@@ -1223,7 +1223,7 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   font-weight: 600;
 }
 
-:root ._comp_status__contentWarningBlurActive {
+:root ._comp_status__contentWrapper._comp_status__contentWarningBlurActive, :root ._comp_status_attachments__galleryWrapper ._comp_status__contentWarningBlur:after {
   display: none;
 }
 

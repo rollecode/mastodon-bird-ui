@@ -506,7 +506,12 @@ html.no-reduce-motion ._comp_status__actions > button[data-like-burst] svg {
 }
 
 // Text and media behind a content warning stay hidden until shown, as in v4
-._comp_status__contentWarningBlurActive {
+._comp_status__contentWrapper._comp_status__contentWarningBlurActive {
+  display: none;
+}
+
+// Sensitive media shows the plain blurhash with its Show button, as in v4
+._comp_status_attachments__galleryWrapper ._comp_status__contentWarningBlur::after {
   display: none;
 }
 
