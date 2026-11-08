@@ -556,3 +556,17 @@ html.no-reduce-motion ._comp_status__actions > button[data-like-burst] svg {
     left: calc(9.5px - 17px);
   }
 }
+
+// The link Mastodon moves out of a quoted post's text reads as a normal link on one line, as in v4
+._comp_card__root:has(._comp_status_quote__title) > ._comp_card__body:not(._comp_status_quote__body) {
+  font-size: inherit;
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  a {
+    color: var(--color-text-brand);
+    font-weight: inherit;
+  }
+}

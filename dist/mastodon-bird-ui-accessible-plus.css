@@ -1327,6 +1327,19 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   left: -7.5px;
 }
 
+:root ._comp_card__root:has(._comp_status_quote__title) > ._comp_card__body:not(._comp_status_quote__body) {
+  font-size: inherit;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 400;
+  overflow: hidden;
+}
+
+:root ._comp_card__root:has(._comp_status_quote__title) > ._comp_card__body:not(._comp_status_quote__body) a {
+  color: var(--color-text-brand);
+  font-weight: inherit;
+}
+
 :root input._comp_search__search {
   background-color: var(--color-mud);
   border-color: var(--color-mud);
