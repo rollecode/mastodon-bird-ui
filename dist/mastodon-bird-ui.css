@@ -172,6 +172,7 @@
   --color-border: #38384d;
   --color-column-link-hover: #f7f7f91a;
   --color-dark: #232543;
+  --color-suggest-bg: #111217;
   --color-dim: #717c9b;
   --color-fg: #fff;
   --color-focusable-toot: #ffffff09;
@@ -191,6 +192,7 @@
   --color-border: #e6e1ed;
   --color-column-link-hover: #1e1b231a;
   --color-dark: #f7f9f9;
+  --color-suggest-bg: #fff;
   --color-dim: #9388a6;
   --color-fg: #000;
   --color-focusable-toot: #00000009;
@@ -1786,6 +1788,67 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 
 :root ._feat_compose__languageListBox, :root ._feat_compose__languageListBox [role="option"]:not(:hover, [aria-selected="true"]) {
   background: none;
+}
+
+:root ._comp_menu__card:has(._comp_autosuggest__item) {
+  background: var(--color-suggest-bg);
+  border: 1px solid var(--color-border);
+  max-width: min(360px, var(--popover-width-available, 360px));
+  border-radius: 8px;
+  width: max-content;
+  min-width: 200px;
+  box-shadow: 0 8px 24px #00000073;
+}
+
+:root ._comp_menu__item._comp_autosuggest__item {
+  align-items: center;
+  gap: 8px;
+  min-height: 0;
+  padding: 5px 8px;
+}
+
+:root ._comp_menu__item._comp_autosuggest__item > div {
+  align-items: baseline;
+  gap: 6px;
+  min-width: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+:root ._comp_autosuggest__item ._comp_autosuggest__itemIcon {
+  width: 24px !important;
+  height: 24px !important;
+}
+
+:root ._comp_autosuggest__itemAccountName {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex-shrink: 1;
+  min-width: 0;
+  font-size: 14px;
+  line-height: 20px;
+  overflow: hidden;
+}
+
+:root ._comp_autosuggest__itemAccountVerified {
+  display: none;
+}
+
+:root ._comp_autosuggest__itemAccountHandle {
+  color: var(--color-dim);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex-shrink: 2;
+  min-width: 0;
+  font-size: 13px;
+  line-height: 20px;
+  overflow: hidden;
+}
+
+:root ._comp_autosuggest__itemHashUses {
+  color: var(--color-dim);
+  padding-inline-start: 16px;
+  font-size: 12px;
 }
 
 :root .media-gallery, :root .audio-player, :root .video-player, :root .media-gallery__gifv, :root .media-gallery__preview {

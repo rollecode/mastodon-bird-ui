@@ -60,3 +60,67 @@
 ._feat_compose__languageListBox [role='option']:not(:hover, [aria-selected='true']) {
   background: transparent;
 }
+
+// Composer suggestions: one compact row per item on a near black panel,
+// name and handle on the same line
+._comp_menu__card:has(._comp_autosuggest__item) {
+  background: var(--color-suggest-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 45%);
+  max-width: min(360px, var(--popover-width-available, 360px));
+  min-width: 200px;
+  width: max-content;
+}
+
+._comp_menu__item._comp_autosuggest__item {
+  align-items: center;
+  gap: 8px;
+  min-height: 0;
+  padding: 5px 8px;
+
+  > div {
+    align-items: baseline;
+    display: flex;
+    gap: 6px;
+    min-width: 0;
+    overflow: hidden;
+  }
+}
+
+// The avatar sets its 32px size inline
+._comp_autosuggest__item ._comp_autosuggest__itemIcon {
+  height: 24px !important;
+  width: 24px !important;
+}
+
+._comp_autosuggest__itemAccountName {
+  flex-shrink: 1;
+  font-size: 14px;
+  line-height: 20px;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+._comp_autosuggest__itemAccountVerified {
+  display: none;
+}
+
+._comp_autosuggest__itemAccountHandle {
+  color: var(--color-dim);
+  flex-shrink: 2;
+  font-size: 13px;
+  line-height: 20px;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+._comp_autosuggest__itemHashUses {
+  color: var(--color-dim);
+  font-size: 12px;
+  padding-inline-start: 16px;
+}

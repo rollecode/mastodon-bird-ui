@@ -1,6 +1,7 @@
 ### Unreleased
 
-* Size filter and content warning text like the Show post button in the accessible themes
+* Redesign composer suggestions as a compact dark list
+* Enlarge warning text in the accessible themes
 * Dim the footer links in the accessible themes
 * Keep footer links tiny in the accessible themes
 * Fix double post hover shade in feeds and notifications
