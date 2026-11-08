@@ -2395,6 +2395,45 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   padding-bottom: 8px;
 }
 
+:root ._feat_compose__calloutWrapper {
+  gap: 8px;
+}
+
+:root ._feat_compose__calloutWrapper ._comp_callout_redesign__rootLarge {
+  background-color: var(--color-focusable-toot);
+  border: 1px solid var(--color-border);
+  color: var(--color-light-purple);
+  border-radius: 16px;
+  gap: 12px;
+  padding: 10px 16px;
+}
+
+:root ._feat_compose__calloutWrapper ._comp_callout_redesign__rootLarge ._comp_callout_redesign__icon {
+  width: 18px;
+  height: 18px;
+}
+
+:root ._feat_compose__calloutWrapper ._comp_callout_redesign__rootLarge ._comp_callout_redesign__textWrapper {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+:root ._feat_compose__calloutWrapper ._comp_callout_redesign__rootLarge ._comp_button__base {
+  --bg: transparent;
+  --bg-hover: transparent;
+  box-shadow: none;
+  color: var(--color-fg);
+  border: 0;
+  min-height: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+:root ._feat_compose__calloutWrapper ._comp_callout_redesign__rootLarge ._comp_button__base:not(._comp_button__ghost) {
+  color: var(--color-accent);
+}
+
 :root .trends__item__name {
   color: var(--color-dim);
 }
