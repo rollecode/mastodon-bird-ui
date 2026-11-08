@@ -1,6 +1,6 @@
 ### Unreleased
 
-* Keep even spacing in the action bar when counts are missing
+* Keep reply, boost and like in fixed places when counts change
 * Fix link card text cut off by the author row
 * Make New post a soft pill that fills with the accent on hover
 * Size the announcement add reaction button like the reactions

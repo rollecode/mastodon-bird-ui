@@ -544,18 +544,15 @@ html.no-reduce-motion ._comp_status__actions > button[data-like-burst] svg {
   }
 }
 
-// Reply, boost and like keep the same space after them, with or without a count.
-// A missing count takes no room: Mastodon hides a zero but keeps its width.
-._comp_status__actions > button:nth-of-type(-n + 2) {
+// Reply, boost and like sit in fixed slots, so nothing moves when a count appears
+._comp_status__actions > button:nth-of-type(-n + 3) {
   aspect-ratio: auto;
-  padding-inline-end: 18px !important;
+  flex: 0 0 auto;
+  justify-content: flex-start;
+  width: 50px;
 
-  // The hover bubble stays on the icon, not the middle of the wider button
+  // The hover bubble stays on the icon, not the middle of the slot
   &._comp_button__iconOnly::after {
     left: calc(9.5px - 17px);
   }
-}
-
-._comp_status__actions > button:has(> ._comp_button__label > span[style*='hidden']) ._comp_button__label {
-  display: none;
 }

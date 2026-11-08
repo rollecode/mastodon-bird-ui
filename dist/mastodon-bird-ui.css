@@ -1316,17 +1316,15 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   overflow-y: clip;
 }
 
-:root ._comp_status__actions > button:nth-of-type(-n+2) {
+:root ._comp_status__actions > button:nth-of-type(-n+3) {
   aspect-ratio: auto;
-  padding-inline-end: 18px !important;
+  flex: none;
+  justify-content: flex-start;
+  width: 50px;
 }
 
-:root ._comp_status__actions > button:nth-of-type(-n+2)._comp_button__iconOnly:after {
+:root ._comp_status__actions > button:nth-of-type(-n+3)._comp_button__iconOnly:after {
   left: -7.5px;
-}
-
-:root ._comp_status__actions > button:has( > ._comp_button__label > span[style*="hidden"]) ._comp_button__label {
-  display: none;
 }
 
 :root input._comp_search__search {
