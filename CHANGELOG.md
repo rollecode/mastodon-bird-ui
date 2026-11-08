@@ -1,5 +1,6 @@
 ### Unreleased
 
+* Tighten Follow buttons in Explore suggestions
 * Redesign composer suggestions as a compact dark list
 * Enlarge warning text in the accessible themes
 * Dim the footer links in the accessible themes

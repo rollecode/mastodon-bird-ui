@@ -696,6 +696,8 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   --bg-hover: var(--color-bg-highlight);
   --fg: var(--color-text-primary);
   box-shadow: inset 0 0 0 1px var(--color-border-primary);
+  padding-inline: 12px;
+  font-size: 14px;
 }
 
 :root ._comp_button__base {

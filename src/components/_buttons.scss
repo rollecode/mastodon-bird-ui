@@ -87,6 +87,8 @@
   --fg: var(--color-text-primary);
 
   box-shadow: inset 0 0 0 1px var(--color-border-primary);
+  font-size: 14px;
+  padding-inline: 12px;
 }
 
 // Button labels never wrap onto a second line
