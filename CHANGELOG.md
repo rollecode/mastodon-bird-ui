@@ -3,7 +3,7 @@
 * Show menu unread counts on the icon like v4
 * Space and weight the boost line like v4
 * Size link card text like v4
-* Stop the thread line at the opened post like v4
+* Stop the thread line at the divider above the opened post like v4
 * Keep media visible in collapsed long posts like v4
 * Keep the left menu usable on short windows in the accessible themes
 * Turn the language button yellow when the text looks like another language

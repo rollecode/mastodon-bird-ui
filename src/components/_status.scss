@@ -467,7 +467,7 @@ html.no-reduce-motion ._comp_status__actions > button[data-like-burst] svg {
 ._feat_status__thread:has(+ ._feat_status__mainStatus)
   > article[data-connect-next='true']:last-child
   > ._comp_status__connectNextReply::after {
-  inset-block-end: 0;
+  inset-block-end: -20px; // through the post's bottom padding, down to the divider
 }
 
 // The avatar sits above the thread line, so the line starts below it
