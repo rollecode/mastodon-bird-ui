@@ -300,6 +300,7 @@ html.no-reduce-motion ._comp_status__actions > button[data-like-burst] svg {
   font-size: 15px;
   font-weight: 500;
   line-height: 22px;
+  margin-bottom: 6px;
 
   .account__avatar,
   ._comp_status_prepend__time,
@@ -307,8 +308,10 @@ html.no-reduce-motion ._comp_status__actions > button[data-like-burst] svg {
     display: none;
   }
 
+  // The name is not bold, as in v4
   ._comp_status_prepend__account {
     color: inherit;
+    font-weight: inherit;
   }
 }
 

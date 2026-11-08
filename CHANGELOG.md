@@ -1,5 +1,6 @@
 ### Unreleased
 
+* Space and weight the boost line like v4
 * Size link card text like v4
 * Stop the thread line at the opened post like v4
 * Keep media visible in collapsed long posts like v4

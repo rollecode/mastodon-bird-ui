@@ -1044,6 +1044,7 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 
 :root ._comp_status_prepend__root {
   color: var(--color-dim);
+  margin-bottom: 6px;
   font-size: 15px;
   font-weight: 500;
   line-height: 22px;
@@ -1055,6 +1056,7 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 
 :root ._comp_status_prepend__root ._comp_status_prepend__account {
   color: inherit;
+  font-weight: inherit;
 }
 
 :root ._comp_status_prepend__root ._comp_status_prepend__reblogIcon {
