@@ -50,10 +50,6 @@
     max-width: 100%;
   }
 
-  ._comp_status__actions > button:nth-of-type(-n + 3) {
-    justify-content: flex-start;
-    min-width: 50px;
-  }
 
   ._comp_status__actions > button._comp_status__actionsButtonGap {
     margin-inline-end: auto !important;
@@ -112,11 +108,6 @@ a._comp_status_header__nameLink {
   justify-content: flex-start;
   margin-inline: -16px;
   padding: 10px 16px;
-
-  > button:nth-of-type(-n + 3) {
-    justify-content: flex-start;
-    min-width: 50px;
-  }
 
   > button._comp_status__actionsButtonGap {
     margin-inline-end: auto !important;
@@ -551,4 +542,20 @@ html.no-reduce-motion ._comp_status__actions > button[data-like-burst] svg {
     // stylelint-enable csstools/value-no-unknown-custom-properties
     overflow-y: clip;
   }
+}
+
+// Reply, boost and like keep the same space after them, with or without a count.
+// A missing count takes no room: Mastodon hides a zero but keeps its width.
+._comp_status__actions > button:nth-of-type(-n + 2) {
+  aspect-ratio: auto;
+  padding-inline-end: 18px !important;
+
+  // The hover bubble stays on the icon, not the middle of the wider button
+  &._comp_button__iconOnly::after {
+    left: calc(9.5px - 17px);
+  }
+}
+
+._comp_status__actions > button:has(> ._comp_button__label > span[style*='hidden']) ._comp_button__label {
+  display: none;
 }
