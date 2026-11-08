@@ -1,5 +1,6 @@
 ### Unreleased
 
+* Hide quoted post cards in notifications like v4
 * Show links in quoted posts like v4, not bold
 * Make the follow back button compact like v4
 * Match v4 spacing and colours in notification previews

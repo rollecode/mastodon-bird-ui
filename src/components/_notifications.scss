@@ -88,6 +88,11 @@
   }
 }
 
+// v4 showed no quoted post card under the notification excerpt
+.notification-group__main ._comp_card__body:has(> ._comp_status_quote__nestedQuote) {
+  display: none;
+}
+
 .notification-group__main {
   gap: 8px;
 }

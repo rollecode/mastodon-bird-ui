@@ -2283,6 +2283,10 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   color: inherit;
 }
 
+:root .notification-group__main ._comp_card__body:has( > ._comp_status_quote__nestedQuote) {
+  display: none;
+}
+
 :root .notification-group__main {
   gap: 8px;
 }
