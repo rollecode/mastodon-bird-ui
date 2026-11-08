@@ -1,5 +1,6 @@
 ### Unreleased
 
+* Keep footer links tiny in the accessible themes
 * Fix double post hover shade in feeds and notifications
 * Keep hashtag pills visible on unread notifications
 * Fix sensitive media hidden inside open content warnings, Closes #199 (kudos to @cadusilva)
