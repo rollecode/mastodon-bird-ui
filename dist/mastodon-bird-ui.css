@@ -2074,17 +2074,22 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 }
 
 :root ._comp_card__actions:has(._comp_status_attachments__cardAuthor) {
+  background-color: var(--color-bg-secondary);
+  border-top: 1px solid var(--color-border-primary);
   color: var(--color-dim);
+  align-items: center;
   gap: 4px 8px;
-  margin-inline: -16px;
-  padding-block: 10px 6px;
-  padding-inline: 16px;
+  margin: 0 -16px -16px;
+  padding: 15px;
   font-size: 14px;
   font-weight: 400;
 }
 
 :root ._comp_card__actions:has(._comp_status_attachments__cardAuthor) > span {
+  align-items: center;
+  gap: 4px;
   margin-inline-end: 0;
+  display: flex;
 }
 
 :root ._comp_status_attachments__cardAuthor {
