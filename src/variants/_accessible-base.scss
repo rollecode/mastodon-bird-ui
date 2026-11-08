@@ -101,6 +101,8 @@
     .notification__filter-bar button,
     .inline-follow-suggestions__body *,
     ._comp_button__label,
+    ._comp_status__spoiler ._comp_callout_redesign__textWrapper,
+    ._comp_status__spoiler ._comp_callout_redesign__textWrapper *,
     ._comp_lockup__subtitle,
     ._comp_lockup__subtitle *,
     ._comp_mini_card__card,
@@ -140,6 +142,7 @@
     ._feat_discovery_panel_footer_links__root *,
     ._ui_components_link_footer__wrapper,
     ._ui_components_link_footer__wrapper * {
+      color: #a6a6a6 !important; // 8.6:1 on black, passes WCAG AAA
       font-size: 13px !important;
       line-height: 18px !important;
     }
