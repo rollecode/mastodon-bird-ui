@@ -205,6 +205,12 @@ canvas[class='media-gallery__preview'],
     line-height: 1.3;
   }
 
+  // Spacing as margin: newer Chromium clamps lines inside the padding and cut the text
+  ._comp_card__body._comp_card__clamp {
+    margin-block-start: 8px;
+    padding-block-start: 0;
+  }
+
   ._comp_card__description {
     font-size: 14px;
     -webkit-line-clamp: 1;

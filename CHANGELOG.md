@@ -1,5 +1,6 @@
 ### Unreleased
 
+* Fix link card text cut off by the author row
 * Make New post a soft pill that fills with the accent on hover
 * Size the announcement add reaction button like the reactions
 * Show notification previews in light text with accent links like v4
