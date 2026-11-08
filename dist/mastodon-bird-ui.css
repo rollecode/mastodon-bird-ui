@@ -2403,14 +2403,15 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 }
 
 :root .notification-group__main ._comp_card__body {
-  color: var(--color-dim);
+  color: var(--color-light-text);
   padding-top: 0;
   font-size: 15px;
   line-height: 22px;
 }
 
 :root .notification-group__main ._comp_card__body :is(a, strong:has( > span)) {
-  color: inherit;
+  color: var(--color-accent);
+  font-weight: inherit;
 }
 
 :root .notification-group__main ._comp_card__body:not(._comp_status_quote__body) {

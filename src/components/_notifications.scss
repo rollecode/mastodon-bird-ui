@@ -77,14 +77,16 @@
   display: none;
 }
 
+// The post text in light colour, mentions, links and hashtags in the accent, as in v4 Bird UI
 .notification-group__main ._comp_card__body {
-  color: var(--color-dim);
+  color: var(--color-light-text);
   font-size: 15px;
   line-height: 22px;
   padding-top: 0;
 
   :is(a, strong:has(> span)) {
-    color: inherit;
+    color: var(--color-accent);
+    font-weight: inherit;
   }
 }
 
