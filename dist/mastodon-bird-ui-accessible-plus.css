@@ -624,6 +624,25 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   color: var(--color-fg);
 }
 
+:root ._navigation_panel_redesign_navigation_link__link:not(._navigation_panel_redesign_navigation_link__linkStacked) ._comp_badge__badge {
+  background-color: var(--color-accent-dark);
+  border: 2px solid var(--color-bg-primary);
+  box-sizing: border-box;
+  color: #fff;
+  border-radius: 1em;
+  justify-content: center;
+  align-items: center;
+  min-width: 1.7em;
+  height: 1.7em;
+  padding: 0 .4em;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1;
+  display: flex;
+  position: absolute;
+  inset: 2px auto auto 22px;
+}
+
 :root ._comp_button__base:not(._comp_button__iconOnly) {
   border-radius: var(--radius-round);
   font-weight: 500;

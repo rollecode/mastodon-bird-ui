@@ -217,3 +217,24 @@
     color: var(--color-fg);
   }
 }
+
+// A menu link's unread count sits on its icon as a small round badge, as in v4
+._navigation_panel_redesign_navigation_link__link:not(._navigation_panel_redesign_navigation_link__linkStacked)
+  ._comp_badge__badge {
+  align-items: center;
+  background-color: var(--color-accent-dark);
+  border: 2px solid var(--color-bg-primary);
+  border-radius: 1em;
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  font-size: 11px;
+  font-weight: 500;
+  height: 1.7em;
+  inset: 2px auto auto 22px;
+  justify-content: center;
+  line-height: 1;
+  min-width: 1.7em;
+  padding: 0 0.4em;
+  position: absolute;
+}
