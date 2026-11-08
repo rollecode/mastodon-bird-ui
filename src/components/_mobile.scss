@@ -12,6 +12,11 @@
   padding-bottom: env(safe-area-inset-bottom);
 }
 
+// Slide-out menu: room on the left instead of hugging the screen edge
+._navigation_panel_redesign__root[data-mode='slide-out'] {
+  padding-inline: 10px;
+}
+
 @media (width <= 760px) {
   ._comp_columns_area__main {
     border-inline: 0;

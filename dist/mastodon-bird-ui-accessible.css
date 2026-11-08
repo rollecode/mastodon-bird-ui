@@ -2508,6 +2508,10 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   border-radius: 0;
 }
 
+:root ._navigation_panel_redesign__root[data-mode="slide-out"] {
+  padding-inline: 10px;
+}
+
 @media (width <= 760px) {
   :root ._comp_columns_area__main {
     border-inline: 0;
