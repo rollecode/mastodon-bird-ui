@@ -521,3 +521,19 @@ html.no-reduce-motion ._comp_status__actions > button[data-like-burst] svg {
   color: var(--color-text-brand);
   font-weight: inherit;
 }
+
+// A long post collapses only its text; media, polls and quotes stay visible as in v4
+._comp_status_content__root._comp_status_content__collapsed {
+  mask-image: none;
+  max-height: none;
+  overflow-y: visible;
+
+  // Both custom properties are set by Mastodon on the content root
+  > ._comp_status_content__text {
+    // stylelint-disable csstools/value-no-unknown-custom-properties
+    mask-image: linear-gradient(to bottom, black calc(100% - var(--mask-height)), transparent);
+    max-height: var(--max-height);
+    // stylelint-enable csstools/value-no-unknown-custom-properties
+    overflow-y: clip;
+  }
+}

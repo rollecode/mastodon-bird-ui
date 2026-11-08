@@ -1241,6 +1241,18 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   font-weight: inherit;
 }
 
+:root ._comp_status_content__root._comp_status_content__collapsed {
+  max-height: none;
+  overflow-y: visible;
+  mask-image: none;
+}
+
+:root ._comp_status_content__root._comp_status_content__collapsed > ._comp_status_content__text {
+  mask-image: linear-gradient(to bottom, black calc(100% - var(--mask-height)), transparent);
+  max-height: var(--max-height);
+  overflow-y: clip;
+}
+
 :root input._comp_search__search {
   background-color: var(--color-mud);
   border-color: var(--color-mud);
