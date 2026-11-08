@@ -108,3 +108,18 @@ svg:has(> path:is(#{$dots-three})) {
     display: none;
   }
 }
+
+// The add reaction button in announcements is the size of the reaction pills
+.reactions-bar > ._comp_button__iconOnly._comp_button__base {
+  border-radius: 3px;
+  box-shadow: inset 0 0 0 1px var(--color-border);
+  height: 24px;
+  margin: 2px;
+  min-height: 0;
+  width: 32px;
+
+  svg {
+    height: 16px;
+    width: 16px;
+  }
+}

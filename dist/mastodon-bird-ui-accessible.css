@@ -732,6 +732,20 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   display: none;
 }
 
+:root .reactions-bar > ._comp_button__iconOnly._comp_button__base {
+  box-shadow: inset 0 0 0 1px var(--color-border);
+  border-radius: 3px;
+  width: 32px;
+  height: 24px;
+  min-height: 0;
+  margin: 2px;
+}
+
+:root .reactions-bar > ._comp_button__iconOnly._comp_button__base svg {
+  width: 16px;
+  height: 16px;
+}
+
 :root ._comp_column_header__root {
   background: var(--color-bg-primary);
   border-bottom: 1px solid var(--color-border-primary);

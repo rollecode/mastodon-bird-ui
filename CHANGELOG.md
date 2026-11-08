@@ -1,5 +1,6 @@
 ### Unreleased
 
+* Size the announcement add reaction button like the reactions
 * Show notification previews in light text with accent links like v4
 * Space quoted posts from the post text like v4
 * Show the link card author row as the v4 strip
