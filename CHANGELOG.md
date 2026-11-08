@@ -1,5 +1,6 @@
 ### Unreleased
 
+* Fix double hover on post notifications
 * Style composer hints like content warnings
 
 ### 5.0.0-beta.1-2026-11-08: 2026-11-08

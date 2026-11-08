@@ -106,3 +106,17 @@
     display: none;
   }
 }
+
+// A notification about a post highlights as one row, header included
+.notification-ungrouped {
+  transition: background-color 0.2s;
+}
+
+.notification-ungrouped:is(:focus, :hover) {
+  background-color: var(--color-light-shade);
+}
+
+.notification-ungrouped article:is(:focus, :hover),
+.notification-ungrouped ._comp_card__root:is(:hover, :has(a:hover)) {
+  background-color: transparent;
+}

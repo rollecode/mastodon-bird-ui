@@ -2282,6 +2282,18 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   display: none;
 }
 
+:root .notification-ungrouped {
+  transition: background-color .2s;
+}
+
+:root .notification-ungrouped:is(:focus, :hover) {
+  background-color: var(--color-light-shade);
+}
+
+:root .notification-ungrouped article:is(:focus, :hover), :root .notification-ungrouped ._comp_card__root:is(:hover, :has(a:hover)) {
+  background-color: #0000;
+}
+
 :root .modal-root__overlay, :root .drawer__backdrop, :root ._feat_compose_trigger__rootTop[data-fullscreen="false"] ._feat_compose_trigger__backdrop {
   backdrop-filter: blur(4px);
   opacity: 1;
