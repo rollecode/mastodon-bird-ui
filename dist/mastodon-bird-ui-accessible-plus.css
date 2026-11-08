@@ -696,12 +696,12 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   white-space: nowrap;
 }
 
-:root svg:has( > path:is([d^="M136,128a8,8"], [d^="M138,128a10,10"], [d^="M140,128a12,12"], [d^="M144,128a16,16"])) {
+:root svg:has( > path:is([d^="M136,128a8,8,0,1,1-8-8A8,8,0,0,1,136,128Zm-76"], [d^="M138,128a10,10,0,1,1-10-10A10,10,0,0,1,138,128ZM60"], [d^="M140,128a12,12,0,1,1-12-12A12,12,0,0,1,140,128Zm56"], [d^="M144,128a16,16,0,1,1-16-16A16,16,0,0,1,144,128ZM60"])) {
   mask: var(--icon-more) center/100% no-repeat;
   background-color: currentColor;
 }
 
-:root svg:has( > path:is([d^="M136,128a8,8"], [d^="M138,128a10,10"], [d^="M140,128a12,12"], [d^="M144,128a16,16"])) > path {
+:root svg:has( > path:is([d^="M136,128a8,8,0,1,1-8-8A8,8,0,0,1,136,128Zm-76"], [d^="M138,128a10,10,0,1,1-10-10A10,10,0,0,1,138,128ZM60"], [d^="M140,128a12,12,0,1,1-12-12A12,12,0,0,1,140,128Zm56"], [d^="M144,128a16,16,0,1,1-16-16A16,16,0,0,1,144,128ZM60"])) > path {
   display: none;
 }
 

@@ -94,8 +94,11 @@
   white-space: nowrap;
 }
 
-// Every three-dots icon uses the Bird UI one, in the button's own colour
-svg:has(> path:is([d^='M136,128a8,8'], [d^='M138,128a10,10'], [d^='M140,128a12,12'], [d^='M144,128a16,16'])) {
+// Every three-dots icon uses the Bird UI one, in the button's own colour.
+// Prefixes match only Phosphor's horizontal DotsThree, not the chat bubbles.
+$dots-three: "[d^='M136,128a8,8,0,1,1-8-8A8,8,0,0,1,136,128Zm-76'], [d^='M138,128a10,10,0,1,1-10-10A10,10,0,0,1,138,128ZM60'], [d^='M140,128a12,12,0,1,1-12-12A12,12,0,0,1,140,128Zm56'], [d^='M144,128a16,16,0,1,1-16-16A16,16,0,0,1,144,128ZM60']";
+
+svg:has(> path:is(#{$dots-three})) {
   background-color: currentcolor;
   mask: var(--icon-more) center / 100% no-repeat;
 
