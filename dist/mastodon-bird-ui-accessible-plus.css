@@ -2491,14 +2491,23 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 
 :root .notification-group__main ._comp_card__body {
   color: var(--color-light-text);
+  -webkit-line-clamp: 4;
   padding-top: 0;
   font-size: 15px;
   line-height: 22px;
 }
 
+:root .notification-group__main ._comp_card__body p:not(:last-child) {
+  margin-bottom: 18px;
+}
+
 :root .notification-group__main ._comp_card__body :is(a, strong:has( > span)) {
   color: var(--color-accent);
   font-weight: inherit;
+}
+
+:root .notification-group__main ._comp_card__root ._comp_card__body._comp_card__clamp._comp_status_quote__body {
+  margin-block-start: 0;
 }
 
 :root .notification-group__main ._comp_card__body:not(._comp_status_quote__body) {

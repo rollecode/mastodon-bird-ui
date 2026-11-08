@@ -1,5 +1,6 @@
 ### Unreleased
 
+* Show up to four lines in notification previews like v4
 * Fix missing thread line under the first post in a thread
 * Keep icons in the account menu
 * Remove the empty band above the Blocked tabs

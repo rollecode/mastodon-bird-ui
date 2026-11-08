@@ -81,13 +81,23 @@
 .notification-group__main ._comp_card__body {
   color: var(--color-light-text);
   font-size: 15px;
+  -webkit-line-clamp: 4; // v4 showed up to four lines, not two
   line-height: 22px;
   padding-top: 0;
+
+  p:not(:last-child) {
+    margin-bottom: 18px;
+  }
 
   :is(a, strong:has(> span)) {
     color: var(--color-accent);
     font-weight: inherit;
   }
+}
+
+// Right under the label, without the link card spacing the hidden link line would bring
+.notification-group__main ._comp_card__root ._comp_card__body._comp_card__clamp._comp_status_quote__body {
+  margin-block-start: 0;
 }
 
 // v4 showed only the post text: no link, collection or quoted post line below it
