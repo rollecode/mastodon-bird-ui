@@ -24,6 +24,11 @@ article {
   }
 }
 
+// v5 nests the post article inside the feed article; one shade like v4, not two
+article article:is(:focus, :hover) {
+  background-color: transparent;
+}
+
 .focusable:focus {
   background: var(--color-focusable-toot);
 }

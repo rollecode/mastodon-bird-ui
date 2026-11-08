@@ -368,6 +368,10 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   background-color: var(--color-light-shade);
 }
 
+:root article article:is(:focus, :hover) {
+  background-color: #0000;
+}
+
 :root .focusable:focus {
   background: var(--color-focusable-toot);
 }
