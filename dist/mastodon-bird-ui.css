@@ -2083,7 +2083,7 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   inset: auto auto 13px 13px;
 }
 
-:root .media-gallery .media-gallery__alt__label.media-gallery__alt__label {
+:root .media-gallery__alt__label.media-gallery__alt__label.media-gallery__alt__label {
   backdrop-filter: blur(10px) saturate(1.8) contrast(.75) brightness(.7);
   min-height: 0;
   padding: 3px 8px;
@@ -2096,7 +2096,7 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   border-radius: 4px !important;
 }
 
-:root .media-gallery .media-gallery__actions__pill ._comp_button__label, :root .media-gallery .media-gallery__alt__label ._comp_button__label {
+:root .media-gallery .media-gallery__actions__pill ._comp_button__label, :root .media-gallery__alt__label ._comp_button__label {
   line-height: inherit;
   padding: 0;
 }

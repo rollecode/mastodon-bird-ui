@@ -140,7 +140,8 @@ canvas[class='media-gallery__preview'],
   inset: auto auto 13px 13px;
 }
 
-.media-gallery .media-gallery__alt__label.media-gallery__alt__label {
+// Also in quoted posts and notification previews, which have no media gallery around them
+.media-gallery__alt__label.media-gallery__alt__label.media-gallery__alt__label {
   backdrop-filter: blur(10px) saturate(1.8) contrast(0.75) brightness(0.7);
   background: rgb(0 0 0 / 65%) !important;
   border: 0 !important;
@@ -154,7 +155,7 @@ canvas[class='media-gallery__preview'],
 }
 
 .media-gallery .media-gallery__actions__pill ._comp_button__label,
-.media-gallery .media-gallery__alt__label ._comp_button__label {
+.media-gallery__alt__label ._comp_button__label {
   line-height: inherit;
   padding: 0;
 }
