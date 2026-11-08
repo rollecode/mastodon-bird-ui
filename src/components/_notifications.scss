@@ -122,7 +122,7 @@
   transition: background-color 0.2s;
 }
 
-.notification-ungrouped:is(:focus, :hover) {
+.notification-ungrouped:not(.notification-ungrouped--unread):is(:focus, :hover) {
   background-color: var(--color-light-shade);
 }
 

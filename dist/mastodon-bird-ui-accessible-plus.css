@@ -2311,7 +2311,7 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   transition: background-color .2s;
 }
 
-:root .notification-ungrouped:is(:focus, :hover) {
+:root .notification-ungrouped:not(.notification-ungrouped--unread):is(:focus, :hover) {
   background-color: var(--color-light-shade);
 }
 
