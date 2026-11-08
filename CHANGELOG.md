@@ -1,5 +1,6 @@
 ### Unreleased
 
+* Centre the link card author avatar and name
 * Fix double hover on post notifications
 * Style composer hints like content warnings
 

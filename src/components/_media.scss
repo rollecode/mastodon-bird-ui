@@ -226,4 +226,16 @@ canvas[class='media-gallery__preview'],
     height: 16px !important;
     width: 16px !important;
   }
+
+  // Avatar, name and name emojis on one centred line
+  ._comp_button__label {
+    align-items: center;
+    gap: 6px;
+    line-height: 20px;
+  }
+
+  .custom-emoji {
+    height: 16px;
+    width: 16px;
+  }
 }
