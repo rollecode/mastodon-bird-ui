@@ -1,5 +1,6 @@
 ### 5.0.0-beta.1-2026-11-08: 2026-11-08
 
+* Add the Mastodon 5 hero image to README
 * Add left space to the mobile slide-out menu
 * Fix Messages icon showing three dots
 * Group opened post actions like the feed

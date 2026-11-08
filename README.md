@@ -13,7 +13,7 @@ Read the blog post: [The day I decided to build my own "Twitter"](https://rolle.
 
 ## [Live demo on mementomori.social](https://mementomori.social)
 
-![mbui](https://github.com/ronilaukkarinen/mastodon-bird-ui/assets/1534150/8006e3ba-a902-40f5-9047-048b29f075db)
+![Mastodon Bird UI 5 on desktop and mobile, the desktop view split between dark and light mode](docs/hero.png)
 
 ## Table of contents
 
