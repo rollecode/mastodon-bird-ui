@@ -82,7 +82,9 @@
     .about__mail,
     .prose,
     .prose *,
-    [role='dialog'] textarea {
+    [role='dialog'] textarea,
+    .notification-ungrouped__header,
+    .notification-ungrouped__header * {
       font-size: var(--font-size) !important;
       line-height: var(--line-height) !important;
     }

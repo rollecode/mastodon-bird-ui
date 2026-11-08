@@ -1,5 +1,6 @@
 ### Unreleased
 
+* Size notification labels like post text in the accessible themes
 * Tighten Follow buttons in Explore suggestions
 * Redesign composer suggestions as a compact dark list
 * Enlarge warning text in the accessible themes
