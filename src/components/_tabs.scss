@@ -10,6 +10,12 @@
   padding: 0;
 }
 
+// Right under a column header the header's own border is enough, as on Blocked
+._comp_column_header__root + ._comp_tab_list__tabList._comp_tab_list__withSpaceAndBorder {
+  border-top: 0;
+  margin-top: 0;
+}
+
 ._comp_tab_list__tabList ._comp_tab_list__tab,
 .account__section-headline a,
 .account__section-headline button,

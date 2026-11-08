@@ -2209,6 +2209,11 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   padding: 0;
 }
 
+:root ._comp_column_header__root + ._comp_tab_list__tabList._comp_tab_list__withSpaceAndBorder {
+  border-top: 0;
+  margin-top: 0;
+}
+
 :root ._comp_tab_list__tabList ._comp_tab_list__tab, :root .account__section-headline a, :root .account__section-headline button, :root .notification__filter-bar button {
   color: var(--color-dim);
   font-size: var(--font-size);

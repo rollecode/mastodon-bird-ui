@@ -1,5 +1,6 @@
 ### Unreleased
 
+* Remove the empty band above the Blocked tabs
 * Space reply, boost and like 53px apart like core
 * Tighten the link card author row padding
 * Use whole-pixel line heights in posts to stop 1px shifts
