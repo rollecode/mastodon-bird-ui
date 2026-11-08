@@ -1,5 +1,6 @@
 ### Unreleased
 
+* Fix posts fading in while scrolling, Closes #198
 * Fix bold text in quoted posts
 * Centre the link card author avatar and name
 * Fix double hover on post notifications

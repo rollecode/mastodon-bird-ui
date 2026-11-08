@@ -361,7 +361,7 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 }
 
 :root article {
-  transition: background-color .2s, border-color .2s, opacity .2s;
+  transition: background-color .2s, border-color .2s;
 }
 
 :root article:focus, :root article:hover {
