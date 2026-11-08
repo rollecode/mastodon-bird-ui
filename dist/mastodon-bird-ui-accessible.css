@@ -2133,7 +2133,7 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   color: var(--color-dim);
   align-items: center;
   gap: 4px 8px;
-  margin: 0 -16px -16px;
+  margin: 16px -16px -16px;
   padding: 15px;
   font-size: 14px;
   font-weight: 400;

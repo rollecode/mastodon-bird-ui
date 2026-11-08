@@ -1,5 +1,6 @@
 ### Unreleased
 
+* Space the link card author row from the description like v4
 * Keep reply, boost and like in fixed places when counts change
 * Fix link card text cut off by the author row
 * Make New post a soft pill that fills with the accent on hover
