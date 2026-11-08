@@ -1,5 +1,6 @@
 ### Unreleased
 
+* Size link card text like v4
 * Stop the thread line at the opened post like v4
 * Keep media visible in collapsed long posts like v4
 * Keep the left menu usable on short windows in the accessible themes
