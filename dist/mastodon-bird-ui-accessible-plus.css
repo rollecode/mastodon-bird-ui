@@ -1896,6 +1896,17 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   display: none;
 }
 
+:root ._comp_menu__card ul ._comp_menu__item {
+  gap: 10px;
+}
+
+:root ._comp_menu__card ul ._comp_menu__item ._comp_menu__itemIcon {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
 :root ._feat_compose__languageListBox, :root ._feat_compose__languageListBox [role="option"]:not(:hover, [aria-selected="true"]) {
   background: none;
 }

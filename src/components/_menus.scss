@@ -52,6 +52,18 @@
   display: none;
 }
 
+// The account menu by the profile card keeps its icons, small like the text
+._comp_menu__card ul ._comp_menu__item {
+  gap: 10px;
+
+  ._comp_menu__itemIcon {
+    display: block;
+    flex: 0 0 auto;
+    height: 18px;
+    width: 18px;
+  }
+}
+
 // Composer language picker: the list sits flat in the dark menu panel
 ._feat_compose__languageListBox {
   background: transparent;

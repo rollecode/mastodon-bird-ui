@@ -1,5 +1,6 @@
 ### Unreleased
 
+* Keep icons in the account menu
 * Remove the empty band above the Blocked tabs
 * Space reply, boost and like 53px apart like core
 * Tighten the link card author row padding
