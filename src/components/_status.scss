@@ -381,7 +381,7 @@ html.no-reduce-motion ._comp_status__actions > button[data-like-burst] svg {
 }
 
 // v5 buttons paint from --bg, --bg-hover and --fg, so set those instead of colours
-._comp_status__hashtags > button._comp_button__base._comp_button__base {
+._comp_status__hashtags > ._comp_button__base._comp_button__base {
   --bg: var(--color-dark);
   --bg-hover: var(--color-accent-dark);
   --fg: var(--color-light-purple);
@@ -396,6 +396,7 @@ html.no-reduce-motion ._comp_status__actions > button[data-like-burst] svg {
 
   min-height: 0;
   padding: 4px 8px;
+  text-decoration: none;
 
   // Always light, also in light mode, as in v4
   &:hover,

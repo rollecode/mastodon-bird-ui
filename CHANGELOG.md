@@ -1,5 +1,6 @@
 ### Unreleased
 
+* Style hashtag bar pills that are links
 * Enlarge the character counter in the accessible themes
 * Keep settings toggles inside the menu in the accessible themes
 * Size notification labels like post text in the accessible themes

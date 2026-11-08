@@ -1122,7 +1122,7 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   padding: 0;
 }
 
-:root ._comp_status__hashtags > button._comp_button__base._comp_button__base {
+:root ._comp_status__hashtags > ._comp_button__base._comp_button__base {
   --bg: var(--color-dark);
   --bg-hover: var(--color-accent-dark);
   --fg: var(--color-light-purple);
@@ -1136,9 +1136,10 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   font-size: 13px;
   font-weight: 500;
   line-height: 19.5px;
+  text-decoration: none;
 }
 
-:root ._comp_status__hashtags > button._comp_button__base._comp_button__base:hover, :root ._comp_status__hashtags > button._comp_button__base._comp_button__base:focus-visible {
+:root ._comp_status__hashtags > ._comp_button__base._comp_button__base:hover, :root ._comp_status__hashtags > ._comp_button__base._comp_button__base:focus-visible {
   --bg: var(--color-accent-dark);
   --fg: #f7f9f9;
 }
@@ -2376,7 +2377,7 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   display: none;
 }
 
-:root :is(.notification-group--unread, .notification-ungrouped--unread) ._comp_status__hashtags > button._comp_button__base._comp_button__base:not(:hover, :focus-visible) {
+:root :is(.notification-group--unread, .notification-ungrouped--unread) ._comp_status__hashtags > ._comp_button__base._comp_button__base:not(:hover, :focus-visible) {
   --bg: var(--color-bg-brand-soft);
 }
 

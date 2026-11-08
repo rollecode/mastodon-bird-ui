@@ -120,7 +120,7 @@
 // Hashtag pills share that background, so tint them to stay visible
 :is(.notification-group--unread, .notification-ungrouped--unread)
   ._comp_status__hashtags
-  > button._comp_button__base._comp_button__base:not(:hover, :focus-visible) {
+  > ._comp_button__base._comp_button__base:not(:hover, :focus-visible) {
   --bg: var(--color-bg-brand-soft);
 }
 
