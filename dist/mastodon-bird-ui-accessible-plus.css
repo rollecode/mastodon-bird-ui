@@ -2024,13 +2024,13 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   object-fit: cover;
 }
 
-:root .media-gallery--layout-1:has(.media-gallery__preview--hidden) {
+:root .media-gallery--layout-1:has(.media-gallery__preview--hidden):not(:has(.media-gallery__gifv)) {
   height: auto;
   aspect-ratio: auto !important;
   width: fit-content !important;
 }
 
-:root .media-gallery--layout-1:has(.media-gallery__preview--hidden) .media-gallery__item-thumbnail img {
+:root .media-gallery--layout-1:has(.media-gallery__preview--hidden):not(:has(.media-gallery__gifv)) .media-gallery__item-thumbnail img {
   width: auto;
   max-width: 100%;
   height: auto;

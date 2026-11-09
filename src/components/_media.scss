@@ -50,7 +50,7 @@ canvas[class='media-gallery__preview'],
   object-fit: cover;
 }
 
-.media-gallery--layout-1:has(.media-gallery__preview--hidden) {
+.media-gallery--layout-1:has(.media-gallery__preview--hidden):not(:has(.media-gallery__gifv)) {
   aspect-ratio: auto !important;
   height: auto;
   width: fit-content !important;
