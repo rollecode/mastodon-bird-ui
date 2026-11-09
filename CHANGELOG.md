@@ -1,5 +1,7 @@
 ### Unreleased
 
+* Larger handle help text in accessible themes
+* Fix clipped column titles in accessible themes
 * Fix clipped letters in quoted post links
 * Show poll text at post size in accessible themes
 * Pad the Show post button in accessible themes
