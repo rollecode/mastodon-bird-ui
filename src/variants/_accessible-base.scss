@@ -246,6 +246,13 @@
       }
     }
 
+    // Handles a step dimmer than names, still 10:1 on black
+    ._comp_status_header__handle,
+    ._comp_account_list_item__handle,
+    .display-name__account {
+      color: #b3b3b3;
+    }
+
     // Wide scrollbar and a glow on the edge with more items
     ._comp_menu__scrollableInnerCard {
       background:

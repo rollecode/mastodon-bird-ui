@@ -3025,6 +3025,10 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   color: #000;
 }
 
+:root ._comp_status_header__handle, :root ._comp_account_list_item__handle, :root .display-name__account {
+  color: #b3b3b3;
+}
+
 :root ._comp_menu__scrollableInnerCard {
   background: linear-gradient(var(--color-dark) 30%, transparent) top/100% 48px no-repeat local, linear-gradient(transparent, var(--color-dark) 70%) bottom/100% 48px no-repeat local, radial-gradient(farthest-side at 50% 0, #ffffffb3, transparent) top/100% 20px no-repeat scroll, radial-gradient(farthest-side at 50% 100%, #ffffffb3, transparent) bottom/100% 20px no-repeat scroll;
   scrollbar-width: auto;

@@ -1,5 +1,6 @@
 ### Unreleased
 
+* Dim handles next to names in accessible themes
 * Enlarge custom emoji in notification previews
 * Show a scroll cue in menus in accessible themes
 * Fix broken three dots on profile buttons
