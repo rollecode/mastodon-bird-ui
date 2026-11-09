@@ -206,6 +206,12 @@
       line-height: 1.3 !important;
     }
 
+    // Hidden link parts like https:// stay hidden despite the size rules above
+    &:root .invisible {
+      font-size: 0 !important;
+      line-height: 0 !important;
+    }
+
     // Links, mentions and hashtags each in their own colour
     ._comp_status_content__text a {
       color: var(--color-link) !important;

@@ -51,6 +51,10 @@ $field-list: "._comp_account_header__bioButtonsWrapper ._comp_account_header__fi
   margin: 0 0 20px;
   padding: 0;
 
+  span:has(> a:only-of-type) {
+    display: block;
+  }
+
   span > a:only-of-type {
     display: block;
     max-width: 220px;

@@ -1,5 +1,6 @@
 ### Unreleased
 
+* Fix profile link, badge and count alignment
 * Larger handle help text in accessible themes
 * Fix clipped column titles in accessible themes
 * Fix clipped letters in quoted post links

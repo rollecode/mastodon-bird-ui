@@ -1568,6 +1568,7 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   text-transform: lowercase;
   flex-direction: row-reverse;
   flex: none;
+  align-items: baseline;
   gap: 4px;
   font-size: 14px;
   font-weight: 500;
@@ -1678,6 +1679,10 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   padding: 0;
   display: flex;
   line-height: 20px !important;
+}
+
+:root ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList span:has( > a:only-of-type) {
+  display: block;
 }
 
 :root ._comp_account_header__bioButtonsWrapper ._comp_account_header__fieldList span > a:only-of-type {
