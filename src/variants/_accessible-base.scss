@@ -1,10 +1,9 @@
 // stylelint-disable plugin/no-unused-custom-properties
-// Ultra accessible themes: black background, white text, larger type and
-// links, mentions and hashtags in their own colours
+// Ultra accessible themes: black, white, large text, coloured links
 @use "../variables/icons";
 
 @mixin theme($font-size, $font-size-smaller, $font-size-heading, $line-height, $root-scale) {
-  // Three :root outrank the colour scheme blocks, so these stay dark in light mode too
+  // Three :root stay dark in light mode too
   :root:root:root {
     @include icons.white;
     --base-color-bg: #000;
@@ -247,6 +246,16 @@
       }
     }
 
+    // Wide scrollbar and a glow on the edge with more items
+    ._comp_menu__scrollableInnerCard {
+      background:
+        linear-gradient(var(--color-dark) 30%, transparent) top / 100% 48px no-repeat local,
+        linear-gradient(transparent, var(--color-dark) 70%) bottom / 100% 48px no-repeat local,
+        radial-gradient(farthest-side at 50% 0, rgb(255 255 255 / 70%), transparent) top / 100% 20px no-repeat scroll,
+        radial-gradient(farthest-side at 50% 100%, rgb(255 255 255 / 70%), transparent) bottom / 100% 20px no-repeat scroll;
+      scrollbar-width: auto;
+    }
+
     .media-gallery__alt__popover p {
       color: var(--color-fg);
       font-size: var(--font-size);
@@ -255,8 +264,7 @@
     }
   }
 
-  // Large text fills a short window, so the whole left column scrolls as one
-  // instead of squeezing the menu behind the fixed bottom part
+  // Short windows scroll the whole left column
   @media (height < 900px) {
     :root ._navigation_panel_redesign__footer {
       flex: 0 0 auto;
