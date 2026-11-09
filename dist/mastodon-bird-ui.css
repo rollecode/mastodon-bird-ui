@@ -1551,14 +1551,6 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   height: 38px;
 }
 
-:root [class*="_comp_account_header__buttons"] button._comp_button__iconOnly[aria-haspopup="menu"] svg {
-  background: var(--icon-more) center/18px no-repeat;
-}
-
-:root [class*="_comp_account_header__buttons"] button._comp_button__iconOnly[aria-haspopup="menu"] svg path {
-  display: none;
-}
-
 :root ._comp_number_fields__list {
   order: 5;
   gap: 4px 18px;

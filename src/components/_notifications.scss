@@ -23,7 +23,7 @@
   color: var(--color-accent-dark);
 }
 
-// Labels such as "edited a post" line up with the post text, icon in front, as in v4
+// Labels line up with the post text like v4
 .notification-ungrouped__header {
   color: var(--color-dim);
   font-weight: 500;
@@ -58,8 +58,7 @@
   color: var(--color-red);
 }
 
-// The post a notification is about shows only its text, dimmed and
-// without a box, as in v4
+// Notification post preview as dimmed text without a box like v4
 .notification-group__main ._comp_card__root {
   background: transparent;
   border: 0;
@@ -77,7 +76,7 @@
   display: none;
 }
 
-// The post text in light colour, mentions, links and hashtags in the accent, as in v4 Bird UI
+// Preview text light, links in the accent like v4
 .notification-group__main ._comp_card__body {
   color: var(--color-light-text);
   font-size: 15px;
@@ -95,7 +94,7 @@
   }
 }
 
-// Right under the label, without the link card spacing the hidden link line would bring
+// Right under the label, no link card spacing
 .notification-group__main ._comp_card__root ._comp_card__body._comp_card__clamp._comp_status_quote__body {
   margin-block-start: 0;
 }
@@ -119,7 +118,7 @@
   border-top: 1px solid var(--color-border-primary);
 }
 
-// Unread notifications get the darker background instead of the left bar, as in v4
+// Unread notifications darker instead of a left bar like v4
 .notification-group--unread,
 .notification-ungrouped--unread {
   background-color: var(--color-dark);

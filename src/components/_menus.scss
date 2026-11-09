@@ -73,8 +73,7 @@
   background: transparent;
 }
 
-// Composer suggestions: one compact row per item on a near black panel,
-// name and handle on the same line
+// Composer suggestions as compact one-line rows
 ._comp_menu__card:has(._comp_autosuggest__item) {
   background: var(--color-suggest-bg);
   border: 1px solid var(--color-border);

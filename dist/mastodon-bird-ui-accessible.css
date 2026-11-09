@@ -1551,14 +1551,6 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   height: 38px;
 }
 
-:root [class*="_comp_account_header__buttons"] button._comp_button__iconOnly[aria-haspopup="menu"] svg {
-  background: var(--icon-more) center/18px no-repeat;
-}
-
-:root [class*="_comp_account_header__buttons"] button._comp_button__iconOnly[aria-haspopup="menu"] svg path {
-  display: none;
-}
-
 :root ._comp_number_fields__list {
   order: 5;
   gap: 4px 18px;
@@ -3025,6 +3017,11 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   --bg: var(--color-accent);
   --bg-hover: var(--color-accent);
   color: #000;
+}
+
+:root ._comp_menu__scrollableInnerCard {
+  background: linear-gradient(var(--color-dark) 30%, transparent) top/100% 48px no-repeat local, linear-gradient(transparent, var(--color-dark) 70%) bottom/100% 48px no-repeat local, radial-gradient(farthest-side at 50% 0, #ffffffb3, transparent) top/100% 20px no-repeat scroll, radial-gradient(farthest-side at 50% 100%, #ffffffb3, transparent) bottom/100% 20px no-repeat scroll;
+  scrollbar-width: auto;
 }
 
 :root .media-gallery__alt__popover p {

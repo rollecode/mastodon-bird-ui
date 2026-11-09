@@ -1,5 +1,4 @@
-// Timeline posts and thread replies: 48px avatar beside an inline name,
-// handle and date row
+// Posts: 48px avatar beside an inline name, handle and date
 ._comp_status__variantFeed,
 ._comp_status__variantThread {
   --avatar-size: 48px;
@@ -118,8 +117,7 @@ a._comp_status_header__nameLink {
   }
 }
 
-// Action bar: 19px icons with 13px counters in the dim colour and a round
-// grey bubble behind the icon on hover, as in v4
+// Action bar like v4: 19px icons, dim counters, round hover bubble
 ._comp_status__actions > button._comp_button__base,
 ._comp_status__actions .status__action-bar__button-wrapper > button._comp_button__base {
   --bg-hover: transparent;
@@ -488,8 +486,7 @@ html.no-reduce-motion ._comp_status__actions > button[data-like-burst] svg {
   inset-block-start: 22px;
 }
 
-// Content warnings and filter notices like v4: a quiet box, text left,
-// a plain "Show post" link right, no warning icon
+// Content warnings and filter notices like v4
 ._comp_status__spoiler {
   align-items: flex-start;
   background-color: var(--color-focusable-toot);
@@ -539,7 +536,7 @@ html.no-reduce-motion ._comp_status__actions > button[data-like-burst] svg {
   font-weight: inherit;
 }
 
-// A long post collapses only its text; media, polls and quotes stay visible as in v4
+// Long posts collapse only their text like v4
 ._comp_status_content__root._comp_status_content__collapsed {
   mask-image: none;
   max-height: none;
@@ -555,7 +552,7 @@ html.no-reduce-motion ._comp_status__actions > button[data-like-burst] svg {
   }
 }
 
-// Reply, boost and like sit in slots 53px apart like in core, so short counts move nothing
+// Reply, boost and like in fixed 53px slots like core
 ._comp_status__actions > button:nth-of-type(-n + 3) {
   aspect-ratio: auto;
   flex: 0 0 auto;
@@ -568,7 +565,7 @@ html.no-reduce-motion ._comp_status__actions > button[data-like-burst] svg {
   }
 }
 
-// The link Mastodon moves out of a quoted post's text reads as a normal link on one line, as in v4
+// Quoted post link as a normal one-line link like v4
 ._comp_card__root:has(._comp_status_quote__title) > ._comp_card__body:not(._comp_status_quote__body) {
   font-size: inherit;
   font-weight: 400;
@@ -582,8 +579,7 @@ html.no-reduce-motion ._comp_status__actions > button[data-like-burst] svg {
   }
 }
 
-// Whole-pixel line heights in posts: a half pixel here puts every post below
-// on a fraction of a pixel, and those shift by a pixel when anything repaints
+// Whole-pixel line heights keep posts from shifting on repaint
 ._comp_status_content__text p,
 ._comp_status_quote__body p {
   line-height: 22px;

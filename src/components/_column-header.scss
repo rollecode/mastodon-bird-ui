@@ -46,8 +46,7 @@
   }
 }
 
-// Next to a back arrow the title reads like v4's "Back" link: 16px regular, 5px from the arrow.
-// The mobile menu button (three lines) keeps the plain white, bold title.
+// Title next to a back arrow like v4's "Back" link
 $back-button: '._comp_column_header__leftButton:not(:has(path[d^="M224,128a8,8,0,0,1-8,8H40"]))';
 
 #{$back-button} + ._comp_column_header__title {

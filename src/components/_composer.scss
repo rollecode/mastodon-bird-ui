@@ -51,7 +51,7 @@
   }
 }
 
-// The language button turns yellow when the text looks like another language, as in v4
+// Language button yellow on a likely language mismatch like v4
 ._feat_compose__root ._comp_button__base[data-language-mismatch] {
   --fg: var(--color-text-warning);
 
