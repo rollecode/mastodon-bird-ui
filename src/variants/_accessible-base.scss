@@ -85,7 +85,10 @@
     .prose *,
     [role='dialog'] textarea,
     .notification-ungrouped__header,
-    .notification-ungrouped__header * {
+    .notification-ungrouped__header *,
+    .poll__option,
+    .poll__footer,
+    .poll__footer * {
       font-size: var(--font-size) !important;
       line-height: var(--line-height) !important;
     }
@@ -244,6 +247,10 @@
         --bg-hover: var(--color-accent);
         color: #000;
       }
+    }
+
+    ._comp_status__spoiler ._comp_button__base {
+      padding: 6px 14px;
     }
 
     // Handles a step dimmer than names, still 10:1 on black

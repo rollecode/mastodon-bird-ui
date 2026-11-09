@@ -2940,7 +2940,7 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   font-size: 112.5%;
 }
 
-:root ._comp_status_content__text, :root ._comp_status_content__text p, :root ._comp_status_quote__body p, :root ._comp_status_header__nameLink, :root ._comp_status_header__handle, :root ._comp_status_header__date, :root ._comp_status_prepend__root, :root ._comp_account_bio__bio, :root ._comp_menu__item, :root ._navigation_panel_redesign_navigation_link__link, :root .display-name__html, :root .notification-group__main, :root .notification-group__main__header__label, :root .notification-group__main__additional-content, :root .trends__item__name, :root ._comp_account_list_item__displayName, :root ._navigation_panel_redesign_account_card_and_menu__accountLink, :root ._feat_account_timeline__filterSelectButton, :root ._feat_notifications_v2__unreadBar, :root .inline-follow-suggestions__title, :root .hover-card__numbers, :root .account-card__bio, :root ._comp_lockup__title, :root ._comp_card__body, :root ._comp_card__primaryCardLink, :root .story__details__title, :root ._comp_account_header__fieldItem dt, :root ._comp_account_header__fieldItem dd, :root ._comp_account_header__fieldItem dd *, :root .about__header p, :root .about__footer p, :root .about__meta__column h4, :root .about__mail, :root .prose, :root .prose *, :root [role="dialog"] textarea, :root .notification-ungrouped__header, :root .notification-ungrouped__header * {
+:root ._comp_status_content__text, :root ._comp_status_content__text p, :root ._comp_status_quote__body p, :root ._comp_status_header__nameLink, :root ._comp_status_header__handle, :root ._comp_status_header__date, :root ._comp_status_prepend__root, :root ._comp_account_bio__bio, :root ._comp_menu__item, :root ._navigation_panel_redesign_navigation_link__link, :root .display-name__html, :root .notification-group__main, :root .notification-group__main__header__label, :root .notification-group__main__additional-content, :root .trends__item__name, :root ._comp_account_list_item__displayName, :root ._navigation_panel_redesign_account_card_and_menu__accountLink, :root ._feat_account_timeline__filterSelectButton, :root ._feat_notifications_v2__unreadBar, :root .inline-follow-suggestions__title, :root .hover-card__numbers, :root .account-card__bio, :root ._comp_lockup__title, :root ._comp_card__body, :root ._comp_card__primaryCardLink, :root .story__details__title, :root ._comp_account_header__fieldItem dt, :root ._comp_account_header__fieldItem dd, :root ._comp_account_header__fieldItem dd *, :root .about__header p, :root .about__footer p, :root .about__meta__column h4, :root .about__mail, :root .prose, :root .prose *, :root [role="dialog"] textarea, :root .notification-ungrouped__header, :root .notification-ungrouped__header *, :root .poll__option, :root .poll__footer, :root .poll__footer * {
   font-size: var(--font-size) !important;
   line-height: var(--line-height) !important;
 }
@@ -3023,6 +3023,10 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   --bg: var(--color-accent);
   --bg-hover: var(--color-accent);
   color: #000;
+}
+
+:root ._comp_status__spoiler ._comp_button__base {
+  padding: 6px 14px;
 }
 
 :root ._comp_status_header__handle, :root ._comp_account_list_item__handle, :root .display-name__account {

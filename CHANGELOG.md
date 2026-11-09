@@ -1,5 +1,7 @@
 ### Unreleased
 
+* Show poll text at post size in accessible themes
+* Pad the Show post button in accessible themes
 * Dim handles next to names in accessible themes
 * Enlarge custom emoji in notification previews
 * Show a scroll cue in menus in accessible themes
