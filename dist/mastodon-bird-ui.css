@@ -984,8 +984,12 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   left: calc(50% - 17px);
 }
 
-:root ._comp_status__actions > button._comp_button__base:hover:after, :root ._comp_status__actions > button._comp_button__base:focus-visible:after, :root ._comp_status__actions .status__action-bar__button-wrapper > button._comp_button__base:hover:after, :root ._comp_status__actions .status__action-bar__button-wrapper > button._comp_button__base:focus-visible:after {
+:root ._comp_status__actions > button._comp_button__base:focus-visible:after, :root ._comp_status__actions .status__action-bar__button-wrapper > button._comp_button__base:focus-visible:after {
   opacity: 1;
+}
+
+:root ._comp_status__actions > button._comp_button__base, :root ._comp_status__actions > button._comp_button__base:active, :root ._comp_status__actions > button._comp_button__base[aria-pressed="true"], :root ._comp_status__actions > button._comp_button__base[aria-expanded="true"], :root ._comp_status__actions .status__action-bar__button-wrapper > button._comp_button__base, :root ._comp_status__actions .status__action-bar__button-wrapper > button._comp_button__base:active, :root ._comp_status__actions .status__action-bar__button-wrapper > button._comp_button__base[aria-pressed="true"], :root ._comp_status__actions .status__action-bar__button-wrapper > button._comp_button__base[aria-expanded="true"] {
+  --bg: transparent;
 }
 
 :root ._comp_status__actions > button._comp_button__base svg, :root ._comp_status__actions .status__action-bar__button-wrapper > button._comp_button__base svg {
@@ -1000,16 +1004,34 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   line-height: 19px;
 }
 
-:root ._comp_status__actions > button:first-of-type:hover {
-  color: var(--color-accent);
-}
+@media (hover: hover) {
+  :root ._comp_status__actions > button._comp_button__base:hover:after, :root ._comp_status__actions .status__action-bar__button-wrapper > button._comp_button__base:hover:after {
+    opacity: 1;
+  }
 
-:root ._comp_status__actions > button:nth-of-type(2):hover {
-  color: var(--color-green);
-}
+  :root ._comp_status__actions > button:first-of-type:hover {
+    color: var(--color-accent);
+  }
 
-:root ._comp_status__actions > button:nth-of-type(2):hover svg {
-  background-image: var(--icon-boost-active);
+  :root ._comp_status__actions > button:nth-of-type(2):hover {
+    color: var(--color-green);
+  }
+
+  :root ._comp_status__actions > button:nth-of-type(2):hover svg {
+    background-image: var(--icon-boost-active);
+  }
+
+  :root ._comp_status__actions > button:first-of-type:hover svg {
+    background-image: var(--icon-reply-status-hover);
+  }
+
+  :root ._comp_status__actions > button:nth-of-type(5):hover svg {
+    background-image: var(--icon-bookmark-status-hover);
+  }
+
+  :root ._comp_status__actions > button._comp_status__actionsButtonGap:hover svg {
+    background-image: var(--icon-heart-hover);
+  }
 }
 
 :root ._comp_status__actions > button:nth-of-type(4) {
@@ -1030,10 +1052,6 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   background-image: var(--icon-reply);
 }
 
-:root ._comp_status__actions > button:first-of-type:hover svg {
-  background-image: var(--icon-reply-status-hover);
-}
-
 :root ._comp_status__actions > button:nth-of-type(2) svg {
   background-image: var(--icon-boost-status);
   background-size: 21px 20px;
@@ -1045,10 +1063,6 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 
 :root ._comp_status__actions > button:nth-of-type(5) svg {
   background-image: var(--icon-bookmark);
-}
-
-:root ._comp_status__actions > button:nth-of-type(5):hover svg {
-  background-image: var(--icon-bookmark-status-hover);
 }
 
 :root ._comp_status__actions > button:nth-of-type(5)[aria-pressed="true"] svg {
@@ -1065,10 +1079,6 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 
 :root ._comp_status__actions > button._comp_status__actionsButtonGap svg > path {
   display: none;
-}
-
-:root ._comp_status__actions > button._comp_status__actionsButtonGap:hover svg {
-  background-image: var(--icon-heart-hover);
 }
 
 :root ._comp_status__actions > button._comp_status__actionsButtonGap[aria-pressed="true"] svg {
