@@ -118,6 +118,16 @@ canvas[class='media-gallery__preview'],
   }
 }
 
+// Show media sits on the media, which can be narrower than the post
+._comp_status_attachments__galleryWrapper :is(.media-gallery, .video-player, .audio-player) {
+  anchor-name: --bird-gallery;
+}
+
+._comp_status_attachments__gallerySpoiler {
+  inset: anchor(--bird-gallery top) anchor(--bird-gallery right) anchor(--bird-gallery bottom)
+    anchor(--bird-gallery left);
+}
+
 // Hide pill top right, ALT tag bottom left, as in v4
 .media-gallery .media-gallery__actions.media-gallery__actions {
   inset: 7px 7px auto auto;

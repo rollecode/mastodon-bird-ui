@@ -1,5 +1,6 @@
 ### 5.0.0-beta.1-2026-11-09: 2026-11-09
 
+* Fix Show media off centre on portrait media, Closes #203 (kudos to @cadusilva)
 * Fix GIFs shrinking in Firefox, Closes #202 (kudos to @cadusilva)
 * Fix profile link, badge and count alignment
 * Fix clipped column titles in the accessible themes

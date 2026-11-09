@@ -2079,6 +2079,14 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   width: 100% !important;
 }
 
+:root ._comp_status_attachments__galleryWrapper :is(.media-gallery, .video-player, .audio-player) {
+  anchor-name: --bird-gallery;
+}
+
+:root ._comp_status_attachments__gallerySpoiler {
+  inset: anchor(--bird-gallery top) anchor(--bird-gallery right) anchor(--bird-gallery bottom) anchor(--bird-gallery left);
+}
+
 :root .media-gallery .media-gallery__actions.media-gallery__actions {
   inset: 7px 7px auto auto;
 }
