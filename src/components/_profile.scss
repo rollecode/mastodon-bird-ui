@@ -141,14 +141,6 @@
   width: 38px;
 }
 
-[class*='_comp_account_header__buttons'] button._comp_button__iconOnly[aria-haspopup='menu'] svg {
-  background: var(--icon-more) center / 18px no-repeat;
-
-  path {
-    display: none;
-  }
-}
-
 // Counts as bold numbers before dim labels
 ._comp_number_fields__list {
   font-size: 13px;
