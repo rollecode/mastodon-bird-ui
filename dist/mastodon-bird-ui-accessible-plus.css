@@ -3016,6 +3016,17 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   box-shadow: inset 0 0 0 1px var(--color-light-text);
 }
 
+:root ._navigation_panel_redesign__newPostButton ._comp_button__base._comp_button__base {
+  --bg: var(--color-accent-dark);
+  color: var(--color-fg);
+}
+
+:root ._navigation_panel_redesign__newPostButton ._comp_button__base._comp_button__base:hover, :root ._navigation_panel_redesign__newPostButton ._comp_button__base._comp_button__base:focus-visible {
+  --bg: var(--color-accent);
+  --bg-hover: var(--color-accent);
+  color: #000;
+}
+
 :root .media-gallery__alt__popover p {
   color: var(--color-fg);
   font-size: var(--font-size);

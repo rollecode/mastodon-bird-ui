@@ -234,6 +234,19 @@
       box-shadow: inset 0 0 0 1px var(--color-light-text);
     }
 
+    // New post filled with solid blue, the soft tint vanishes on black
+    ._navigation_panel_redesign__newPostButton ._comp_button__base._comp_button__base {
+      --bg: var(--color-accent-dark);
+      color: var(--color-fg);
+
+      &:hover,
+      &:focus-visible {
+        --bg: var(--color-accent);
+        --bg-hover: var(--color-accent);
+        color: #000;
+      }
+    }
+
     .media-gallery__alt__popover p {
       color: var(--color-fg);
       font-size: var(--font-size);

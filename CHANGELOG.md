@@ -1,5 +1,6 @@
 ### Unreleased
 
+* Fix new post button contrast in accessible themes
 * Fix tap highlights sticking on post action buttons
 * Fix the feed jumping ahead while scrolling on iPhone, Fixes #198
 * Fix cramped post text in the accessible themes
