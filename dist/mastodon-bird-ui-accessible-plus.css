@@ -363,7 +363,7 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 }
 
 @supports (-webkit-touch-callout: none) {
-  :root html {
+  :root body {
     overflow-anchor: none;
   }
 }

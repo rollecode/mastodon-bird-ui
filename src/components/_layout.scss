@@ -17,8 +17,9 @@ h4 {
 
 // iOS Safari's scroll anchoring jumps the feed a post ahead whenever an
 // off-screen post is swapped for its placeholder, so leave it off there
+// (body, since the whole theme sits under :root)
 @supports (-webkit-touch-callout: none) {
-  html {
+  body {
     overflow-anchor: none;
   }
 }
