@@ -1,44 +1,41 @@
-### Unreleased
+### 5.0.0-beta.1-2026-11-09: 2026-11-09
 
-* Fix GIFs shrinking in Firefox, Fixes #202
+* Fix GIFs shrinking in Firefox, Closes #202 (kudos to @cadusilva)
 * Fix profile link, badge and count alignment
-* Larger handle help text in accessible themes
-* Fix clipped column titles in accessible themes
+* Fix clipped column titles in the accessible themes
+* Enlarge handle help text in the accessible themes
 * Fix clipped letters in quoted post links
-* Show poll text at post size in accessible themes
-* Pad the Show post button in accessible themes
-* Dim handles next to names in accessible themes
+* Show poll text at post size in the accessible themes
+* Pad the Show post button in the accessible themes
+* Dim handles next to names in the accessible themes
 * Enlarge custom emoji in notification previews
-* Show a scroll cue in menus in accessible themes
+* Show a scroll cue in menus in the accessible themes
 * Fix broken three dots on profile buttons
-* Fix new post button contrast in accessible themes
+* Fix New post button contrast in the accessible themes
 * Fix tap highlights sticking on post action buttons
-* Fix the feed jumping ahead while scrolling on iPhone, Fixes #198
+* Fix jumpy scrolling and fading posts on iPhone, Closes #198
 * Fix cramped post text in the accessible themes
 * Use the dark ALT badge in notifications and quotes
-* Show up to four lines in notification previews like v4
+* Match notification preview text, colours and length to v4
 * Fix missing thread line under the first post in a thread
 * Keep icons in the account menu
 * Remove the empty band above the Blocked tabs
 * Space reply, boost and like 53px apart like core
-* Tighten the link card author row padding
-* Use whole-pixel line heights in posts to stop 1px shifts
-* Show the link in quoted posts as a normal link like v4
-* Space the link card author row from the description like v4
 * Keep reply, boost and like in fixed places when counts change
+* Use whole-pixel line heights in posts to stop 1px shifts
+* Fix links and bold text in quoted posts
+* Show the link card author row as a centred v4 strip
 * Fix link card text cut off by the author row
+* Size link card text like v4
 * Make New post a soft pill that fills with the accent on hover
 * Size the announcement add reaction button like the reactions
-* Show notification previews in light text with accent links like v4
 * Space quoted posts from the post text like v4
-* Show the link card author row as the v4 strip
 * Show menu unread counts on the icon like v4
 * Space and weight the boost line like v4
-* Size link card text like v4
 * Stop the thread line at the divider above the opened post like v4
 * Keep media visible in collapsed long posts like v4
 * Keep the left menu usable on short windows in the accessible themes
-* Turn the language button yellow when the text looks like another language
+* Turn the language button yellow on a likely mismatch, Ref: mastodon/mastodon#41588
 * Style hashtag bar pills that are links
 * Enlarge the character counter in the accessible themes
 * Keep settings toggles inside the menu in the accessible themes
@@ -46,20 +43,13 @@
 * Tighten Follow buttons in Explore suggestions
 * Redesign composer suggestions as a compact dark list
 * Enlarge warning text in the accessible themes
-* Dim the footer links in the accessible themes
-* Keep footer links tiny in the accessible themes
-* Fix double post hover shade in feeds and notifications
+* Dim and shrink the footer links in the accessible themes
+* Fix double hover shade in feeds and notifications
 * Keep hashtag pills visible on unread notifications
 * Fix sensitive media hidden inside open content warnings, Closes #199 (kudos to @cadusilva)
 * Keep unread notification background on hover
 * Hide link and quoted post lines in notifications like v4
-* Show links in quoted posts like v4, not bold
 * Make the follow back button compact like v4
-* Match v4 spacing and colours in notification previews
-* Fix posts fading in while scrolling, Closes #198
-* Fix bold text in quoted posts
-* Centre the link card author avatar and name
-* Fix double hover on post notifications
 * Style composer hints like content warnings
 
 ### 5.0.0-beta.1-2026-11-08: 2026-11-08

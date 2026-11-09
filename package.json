@@ -1,6 +1,6 @@
 {
   "name": "mastodon-bird-ui",
-  "version": "5.0.0-beta.1-2026-11-08",
+  "version": "5.0.0-beta.1-2026-11-09",
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
