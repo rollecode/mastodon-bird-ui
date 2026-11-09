@@ -2514,6 +2514,12 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   font-weight: inherit;
 }
 
+:root .notification-group__main ._comp_card__body .emojione {
+  width: 1.3em;
+  height: 1.3em;
+  margin: -3px 0 0;
+}
+
 :root .notification-group__main ._comp_card__root ._comp_card__body._comp_card__clamp._comp_status_quote__body {
   margin-block-start: 0;
 }

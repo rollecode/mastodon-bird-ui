@@ -1,5 +1,6 @@
 ### Unreleased
 
+* Enlarge custom emoji in notification previews
 * Show a scroll cue in menus in accessible themes
 * Fix broken three dots on profile buttons
 * Fix new post button contrast in accessible themes
