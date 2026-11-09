@@ -1,5 +1,6 @@
 ### Unreleased
 
+* Fix clipped letters in quoted post links
 * Show poll text at post size in accessible themes
 * Pad the Show post button in accessible themes
 * Dim handles next to names in accessible themes

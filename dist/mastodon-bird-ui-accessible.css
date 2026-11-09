@@ -1343,6 +1343,10 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   font-size: inherit;
   text-overflow: ellipsis;
   white-space: nowrap;
+  margin-block-end: -.2em;
+  margin-inline: -.15em;
+  padding-block-end: .2em;
+  padding-inline: .15em;
   font-weight: 400;
   overflow: hidden;
 }

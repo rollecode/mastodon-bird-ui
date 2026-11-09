@@ -569,7 +569,11 @@ html.no-reduce-motion ._comp_status__actions > button[data-like-burst] svg {
 ._comp_card__root:has(._comp_status_quote__title) > ._comp_card__body:not(._comp_status_quote__body) {
   font-size: inherit;
   font-weight: 400;
+  margin-block-end: -0.2em;
+  margin-inline: -0.15em;
   overflow: hidden;
+  padding-block-end: 0.2em;
+  padding-inline: 0.15em;
   text-overflow: ellipsis;
   white-space: nowrap;
 
