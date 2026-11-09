@@ -15,6 +15,14 @@ h4 {
   text-transform: unset;
 }
 
+// iOS Safari's scroll anchoring jumps the feed a post ahead whenever an
+// off-screen post is swapped for its placeholder, so leave it off there
+@supports (-webkit-touch-callout: none) {
+  html {
+    overflow-anchor: none;
+  }
+}
+
 article {
   transition: background-color 0.2s, border-color 0.2s;
 
