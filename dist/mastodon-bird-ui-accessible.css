@@ -1323,9 +1323,10 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 }
 
 :root ._comp_status_content__root._comp_status_content__collapsed > ._comp_status_content__text {
-  mask-image: linear-gradient(to bottom, black calc(100% - var(--mask-height)), transparent);
   max-height: var(--max-height);
+  margin-block-end: -.75lh;
   overflow-y: clip;
+  mask-image: linear-gradient(#000 calc(100% - 2.5lh), #0000 calc(100% - 1lh));
 }
 
 :root ._comp_status__actions > button:nth-of-type(-n+3) {

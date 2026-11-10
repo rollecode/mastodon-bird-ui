@@ -542,12 +542,12 @@ html.no-reduce-motion ._comp_status__actions > button[data-like-burst] svg {
   max-height: none;
   overflow-y: visible;
 
-  // Both custom properties are set by Mastodon on the content root
+  // Last line hidden so a cut line never shows, button a paragraph gap below
   > ._comp_status_content__text {
-    // stylelint-disable csstools/value-no-unknown-custom-properties
-    mask-image: linear-gradient(to bottom, black calc(100% - var(--mask-height)), transparent);
+    margin-block-end: -0.75lh;
+    mask-image: linear-gradient(to bottom, black calc(100% - 2.5lh), transparent calc(100% - 1lh));
+    // stylelint-disable-next-line csstools/value-no-unknown-custom-properties
     max-height: var(--max-height);
-    // stylelint-enable csstools/value-no-unknown-custom-properties
     overflow-y: clip;
   }
 }
