@@ -1,7 +1,8 @@
 ### Unreleased
 
+* Match heart icon shade to other actions
 * Fix large gap above View full post
-* Fix cut-off bios on admin account cards in the accessible themes
+* Fix cut-off bios on admin account cards
 * Round the discard draft dialog corners, Closes #204 (kudos to @cadusilva)
 * Fix clipped badges in the accessible themes
 
