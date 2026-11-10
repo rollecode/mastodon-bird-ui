@@ -3018,6 +3018,14 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   line-height: 0 !important;
 }
 
+:root ._comp_badge__content {
+  line-height: 1.2;
+}
+
+:root ._comp_account_list_item__badge {
+  vertical-align: baseline;
+}
+
 :root ._comp_status_content__text a {
   color: var(--color-link) !important;
 }

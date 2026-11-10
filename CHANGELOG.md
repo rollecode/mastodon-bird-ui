@@ -1,3 +1,7 @@
+### Unreleased
+
+* Fix clipped badges in the accessible themes
+
 ### 5.0.0-beta.1-2026-11-09: 2026-11-09
 
 * Fix Show media off centre on portrait media, Closes #203 (kudos to @cadusilva)

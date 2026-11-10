@@ -212,6 +212,15 @@
       line-height: 0 !important;
     }
 
+    // Badge text grows the pill instead of clipping, level with the name
+    ._comp_badge__content {
+      line-height: 1.2;
+    }
+
+    ._comp_account_list_item__badge {
+      vertical-align: baseline;
+    }
+
     // Links, mentions and hashtags each in their own colour
     ._comp_status_content__text a {
       color: var(--color-link) !important;
