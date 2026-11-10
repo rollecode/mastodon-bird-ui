@@ -2603,7 +2603,7 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   background-color: var(--color-dark);
   box-shadow: none;
   border: 0;
-  border-radius: 0;
+  border-radius: 16px;
 }
 
 :root .media-modal__navigation .icon {

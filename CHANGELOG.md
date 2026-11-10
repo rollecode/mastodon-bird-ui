@@ -1,5 +1,6 @@
 ### Unreleased
 
+* Round the discard draft dialog corners, Closes #204 (kudos to @cadusilva)
 * Fix clipped badges in the accessible themes
 
 ### 5.0.0-beta.1-2026-11-09: 2026-11-09
