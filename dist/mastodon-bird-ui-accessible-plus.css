@@ -3026,6 +3026,10 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   vertical-align: baseline;
 }
 
+:root .account-card__bio {
+  max-height: calc(var(--line-height) * 2);
+}
+
 :root ._comp_status_content__text a {
   color: var(--color-link) !important;
 }

@@ -221,6 +221,11 @@
       vertical-align: baseline;
     }
 
+    // Two full lines of the larger bio text on account cards
+    .account-card__bio {
+      max-height: calc(var(--line-height) * 2);
+    }
+
     // Links, mentions and hashtags each in their own colour
     ._comp_status_content__text a {
       color: var(--color-link) !important;
