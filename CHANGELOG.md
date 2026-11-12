@@ -1,5 +1,6 @@
 ### Unreleased
 
+* Fix opened replies showing their parent post first
 * Match heart icon shade to other actions
 * Fix large gap above View full post
 * Fix cut-off bios on admin account cards

@@ -1266,6 +1266,35 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   inset-block-end: -20px;
 }
 
+:root .scrollable:has( > ._feat_status__thread + ._feat_status__mainStatus) {
+  grid-template-rows: auto auto auto 1fr;
+  grid-template-columns: minmax(0, 1fr);
+  display: grid;
+}
+
+:root .scrollable:has( > ._feat_status__thread + ._feat_status__mainStatus) > * {
+  grid-column: 1;
+}
+
+:root .scrollable:has( > ._feat_status__thread + ._feat_status__mainStatus) > ._feat_status__mainStatus {
+  grid-row: 2;
+}
+
+:root .scrollable:has( > ._feat_status__thread + ._feat_status__mainStatus) > ._feat_status__mainStatus + ._feat_status__thread {
+  grid-row: 3;
+}
+
+:root .scrollable:has( > ._feat_status__thread + ._feat_status__mainStatus) > ._feat_status__threadEnd {
+  grid-row: 4;
+}
+
+:root .scrollable:has( > ._feat_status__thread + ._feat_status__mainStatus):after {
+  content: "";
+  min-height: calc(100dvh - var(--current-column-header-height, 0px) - var(--scroll-fade-height, 0px));
+  pointer-events: none;
+  grid-area: 2 / 1 / 5;
+}
+
 :root ._comp_status__variantThread ._comp_status_header__avatar {
   z-index: 1;
   position: relative;

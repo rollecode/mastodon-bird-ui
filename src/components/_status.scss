@@ -475,6 +475,37 @@ html.no-reduce-motion ._comp_status__actions > button[data-like-burst] svg {
   inset-block-end: -20px; // through the post's bottom padding, down to the divider
 }
 
+// Room below the opened reply, so it scrolls to the top instead of its parent
+.scrollable:has(> ._feat_status__thread + ._feat_status__mainStatus) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto auto auto 1fr;
+
+  > * {
+    grid-column: 1;
+  }
+
+  > ._feat_status__mainStatus {
+    grid-row: 2;
+  }
+
+  > ._feat_status__mainStatus + ._feat_status__thread {
+    grid-row: 3;
+  }
+
+  > ._feat_status__threadEnd {
+    grid-row: 4;
+  }
+
+  &::after {
+    content: '';
+    grid-column: 1;
+    grid-row: 2 / 5;
+    min-height: calc(100dvh - var(--current-column-header-height, 0px) - var(--scroll-fade-height, 0px));
+    pointer-events: none;
+  }
+}
+
 // The avatar sits above the thread line, so the line starts below it
 ._comp_status__variantThread ._comp_status_header__avatar {
   position: relative;
