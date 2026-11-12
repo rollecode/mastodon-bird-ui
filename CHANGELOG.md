@@ -1,5 +1,6 @@
 ### Unreleased
 
+* Fix feed jumping when liking or boosting, Ref #205
 * Fix opened replies showing their parent post first
 * Match heart icon shade to other actions
 * Fix large gap above View full post

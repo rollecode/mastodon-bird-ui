@@ -1394,6 +1394,18 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   line-height: 20px;
 }
 
+:root .emojione.emoji-loading {
+  vertical-align: baseline;
+}
+
+:root .emojione.emoji-loading:not([title^=":"]) {
+  margin: 0;
+}
+
+:root .emojione.emoji-loading:not([title^=":"]):before {
+  content: attr(title);
+}
+
 :root input._comp_search__search {
   background-color: var(--color-mud);
   border-color: var(--color-mud);
