@@ -15,8 +15,8 @@ h4 {
   text-transform: unset;
 }
 
-// iOS Safari scroll anchoring jumps the feed, keep it off
-@supports (-webkit-touch-callout: none) {
+// Safari scroll anchoring jumps the feed, keep it off on iOS and macOS
+@supports (-webkit-touch-callout: none) or (font: -apple-system-body) {
   body {
     overflow-anchor: none;
   }

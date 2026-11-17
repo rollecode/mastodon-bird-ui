@@ -362,7 +362,7 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   text-transform: unset;
 }
 
-@supports (-webkit-touch-callout: none) {
+@supports (-webkit-touch-callout: none) or (font: -apple-system-body) {
   :root body {
     overflow-anchor: none;
   }
