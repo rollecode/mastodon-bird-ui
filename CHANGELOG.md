@@ -1,5 +1,6 @@
 ### Unreleased
 
+* Fix cramped Unfollow button in notifications
 * Fix feed jumping in Safari on macOS
 * Fix feed jumping when liking or boosting, Ref #205
 * Fix opened replies showing their parent post first

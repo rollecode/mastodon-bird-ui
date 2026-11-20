@@ -2621,10 +2621,15 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 
 :root .notification-group__main__header__wrapper ._comp_button__base {
   min-height: 0;
-  padding: 3px 12px;
+  padding: 8px 10px;
   font-size: 14px;
   font-weight: 700;
   line-height: 20px;
+}
+
+:root .notification-group__main__header__wrapper ._comp_button__neutral._comp_button__tonal {
+  box-shadow: inset 0 0 0 1px var(--color-accent);
+  color: var(--color-accent);
 }
 
 :root .modal-root__overlay, :root .drawer__backdrop, :root ._feat_compose_trigger__rootTop[data-fullscreen="false"] ._feat_compose_trigger__backdrop {
