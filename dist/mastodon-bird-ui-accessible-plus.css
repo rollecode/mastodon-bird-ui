@@ -438,7 +438,20 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 }
 
 :root ._feat_navigation_panel_header__root {
+  padding-inline-end: 16px;
   padding-top: 10px;
+}
+
+:root ._feat_navigation_panel__list {
+  margin-inline-end: 16px;
+}
+
+:root ._feat_navigation_panel__loggedOutContent {
+  margin-inline-end: 24px;
+}
+
+:root ._feat_navigation_panel_mini_nav__list > li:last-child {
+  flex-grow: 0;
 }
 
 :root ._feat_navigation_panel_header__logoLockupWrapper {
@@ -622,7 +635,11 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   background-color: #0000;
 }
 
-:root ._feat_navigation_panel__root ._feat_navigation_panel_list_section__title, :root ._feat_navigation_panel__root ._feat_navigation_panel_list_section__viewAll {
+:root ._feat_navigation_panel__root ._feat_navigation_panel_list_section__title {
+  padding-inline: 10px 8px;
+}
+
+:root ._feat_navigation_panel__root ._feat_navigation_panel_list_section__viewAll {
   padding-inline: 10px;
 }
 
@@ -729,10 +746,6 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 
 :root ._feat_navigation_panel_header__logoLockupWrapper > ._comp_button__iconOnly._comp_button__base svg path, :root ._feat_navigation_panel_collapsed__expandButton._comp_button__base._comp_button__base svg path {
   display: none;
-}
-
-:root ._feat_navigation_panel_header__logoLockupWrapper > ._comp_button__iconOnly._comp_button__base {
-  margin-inline-end: 2px;
 }
 
 :root ._comp_button__base:not(._comp_button__iconOnly) {

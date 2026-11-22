@@ -1,6 +1,20 @@
 // Left navigation like v4: icon logo, 44px links, Bird UI icons, pill hover
 ._feat_navigation_panel_header__root {
+  padding-inline-end: 16px;
   padding-top: 10px;
+}
+
+// Same gap to the feed as the right sidebar: 16px to boxes, 24px to content
+._feat_navigation_panel__list {
+  margin-inline-end: 16px;
+}
+
+._feat_navigation_panel__loggedOutContent {
+  margin-inline-end: 24px;
+}
+
+._feat_navigation_panel_mini_nav__list > li:last-child {
+  flex-grow: 0;
 }
 
 ._feat_navigation_panel_header__logoLockupWrapper {
@@ -207,7 +221,7 @@
 
 // Only the left navigation indents its section headers
 ._feat_navigation_panel__root ._feat_navigation_panel_list_section__title {
-  padding-inline: 10px;
+  padding-inline: 10px 8px;
 }
 
 ._feat_navigation_panel__root ._feat_navigation_panel_list_section__viewAll {
@@ -327,8 +341,4 @@
   path {
     display: none;
   }
-}
-
-._feat_navigation_panel_header__logoLockupWrapper > ._comp_button__iconOnly._comp_button__base {
-  margin-inline-end: 2px;
 }
