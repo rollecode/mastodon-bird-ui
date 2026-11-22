@@ -139,6 +139,11 @@ canvas[class='media-gallery__preview'],
   max-height: none;
 }
 
+// The loading placeholders need the same cap
+._comp_status_attachments__galleryWrapper :is(.media-gallery, .media-video) {
+  max-height: 430px;
+}
+
 // Hide pill top right, ALT tag bottom left, as in v4
 .media-gallery .media-gallery__actions.media-gallery__actions {
   inset: 7px 7px auto auto;
