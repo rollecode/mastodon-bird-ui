@@ -128,6 +128,17 @@ canvas[class='media-gallery__preview'],
     anchor(--bird-gallery left);
 }
 
+// The hide button follows narrower media too
+._comp_status_attachments__galleryWrapper ._comp_status_attachments__gallerySpoilerButton {
+  inset: calc(anchor(--bird-gallery top) + 7px) calc(anchor(--bird-gallery right) + 7px) auto auto;
+}
+
+// Core reserves up to 566px for single media, capped lower here it would leave a gap
+._comp_status_attachments__galleryWrapper._comp_status_attachments__galleryWrapperAspectForce {
+  aspect-ratio: auto;
+  max-height: none;
+}
+
 // Hide pill top right, ALT tag bottom left, as in v4
 .media-gallery .media-gallery__actions.media-gallery__actions {
   inset: 7px 7px auto auto;
