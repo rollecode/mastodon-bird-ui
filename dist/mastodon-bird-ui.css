@@ -708,9 +708,9 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 :root ._feat_navigation_panel_header__newPostButton._comp_button__base {
   border-radius: 32px;
   column-gap: 6px;
-  width: fit-content;
+  width: 100%;
   min-height: 40px;
-  padding: 9px 18px 9px 12px;
+  padding: 9px 18px;
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;

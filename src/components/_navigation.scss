@@ -279,7 +279,7 @@
   inset-inline-start: calc(50% + 2px);
 }
 
-// New post as a dim pill as wide as its label, accent on hover
+// New post as a dim full width pill, accent on hover
 ._feat_navigation_panel_header__newPostButton._comp_button__base,
 ._feat_navigation_panel_collapsed__root ._comp_button__accent._comp_button__solid {
   --bg: var(--color-bg-brand-soft);
@@ -303,8 +303,8 @@
   font-weight: 500;
   line-height: 20px;
   min-height: 40px;
-  padding: 9px 18px 9px 12px;
-  width: fit-content;
+  padding: 9px 18px;
+  width: 100%;
 
   svg {
     height: 18px;
