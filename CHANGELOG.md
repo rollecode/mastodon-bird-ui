@@ -4,6 +4,7 @@
 * Fix composer backdrop and Show media for beta.2
 * Fix huge gap below tall images
 * Remove separate focus color on account link
+* Fix New post icon size in accessible themes
 * Fix search icon overlapping the text
 * Fix composer hint icons and content warning indent
 * Fix too much space in notification count bubble

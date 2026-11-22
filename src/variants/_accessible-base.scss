@@ -280,6 +280,12 @@
       }
     }
 
+    // Same size as the other icons in the collapsed menu
+    ._feat_navigation_panel_collapsed__root ._comp_button__iconOnly ._comp_button__icon {
+      height: 20px;
+      width: 20px;
+    }
+
     ._comp_status__spoiler ._comp_button__base {
       padding: 6px 14px;
     }

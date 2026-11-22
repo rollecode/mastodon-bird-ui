@@ -3201,6 +3201,11 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   color: #000;
 }
 
+:root ._feat_navigation_panel_collapsed__root ._comp_button__iconOnly ._comp_button__icon {
+  width: 20px;
+  height: 20px;
+}
+
 :root ._comp_status__spoiler ._comp_button__base {
   padding: 6px 14px;
 }
