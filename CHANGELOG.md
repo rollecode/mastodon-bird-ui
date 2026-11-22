@@ -1,4 +1,4 @@
-### Unreleased
+### 5.0.0-beta.2-2026-11-22: 2026-11-22
 
 * Fix navigation styles for Mastodon 5.0.0-beta.2
 * Fix composer backdrop and Show media for beta.2
