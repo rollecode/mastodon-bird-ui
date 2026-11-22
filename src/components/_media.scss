@@ -266,6 +266,11 @@ canvas[class='media-gallery__preview'],
   }
 }
 
+// Large cards have no padding to stretch the row over
+._comp_status_attachments__cardMedia ._comp_card__actions:has(._comp_status_attachments__cardAuthor) {
+  margin: 0;
+}
+
 ._comp_status_attachments__cardAuthor {
   --bg-hover: transparent;
   color: var(--color-fg);
@@ -273,6 +278,7 @@ canvas[class='media-gallery__preview'],
   font-weight: 500;
   gap: 4px;
   height: auto;
+  margin-inline-start: 0;
   min-height: 0;
   padding: 0;
 

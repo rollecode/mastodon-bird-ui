@@ -2330,12 +2330,17 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   display: flex;
 }
 
+:root ._comp_status_attachments__cardMedia ._comp_card__actions:has(._comp_status_attachments__cardAuthor) {
+  margin: 0;
+}
+
 :root ._comp_status_attachments__cardAuthor {
   --bg-hover: transparent;
   color: var(--color-fg);
   gap: 4px;
   height: auto;
   min-height: 0;
+  margin-inline-start: 0;
   padding: 0;
   font-size: 14px;
   font-weight: 500;
