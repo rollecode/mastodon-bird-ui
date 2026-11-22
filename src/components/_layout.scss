@@ -40,6 +40,11 @@ article article:is(:focus, :hover) {
   background: var(--color-focusable-toot);
 }
 
+// The account card shades as a whole
+._feat_navigation_panel_account_menu_items__accountLink.focusable:focus {
+  background: none;
+}
+
 // Flat columns divided by borders
 ._comp_columns_area__main {
   border-inline: 1px solid var(--color-border-primary);

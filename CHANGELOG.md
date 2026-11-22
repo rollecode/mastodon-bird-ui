@@ -3,6 +3,7 @@
 * Fix navigation styles for Mastodon 5.0.0-beta.2
 * Fix composer backdrop and Show media for beta.2
 * Fix huge gap below tall images
+* Remove separate focus color on account link
 * Fix search icon overlapping the text
 * Fix composer hint icons and content warning indent
 * Fix too much space in notification count bubble

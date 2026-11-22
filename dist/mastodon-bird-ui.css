@@ -384,6 +384,10 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   background: var(--color-focusable-toot);
 }
 
+:root ._feat_navigation_panel_account_menu_items__accountLink.focusable:focus {
+  background: none;
+}
+
 :root ._comp_columns_area__main {
   border-inline: 1px solid var(--color-border-primary);
 }
