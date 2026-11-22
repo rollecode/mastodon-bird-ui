@@ -1,7 +1,7 @@
 // One darker, blurred backdrop behind every overlay
 .modal-root__overlay,
 .drawer__backdrop,
-._feat_compose_trigger__rootTop[data-fullscreen='false'] ._feat_compose_trigger__backdrop {
+._feat_compose_trigger__showing[data-fullscreen='false']::before {
   backdrop-filter: blur(4px);
   background: rgb(0 0 0 / 70%) !important;
   opacity: 1;

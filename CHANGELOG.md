@@ -1,5 +1,12 @@
 ### Unreleased
 
+* Fix navigation styles for Mastodon 5.0.0-beta.2
+* Fix composer backdrop and Show media for beta.2
+* Fix search icon overlapping the text
+* Fix too much space in notification count bubble
+* Change New post back to dim and narrow
+* Change profile photo to larger without arrow
+* Change server name in navigation to simple logo
 * Fix cramped Unfollow button in notifications
 * Fix feed jumping in Safari on macOS
 * Fix feed jumping when liking or boosting, Ref #205

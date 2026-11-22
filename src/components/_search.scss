@@ -6,7 +6,8 @@ input._comp_search__search {
   color: var(--color-dim);
   font-size: 15px;
   height: 42px;
-  padding: 0 44px 0 20px;
+  padding-block: 0;
+  padding-inline: 20px 44px;
 
   &:focus {
     color: var(--color-light-text);
@@ -17,36 +18,27 @@ input._comp_search__search {
   color: var(--color-light-text);
 }
 
-.search__icon-wrapper {
-  right: 0;
+svg._comp_search__searchIcon._comp_search__searchIcon {
+  background: none;
+  bottom: 0;
+  color: var(--color-dim);
+  inset-inline: auto 14px;
+  margin-block: auto;
   top: 0;
-
-  &.has-value .search__icon {
-    background-image: var(--icon-close-action-bar);
-  }
 }
 
-.search__icon-wrapper .search__icon {
-  background: var(--icon-search) center / 20px auto no-repeat;
-  display: inline-block;
-  height: 24px;
-  inset-inline-start: unset;
-  position: absolute;
-  right: 14px;
-  top: 9px;
-  width: 24px;
-
-  path {
-    display: none;
-  }
+// The clear button takes the icon's place
+.search:has(._comp_search__closeButton) ._comp_search__searchIcon {
+  display: none;
 }
 
-.search__icon .icon-times-circle {
-  top: 9px;
-}
-
-.icon-search {
-  background-image: var(--icon-search-opaque);
+button._comp_search__closeButton._comp_search__closeButton {
+  background: transparent;
+  bottom: 0;
+  box-shadow: none;
+  inset-inline-end: 10px;
+  margin-block: auto;
+  top: 0;
 }
 
 .search__popout {

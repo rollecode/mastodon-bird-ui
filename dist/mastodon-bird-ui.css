@@ -437,30 +437,43 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   color: var(--color-accent);
 }
 
-:root ._navigation_panel_redesign_header__root {
-  margin-bottom: 12px;
-  padding: 10px 0 0;
+:root ._feat_navigation_panel_header__root {
+  padding-top: 10px;
 }
 
-:root ._navigation_panel_redesign_header__siteNameLink {
+:root ._feat_navigation_panel_header__logoLockupWrapper {
+  align-items: center;
+  margin-bottom: 8px;
+  padding-inline-start: 0;
+}
+
+:root ._feat_navigation_panel_header__lockupLink {
   background: var(--logo) center/32px auto no-repeat;
   width: 50px;
   height: 50px;
+  margin-block-end: 0;
+  margin-inline-start: -4px;
+  position: relative;
 }
 
-:root ._navigation_panel_redesign_header__content, :root ._navigation_panel_redesign_header__appIcon {
+:root ._feat_navigation_panel_header__lockupContent {
+  clip-path: inset(50%);
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+}
+
+:root ._feat_navigation_panel_header__lockupIcon {
   display: none;
 }
 
-:root ._navigation_panel_redesign__list {
-  margin-inline: 0;
+:root ._feat_navigation_panel_navigation_link__wrapper {
+  margin-bottom: 0;
 }
 
-:root ._navigation_panel_redesign_navigation_link__wrapper {
-  padding-bottom: 0;
-}
-
-:root ._navigation_panel_redesign_navigation_link__link {
+:root ._feat_navigation_panel_navigation_link__link:not(._feat_navigation_panel_navigation_link__linkMini) {
   --icon-size: 22px;
   --border-radius: 32px;
   column-gap: 14px;
@@ -473,140 +486,146 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   line-height: 20px;
 }
 
-:root ._navigation_panel_redesign_navigation_link__link[aria-current="page"] {
+:root ._feat_navigation_panel_navigation_link__link:not(._feat_navigation_panel_navigation_link__linkMini)[aria-current="page"] {
   background-color: #0000;
   font-weight: 700;
 }
 
-:root ._navigation_panel_redesign_navigation_link__link:hover {
+:root ._feat_navigation_panel_navigation_link__link:not(._feat_navigation_panel_navigation_link__linkMini):hover {
   background-color: var(--color-column-link-hover);
 }
 
-:root ._navigation_panel_redesign_navigation_link__linkStacked, :root ._navigation_panel_redesign_navigation_link__linkMobile {
-  column-gap: 0;
-  width: 100%;
-  min-height: 0;
-  font-size: 12px;
-  line-height: 16px;
+:root ._feat_navigation_panel_navigation_link__linkMini:has(.account__avatar) {
+  padding-block: 5px;
 }
 
-:root ._navigation_panel_redesign_navigation_link__linkStacked {
-  --border-radius: 12px;
-  padding-inline: 4px;
-  font-size: 11px;
+:root ._feat_navigation_panel_navigation_link__linkMini:has(.account__avatar) ._feat_navigation_panel_navigation_link__icon, :root ._feat_navigation_panel_navigation_link__linkMini:has(.account__avatar) .account__avatar {
+  display: block;
+  width: 26px !important;
+  height: 26px !important;
 }
 
-:root ._navigation_panel_redesign_navigation_link__linkStacked ._navigation_panel_redesign_navigation_link__label {
-  hyphens: none;
-  white-space: nowrap;
+:root ._feat_navigation_panel_navigation_link__linkMini:has(.account__avatar) ._feat_navigation_panel_navigation_link__icon {
+  flex-shrink: 0;
 }
 
-:root ._navigation_panel_redesign__footer {
-  padding-inline: 10px;
+:root ._feat_navigation_panel_navigation_link__linkMini:has(.account__avatar) ._feat_navigation_panel_navigation_link__menuIndicatorIcon {
+  display: none;
 }
 
-:root ._navigation_panel_redesign_navigation_link__link:is([href="/home"], [href^="/explore"], [href^="/public"], [href^="/notifications"], [href^="/conversations"], [href^="/bookmarks"], [href^="/favourites"]) ._navigation_panel_redesign_navigation_link__icon svg:not([data-for-you]) {
+@media (width < 760px) {
+  :root ._feat_navigation_panel_navigation_link__linkMini:has(.account__avatar) {
+    padding-block: 10px;
+  }
+
+  :root ._feat_navigation_panel_navigation_link__linkMini:has(.account__avatar) ._feat_navigation_panel_navigation_link__icon, :root ._feat_navigation_panel_navigation_link__linkMini:has(.account__avatar) .account__avatar {
+    width: 28px !important;
+    height: 28px !important;
+  }
+}
+
+:root ._feat_navigation_panel_navigation_link__link:not(._feat_navigation_panel_mobile_nav__list [href^="/explore"]):is([href="/home"], [href^="/explore"], [href^="/public"], [href^="/notifications"], [href^="/conversations"], [href^="/bookmarks"], [href^="/favourites"]) ._feat_navigation_panel_navigation_link__icon svg:not([data-for-you]) {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-:root ._navigation_panel_redesign_navigation_link__link:is([href="/home"], [href^="/explore"], [href^="/public"], [href^="/notifications"], [href^="/conversations"], [href^="/bookmarks"], [href^="/favourites"]) ._navigation_panel_redesign_navigation_link__icon svg:not([data-for-you]) path {
+:root ._feat_navigation_panel_navigation_link__link:not(._feat_navigation_panel_mobile_nav__list [href^="/explore"]):is([href="/home"], [href^="/explore"], [href^="/public"], [href^="/notifications"], [href^="/conversations"], [href^="/bookmarks"], [href^="/favourites"]) ._feat_navigation_panel_navigation_link__icon svg:not([data-for-you]) path {
   display: none;
 }
 
-:root ._navigation_panel_redesign_navigation_link__link[href="/home"] svg:not([data-for-you]) {
+:root ._feat_navigation_panel_navigation_link__link[href="/home"] svg:not([data-for-you]) {
   background-image: var(--icon-home);
 }
 
-:root ._navigation_panel_redesign_navigation_link__link[href="/home"][aria-current="page"] svg:not([data-for-you]) {
+:root ._feat_navigation_panel_navigation_link__link[href="/home"][aria-current="page"] svg:not([data-for-you]) {
   background-image: var(--icon-home-column-link-active);
 }
 
-:root ._navigation_panel_redesign_navigation_link__link[href^="/explore"] svg {
+:root ._feat_navigation_panel_navigation_link__link:not(._feat_navigation_panel_mobile_nav__list *)[href^="/explore"] svg {
   background-image: var(--icon-hashtag);
 }
 
-:root ._navigation_panel_redesign_navigation_link__link[href^="/explore"][aria-current="page"] svg {
+:root ._feat_navigation_panel_navigation_link__link:not(._feat_navigation_panel_mobile_nav__list *)[href^="/explore"][aria-current="page"] svg {
   background-image: var(--icon-hashtag-active);
 }
 
-:root ._navigation_panel_redesign_navigation_link__link[href^="/public"] svg {
+:root ._feat_navigation_panel_navigation_link__link[href^="/public"] svg {
   background-image: var(--icon-globe);
 }
 
-:root ._navigation_panel_redesign_navigation_link__link[href^="/public"][aria-current="page"] svg {
+:root ._feat_navigation_panel_navigation_link__link[href^="/public"][aria-current="page"] svg {
   background-image: var(--icon-globe-active);
 }
 
-:root ._navigation_panel_redesign_navigation_link__link[href^="/notifications"] svg {
+:root ._feat_navigation_panel_navigation_link__link[href^="/notifications"] svg {
   background-image: var(--icon-bell);
 }
 
-:root ._navigation_panel_redesign_navigation_link__link[href^="/notifications"][aria-current="page"] svg {
+:root ._feat_navigation_panel_navigation_link__link[href^="/notifications"][aria-current="page"] svg {
   background-image: var(--icon-bell-active);
 }
 
-:root ._navigation_panel_redesign_navigation_link__link[href^="/conversations"] svg {
+:root ._feat_navigation_panel_navigation_link__link[href^="/conversations"] svg {
   background-image: var(--icon-direct-messages);
 }
 
-:root ._navigation_panel_redesign_navigation_link__link[href^="/conversations"][aria-current="page"] svg {
+:root ._feat_navigation_panel_navigation_link__link[href^="/conversations"][aria-current="page"] svg {
   background-image: var(--icon-direct-messages-active);
 }
 
-:root ._navigation_panel_redesign_navigation_link__link[href^="/bookmarks"] svg {
+:root ._feat_navigation_panel_navigation_link__link[href^="/bookmarks"] svg {
   background-image: var(--icon-bookmark-column-link);
 }
 
-:root ._navigation_panel_redesign_navigation_link__link[href^="/bookmarks"][aria-current="page"] svg {
+:root ._feat_navigation_panel_navigation_link__link[href^="/bookmarks"][aria-current="page"] svg {
   background-image: var(--icon-bookmark-column-link-active);
 }
 
-:root ._navigation_panel_redesign_navigation_link__link[href^="/favourites"] svg {
+:root ._feat_navigation_panel_navigation_link__link[href^="/favourites"] svg {
   background-image: var(--icon-heart-column-link);
 }
 
-:root ._navigation_panel_redesign_navigation_link__link[href^="/favourites"][aria-current="page"] svg {
+:root ._feat_navigation_panel_navigation_link__link[href^="/favourites"][aria-current="page"] svg {
   background-image: var(--icon-heart-column-link-active);
 }
 
-:root ._navigation_panel_redesign_list_section__root ._navigation_panel_redesign_navigation_link__link {
+:root ._feat_navigation_panel_list_section__root ._feat_navigation_panel_navigation_link__link {
   --icon-size: 20px;
   min-height: 34px;
   padding-block: 7px;
   font-size: 15px;
 }
 
-:root ._navigation_panel_redesign_list_section__root {
+:root ._feat_navigation_panel_list_section__root {
   padding-top: 8px;
 }
 
-:root ._navigation_panel_redesign_list_section__root ._navigation_panel_redesign_navigation_link__link:not(:has(._navigation_panel_redesign_navigation_link__icon)) {
+:root ._feat_navigation_panel_list_section__root ._feat_navigation_panel_navigation_link__link:not(:has(._feat_navigation_panel_navigation_link__icon)) {
   padding-inline: 10px;
 }
 
-:root ._navigation_panel_redesign_list_section__title {
+:root ._feat_navigation_panel_list_section__title {
   color: var(--color-dim);
   border-radius: 0;
   min-height: 32px;
   font-size: 13px;
 }
 
-:root ._navigation_panel_redesign_list_section__title:hover, :root ._navigation_panel_redesign_list_section__title:focus-visible {
+:root ._feat_navigation_panel_list_section__title:hover, :root ._feat_navigation_panel_list_section__title:focus-visible {
   color: var(--color-fg);
   background-color: #0000;
 }
 
-:root ._navigation_panel_redesign__root ._navigation_panel_redesign_list_section__title {
+:root ._feat_navigation_panel__root ._feat_navigation_panel_list_section__title {
   padding-inline: 10px 30px;
 }
 
-:root ._navigation_panel_redesign__root ._navigation_panel_redesign_list_section__viewAll {
+:root ._feat_navigation_panel__root ._feat_navigation_panel_list_section__viewAll {
   padding-inline: 10px;
 }
 
-:root ._navigation_panel_redesign_list_section__toggleIcon {
+:root ._feat_navigation_panel_list_section__toggleIcon {
   box-sizing: content-box;
   color: var(--color-dim);
   background: currentColor;
@@ -618,19 +637,19 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960'%3E%3Cpath d='M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z'/%3E%3C/svg%3E") center / 24px no-repeat;
 }
 
-:root ._navigation_panel_redesign_list_section__toggleIcon path {
+:root ._feat_navigation_panel_list_section__toggleIcon path {
   display: none;
 }
 
-:root ._navigation_panel_redesign_list_section__toggleIcon:before {
+:root ._feat_navigation_panel_list_section__toggleIcon:before {
   content: "";
 }
 
-:root ._navigation_panel_redesign_list_section__title:hover ._navigation_panel_redesign_list_section__toggleIcon {
+:root ._feat_navigation_panel_list_section__title:hover ._feat_navigation_panel_list_section__toggleIcon {
   color: var(--color-fg);
 }
 
-:root ._navigation_panel_redesign_navigation_link__link:not(._navigation_panel_redesign_navigation_link__linkStacked) ._comp_badge__badge {
+:root ._feat_navigation_panel_navigation_link__link ._comp_badge__badge._comp_badge__badge {
   background-color: var(--color-accent-dark);
   border: 2px solid var(--color-bg-primary);
   box-sizing: border-box;
@@ -638,49 +657,53 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   border-radius: 1em;
   justify-content: center;
   align-items: center;
-  min-width: 1.7em;
-  height: 1.7em;
-  padding: 0 .4em;
-  font-size: 11px;
-  font-weight: 500;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 2px;
+  font-size: 10px;
+  font-weight: 600;
   line-height: 1;
   display: flex;
   position: absolute;
   inset: 2px auto auto 22px;
 }
 
-:root ._navigation_panel_redesign__newPostButton {
-  padding-inline: 0;
+:root ._feat_navigation_panel_navigation_link__linkMini ._comp_badge__badge._comp_badge__badge {
+  inset-inline-start: calc(50% + 2px);
 }
 
-:root ._navigation_panel_redesign__newPostButton ._comp_button__base._comp_button__base {
+:root ._feat_navigation_panel_header__newPostButton._comp_button__base, :root ._feat_navigation_panel_collapsed__root ._comp_button__accent._comp_button__solid {
   --bg: var(--color-bg-brand-soft);
   --bg-hover: var(--color-accent-dark);
   background: var(--bg);
   box-shadow: none;
   color: var(--color-accent);
+  transition: background-color .2s, color .2s;
+}
+
+:root ._feat_navigation_panel_header__newPostButton._comp_button__base:hover, :root ._feat_navigation_panel_header__newPostButton._comp_button__base:focus-visible, :root ._feat_navigation_panel_collapsed__root ._comp_button__accent._comp_button__solid:hover, :root ._feat_navigation_panel_collapsed__root ._comp_button__accent._comp_button__solid:focus-visible {
+  --bg: var(--color-accent-dark);
+  color: #fff;
+}
+
+:root ._feat_navigation_panel_header__newPostButton._comp_button__base {
   border-radius: 32px;
   column-gap: 6px;
+  width: fit-content;
   min-height: 40px;
   padding: 9px 18px 9px 12px;
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
-  transition: background-color .2s, color .2s;
 }
 
-:root ._navigation_panel_redesign__newPostButton ._comp_button__base._comp_button__base svg {
+:root ._feat_navigation_panel_header__newPostButton._comp_button__base svg {
   width: 18px;
   height: 18px;
 }
 
-:root ._navigation_panel_redesign__newPostButton ._comp_button__base._comp_button__base ._comp_button__label {
+:root ._feat_navigation_panel_header__newPostButton._comp_button__base ._comp_button__label {
   padding-inline: 0;
-}
-
-:root ._navigation_panel_redesign__newPostButton ._comp_button__base._comp_button__base:hover, :root ._navigation_panel_redesign__newPostButton ._comp_button__base._comp_button__base:focus-visible {
-  --bg: var(--color-accent-dark);
-  color: #fff;
 }
 
 :root ._comp_button__base:not(._comp_button__iconOnly) {
@@ -1412,7 +1435,8 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   color: var(--color-dim);
   border-radius: 32px;
   height: 42px;
-  padding: 0 44px 0 20px;
+  padding-block: 0;
+  padding-inline: 20px 44px;
   font-size: 15px;
 }
 
@@ -1420,36 +1444,26 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   color: var(--color-light-text);
 }
 
-:root .search__icon-wrapper {
+:root svg._comp_search__searchIcon._comp_search__searchIcon {
+  color: var(--color-dim);
+  bottom: 0;
+  inset-inline: auto 14px;
+  background: none;
+  margin-block: auto;
   top: 0;
-  right: 0;
 }
 
-:root .search__icon-wrapper.has-value .search__icon {
-  background-image: var(--icon-close-action-bar);
-}
-
-:root .search__icon-wrapper .search__icon {
-  background: var(--icon-search) center/20px auto no-repeat;
-  height: 24px;
-  inset-inline-start: unset;
-  width: 24px;
-  display: inline-block;
-  position: absolute;
-  top: 9px;
-  right: 14px;
-}
-
-:root .search__icon-wrapper .search__icon path {
+:root .search:has(._comp_search__closeButton) ._comp_search__searchIcon {
   display: none;
 }
 
-:root .search__icon .icon-times-circle {
-  top: 9px;
-}
-
-:root .icon-search {
-  background-image: var(--icon-search-opaque);
+:root button._comp_search__closeButton._comp_search__closeButton {
+  box-shadow: none;
+  bottom: 0;
+  inset-inline-end: 10px;
+  background: none;
+  margin-block: auto;
+  top: 0;
 }
 
 :root .search__popout {
@@ -2125,7 +2139,7 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   anchor-name: --bird-gallery;
 }
 
-:root ._comp_status_attachments__gallerySpoiler {
+:root ._comp_status_attachments__gallerySpoilerBox {
   inset: anchor(--bird-gallery top) anchor(--bird-gallery right) anchor(--bird-gallery bottom) anchor(--bird-gallery left);
 }
 
@@ -2632,7 +2646,7 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   color: var(--color-accent);
 }
 
-:root .modal-root__overlay, :root .drawer__backdrop, :root ._feat_compose_trigger__rootTop[data-fullscreen="false"] ._feat_compose_trigger__backdrop {
+:root .modal-root__overlay, :root .drawer__backdrop, :root ._feat_compose_trigger__showing[data-fullscreen="false"]:before {
   backdrop-filter: blur(4px);
   opacity: 1;
   background: #000000b3 !important;
@@ -2889,23 +2903,6 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 
 :root .layout-multiple-columns ._comp_status__variantFeed ._comp_status__mainWrapper {
   padding-inline-start: calc(var(--avatar-size) + var(--col-gap));
-}
-
-:root ._navigation_panel_redesign_mobile_nav__root {
-  gap: 0;
-  padding: 0;
-}
-
-:root ._navigation_panel_redesign_mobile_nav__floatingCard {
-  background-color: var(--color-bg-primary);
-  border: 0;
-  border-top: 1px solid var(--color-border-primary);
-  padding-bottom: env(safe-area-inset-bottom);
-  border-radius: 0;
-}
-
-:root ._navigation_panel_redesign__root[data-mode="slide-out"] {
-  padding-inline: 10px;
 }
 
 @media (width <= 760px) {

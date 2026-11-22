@@ -57,14 +57,14 @@
     ._comp_status_prepend__root,
     ._comp_account_bio__bio,
     ._comp_menu__item,
-    ._navigation_panel_redesign_navigation_link__link,
+    ._feat_navigation_panel_navigation_link__link,
     .display-name__html,
     .notification-group__main,
     .notification-group__main__header__label,
     .notification-group__main__additional-content,
     .trends__item__name,
     ._comp_account_list_item__displayName,
-    ._navigation_panel_redesign_account_card_and_menu__accountLink,
+    ._feat_navigation_panel_account_menu_items__accountLink,
     ._feat_account_timeline__filterSelectButton,
     ._feat_notifications_v2__unreadBar,
     .inline-follow-suggestions__title,
@@ -121,8 +121,8 @@
     ._comp_status_meta__editedButton,
     ._comp_account_list_item__handle,
     ._comp_account_header__handleHelpButton,
-    ._navigation_panel_redesign_list_section__title,
-    ._navigation_panel_redesign_list_section__viewAll,
+    ._feat_navigation_panel_list_section__title,
+    ._feat_navigation_panel_list_section__viewAll,
     ._feat_followers__subtitle,
     ._feat_status__threadEnd,
     ._account_featured_components_subheading__subheading h2,
@@ -147,8 +147,8 @@
     }
 
     // Footer meta stays tiny, it would otherwise fill the sidebar
-    ._feat_discovery_panel_footer_links__root,
-    ._feat_discovery_panel_footer_links__root *,
+    ._feat_navigation_panel_footer_links__root,
+    ._feat_navigation_panel_footer_links__root *,
     ._ui_components_link_footer__wrapper,
     ._ui_components_link_footer__wrapper * {
       color: #a6a6a6 !important; // 8.6:1 on black, passes WCAG AAA
@@ -157,7 +157,7 @@
     }
 
     // Own account card on one line: the name is cut short, the handle hidden
-    ._navigation_panel_redesign_account_card_and_menu__root {
+    ._feat_navigation_panel_account_menu_items__root {
       ._comp_lockup__main {
         min-width: 0;
       }
@@ -174,6 +174,12 @@
       }
     }
 
+    // The unread count has to fit on the bell
+    ._feat_navigation_panel_navigation_link__link ._comp_badge__content._comp_badge__content {
+      font-size: 12px !important;
+      line-height: 1 !important;
+    }
+
     // Room for long setting labels, so the toggles stay inside the menu
     ._comp_menu__card:has([role='menuitemcheckbox']) {
       max-width: calc(100vw - 32px);
@@ -184,11 +190,6 @@
     ._comp_menu__itemTrailingContent {
       flex-shrink: 0;
       margin-inline-start: auto;
-    }
-
-    // The stacked footer links share a narrow row
-    ._navigation_panel_redesign_navigation_link__linkStacked {
-      font-size: 14px !important;
     }
 
     ._comp_column_header__title,
@@ -267,7 +268,7 @@
     }
 
     // New post filled with solid blue, the soft tint vanishes on black
-    ._navigation_panel_redesign__newPostButton ._comp_button__base._comp_button__base {
+    ._feat_navigation_panel_header__newPostButton._comp_button__base._comp_button__base {
       --bg: var(--color-accent-dark);
       color: var(--color-fg);
 
@@ -305,18 +306,6 @@
       font-size: var(--font-size);
       line-height: 1.2;
       white-space: pre-line;
-    }
-  }
-
-  // Short windows scroll the whole left column
-  @media (height < 900px) {
-    :root ._navigation_panel_redesign__footer {
-      flex: 0 0 auto;
-      position: relative;
-
-      &::before {
-        display: none;
-      }
     }
   }
 
