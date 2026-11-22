@@ -176,7 +176,12 @@
 }
 
 ._feat_navigation_panel_list_section__root {
+  border-top: 0;
   padding-top: 8px;
+}
+
+._feat_navigation_panel_navigation_link__wrapperWithDivider {
+  border-top: 0;
 }
 
 // Text-only links (followed hashtags) get an even hover pill
@@ -202,7 +207,7 @@
 
 // Only the left navigation indents its section headers
 ._feat_navigation_panel__root ._feat_navigation_panel_list_section__title {
-  padding-inline: 10px 30px;
+  padding-inline: 10px;
 }
 
 ._feat_navigation_panel__root ._feat_navigation_panel_list_section__viewAll {
@@ -216,6 +221,7 @@
   box-sizing: content-box;
   color: var(--color-dim);
   height: 24px;
+  margin-inline-end: -8px; // The drawn arrow lines up with the content edge
   mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960'%3E%3Cpath d='M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z'/%3E%3C/svg%3E") center / 24px no-repeat;
   padding: 2px;
   transition: background-color 200ms, rotate 100ms ease-in;
@@ -294,4 +300,35 @@
   ._comp_button__label {
     padding-inline: 0;
   }
+}
+
+// Collapse and expand: a bare sidebar icon instead of an outlined arrow
+._feat_navigation_panel_header__logoLockupWrapper > ._comp_button__iconOnly._comp_button__base,
+._feat_navigation_panel_collapsed__expandButton._comp_button__base._comp_button__base {
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: none;
+  color: var(--color-dim);
+
+  &:hover,
+  &:focus-visible {
+    background: var(--color-column-link-hover);
+    color: var(--color-fg);
+  }
+}
+
+._feat_navigation_panel_header__logoLockupWrapper > ._comp_button__iconOnly._comp_button__base svg,
+._feat_navigation_panel_collapsed__expandButton._comp_button__base._comp_button__base svg {
+  background: currentColor;
+  height: 20px;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath d='M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40ZM40,56H80V200H40ZM216,200H96V56H216V200Z'/%3E%3C/svg%3E") center / contain no-repeat;
+  width: 20px;
+
+  path {
+    display: none;
+  }
+}
+
+._feat_navigation_panel_header__logoLockupWrapper > ._comp_button__iconOnly._comp_button__base {
+  margin-inline-end: 2px;
 }

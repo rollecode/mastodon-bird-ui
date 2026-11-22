@@ -7,6 +7,9 @@
 * Change New post back to dim and narrow
 * Change profile photo to larger without arrow
 * Change server name in navigation to simple logo
+* Remove lines between navigation sections
+* Fix misaligned section arrows
+* Change collapse button to minimal sidebar icon
 * Fix cramped Unfollow button in notifications
 * Fix feed jumping in Safari on macOS
 * Fix feed jumping when liking or boosting, Ref #205

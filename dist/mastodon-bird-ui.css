@@ -598,7 +598,12 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 }
 
 :root ._feat_navigation_panel_list_section__root {
+  border-top: 0;
   padding-top: 8px;
+}
+
+:root ._feat_navigation_panel_navigation_link__wrapperWithDivider {
+  border-top: 0;
 }
 
 :root ._feat_navigation_panel_list_section__root ._feat_navigation_panel_navigation_link__link:not(:has(._feat_navigation_panel_navigation_link__icon)) {
@@ -617,11 +622,7 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   background-color: #0000;
 }
 
-:root ._feat_navigation_panel__root ._feat_navigation_panel_list_section__title {
-  padding-inline: 10px 30px;
-}
-
-:root ._feat_navigation_panel__root ._feat_navigation_panel_list_section__viewAll {
+:root ._feat_navigation_panel__root ._feat_navigation_panel_list_section__title, :root ._feat_navigation_panel__root ._feat_navigation_panel_list_section__viewAll {
   padding-inline: 10px;
 }
 
@@ -632,6 +633,7 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   border-radius: 50%;
   width: 24px;
   height: 24px;
+  margin-inline-end: -8px;
   padding: 2px;
   transition: background-color .2s, rotate .1s ease-in;
   mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960'%3E%3Cpath d='M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z'/%3E%3C/svg%3E") center / 24px no-repeat;
@@ -704,6 +706,33 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 
 :root ._feat_navigation_panel_header__newPostButton._comp_button__base ._comp_button__label {
   padding-inline: 0;
+}
+
+:root ._feat_navigation_panel_header__logoLockupWrapper > ._comp_button__iconOnly._comp_button__base, :root ._feat_navigation_panel_collapsed__expandButton._comp_button__base._comp_button__base {
+  box-shadow: none;
+  color: var(--color-dim);
+  background: none;
+  border-radius: 50%;
+}
+
+:root ._feat_navigation_panel_header__logoLockupWrapper > ._comp_button__iconOnly._comp_button__base:hover, :root ._feat_navigation_panel_header__logoLockupWrapper > ._comp_button__iconOnly._comp_button__base:focus-visible, :root ._feat_navigation_panel_collapsed__expandButton._comp_button__base._comp_button__base:hover, :root ._feat_navigation_panel_collapsed__expandButton._comp_button__base._comp_button__base:focus-visible {
+  background: var(--color-column-link-hover);
+  color: var(--color-fg);
+}
+
+:root ._feat_navigation_panel_header__logoLockupWrapper > ._comp_button__iconOnly._comp_button__base svg, :root ._feat_navigation_panel_collapsed__expandButton._comp_button__base._comp_button__base svg {
+  background: currentColor;
+  width: 20px;
+  height: 20px;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath d='M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40ZM40,56H80V200H40ZM216,200H96V56H216V200Z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+:root ._feat_navigation_panel_header__logoLockupWrapper > ._comp_button__iconOnly._comp_button__base svg path, :root ._feat_navigation_panel_collapsed__expandButton._comp_button__base._comp_button__base svg path {
+  display: none;
+}
+
+:root ._feat_navigation_panel_header__logoLockupWrapper > ._comp_button__iconOnly._comp_button__base {
+  margin-inline-end: 2px;
 }
 
 :root ._comp_button__base:not(._comp_button__iconOnly) {
