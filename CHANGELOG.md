@@ -9,7 +9,7 @@
 * Change server name in navigation to simple logo
 * Remove lines between navigation sections
 * Fix misaligned section arrows
-* Change collapse button to minimal sidebar icon
+* Change collapse button to minimal icon showing state
 * Fix uneven gaps beside the feed
 * Fix cramped Unfollow button in notifications
 * Fix feed jumping in Safari on macOS
