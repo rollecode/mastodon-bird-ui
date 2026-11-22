@@ -528,6 +528,15 @@ html.no-reduce-motion ._comp_status__actions > button[data-like-burst] svg {
   gap: 16px;
   padding: 10px 16px;
 
+  // Core indents the box and pulls the text back for the icon hidden here
+  &:has(._comp_callout_redesign__icon) {
+    padding-inline-start: 16px;
+  }
+
+  ._comp_callout_redesign__content {
+    margin-inline-start: 0;
+  }
+
   ._comp_callout_redesign__icon {
     display: none;
   }

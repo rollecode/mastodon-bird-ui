@@ -3,6 +3,7 @@
 * Fix navigation styles for Mastodon 5.0.0-beta.2
 * Fix composer backdrop and Show media for beta.2
 * Fix search icon overlapping the text
+* Fix composer hint icons and content warning indent
 * Fix too much space in notification count bubble
 * Change New post back to dim, full width
 * Change profile photo to larger without arrow

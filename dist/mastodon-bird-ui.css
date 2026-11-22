@@ -1388,6 +1388,14 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   font-size: 14px;
 }
 
+:root ._comp_status__spoiler:has(._comp_callout_redesign__icon) {
+  padding-inline-start: 16px;
+}
+
+:root ._comp_status__spoiler ._comp_callout_redesign__content {
+  margin-inline-start: 0;
+}
+
 :root ._comp_status__spoiler ._comp_callout_redesign__icon {
   display: none;
 }
@@ -2818,13 +2826,27 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   border: 1px solid var(--color-border);
   color: var(--color-light-purple);
   border-radius: 16px;
-  gap: 12px;
-  padding: 10px 16px;
+  gap: 8px 12px;
+  padding-block: 10px;
+  padding-inline: 42px 16px;
+}
+
+:root ._feat_compose__calloutWrapper ._comp_callout_redesign__rootLarge ._comp_callout_redesign__content {
+  align-items: flex-start;
+  gap: 8px;
+  margin-inline-start: -26px;
 }
 
 :root ._feat_compose__calloutWrapper ._comp_callout_redesign__rootLarge ._comp_callout_redesign__icon {
+  flex-shrink: 0;
+  align-self: flex-start;
   width: 18px;
   height: 18px;
+  margin-top: 1px;
+}
+
+:root ._feat_compose__calloutWrapper ._comp_callout_redesign__rootLarge ._comp_callout_redesign__actions {
+  gap: 12px;
 }
 
 :root ._feat_compose__calloutWrapper ._comp_callout_redesign__rootLarge ._comp_callout_redesign__textWrapper {
