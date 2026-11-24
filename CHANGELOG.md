@@ -1,6 +1,7 @@
 ### Unreleased
 
 * Fix cut-off videos and images in notifications
+* Fix suggestions covering typed text in accessible themes
 
 ### 5.0.0-beta.2-2026-11-22: 2026-11-22
 
