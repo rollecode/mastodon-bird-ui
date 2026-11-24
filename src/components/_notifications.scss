@@ -105,6 +105,23 @@
   margin-block-start: 0;
 }
 
+// A single image or video shows whole within 260px, framed like in posts
+.notification-group__main ._comp_status_quote__media:not(._comp_status_image__mediaGrid) {
+  border-radius: 0;
+  max-height: none;
+
+  > ._comp_status_image__image {
+    // stylelint-disable-next-line csstools/value-no-unknown-custom-properties
+    aspect-ratio: var(--aspect);
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    max-width: none;
+    min-width: 0;
+    // stylelint-disable-next-line csstools/value-no-unknown-custom-properties
+    width: min(100%, 400px, 260px * (var(--aspect)));
+  }
+}
+
 // v4 showed only the post text: no link, collection or quoted post line below it
 .notification-group__main ._comp_card__body:not(._comp_status_quote__body) {
   display: none;

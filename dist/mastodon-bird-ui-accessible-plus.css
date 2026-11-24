@@ -2366,6 +2366,10 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
   height: 16px;
 }
 
+:root ._comp_status_quote__videoDuration {
+  z-index: 2;
+}
+
 :root ._comp_tab_list__tabList._comp_tab_list__withSpaceAndBorder {
   border-bottom: 1px solid var(--color-border);
   border-left: 0;
@@ -2675,6 +2679,20 @@ html.no-reduce-motion ._comp_status__actions > button._comp_status__actionsButto
 
 :root .notification-group__main ._comp_card__root ._comp_card__body._comp_card__clamp._comp_status_quote__body {
   margin-block-start: 0;
+}
+
+:root .notification-group__main ._comp_status_quote__media:not(._comp_status_image__mediaGrid) {
+  border-radius: 0;
+  max-height: none;
+}
+
+:root .notification-group__main ._comp_status_quote__media:not(._comp_status_image__mediaGrid) > ._comp_status_image__image {
+  aspect-ratio: var(--aspect);
+  border: 1px solid var(--color-border);
+  min-width: 0;
+  max-width: none;
+  width: min(100%, 400px, 260px * (var(--aspect)));
+  border-radius: 16px;
 }
 
 :root .notification-group__main ._comp_card__body:not(._comp_status_quote__body) {

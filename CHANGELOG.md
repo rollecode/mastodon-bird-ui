@@ -1,3 +1,7 @@
+### Unreleased
+
+* Fix cut-off videos and images in notifications
+
 ### 5.0.0-beta.2-2026-11-22: 2026-11-22
 
 * Fix More from row overlapping the avatar and card edge

@@ -304,3 +304,8 @@ canvas[class='media-gallery__preview'],
     width: 16px;
   }
 }
+
+// Card links sit at z-index 1, which hid the video length under the preview
+._comp_status_quote__videoDuration {
+  z-index: 2;
+}
